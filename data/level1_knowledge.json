@@ -1,0 +1,235 @@
+{
+  "level": 1,
+  "total_lessons": 24,
+  "lessons": [
+    {
+      "lesson_num": 1,
+      "filename": "1. 变量和数据的输入输出.pptx",
+      "title": "变量和数据的输入输出",
+      "knowledge_points": [
+        "变量定义",
+        "cin输入",
+        "cout输出",
+        "数据类型"
+      ]
+    },
+    {
+      "lesson_num": 2,
+      "filename": "2. 算数运算符和字符型.pptx",
+      "title": "算数运算符和字符型",
+      "knowledge_points": [
+        "算术运算符",
+        "字符型数据",
+        "ASCII码"
+      ]
+    },
+    {
+      "lesson_num": 3,
+      "filename": "3. 比较运算符和 if 语句.pptx",
+      "title": "比较运算符和 if 语句",
+      "knowledge_points": [
+        "比较运算符",
+        "if条件语句",
+        "if-else分支"
+      ]
+    },
+    {
+      "lesson_num": 4,
+      "filename": "4. 逻辑运算符和多分支语句.pptx",
+      "title": "逻辑运算符和多分支语句",
+      "knowledge_points": [
+        "逻辑运算符",
+        "多分支语句"
+      ]
+    },
+    {
+      "lesson_num": 5,
+      "filename": "5. 阶段复习与练习一.pptx",
+      "title": "阶段复习与练习一",
+      "knowledge_points": [
+        "复习"
+      ]
+    },
+    {
+      "lesson_num": 6,
+      "filename": "6. for 循环.pptx",
+      "title": "for 循环",
+      "knowledge_points": [
+        "for循环结构",
+        "自增运算符"
+      ]
+    },
+    {
+      "lesson_num": 7,
+      "filename": "7. for 循环进阶.pptx",
+      "title": "for 循环进阶",
+      "knowledge_points": [
+        "break语句",
+        "continue语句"
+      ]
+    },
+    {
+      "lesson_num": 8,
+      "filename": "8. 数组.pptx",
+      "title": "数组",
+      "knowledge_points": [
+        "数组定义",
+        "数组下标访问",
+        "数组初始化"
+      ]
+    },
+    {
+      "lesson_num": 9,
+      "filename": "9. 数组进阶.pptx",
+      "title": "数组进阶",
+      "knowledge_points": [
+        "数组遍历",
+        "数组与循环"
+      ]
+    },
+    {
+      "lesson_num": 10,
+      "filename": "10. 阶段复习与练习二.pptx",
+      "title": "阶段复习与练习二",
+      "knowledge_points": [
+        "复习"
+      ]
+    },
+    {
+      "lesson_num": 11,
+      "filename": "11. while 循环.pptx",
+      "title": "while 循环",
+      "knowledge_points": [
+        "while循环",
+        "do-while循环"
+      ]
+    },
+    {
+      "lesson_num": 12,
+      "filename": "12. 格式化输入输出和浮点数.pptx",
+      "title": "格式化输入输出和浮点数",
+      "knowledge_points": [
+        "格式化输入输出",
+        "浮点数类型",
+        "输出精度控制"
+      ]
+    },
+    {
+      "lesson_num": 13,
+      "filename": "13. 浮点数和数据类型转换.pptx",
+      "title": "浮点数和数据类型转换",
+      "knowledge_points": [
+        "setw和setfill",
+        "printf和scanf",
+        "浮点数精度",
+        "数据类型转换"
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "filename": "14. 字符串和字符数组.pptx",
+      "title": "字符串和字符数组",
+      "knowledge_points": [
+        "字符数组",
+        "字符串结束符",
+        "字符串输入"
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "filename": "15. string 类型的字符串.pptx",
+      "title": "string 类型的字符串",
+      "knowledge_points": [
+        "string类型",
+        "字符串长度",
+        "字符串查找"
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "filename": "16. 阶段复习与练习三.pptx",
+      "title": "阶段复习与练习三",
+      "knowledge_points": [
+        "复习"
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "filename": "17. 函数基础.pptx",
+      "title": "函数基础",
+      "knowledge_points": [
+        "函数定义",
+        "函数参数",
+        "返回值",
+        "函数调用"
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "filename": "18. 函数进阶.pptx",
+      "title": "函数进阶",
+      "knowledge_points": [
+        "全局变量",
+        "局部变量"
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "filename": "19. 结构体.pptx",
+      "title": "结构体",
+      "knowledge_points": [
+        "结构体定义",
+        "结构体成员访问",
+        "结构体数组"
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "filename": "20. 循环的嵌套.pptx",
+      "title": "循环的嵌套",
+      "knowledge_points": [
+        "循环嵌套",
+        "图形打印"
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "filename": "21.pptx",
+      "title": "双层for循环与桶排序",
+      "knowledge_points": [
+        "双层for循环",
+        "桶排序"
+      ]
+    },
+    {
+      "lesson_num": 22,
+      "filename": "22.pptx",
+      "title": "选择排序与冒泡排序",
+      "knowledge_points": [
+        "选择排序",
+        "冒泡排序",
+        "排序算法对比"
+      ]
+    },
+    {
+      "lesson_num": 23,
+      "filename": "23.pptx",
+      "title": "插入排序与二维数组",
+      "knowledge_points": [
+        "插入排序",
+        "排序算法对比",
+        "二维数组定义"
+      ]
+    },
+    {
+      "lesson_num": 24,
+      "filename": "24.pptx",
+      "title": "二维数组进阶",
+      "knowledge_points": [
+        "二维数组初始化",
+        "二维数组遍历",
+        "行优先与列优先"
+      ]
+    }
+  ]
+}

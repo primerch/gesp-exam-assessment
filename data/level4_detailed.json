@@ -1,0 +1,957 @@
+{
+  "level": 4,
+  "description": "GESP Level 4 - 竞赛准备级别（对应GESP 7-8级），包含排列组合、高级数据结构、图论算法、动态规划等竞赛核心内容",
+  "total_lessons": 23,
+  "exam_focus": {
+    "复赛": "编程题 - 算法设计与实现",
+    "初赛": "选择题 - 理论知识和基础算法"
+  },
+  "lessons": [
+    {
+      "lesson_num": 1,
+      "title": "排列组合1",
+      "file": "1-排列组合1.pptx",
+      "slides_analyzed": 113,
+      "lesson_type": "数学基础",
+      "exam_type": "复赛/初赛",
+      "knowledge_points": [
+        {
+          "name": "排列数计算",
+          "category": "数学算法",
+          "description": "计算从n个不同元素中取出m个元素的排列数P(n,m) = n!/(n-m)!",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了计算有序选择的方法，比如从5个人中选3人排队有多少种方式",
+          "exam_focus": "编程题：排列数计算、全排列生成"
+        },
+        {
+          "name": "组合数计算",
+          "category": "数学算法",
+          "description": "计算从n个不同元素中取出m个元素的组合数C(n,m) = n!/((n-m)!×m!)",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了计算无序选择的方法，比如从10个球中选4个有多少种选法",
+          "exam_focus": "编程题：组合数计算、杨辉三角"
+        },
+        {
+          "name": "加法原理",
+          "category": "数学基础",
+          "description": "完成一件事有n类方法，每类有mi种方式，则共有m1+m2+...+mn种方法",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了分类计数的方法，不同类别的方案数相加",
+          "exam_focus": "编程题：分类计数问题"
+        },
+        {
+          "name": "乘法原理",
+          "category": "数学基础",
+          "description": "完成一件事需要n个步骤，每步有mi种方式，则共有m1×m2×...×mn种方法",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了分步计数的方法，各步骤的方案数相乘",
+          "exam_focus": "编程题：分步计数问题"
+        }
+      ]
+    },
+    {
+      "lesson_num": 2,
+      "title": "排列组合2",
+      "file": "2-排列组合2.pptx",
+      "slides_analyzed": 69,
+      "lesson_type": "数学基础",
+      "exam_type": "复赛/初赛",
+      "knowledge_points": [
+        {
+          "name": "排列组合综合应用",
+          "category": "数学算法",
+          "description": "结合加法原理、乘法原理解决复杂的排列组合问题",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了灵活运用各种计数方法解决复杂问题",
+          "exam_focus": "编程题：复杂计数问题、路径计数"
+        },
+        {
+          "name": "捆绑法",
+          "category": "竞赛技巧",
+          "description": "处理某些元素必须相邻的排列问题，将相邻元素视为一个整体",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了处理'必须在一起'的排列问题技巧",
+          "exam_focus": "编程题：带约束条件的排列问题"
+        },
+        {
+          "name": "插空法",
+          "category": "竞赛技巧",
+          "description": "处理某些元素不能相邻的排列问题，先排其他元素再插入",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了处理'不能相邻'的排列问题技巧",
+          "exam_focus": "编程题：带不相邻约束的排列问题"
+        },
+        {
+          "name": "隔板法",
+          "category": "竞赛技巧",
+          "description": "解决相同元素分配到不同盒子的问题，使用隔板进行分割",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了将相同物品分配给不同对象的方法",
+          "exam_focus": "编程题：整数划分、分配问题"
+        }
+      ]
+    },
+    {
+      "lesson_num": 3,
+      "title": "质数筛法",
+      "file": "3-质数筛法.pptx",
+      "slides_analyzed": 108,
+      "lesson_type": "数学算法",
+      "exam_type": "复赛",
+      "knowledge_points": [
+        {
+          "name": "埃氏筛法（Eratosthenes筛法）",
+          "category": "数学算法",
+          "description": "通过标记合数来筛选质数，时间复杂度O(n log log n)",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了高效筛选质数的经典算法",
+          "exam_focus": "编程题：质数筛选、质数统计"
+        },
+        {
+          "name": "欧拉筛法（线性筛）",
+          "category": "数学算法",
+          "description": "每个合数只被其最小质因子筛去，时间复杂度O(n)",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了更高效的线性时间质数筛法",
+          "exam_focus": "编程题：大范围质数筛选"
+        },
+        {
+          "name": "质因数分解",
+          "category": "数学算法",
+          "description": "将一个数分解为质因数的乘积，使用试除法或筛法优化",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了将数字分解为质因数的方法",
+          "exam_focus": "编程题：质因数分解、约数个数"
+        },
+        {
+          "name": "最大公约数（GCD）",
+          "category": "数学基础",
+          "description": "使用辗转相除法（欧几里得算法）计算两个数的最大公约数",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了计算两个数最大公约数的方法",
+          "exam_focus": "编程题：GCD计算、分数约分"
+        },
+        {
+          "name": "最小公倍数（LCM）",
+          "category": "数学基础",
+          "description": "利用GCD计算LCM，公式：LCM(a,b) = a×b/GCD(a,b)",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了计算最小公倍数的方法",
+          "exam_focus": "编程题：LCM计算、周期问题"
+        }
+      ]
+    },
+    {
+      "lesson_num": 4,
+      "title": "区间动态规划1",
+      "file": "4-区间动态规划1.pptx",
+      "slides_analyzed": 107,
+      "lesson_type": "动态规划",
+      "exam_type": "复赛",
+      "knowledge_points": [
+        {
+          "name": "区间DP基本概念",
+          "category": "高级DP",
+          "description": "以区间作为DP状态，解决区间合并、分割类问题",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了处理区间问题的动态规划方法",
+          "exam_focus": "编程题：区间最值、区间合并"
+        },
+        {
+          "name": "石子合并问题",
+          "category": "高级DP",
+          "description": "将相邻石子合并，求最小/最大得分，状态转移：dp[i][j] = min(dp[i][k] + dp[k+1][j] + cost)",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了经典的区间DP问题解法",
+          "exam_focus": "编程题：石子合并、矩阵链乘"
+        },
+        {
+          "name": "区间DP状态设计",
+          "category": "高级DP",
+          "description": "设计dp[i][j]表示区间[i,j]的最优解，枚举分割点k进行转移",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了如何设计区间DP的状态和转移",
+          "exam_focus": "编程题：区间分割类问题"
+        }
+      ]
+    },
+    {
+      "lesson_num": 5,
+      "title": "区间动态规划2",
+      "file": "5-区间动态规划2.pptx",
+      "slides_analyzed": 91,
+      "lesson_type": "动态规划",
+      "exam_type": "复赛",
+      "knowledge_points": [
+        {
+          "name": "括号匹配问题",
+          "category": "高级DP",
+          "description": "计算使括号序列合法的最少添加次数或最长合法子序列",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了用区间DP解决括号匹配问题",
+          "exam_focus": "编程题：括号匹配、表达式处理"
+        },
+        {
+          "name": "回文串问题",
+          "category": "高级DP",
+          "description": "计算字符串变成回文的最小代价或最长回文子序列",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了用区间DP处理回文相关问题",
+          "exam_focus": "编程题：回文串构造、回文子序列"
+        },
+        {
+          "name": "区间DP优化技巧",
+          "category": "竞赛技巧",
+          "description": "四边形不等式优化、决策单调性优化区间DP",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了优化区间DP的高级技巧",
+          "exam_focus": "编程题：大规模区间DP问题"
+        }
+      ]
+    },
+    {
+      "lesson_num": 6,
+      "title": "阶段测试",
+      "file": "6-阶段测试.pptx",
+      "slides_analyzed": 48,
+      "lesson_type": "综合测试",
+      "exam_type": "测试",
+      "knowledge_points": [
+        {
+          "name": "排列组合综合测试",
+          "category": "数学算法",
+          "description": "测试排列组合各种方法的综合运用能力",
+          "gesp_level": 7,
+          "parent_explanation": "检验孩子对排列组合知识的掌握程度",
+          "exam_focus": "测试题：综合计数问题"
+        },
+        {
+          "name": "质数筛法应用测试",
+          "category": "数学算法",
+          "description": "测试质数筛法和相关数论知识的应用",
+          "gesp_level": 7,
+          "parent_explanation": "检验孩子对质数算法的掌握程度",
+          "exam_focus": "测试题：数论综合应用"
+        },
+        {
+          "name": "区间DP应用测试",
+          "category": "高级DP",
+          "description": "测试区间动态规划问题的分析和解决能力",
+          "gesp_level": 8,
+          "parent_explanation": "检验孩子对区间DP的掌握程度",
+          "exam_focus": "测试题：区间DP综合问题"
+        }
+      ]
+    },
+    {
+      "lesson_num": 7,
+      "title": "参赛相关",
+      "file": "7-参赛相关.pptx",
+      "slides_analyzed": 101,
+      "lesson_type": "竞赛准备",
+      "exam_type": "信息",
+      "knowledge_points": [
+        {
+          "name": "竞赛规则介绍",
+          "category": "竞赛技巧",
+          "description": "了解竞赛流程、评分标准、时间分配等规则",
+          "gesp_level": 7,
+          "parent_explanation": "帮助孩子了解竞赛的基本规则和流程",
+          "exam_focus": "信息：竞赛须知"
+        },
+        {
+          "name": "考试环境使用",
+          "category": "竞赛技巧",
+          "description": "熟悉竞赛使用的开发环境、编译器、调试技巧",
+          "gesp_level": 7,
+          "parent_explanation": "帮助孩子熟悉考试软件和操作",
+          "exam_focus": "实操：环境配置"
+        },
+        {
+          "name": "答题策略",
+          "category": "竞赛技巧",
+          "description": "时间分配、题目选择、部分分获取等竞赛策略",
+          "gesp_level": 7,
+          "parent_explanation": "教孩子如何合理安排考试时间，争取最好成绩",
+          "exam_focus": "策略：应试技巧"
+        },
+        {
+          "name": "常见错误避免",
+          "category": "竞赛技巧",
+          "description": "文件操作、边界条件、数据范围等常见失分点",
+          "gesp_level": 7,
+          "parent_explanation": "帮助孩子避免常见错误，减少失分",
+          "exam_focus": "技巧：防错指南"
+        }
+      ]
+    },
+    {
+      "lesson_num": 8,
+      "title": "枚举算法应用",
+      "file": "8-枚举算法应用.pptx",
+      "slides_analyzed": 95,
+      "lesson_type": "算法应用",
+      "exam_type": "复赛",
+      "knowledge_points": [
+        {
+          "name": "枚举算法优化",
+          "category": "算法技巧",
+          "description": "减少枚举范围、剪枝、选择合适枚举顺序等优化方法",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了如何让枚举算法跑得更快",
+          "exam_focus": "编程题：优化枚举策略"
+        },
+        {
+          "name": "排列枚举",
+          "category": "算法基础",
+          "description": "使用next_permutation或递归生成全排列",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了枚举所有排列的方法",
+          "exam_focus": "编程题：全排列相关问题"
+        },
+        {
+          "name": "子集枚举",
+          "category": "算法基础",
+          "description": "使用位运算或递归枚举集合的所有子集",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了枚举所有子集的方法",
+          "exam_focus": "编程题：子集枚举、状态压缩"
+        }
+      ]
+    },
+    {
+      "lesson_num": 9,
+      "title": "贪心算法应用（复赛）",
+      "file": "9-贪心算法应用（复赛）.pptx",
+      "slides_analyzed": 94,
+      "lesson_type": "算法应用",
+      "exam_type": "复赛",
+      "knowledge_points": [
+        {
+          "name": "贪心算法思想",
+          "category": "算法基础",
+          "description": "每步选择当前最优解，希望达到全局最优",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了贪心算法的核心思想",
+          "exam_focus": "编程题：贪心策略设计"
+        },
+        {
+          "name": "活动选择问题",
+          "category": "贪心算法",
+          "description": "选择最多不重叠活动，按结束时间贪心选择",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了经典的贪心活动安排问题",
+          "exam_focus": "编程题：区间调度问题"
+        },
+        {
+          "name": "区间覆盖问题",
+          "category": "贪心算法",
+          "description": "用最少的区间覆盖目标区间，贪心选择覆盖最远的",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了用贪心解决区间覆盖问题",
+          "exam_focus": "编程题：最小覆盖问题"
+        },
+        {
+          "name": "贪心正确性证明",
+          "category": "竞赛技巧",
+          "description": "交换论证、归纳法证明贪心算法的正确性",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了判断和证明贪心策略正确的方法",
+          "exam_focus": "编程题：贪心算法选择"
+        }
+      ]
+    },
+    {
+      "lesson_num": 10,
+      "title": "模拟算法应用（复赛）",
+      "file": "10-模拟算法应用（复赛）.pptx",
+      "slides_analyzed": 124,
+      "lesson_type": "算法应用",
+      "exam_type": "复赛",
+      "knowledge_points": [
+        {
+          "name": "高精度计算",
+          "category": "算法基础",
+          "description": "模拟竖式计算，处理超出内置类型范围的大整数运算",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了处理超大数字的计算方法",
+          "exam_focus": "编程题：大整数加减乘除"
+        },
+        {
+          "name": "过程模拟",
+          "category": "算法基础",
+          "description": "按照题目描述的过程一步步模拟执行",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了按步骤模拟题目过程",
+          "exam_focus": "编程题：游戏模拟、过程模拟"
+        },
+        {
+          "name": "日期计算",
+          "category": "算法应用",
+          "description": "计算日期差、星期几、闰年判断等日期相关问题",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了各种日期计算方法",
+          "exam_focus": "编程题：日期推算、星期计算"
+        }
+      ]
+    },
+    {
+      "lesson_num": 11,
+      "title": "搜索算法应用（复赛）",
+      "file": "11-搜索算法应用（复赛）.pptx",
+      "slides_analyzed": 86,
+      "lesson_type": "算法应用",
+      "exam_type": "复赛",
+      "knowledge_points": [
+        {
+          "name": "深度优先搜索（DFS）",
+          "category": "搜索算法",
+          "description": "递归深入搜索，回溯撤销选择，适用于路径、连通性问题",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了用深度优先搜索探索所有可能",
+          "exam_focus": "编程题：迷宫、连通块、全搜索"
+        },
+        {
+          "name": "广度优先搜索（BFS）",
+          "category": "搜索算法",
+          "description": "层次扩展搜索，适用于最短路径、最少步数问题",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了用广度优先搜索找最短路径",
+          "exam_focus": "编程题：最短路径、最少操作"
+        },
+        {
+          "name": "搜索剪枝优化",
+          "category": "竞赛技巧",
+          "description": "可行性剪枝、最优性剪枝、记忆化减少搜索空间",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了优化搜索速度的技巧",
+          "exam_focus": "编程题：复杂搜索优化"
+        },
+        {
+          "name": "记忆化搜索",
+          "category": "高级DP",
+          "description": "将DFS与DP结合，避免重复计算子问题",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了用记忆化提高递归效率",
+          "exam_focus": "编程题：递归优化、状态搜索"
+        }
+      ]
+    },
+    {
+      "lesson_num": 12,
+      "title": "复赛模拟比赛",
+      "file": "12-复赛模拟比赛.pptx",
+      "slides_analyzed": 44,
+      "lesson_type": "竞赛模拟",
+      "exam_type": "复赛",
+      "knowledge_points": [
+        {
+          "name": "复赛真题演练",
+          "category": "竞赛模拟",
+          "description": "模拟真实复赛环境和题目难度",
+          "gesp_level": 8,
+          "parent_explanation": "通过模拟赛检验孩子的竞赛准备情况",
+          "exam_focus": "模拟：完整复赛体验"
+        }
+      ]
+    },
+    {
+      "lesson_num": 13,
+      "title": "计算机基础知识",
+      "file": "13-计算机基础知识.pptx",
+      "slides_analyzed": 105,
+      "lesson_type": "基础知识",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "计算机组成原理",
+          "category": "基础知识",
+          "description": "CPU、内存、存储、输入输出设备等硬件组成",
+          "gesp_level": 7,
+          "parent_explanation": "孩子了解了计算机的基本组成部分",
+          "exam_focus": "选择题：硬件知识"
+        },
+        {
+          "name": "进制转换",
+          "category": "基础知识",
+          "description": "二进制、八进制、十进制、十六进制之间的相互转换",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了不同进制之间的转换方法",
+          "exam_focus": "选择题：进制转换计算"
+        },
+        {
+          "name": "数据存储单位",
+          "category": "基础知识",
+          "description": "位、字节、KB、MB、GB等存储单位及换算",
+          "gesp_level": 7,
+          "parent_explanation": "孩子了解了计算机存储数据的方式和单位",
+          "exam_focus": "选择题：存储计算"
+        },
+        {
+          "name": "网络基础",
+          "category": "基础知识",
+          "description": "IP地址、域名、协议、网络拓扑等基础概念",
+          "gesp_level": 7,
+          "parent_explanation": "孩子了解了计算机网络的基础知识",
+          "exam_focus": "选择题：网络常识"
+        }
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "title": "数据结构1（初赛）",
+      "file": "14-数据结构1（初赛）.pptx",
+      "slides_analyzed": 127,
+      "lesson_type": "数据结构",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "数组与链表",
+          "category": "数据结构",
+          "description": "数组的随机访问特性，链表的动态存储特性",
+          "gesp_level": 7,
+          "parent_explanation": "孩子理解了数组和链表的特点和适用场景",
+          "exam_focus": "选择题：数据结构特性"
+        },
+        {
+          "name": "栈（Stack）",
+          "category": "数据结构",
+          "description": "后进先出（LIFO）的线性数据结构，用于表达式求值、括号匹配等",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了栈的特性及其典型应用",
+          "exam_focus": "选择题：栈的操作和应用"
+        },
+        {
+          "name": "队列（Queue）",
+          "category": "数据结构",
+          "description": "先进先出（FIFO）的线性数据结构，用于BFS、任务调度等",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了队列的特性及其典型应用",
+          "exam_focus": "选择题：队列的操作和应用"
+        },
+        {
+          "name": "树的基本概念",
+          "category": "数据结构",
+          "description": "根、叶子、深度、高度、度等树的术语和性质",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了树结构的基本概念",
+          "exam_focus": "选择题：树的基本性质"
+        }
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "title": "数据结构2（初赛）",
+      "file": "15-数据结构2（初赛）.pptx",
+      "slides_analyzed": 78,
+      "lesson_type": "数据结构",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "二叉树",
+          "category": "数据结构",
+          "description": "每个节点最多有两个子节点的树结构",
+          "gesp_level": 7,
+          "parent_explanation": "孩子理解了二叉树的结构和特性",
+          "exam_focus": "选择题：二叉树性质"
+        },
+        {
+          "name": "二叉搜索树（BST）",
+          "category": "数据结构",
+          "description": "左子树<根<右子树的有序二叉树",
+          "gesp_level": 8,
+          "parent_explanation": "孩子了解了二叉搜索树的查找特性",
+          "exam_focus": "选择题：BST查找效率"
+        },
+        {
+          "name": "堆（Heap）",
+          "category": "数据结构",
+          "description": "完全二叉树，父节点大于/小于子节点，用于优先队列",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了堆的特性和用途",
+          "exam_focus": "选择题：堆的性质和应用"
+        },
+        {
+          "name": "图的基本概念",
+          "category": "图论",
+          "description": "顶点、边、邻接、度、路径、连通性等图论基础",
+          "gesp_level": 8,
+          "parent_explanation": "孩子了解了图结构的基本概念",
+          "exam_focus": "选择题：图的基本术语"
+        }
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "title": "数学专题1（初赛）",
+      "file": "16-数学专题1（初赛）.pptx",
+      "slides_analyzed": 79,
+      "lesson_type": "数学基础",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "整数性质",
+          "category": "数学基础",
+          "description": "奇偶性、整除性、约数、倍数等整数基本性质",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了整数的基本性质",
+          "exam_focus": "选择题：数论基础"
+        },
+        {
+          "name": "模运算",
+          "category": "数学基础",
+          "description": "取模运算的性质和计算技巧",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了模运算的基本操作",
+          "exam_focus": "选择题：模运算计算"
+        },
+        {
+          "name": "等差数列",
+          "category": "数学基础",
+          "description": "通项公式、求和公式、等差数列的性质",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了等差数列的相关公式",
+          "exam_focus": "选择题：数列计算"
+        },
+        {
+          "name": "等比数列",
+          "category": "数学基础",
+          "description": "通项公式、求和公式、等比数列的性质",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了等比数列的相关公式",
+          "exam_focus": "选择题：数列计算"
+        }
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "title": "数学专题2（初赛）",
+      "file": "17-数学专题2（初赛）.pptx",
+      "slides_analyzed": 75,
+      "lesson_type": "数学基础",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "逻辑运算",
+          "category": "数学基础",
+          "description": "与、或、非、异或等逻辑运算及真值表",
+          "gesp_level": 7,
+          "parent_explanation": "孩子理解了基本逻辑运算",
+          "exam_focus": "选择题：逻辑表达式"
+        },
+        {
+          "name": "位运算",
+          "category": "数学基础",
+          "description": "按位与、或、非、异或、移位等位运算操作",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了位运算的基本操作",
+          "exam_focus": "选择题：位运算计算"
+        },
+        {
+          "name": "概率基础",
+          "category": "数学基础",
+          "description": "概率的定义、计算方法、基本性质",
+          "gesp_level": 8,
+          "parent_explanation": "孩子了解了概率的基本概念",
+          "exam_focus": "选择题：概率计算"
+        },
+        {
+          "name": "统计基础",
+          "category": "数学基础",
+          "description": "平均数、中位数、众数、方差等统计概念",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了基本统计量的计算",
+          "exam_focus": "选择题：统计分析"
+        }
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "title": "字符串专题（初赛）",
+      "file": "18-字符串专题（初赛）.pptx",
+      "slides_analyzed": 91,
+      "lesson_type": "字符串算法",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "字符串表示",
+          "category": "字符串算法",
+          "description": "字符数组、字符串的存储和操作",
+          "gesp_level": 7,
+          "parent_explanation": "孩子理解了字符串的存储方式",
+          "exam_focus": "选择题：字符串存储"
+        },
+        {
+          "name": "字符串操作",
+          "category": "字符串算法",
+          "description": "查找、替换、截取、连接等基本操作",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了字符串的基本操作",
+          "exam_focus": "选择题：字符串处理"
+        },
+        {
+          "name": "字符串匹配",
+          "category": "字符串算法",
+          "description": "朴素匹配、KMP等字符串查找算法",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了字符串匹配算法",
+          "exam_focus": "选择题：匹配算法效率"
+        },
+        {
+          "name": "字符串哈希",
+          "category": "字符串算法",
+          "description": "将字符串映射为数字，用于快速比较",
+          "gesp_level": 8,
+          "parent_explanation": "孩子了解了字符串哈希的原理",
+          "exam_focus": "选择题：哈希应用"
+        }
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "title": "二分算法专题（初赛）",
+      "file": "19-二分算法专题（初赛）.pptx",
+      "slides_analyzed": 131,
+      "lesson_type": "算法技巧",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "二分查找",
+          "category": "算法技巧",
+          "description": "在有序序列中快速查找目标元素，时间复杂度O(log n)",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了在有序数据中快速查找的方法",
+          "exam_focus": "选择题：二分查找过程和复杂度"
+        },
+        {
+          "name": "二分答案",
+          "category": "算法技巧",
+          "description": "在答案范围内二分，验证答案可行性",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了用二分法寻找最优解",
+          "exam_focus": "选择题：二分答案思想"
+        },
+        {
+          "name": "二分查找边界处理",
+          "category": "竞赛技巧",
+          "description": "处理左边界、右边界、中间值计算等细节",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了二分查找的实现细节",
+          "exam_focus": "选择题：边界情况处理"
+        }
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "title": "排序专题（初赛）",
+      "file": "20-排序专题（初赛）.pptx",
+      "slides_analyzed": 156,
+      "lesson_type": "算法基础",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "冒泡排序",
+          "category": "算法基础",
+          "description": "相邻元素比较交换，时间复杂度O(n²)",
+          "gesp_level": 7,
+          "parent_explanation": "孩子理解了冒泡排序的原理",
+          "exam_focus": "选择题：排序过程和复杂度"
+        },
+        {
+          "name": "选择排序",
+          "category": "算法基础",
+          "description": "每次选择最小元素放到前面，时间复杂度O(n²)",
+          "gesp_level": 7,
+          "parent_explanation": "孩子理解了选择排序的原理",
+          "exam_focus": "选择题：排序过程"
+        },
+        {
+          "name": "插入排序",
+          "category": "算法基础",
+          "description": "将元素插入到已排序序列的合适位置，时间复杂度O(n²)",
+          "gesp_level": 7,
+          "parent_explanation": "孩子理解了插入排序的原理",
+          "exam_focus": "选择题：排序过程"
+        },
+        {
+          "name": "快速排序",
+          "category": "算法基础",
+          "description": "分治思想，选择基准分区排序，平均O(n log n)",
+          "gesp_level": 8,
+          "parent_explanation": "孩子理解了快速排序的分治思想",
+          "exam_focus": "选择题：快排过程和复杂度"
+        },
+        {
+          "name": "归并排序",
+          "category": "算法基础",
+          "description": "分治合并两个有序序列，时间复杂度O(n log n)",
+          "gesp_level": 8,
+          "parent_explanation": "孩子理解了归并排序的分治思想",
+          "exam_focus": "选择题：归并过程和复杂度"
+        },
+        {
+          "name": "排序算法比较",
+          "category": "算法基础",
+          "description": "各种排序算法的时间/空间复杂度、稳定性比较",
+          "gesp_level": 8,
+          "parent_explanation": "孩子能够比较不同排序算法的优劣",
+          "exam_focus": "选择题：算法选择和比较"
+        }
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "title": "递归专题（初赛）",
+      "file": "21-递归专题（初赛）.pptx",
+      "slides_analyzed": 82,
+      "lesson_type": "算法基础",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "递归思想",
+          "category": "算法基础",
+          "description": "函数调用自身，将大问题分解为相似的小问题",
+          "gesp_level": 7,
+          "parent_explanation": "孩子理解了递归的基本思想",
+          "exam_focus": "选择题：递归执行过程"
+        },
+        {
+          "name": "递归三要素",
+          "category": "算法基础",
+          "description": "递归终止条件、递归调用、返回值处理",
+          "gesp_level": 7,
+          "parent_explanation": "孩子掌握了设计递归函数的要点",
+          "exam_focus": "选择题：递归函数分析"
+        },
+        {
+          "name": "经典递归问题",
+          "category": "算法基础",
+          "description": "阶乘、斐波那契、汉诺塔等经典递归问题",
+          "gesp_level": 7,
+          "parent_explanation": "孩子学会了经典递归问题的解法",
+          "exam_focus": "选择题：递归计算"
+        },
+        {
+          "name": "递归与栈的关系",
+          "category": "算法基础",
+          "description": "理解递归调用使用系统栈保存状态",
+          "gesp_level": 8,
+          "parent_explanation": "孩子理解了递归的底层实现原理",
+          "exam_focus": "选择题：递归深度分析"
+        }
+      ]
+    },
+    {
+      "lesson_num": 22,
+      "title": "动态规划（初赛）",
+      "file": "22-动态规划（初赛）.pptx",
+      "slides_analyzed": 98,
+      "lesson_type": "动态规划",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "动态规划思想",
+          "category": "动态规划",
+          "description": "将问题分解为子问题，保存子问题解避免重复计算",
+          "gesp_level": 8,
+          "parent_explanation": "孩子理解了动态规划的核心思想",
+          "exam_focus": "选择题：DP适用条件"
+        },
+        {
+          "name": "记忆化搜索",
+          "category": "动态规划",
+          "description": "自顶向下，用数组保存已计算的子问题解",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了记忆化搜索的实现",
+          "exam_focus": "选择题：记忆化原理"
+        },
+        {
+          "name": "递推实现DP",
+          "category": "动态规划",
+          "description": "自底向上，按顺序计算所有子问题",
+          "gesp_level": 8,
+          "parent_explanation": "孩子学会了递推实现DP的方法",
+          "exam_focus": "选择题：递推过程"
+        },
+        {
+          "name": "经典DP问题",
+          "category": "动态规划",
+          "description": "斐波那契数列、爬楼梯、最长上升子序列等",
+          "gesp_level": 8,
+          "parent_explanation": "孩子掌握了经典DP问题的解法",
+          "exam_focus": "选择题：状态转移分析"
+        }
+      ]
+    },
+    {
+      "lesson_num": 23,
+      "title": "初赛模拟比赛",
+      "file": "23-初赛模拟比赛.pptx",
+      "slides_analyzed": 66,
+      "lesson_type": "竞赛模拟",
+      "exam_type": "初赛",
+      "knowledge_points": [
+        {
+          "name": "初赛真题演练",
+          "category": "竞赛模拟",
+          "description": "模拟真实初赛环境和题目类型",
+          "gesp_level": 7,
+          "parent_explanation": "通过模拟赛检验孩子对初赛知识点的掌握",
+          "exam_focus": "模拟：完整初赛体验"
+        }
+      ]
+    }
+  ],
+  "category_summary": {
+    "数学算法": {
+      "count": 4,
+      "lessons": [1, 2, 3, 16, 17],
+      "gesp_levels": [7, 8]
+    },
+    "动态规划": {
+      "count": 3,
+      "lessons": [4, 5, 22],
+      "gesp_levels": [8]
+    },
+    "数据结构": {
+      "count": 2,
+      "lessons": [14, 15],
+      "gesp_levels": [7, 8]
+    },
+    "算法基础": {
+      "count": 4,
+      "lessons": [8, 20, 21, 9, 10],
+      "gesp_levels": [7, 8]
+    },
+    "搜索算法": {
+      "count": 1,
+      "lessons": [11],
+      "gesp_levels": [7, 8]
+    },
+    "字符串算法": {
+      "count": 1,
+      "lessons": [18],
+      "gesp_levels": [7, 8]
+    },
+    "基础知识": {
+      "count": 1,
+      "lessons": [13],
+      "gesp_levels": [7]
+    },
+    "竞赛技巧": {
+      "count": 1,
+      "lessons": [7],
+      "gesp_levels": [7, 8]
+    }
+  },
+  "gesp_level_distribution": {
+    "level_7": {
+      "topics": ["排列组合基础", "埃氏筛法", "数据结构基础", "基础算法", "初赛知识点"],
+      "lesson_count": 15
+    },
+    "level_8": {
+      "topics": ["高级排列组合", "欧拉筛法", "区间DP", "搜索优化", "高级数据结构"],
+      "lesson_count": 12
+    }
+  }
+}

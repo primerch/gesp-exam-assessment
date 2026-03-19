@@ -1,0 +1,879 @@
+{
+  "gesp_cpp": {
+    "meta": {
+      "name": "CCF GESP C++编程能力等级认证大纲",
+      "version": "2024",
+      "standard": "C++11",
+      "total_levels": 8,
+      "exam_format": {
+        "choice_questions": "15道（2分/道）",
+        "judgment_questions": "10道（2分/道）",
+        "programming_questions": "2道（25分/道）"
+      }
+    },
+    "level1": {
+      "name": "编程基础",
+      "description": "计算机基础、变量、数据类型、输入输出、基本运算",
+      "total_points": 12,
+      "exam_duration": "120分钟",
+      "points": [
+        {
+          "id": "l1_computer_basic",
+          "name": "计算机基础知识",
+          "description": "计算机的软硬件组成（CPU、内存、I/O设备等）、常见操作系统（Windows、Linux）基本概念和操作、计算机发展历程",
+          "category": "计算机基础",
+          "weight": 0.8,
+          "exam_format": "选择题、判断题"
+        },
+        {
+          "id": "l1_ide",
+          "name": "集成开发环境使用",
+          "description": "熟悉Dev C++等IDE：创建文件、编辑文件、保存文件、编译、解释、调试",
+          "category": "开发环境",
+          "weight": 0.8,
+          "exam_format": "选择题、判断题、编程题"
+        },
+        {
+          "id": "l1_io",
+          "name": "输入输出语句",
+          "description": "掌握cin、scanf、cout、printf语句的使用，理解输入输出流的概念",
+          "category": "基础语法",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l1_identifier",
+          "name": "标识符与关键字",
+          "description": "掌握标识符的命名规则、关键字的概念、常量与变量的区别",
+          "category": "基础语法",
+          "weight": 0.8,
+          "exam_format": "选择题、判断题"
+        },
+        {
+          "id": "l1_variable",
+          "name": "变量定义与使用",
+          "description": "变量的定义、初始化、赋值；理解变量的作用；掌握自增(++)和自减(--)运算",
+          "category": "基础语法",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l1_datatype",
+          "name": "基本数据类型",
+          "description": "整型(int, long long)、实数型(float, double)、字符型(char)、布尔型(bool)的定义和使用",
+          "category": "基础语法",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l1_arithmetic",
+          "name": "算术运算",
+          "description": "加(+)、减(-)、乘(*)、除(/)、整除、求余(%)运算",
+          "category": "运算符",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l1_logic",
+          "name": "逻辑运算",
+          "description": "逻辑与(&&)、逻辑或(||)、逻辑非(!)的概念和应用",
+          "category": "运算符",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l1_relation",
+          "name": "关系运算",
+          "description": "大于(>)、大于等于(>=)、小于(<)、小于等于(<=)、等于(==)、不等于(!=)",
+          "category": "运算符",
+          "weight": 0.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l1_ternary",
+          "name": "三目运算",
+          "description": "条件表达式 ? 值1 : 值2 的基本使用",
+          "category": "运算符",
+          "weight": 0.8,
+          "exam_format": "选择题、编程题"
+        },
+        {
+          "id": "l1_sequence",
+          "name": "顺序结构",
+          "description": "程序按语句顺序执行的结构",
+          "category": "程序结构",
+          "weight": 0.8,
+          "exam_format": "编程题"
+        },
+        {
+          "id": "l1_branch",
+          "name": "分支结构",
+          "description": "if语句、if-else语句、switch语句的使用",
+          "category": "程序结构",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l1_loop",
+          "name": "循环结构",
+          "description": "for循环、while循环、do-while循环的使用；continue和break语句的应用",
+          "category": "程序结构",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l1_comment",
+          "name": "程序注释与调试",
+          "description": "单行注释(//)、多行注释(/* */)的使用；程序调试的基本概念",
+          "category": "程序规范",
+          "weight": 0.5,
+          "exam_format": "判断题"
+        }
+      ]
+    },
+    "level2": {
+      "name": "程序设计",
+      "description": "流程图、ASCII编码、类型转换、多层分支循环、数学函数",
+      "total_points": 14,
+      "exam_duration": "120分钟",
+      "points": [
+        {
+          "id": "l2_storage",
+          "name": "计算机存储",
+          "description": "ROM、RAM、Cache的功能及区别；存储器分类",
+          "category": "计算机基础",
+          "weight": 0.8,
+          "exam_format": "选择题、判断题"
+        },
+        {
+          "id": "l2_network",
+          "name": "计算机网络基础",
+          "description": "网络分类（WAN、MAN、LAN）、TCP/IP四层模型与OSI七层模型、IP地址及子网划分",
+          "category": "计算机基础",
+          "weight": 0.8,
+          "exam_format": "选择题、判断题"
+        },
+        {
+          "id": "l2_language",
+          "name": "程序设计语言",
+          "description": "机器语言、汇编语言、高级语言的分类及特点；常见高级语言(C++、Python等)",
+          "category": "计算机基础",
+          "weight": 0.6,
+          "exam_format": "选择题、判断题"
+        },
+        {
+          "id": "l2_flowchart",
+          "name": "流程图",
+          "description": "流程图的概念、基本符号、绘制方法；用流程图描述顺序、分支、循环三种基本结构",
+          "category": "算法描述",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题"
+        },
+        {
+          "id": "l2_ascii",
+          "name": "ASCII编码",
+          "description": "ASCII编码原理；常用字符ASCII码：空格(32)、'0'(48)、'A'(65)、'a'(97)；字符与ASCII码转换",
+          "category": "数据编码",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l2_typecast",
+          "name": "数据类型转换",
+          "description": "强制类型转换和隐式类型转换的概念与应用",
+          "category": "基础语法",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l2_multi_branch",
+          "name": "多层分支结构",
+          "description": "if语句、if-else语句、switch语句的嵌套使用",
+          "category": "程序结构",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l2_multi_loop",
+          "name": "多层循环结构",
+          "description": "for、while、do-while循环的嵌套；循环与分支的嵌套",
+          "category": "程序结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l2_abs",
+          "name": "绝对值函数",
+          "description": "abs()函数的使用，返回整数的绝对值",
+          "category": "数学函数",
+          "weight": 0.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l2_sqrt",
+          "name": "平方根函数",
+          "description": "sqrt()函数的使用，计算非负实数的平方根",
+          "category": "数学函数",
+          "weight": 0.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l2_maxmin",
+          "name": "最大值最小值函数",
+          "description": "max()和min()函数的使用，比较两个值的大小",
+          "category": "数学函数",
+          "weight": 0.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l2_random",
+          "name": "随机数函数",
+          "description": "rand()和srand()函数的使用，生成随机数",
+          "category": "数学函数",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        }
+      ]
+    },
+    "level3": {
+      "name": "算法基础",
+      "description": "进制转换、位运算、数组、字符串、枚举模拟",
+      "total_points": 12,
+      "exam_duration": "120分钟",
+      "points": [
+        {
+          "id": "l3_encoding",
+          "name": "数据编码",
+          "description": "原码、反码、补码的概念与表示方法",
+          "category": "数据编码",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题"
+        },
+        {
+          "id": "l3_base_conversion",
+          "name": "进制转换",
+          "description": "二进制、八进制、十进制、十六进制之间的相互转换",
+          "category": "数据编码",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_bitwise_and",
+          "name": "位运算-与",
+          "description": "按位与(&)运算的原理和应用",
+          "category": "位运算",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_bitwise_or",
+          "name": "位运算-或",
+          "description": "按位或(|)运算的原理和应用",
+          "category": "位运算",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_bitwise_not",
+          "name": "位运算-非",
+          "description": "按位取反(~)运算的原理和应用",
+          "category": "位运算",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_bitwise_xor",
+          "name": "位运算-异或",
+          "description": "按位异或(^)运算的原理和应用",
+          "category": "位运算",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_bitwise_shift",
+          "name": "位运算-移位",
+          "description": "左移(<<)和右移(>>)运算的原理和应用",
+          "category": "位运算",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_algorithm_desc",
+          "name": "算法描述",
+          "description": "使用自然语言、流程图、伪代码描述算法",
+          "category": "算法基础",
+          "weight": 0.8,
+          "exam_format": "选择题、填空题"
+        },
+        {
+          "id": "l3_array",
+          "name": "一维数组",
+          "description": "C++一维数组的定义、初始化、访问；不包括变长数组",
+          "category": "数据结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_string",
+          "name": "字符串及其函数",
+          "description": "string类型的使用；大小写转换、字符串搜索、分割、替换等操作",
+          "category": "数据结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_enum",
+          "name": "枚举算法",
+          "description": "枚举法的原理、特点；使用枚举法解决实际问题",
+          "category": "算法",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l3_simulation",
+          "name": "模拟算法",
+          "description": "模拟法的原理、特点；使用模拟法解决实际问题",
+          "category": "算法",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        }
+      ]
+    },
+    "level4": {
+      "name": "数据结构",
+      "description": "函数、指针、结构体、二维数组、排序、文件",
+      "total_points": 14,
+      "exam_duration": "120分钟",
+      "points": [
+        {
+          "id": "l4_pointer",
+          "name": "指针基础",
+          "description": "指针类型的概念；指针变量的定义、赋值、解引用(*)操作",
+          "category": "指针",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_2d_array",
+          "name": "二维及多维数组",
+          "description": "C++二维及多维数组的定义、初始化、访问；不包括变长数组",
+          "category": "数据结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_struct",
+          "name": "结构体",
+          "description": "结构体的定义和使用、结构体数组、结构体指针、结构体嵌套、结构体作函数参数、const使用",
+          "category": "数据结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_function_def",
+          "name": "函数定义与调用",
+          "description": "函数的声明、定义及调用；不包含匿名函数、类的括号运算符重载",
+          "category": "函数",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_parameter",
+          "name": "形参与实参",
+          "description": "形参和实参的概念及区别；函数参数传递方式：值传递、引用传递、指针传递",
+          "category": "函数",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_scope",
+          "name": "变量作用域",
+          "description": "全局变量与局部变量的概念、区别、作用范围",
+          "category": "函数",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_recurrence",
+          "name": "递推算法",
+          "description": "递推算法基本思想、递推关系式的推导、递推问题求解",
+          "category": "算法",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_sort_concept",
+          "name": "排序概念",
+          "description": "排序算法的概念；内排序和外排序的区别；排序算法的时间复杂度、空间复杂度、稳定性",
+          "category": "算法",
+          "weight": 1.0,
+          "exam_format": "选择题、判断题"
+        },
+        {
+          "id": "l4_bubble_sort",
+          "name": "冒泡排序",
+          "description": "冒泡排序的算法思想、排序步骤及代码实现",
+          "category": "算法",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_insertion_sort",
+          "name": "插入排序",
+          "description": "插入排序的算法思想、排序步骤及代码实现",
+          "category": "算法",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_selection_sort",
+          "name": "选择排序",
+          "description": "选择排序的算法思想、排序步骤及代码实现",
+          "category": "算法",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_complexity",
+          "name": "算法复杂度估算",
+          "description": "简单算法复杂度的估算，含多项式、指数复杂度",
+          "category": "算法",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题"
+        },
+        {
+          "id": "l4_file_io",
+          "name": "文件操作",
+          "description": "文件重定向；文件的读操作、写操作、读写操作；文本文件分类",
+          "category": "文件操作",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l4_exception",
+          "name": "异常处理",
+          "description": "异常处理机制；常用异常处理方法",
+          "category": "程序规范",
+          "weight": 0.8,
+          "exam_format": "选择题、判断题"
+        }
+      ]
+    },
+    "level5": {
+      "name": "高级算法",
+      "description": "数论、高精度、链表、二分、递归、分治、贪心",
+      "total_points": 12,
+      "exam_duration": "180分钟",
+      "points": [
+        {
+          "id": "l5_number_theory",
+          "name": "初等数论基础",
+          "description": "素数与合数、最大公约数与最小公倍数、同余与模运算、约数与倍数、质因数分解、奇偶性",
+          "category": "数论",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_gcd",
+          "name": "辗转相除法(欧几里得算法)",
+          "description": "欧几里得算法的原理和应用，求解最大公约数",
+          "category": "数论",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_prime_sieve",
+          "name": "素数筛法",
+          "description": "埃氏筛法和线性筛法的原理和应用，生成素数表",
+          "category": "数论",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_unique_factorization",
+          "name": "唯一分解定理",
+          "description": "唯一分解定理(算术基本定理)的原理和应用",
+          "category": "数论",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_complexity",
+          "name": "算法复杂度估算(高级)",
+          "description": "含多项式、对数的算法复杂度分析",
+          "category": "算法",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题"
+        },
+        {
+          "id": "l5_high_precision",
+          "name": "高精度运算",
+          "description": "使用C++数组模拟高精度加法、减法、乘法、除法运算",
+          "category": "算法",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_linked_list",
+          "name": "链表",
+          "description": "单链表、双链表、循环链表的创建、插入、删除、遍历、查找、反转操作",
+          "category": "数据结构",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_binary_search",
+          "name": "二分查找",
+          "description": "二分查找算法的原理和应用，在有序数组中快速定位目标值",
+          "category": "算法",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_binary_answer",
+          "name": "二分答案",
+          "description": "二分答案(二分枚举法)的基本原理和应用",
+          "category": "算法",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_recursion",
+          "name": "递归算法",
+          "description": "递归算法的概念、时间复杂度和空间复杂度分析、递归优化策略",
+          "category": "算法",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_divide_conquer",
+          "name": "分治算法",
+          "description": "分治算法思想；归并排序和快速排序的实现",
+          "category": "算法",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l5_greedy",
+          "name": "贪心算法",
+          "description": "贪心算法的基本原理、最优子结构概念；使用贪心算法解决问题",
+          "category": "算法",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        }
+      ]
+    },
+    "level6": {
+      "name": "搜索与DP",
+      "description": "树、搜索算法、简单DP、面向对象、栈队列",
+      "total_points": 12,
+      "exam_duration": "180分钟",
+      "points": [
+        {
+          "id": "l6_tree_basic",
+          "name": "树的基本概念",
+          "description": "树的定义、基本术语、树的表示方法；树的构造与遍历算法",
+          "category": "数据结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_huffman_tree",
+          "name": "哈夫曼树",
+          "description": "哈夫曼树的定义、构造方法、应用场景",
+          "category": "数据结构",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_complete_binary_tree",
+          "name": "完全二叉树",
+          "description": "完全二叉树的定义、性质、判断方法",
+          "category": "数据结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_bst",
+          "name": "二叉排序树",
+          "description": "二叉排序树(BST)的定义、性质、基本操作",
+          "category": "数据结构",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_huffman_code",
+          "name": "哈夫曼编码",
+          "description": "哈夫曼编码的原理、构造方法、应用",
+          "category": "编码",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_gray_code",
+          "name": "格雷编码",
+          "description": "格雷编码的原理和简单应用",
+          "category": "编码",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题"
+        },
+        {
+          "id": "l6_dfs",
+          "name": "深度优先搜索(DFS)",
+          "description": "DFS算法的概念、实现方法、应用场景",
+          "category": "搜索算法",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_bfs",
+          "name": "广度优先搜索(BFS)",
+          "description": "BFS算法(宽度优先搜索)的概念、实现方法、应用场景",
+          "category": "搜索算法",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_tree_search",
+          "name": "二叉树搜索算法",
+          "description": "二叉树的各种搜索遍历算法",
+          "category": "搜索算法",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_dp_1d",
+          "name": "一维动态规划",
+          "description": "简单动态规划思想；一维DP问题的分析和求解",
+          "category": "动态规划",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_knapsack",
+          "name": "简单背包问题",
+          "description": "简单背包问题的DP解法",
+          "category": "动态规划",
+          "weight": 2.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_oop",
+          "name": "面向对象",
+          "description": "面向对象思想；封装、继承、多态的概念；类的创建和基本使用",
+          "category": "面向对象",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_stack",
+          "name": "栈",
+          "description": "栈的定义、应用场景、常见操作（压栈、弹栈）",
+          "category": "数据结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l6_queue",
+          "name": "队列",
+          "description": "队列和循环队列的定义、应用场景、常见操作（入队、出队）",
+          "category": "数据结构",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        }
+      ]
+    },
+    "level7": {
+      "name": "图论与DP",
+      "description": "数学库、复杂DP、图论、哈希表",
+      "total_points": 11,
+      "exam_duration": "180分钟",
+      "points": [
+        {
+          "id": "l7_math_trig",
+          "name": "三角函数",
+          "description": "sin(x)、cos(x)等三角函数的使用",
+          "category": "数学库",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_math_log",
+          "name": "对数函数",
+          "description": "log10(x)以10为底、log2(x)以2为底的对数函数",
+          "category": "数学库",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_math_exp",
+          "name": "指数函数",
+          "description": "exp(x)计算e的x次方",
+          "category": "数学库",
+          "weight": 1.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_dp_2d",
+          "name": "二维动态规划",
+          "description": "二维DP问题的分析和求解",
+          "category": "动态规划",
+          "weight": 2.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_dp_optimization",
+          "name": "动态规划最值优化",
+          "description": "区间DP；最长上升子序列(LIS)；最长公共子序列(LCS)；滚动数组优化空间复杂度",
+          "category": "动态规划",
+          "weight": 2.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_graph_def",
+          "name": "图的定义",
+          "description": "图的定义、种类(有向图、无向图)、节点的度；图的存储表示方法",
+          "category": "图论",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_graph_dfs",
+          "name": "图的深度优先遍历",
+          "description": "基于DFS的图遍历算法",
+          "category": "图论",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_graph_bfs",
+          "name": "图的广度优先遍历",
+          "description": "基于BFS的图遍历算法",
+          "category": "图论",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_flood_fill",
+          "name": "泛洪算法",
+          "description": "flood fill算法的原理和应用",
+          "category": "图论",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l7_hash_table",
+          "name": "哈希表",
+          "description": "哈希表的概念、原理、实现方法及应用",
+          "category": "数据结构",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        }
+      ]
+    },
+    "level8": {
+      "name": "综合应用",
+      "description": "排列组合、图论算法、算法优化",
+      "total_points": 13,
+      "exam_duration": "180分钟",
+      "points": [
+        {
+          "id": "l8_counting",
+          "name": "计数原理",
+          "description": "加法原理和乘法原理的概念、区别与应用",
+          "category": "组合数学",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_permutation",
+          "name": "排列",
+          "description": "排列的基本概念、计算方法、编程实现",
+          "category": "组合数学",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_combination",
+          "name": "组合",
+          "description": "组合的基本概念、计算方法、编程实现",
+          "category": "组合数学",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_pascal",
+          "name": "杨辉三角",
+          "description": "杨辉三角形(帕斯卡三角形)的定义、实现、与组合数的关系",
+          "category": "组合数学",
+          "weight": 1.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_doubling",
+          "name": "倍增法",
+          "description": "倍增法的概念、时间复杂度、应用场景",
+          "category": "算法",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_equation",
+          "name": "代数基础",
+          "description": "一元一次方程、二元一次方程的基本求解技巧",
+          "category": "数学基础",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_geometry",
+          "name": "平面几何",
+          "description": "基础平面几何概念；长方形、三角形、圆形等基本图形面积计算",
+          "category": "数学基础",
+          "weight": 1.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_mst",
+          "name": "最小生成树",
+          "description": "最小生成树概念；kruskal算法、prim算法的原理和实现",
+          "category": "图论算法",
+          "weight": 2.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_shortest_path",
+          "name": "最短路径",
+          "description": "最短路径概念；dijkstra算法、Floyd算法的原理和实现",
+          "category": "图论算法",
+          "weight": 2.5,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_graph_application",
+          "name": "图论算法综合应用",
+          "description": "不同图论算法的比较、选择、综合问题解决技巧",
+          "category": "图论算法",
+          "weight": 2.2,
+          "exam_format": "选择题、填空题、编程题"
+        },
+        {
+          "id": "l8_complexity_analysis",
+          "name": "算法复杂度分析",
+          "description": "复杂算法的时间和空间复杂度分析方法；各类算法(排序、查找、树图遍历、搜索、分治、DP)的复杂度分析",
+          "category": "算法分析",
+          "weight": 1.8,
+          "exam_format": "选择题、填空题"
+        },
+        {
+          "id": "l8_optimization",
+          "name": "算法优化",
+          "description": "不同方法求解问题在时空复杂度上的差异分析；使用数学知识辅助求解问题的技巧(如等差等比数列求和公式)；一般算法优化技巧",
+          "category": "算法优化",
+          "weight": 2.0,
+          "exam_format": "选择题、填空题、编程题"
+        }
+      ]
+    }
+  }
+}

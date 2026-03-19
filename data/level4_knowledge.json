@@ -1,0 +1,268 @@
+{
+  "level": 4,
+  "total_lessons": 23,
+  "lessons": [
+    {
+      "lesson_num": 1,
+      "filename": "1-排列组合1.pptx",
+      "title": "排列组合1",
+      "knowledge_points": [
+        "乘法原理",
+        "加法原理",
+        "排列数计算",
+        "全排列"
+      ]
+    },
+    {
+      "lesson_num": 2,
+      "filename": "2-排列组合2.pptx",
+      "title": "排列组合2",
+      "knowledge_points": [
+        "组合性质",
+        "二项式定理",
+        "组合数计算",
+        "杨辉三角"
+      ]
+    },
+    {
+      "lesson_num": 3,
+      "filename": "3-质数筛法.pptx",
+      "title": "质数筛法",
+      "knowledge_points": [
+        "埃氏筛",
+        "欧拉筛",
+        "质数判断",
+        "线性筛"
+      ]
+    },
+    {
+      "lesson_num": 4,
+      "filename": "4-区间动态规划1.pptx",
+      "title": "区间动态规划1",
+      "knowledge_points": [
+        "状态定义",
+        "区间DP概念",
+        "石子合并问题",
+        "状态转移"
+      ]
+    },
+    {
+      "lesson_num": 5,
+      "filename": "5-区间动态规划2.pptx",
+      "title": "区间动态规划2",
+      "knowledge_points": [
+        "区间DP优化",
+        "矩阵链乘",
+        "最优解构造",
+        "四边形不等式"
+      ]
+    },
+    {
+      "lesson_num": 6,
+      "filename": "6-阶段测试.pptx",
+      "title": "阶段测试",
+      "knowledge_points": [
+        "知识复习",
+        "综合练习",
+        "阶段测试"
+      ]
+    },
+    {
+      "lesson_num": 7,
+      "filename": "7-参赛相关.pptx",
+      "title": "参赛相关",
+      "knowledge_points": [
+        "参赛准备",
+        "比赛规则",
+        "考试技巧",
+        "注意事项"
+      ]
+    },
+    {
+      "lesson_num": 8,
+      "filename": "8-枚举算法应用.pptx",
+      "title": "枚举算法应用",
+      "knowledge_points": [
+        "子集枚举",
+        "复杂度分析",
+        "枚举思想",
+        "全排列枚举"
+      ]
+    },
+    {
+      "lesson_num": 9,
+      "filename": "9-贪心算法应用（复赛）.pptx",
+      "title": "贪心算法应用（复赛）",
+      "knowledge_points": [
+        "最优子结构",
+        "正确性证明",
+        "贪心思想",
+        "活动安排问题"
+      ]
+    },
+    {
+      "lesson_num": 10,
+      "filename": "10-模拟算法应用（复赛）.pptx",
+      "title": "模拟算法应用（复赛）",
+      "knowledge_points": [
+        "大数模拟",
+        "边界处理",
+        "过程模拟",
+        "模拟思想"
+      ]
+    },
+    {
+      "lesson_num": 11,
+      "filename": "11-搜索算法应用（复赛）.pptx",
+      "title": "搜索算法应用（复赛）",
+      "knowledge_points": [
+        "搜索优化",
+        "DFS",
+        "BFS",
+        "回溯法",
+        "剪枝技巧"
+      ]
+    },
+    {
+      "lesson_num": 12,
+      "filename": "12-复赛模拟比赛.pptx",
+      "title": "复赛模拟比赛",
+      "knowledge_points": [
+        "实战训练",
+        "真题练习",
+        "复赛模拟"
+      ]
+    },
+    {
+      "lesson_num": 13,
+      "filename": "13-计算机基础知识.pptx",
+      "title": "计算机基础知识",
+      "knowledge_points": [
+        "计算机组成",
+        "网络基础",
+        "进制转换",
+        "存储单位",
+        "操作系统基础"
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "filename": "14-数据结构1（初赛）.pptx",
+      "title": "数据结构1（初赛）",
+      "knowledge_points": [
+        "数组",
+        "线性表操作",
+        "队列",
+        "栈",
+        "链表"
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "filename": "15-数据结构2（初赛）.pptx",
+      "title": "数据结构2（初赛）",
+      "knowledge_points": [
+        "堆",
+        "图的概念",
+        "邻接表",
+        "树的遍历",
+        "二叉树"
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "filename": "16-数学专题1（初赛）.pptx",
+      "title": "数学专题1（初赛）",
+      "knowledge_points": [
+        "GCD",
+        "素数性质",
+        "LCM",
+        "同余方程",
+        "欧几里得算法"
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "filename": "17-数学专题2（初赛）.pptx",
+      "title": "数学专题2（初赛）",
+      "knowledge_points": [
+        "高精度计算",
+        "组合计数",
+        "矩阵快速幂",
+        "快速幂"
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "filename": "18-字符串专题（初赛）.pptx",
+      "title": "字符串专题（初赛）",
+      "knowledge_points": [
+        "字符串操作",
+        "字符串哈希",
+        "字符串匹配",
+        "KMP算法"
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "filename": "19-二分算法专题（初赛）.pptx",
+      "title": "二分算法专题（初赛）",
+      "knowledge_points": [
+        "二分答案",
+        "二分查找",
+        "浮点二分",
+        "单调性分析"
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "filename": "20-排序专题（初赛）.pptx",
+      "title": "排序专题（初赛）",
+      "knowledge_points": [
+        "归并排序",
+        "桶排序",
+        "选择排序",
+        "插入排序",
+        "快速排序",
+        "冒泡排序",
+        "排序稳定性"
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "filename": "21-递归专题（初赛）.pptx",
+      "title": "递归专题（初赛）",
+      "knowledge_points": [
+        "递归树",
+        "递归思想",
+        "归并排序递归",
+        "分治法",
+        "递归与递推"
+      ]
+    },
+    {
+      "lesson_num": 22,
+      "filename": "22-动态规划（初赛）.pptx",
+      "title": "动态规划（初赛）",
+      "knowledge_points": [
+        "多重背包",
+        "01背包",
+        "DP基础",
+        "状态设计",
+        "背包问题",
+        "完全背包"
+      ]
+    },
+    {
+      "lesson_num": 23,
+      "filename": "23-初赛模拟比赛.pptx",
+      "title": "初赛模拟比赛",
+      "knowledge_points": [
+        "选择题练习",
+        "初赛模拟",
+        "填空题练习",
+        "知识综合"
+      ]
+    }
+  ]
+}

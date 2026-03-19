@@ -1,0 +1,553 @@
+{
+  "level": 2,
+  "total_lessons": 24,
+  "description": "GESP Level 2 算法进阶课程，涵盖枚举、递推、前缀和、二分、贪心、高精度运算、栈队列、链表、递归、深搜广搜、树、图等核心算法与数据结构",
+  "gesp_target": "对应GESP 3-4级考试内容",
+  "lessons": [
+    {
+      "lesson_num": 1,
+      "title": "枚举算法",
+      "slides_analyzed": 70,
+      "knowledge_points": [
+        {
+          "name": "枚举算法概念",
+          "category": "算法",
+          "description": "穷举所有可能解，逐一验证的算法思想。适用于有明确范围的问题",
+          "gesp_level": 3,
+          "parent_explanation": "孩子学会了用'笨办法'解决复杂问题，一个一个试过去",
+          "exam_focus": "编程题：用枚举解决水仙花数、四叶玫瑰数等数字问题"
+        },
+        {
+          "name": "水仙花数",
+          "category": "数学应用",
+          "description": "三位整数，各位数字立方和等于该数本身。如153=1³+5³+3³",
+          "gesp_level": 3,
+          "code_key": "数字拆分：百位=n/100，十位=n/10%10，个位=n%10"
+        },
+        {
+          "name": "枚举优化技巧",
+          "category": "算法优化",
+          "description": "减少循环次数、减少嵌套层数。如百钱买百鸡从三重循环优化到双重循环",
+          "gesp_level": 4,
+          "parent_explanation": "教孩子学会用数学思维减少不必要的计算"
+        }
+      ]
+    },
+    {
+      "lesson_num": 2,
+      "title": "递推算法",
+      "slides_analyzed": 77,
+      "knowledge_points": [
+        {
+          "name": "递推算法概念",
+          "category": "算法",
+          "description": "从已知初始条件出发，依据递推关系推出结果的算法",
+          "gesp_level": 3,
+          "parent_explanation": "像多米诺骨牌一样，前面倒了后面跟着倒"
+        },
+        {
+          "name": "顺推与逆推",
+          "category": "算法",
+          "description": "顺推：从开始推导到结束；逆推：从结束推导到开始",
+          "gesp_level": 3,
+          "examples": ["顺推：种树问题", "逆推：猴子分桃问题"]
+        },
+        {
+          "name": "斐波那契数列",
+          "category": "数学应用",
+          "description": "1,1,2,3,5,8,13...从第三项开始每项等于前两项之和",
+          "gesp_level": 3,
+          "applications": ["兔子繁殖", "台阶问题", "铺瓷砖问题"],
+          "code_template": "a[i]=a[i-1]+a[i-2]"
+        }
+      ]
+    },
+    {
+      "lesson_num": 3,
+      "title": "前缀和与差分",
+      "slides_analyzed": 81,
+      "knowledge_points": [
+        {
+          "name": "前缀和概念",
+          "category": "数据结构",
+          "description": "前n项的和。用于快速计算区间和",
+          "gesp_level": 4,
+          "formula": "s[i]=s[i-1]+a[i]",
+          "advantage": "O(1)时间计算任意区间和"
+        },
+        {
+          "name": "区间和计算",
+          "category": "算法应用",
+          "description": "利用前缀和数组快速计算[L,R]区间的和",
+          "gesp_level": 4,
+          "formula": "sum(L,R)=s[R]-s[L-1]"
+        },
+        {
+          "name": "差分数组",
+          "category": "数据结构",
+          "description": "存储相邻元素的差值，用于区间修改",
+          "gesp_level": 4,
+          "property": "对差分数组求前缀和得到原数组"
+        }
+      ]
+    },
+    {
+      "lesson_num": 4,
+      "title": "二分算法",
+      "slides_analyzed": 67,
+      "knowledge_points": [
+        {
+          "name": "二分算法概念",
+          "category": "算法",
+          "description": "每次将数据一分为二，筛除不合理的一半，直到找到答案",
+          "gesp_level": 4,
+          "parent_explanation": "像猜数字游戏，每次都排除一半可能性",
+          "time_complexity": "O(logN)"
+        },
+        {
+          "name": "二分三要素",
+          "category": "算法",
+          "description": "最小值L、中间值mid、最大值R",
+          "gesp_level": 4,
+          "mid_formula": "mid=(L+R)/2 或 mid=(L+R+1)/2"
+        },
+        {
+          "name": "二分查找实现",
+          "category": "代码实现",
+          "description": "while循环配合条件判断，不断更新边界",
+          "gesp_level": 4,
+          "code_template": "while(L<=R){mid=(L+R)/2;...}"
+        }
+      ]
+    },
+    {
+      "lesson_num": 5,
+      "title": "贪心算法",
+      "slides_analyzed": 57,
+      "knowledge_points": [
+        {
+          "name": "贪心算法概念",
+          "category": "算法",
+          "description": "通过局部最优解逐步推导出全局最优解",
+          "gesp_level": 4,
+          "parent_explanation": "每次做当下最好的选择，期望最终结果是最好的"
+        },
+        {
+          "name": "贪心题型分类",
+          "category": "算法应用",
+          "description": "选择类、最优装载、部分背包、分组乘船、排队等待、区间问题",
+          "gesp_level": 4,
+          "examples": {
+            "选择类": "每堆选最重",
+            "最优装载": "每次选最轻",
+            "部分背包": "每次选单价最贵"
+          }
+        }
+      ]
+    },
+    {
+      "lesson_num": 6,
+      "title": "阶段复习与测试",
+      "slides_analyzed": 46,
+      "knowledge_points": [
+        {
+          "name": "Level 2前半程复习",
+          "category": "复习",
+          "description": "枚举、递推、前缀和、二分、贪心算法综合复习",
+          "gesp_level": 3
+        }
+      ]
+    },
+    {
+      "lesson_num": 7,
+      "title": "大整数加法",
+      "slides_analyzed": 87,
+      "knowledge_points": [
+        {
+          "name": "高精度数概念",
+          "category": "数据结构",
+          "description": "超过19位(long long范围)的整数，需要用数组存储",
+          "gesp_level": 4,
+          "storage": "字符串输入，逆序存数组"
+        },
+        {
+          "name": "大整数加法",
+          "category": "算法",
+          "description": "模拟竖式加法，处理进位",
+          "gesp_level": 4,
+          "steps": ["字符串输入", "转换逆序存数组", "按位相加", "处理进位", "逆序输出"]
+        }
+      ]
+    },
+    {
+      "lesson_num": 8,
+      "title": "大整数减法",
+      "slides_analyzed": 62,
+      "knowledge_points": [
+        {
+          "name": "大整数减法",
+          "category": "算法",
+          "description": "模拟竖式减法，处理借位和前导零",
+          "gesp_level": 4,
+          "key_points": ["被减数小于减数要交换", "处理借位", "去除前导零"]
+        }
+      ]
+    },
+    {
+      "lesson_num": 9,
+      "title": "大整数乘法",
+      "slides_analyzed": 63,
+      "knowledge_points": [
+        {
+          "name": "大整数乘法",
+          "category": "算法",
+          "description": "模拟竖式乘法，双重循环处理错位和进位",
+          "gesp_level": 4,
+          "code_key": "c1[j+i]=c1[j+i]+a1[j]*b1[i]+x"
+        },
+        {
+          "name": "大整数乘小整数",
+          "category": "算法优化",
+          "description": "简化版乘法，数组元素依次乘以变量",
+          "gesp_level": 4,
+          "application": "阶乘计算"
+        }
+      ]
+    },
+    {
+      "lesson_num": 10,
+      "title": "栈",
+      "slides_analyzed": 57,
+      "knowledge_points": [
+        {
+          "name": "栈的概念",
+          "category": "数据结构",
+          "description": "后进先出(LIFO)的线性数据结构",
+          "gesp_level": 3,
+          "parent_explanation": "像一叠盘子，最后放的先拿"
+        },
+        {
+          "name": "栈的基本操作",
+          "category": "数据结构",
+          "description": "push(入栈)、pop(出栈)、top(取栈顶)",
+          "gesp_level": 3
+        },
+        {
+          "name": "栈的应用",
+          "category": "算法应用",
+          "description": "括号匹配、表达式求值、递归模拟",
+          "gesp_level": 4
+        }
+      ]
+    },
+    {
+      "lesson_num": 11,
+      "title": "队列",
+      "slides_analyzed": 54,
+      "knowledge_points": [
+        {
+          "name": "队列的概念",
+          "category": "数据结构",
+          "description": "先进先出(FIFO)的线性数据结构",
+          "gesp_level": 3,
+          "parent_explanation": "像排队买东西，先排的先服务"
+        },
+        {
+          "name": "队列的基本操作",
+          "category": "数据结构",
+          "description": "push(入队)、pop(出队)、front(取队首)",
+          "gesp_level": 3
+        }
+      ]
+    },
+    {
+      "lesson_num": 12,
+      "title": "STL入门",
+      "slides_analyzed": 54,
+      "knowledge_points": [
+        {
+          "name": "STL容器",
+          "category": "C++特性",
+          "description": "标准模板库提供的现成数据结构",
+          "gesp_level": 4,
+          "containers": ["stack", "queue", "vector", "map", "set"]
+        }
+      ]
+    },
+    {
+      "lesson_num": 13,
+      "title": "指针",
+      "slides_analyzed": 54,
+      "knowledge_points": [
+        {
+          "name": "指针概念",
+          "category": "C++基础",
+          "description": "存储内存地址的变量，用于间接访问数据",
+          "gesp_level": 4,
+          "syntax": "int *p; p=&a; *p访问数据"
+        },
+        {
+          "name": "指针与函数",
+          "category": "C++基础",
+          "description": "函数传指针可以实现不同作用域的值同步",
+          "gesp_level": 4
+        },
+        {
+          "name": "结构体指针",
+          "category": "C++基础",
+          "description": "指向结构体的指针，使用->访问成员",
+          "gesp_level": 4
+        }
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "title": "链表",
+      "slides_analyzed": 88,
+      "knowledge_points": [
+        {
+          "name": "链表概念",
+          "category": "数据结构",
+          "description": "由结点和指针组成的非连续存储结构",
+          "gesp_level": 4,
+          "node_structure": "数据域+指针域"
+        },
+        {
+          "name": "链表基本操作",
+          "category": "数据结构",
+          "description": "创建、遍历、插入、删除结点",
+          "gesp_level": 4,
+          "insert_steps": ["新结点next指向后继", "前驱结点next指向新结点"]
+        }
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "title": "递归",
+      "slides_analyzed": 122,
+      "knowledge_points": [
+        {
+          "name": "递归概念",
+          "category": "算法",
+          "description": "函数自己调用自己，先递进后回归",
+          "gesp_level": 4,
+          "parent_explanation": "像梦境层层深入，然后一层层醒来"
+        },
+        {
+          "name": "递归三要素",
+          "category": "算法",
+          "description": "递归公式、递归出口、递进回归过程",
+          "gesp_level": 4
+        },
+        {
+          "name": "递归应用",
+          "category": "算法应用",
+          "description": "累加求和、阶乘、斐波那契、台阶问题",
+          "gesp_level": 4,
+          "formula": "f(n)=f(n-1)+n"
+        }
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "title": "深度优先搜索1",
+      "slides_analyzed": 63,
+      "knowledge_points": [
+        {
+          "name": "DFS概念",
+          "category": "算法",
+          "description": "能深则深，不能深则退的搜索方法",
+          "gesp_level": 4,
+          "parent_explanation": "像走迷宫，一条路走到底，不通就回头换路"
+        },
+        {
+          "name": "DFS实现",
+          "category": "代码实现",
+          "description": "递归实现，配合标记数组和方向数组",
+          "gesp_level": 4,
+          "key_components": ["递归函数", "标记数组vis", "方向数组dx/dy"]
+        }
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "title": "深度优先搜索2",
+      "slides_analyzed": 60,
+      "knowledge_points": [
+        {
+          "name": "迷宫问题",
+          "category": "算法应用",
+          "description": "用DFS搜索迷宫路径，判断能否到达目标",
+          "gesp_level": 4
+        },
+        {
+          "name": "连通块问题",
+          "category": "算法应用",
+          "description": "用DFS搜索连通区域，统计连通块数量或大小",
+          "gesp_level": 4
+        }
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "title": "广度优先搜索1",
+      "slides_analyzed": 54,
+      "knowledge_points": [
+        {
+          "name": "BFS概念",
+          "category": "算法",
+          "description": "全面扩散，逐层递进的搜索方法",
+          "gesp_level": 4,
+          "parent_explanation": "像水波纹一样一圈圈扩散"
+        },
+        {
+          "name": "BFS实现",
+          "category": "代码实现",
+          "description": "队列实现，配合标记数组和方向数组",
+          "gesp_level": 4,
+          "key_components": ["队列queue", "标记数组vis", "方向数组dx/dy"]
+        }
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "title": "树与二叉树",
+      "slides_analyzed": 80,
+      "knowledge_points": [
+        {
+          "name": "树的概念",
+          "category": "数据结构",
+          "description": "非线性层次结构，由结点和边组成",
+          "gesp_level": 4,
+          "key_terms": ["根结点", "子树", "叶子结点", "度"]
+        },
+        {
+          "name": "二叉树",
+          "category": "数据结构",
+          "description": "每个结点最多有两个子树的树结构",
+          "gesp_level": 4,
+          "types": ["满二叉树", "完全二叉树"]
+        },
+        {
+          "name": "二叉树遍历",
+          "category": "算法",
+          "description": "先序(根左右)、中序(左根右)、后序(左右根)",
+          "gesp_level": 4
+        }
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "title": "图的基本概念",
+      "slides_analyzed": 99,
+      "knowledge_points": [
+        {
+          "name": "图的概念",
+          "category": "数据结构",
+          "description": "由有限个结点和边组成的非线性结构",
+          "gesp_level": 4,
+          "notation": "G=(V,E)，V结点集，E边集"
+        },
+        {
+          "name": "图的分类",
+          "category": "数据结构",
+          "description": "无向图、有向图、完全图、带权图(网)",
+          "gesp_level": 4
+        },
+        {
+          "name": "图的术语",
+          "category": "数据结构",
+          "description": "度、入度、出度、路径、回路、连通",
+          "gesp_level": 4
+        }
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "title": "图的存储与STL",
+      "slides_analyzed": 58,
+      "knowledge_points": [
+        {
+          "name": "邻接矩阵",
+          "category": "数据结构",
+          "description": "用二维数组存储图，g[i][j]表示i到j是否有边",
+          "gesp_level": 4,
+          "property": "无向图对称，有向图不对称"
+        },
+        {
+          "name": "STL进阶",
+          "category": "C++特性",
+          "description": "stack、queue、vector的高级用法",
+          "gesp_level": 4
+        }
+      ]
+    },
+    {
+      "lesson_num": 22,
+      "title": "广度优先搜索应用",
+      "slides_analyzed": 65,
+      "knowledge_points": [
+        {
+          "name": "BFS最短路径",
+          "category": "算法应用",
+          "description": "BFS天然适合求最短路径(步数最少)",
+          "gesp_level": 4,
+          "advantage": "第一次到达目标即最短路径"
+        }
+      ]
+    },
+    {
+      "lesson_num": 23,
+      "title": "广度优先搜索进阶",
+      "slides_analyzed": 78,
+      "knowledge_points": [
+        {
+          "name": "BFS综合应用",
+          "category": "算法应用",
+          "description": "多源BFS、记录路径、状态搜索",
+          "gesp_level": 4
+        }
+      ]
+    },
+    {
+      "lesson_num": 24,
+      "title": "阶段复习与测试",
+      "slides_analyzed": 62,
+      "knowledge_points": [
+        {
+          "name": "Level 2全程复习",
+          "category": "复习",
+          "description": "高精度运算、栈队列链表、递归、搜索、树图综合复习",
+          "gesp_level": 4
+        }
+      ]
+    }
+  ],
+  "gesp_exam_preparation": {
+    "level_3_focus": [
+      "枚举算法及应用",
+      "递推算法(顺推/逆推)",
+      "斐波那契数列问题",
+      "栈和队列基本操作",
+      "简单模拟题"
+    ],
+    "level_4_focus": [
+      "前缀和与差分",
+      "二分查找算法",
+      "贪心算法及应用",
+      "高精度运算(加减乘)",
+      "指针与链表",
+      "递归算法",
+      "DFS和BFS搜索",
+      "树和图的基本概念"
+    ]
+  },
+  "analysis_summary": {
+    "total_slides": 1618,
+    "algorithm_topics": 10,
+    "data_structure_topics": 6,
+    "math_application_topics": 4,
+    "cpp_language_topics": 3,
+    "search_algorithm_topics": 4
+  }
+}

@@ -1,0 +1,1183 @@
+{
+  "level": 1,
+  "description": "GESP C++ Level 1 知识点详细分析，包含24个课程",
+  "analysis_date": "2026-03-19",
+  "summary": {
+    "total_lessons": 24,
+    "total_knowledge_points": 127,
+    "gesp_level_1_points": 52,
+    "gesp_level_2_points": 75,
+    "category_distribution": {
+      "基础概念": 25,
+      "基础语法": 44,
+      "编程技巧": 36,
+      "编程规范": 2,
+      "综合应用": 9,
+      "算法思想": 4,
+      "算法步骤": 3,
+      "算法分析": 4
+    }
+  },
+  "lessons": [
+    {
+      "lesson_num": 1,
+      "title": "变量和数据的输入输出",
+      "knowledge_points": [
+        {
+          "name": "C++程序框架",
+          "category": "基础概念",
+          "description": "C++程序的基本结构：#include <iostream>、using namespace std;、int main()、return 0;",
+          "gesp_level": 1,
+          "parent_explanation": "就像写信需要信封格式，C++程序也需要固定的开头格式",
+          "exam_focus": "选择题：程序框架组成、填空题：补全程序头"
+        },
+        {
+          "name": "cout输出语句",
+          "category": "基础语法",
+          "description": "使用cout << 内容; 输出信息到屏幕，内容用双引号包围，语句以分号结束",
+          "gesp_level": 1,
+          "parent_explanation": "就像打印机把文档打印到纸上，cout把内容'打印'到屏幕",
+          "exam_focus": "选择题：cout语法正确性、填空题：补全输出语句"
+        },
+        {
+          "name": "换行符endl",
+          "category": "基础语法",
+          "description": "使用endl或\\n实现输出换行，让输出内容分行显示",
+          "gesp_level": 1,
+          "parent_explanation": "就像写字换行一样，endl让输出内容另起一行",
+          "exam_focus": "选择题：换行符的使用、阅读程序：预测输出格式"
+        },
+        {
+          "name": "连续输出",
+          "category": "编程技巧",
+          "description": "使用cout << 内容1 << 内容2 << ...; 一次性输出多个内容",
+          "gesp_level": 1,
+          "parent_explanation": "可以连续输出多个内容，不用写多行代码",
+          "exam_focus": "选择题：连续输出语法、编程题：格式化输出"
+        },
+        {
+          "name": "变量定义",
+          "category": "基础语法",
+          "description": "使用int 变量名; 创建整数变量，变量名由字母、数字、下划线组成，不能以数字开头",
+          "gesp_level": 1,
+          "parent_explanation": "变量就像贴有标签的盒子，可以存储数据，int表示存储整数",
+          "exam_focus": "选择题：变量命名规则、判断题：合法变量名"
+        },
+        {
+          "name": "变量赋值",
+          "category": "基础语法",
+          "description": "使用=将数据存入变量，如a = 10; 也可定义时直接初始化int a = 10;",
+          "gesp_level": 1,
+          "parent_explanation": "把数据放进变量的'盒子'里，=号在这里是赋值的意思",
+          "exam_focus": "选择题：赋值语法、阅读程序：追踪变量值变化"
+        },
+        {
+          "name": "变量命名规则",
+          "category": "编程规范",
+          "description": "变量名只能含字母、数字、下划线，不能以数字开头，不能用int、return等关键字",
+          "gesp_level": 1,
+          "parent_explanation": "给变量取名要遵守规则，就像给孩子取名不能用数字开头",
+          "exam_focus": "选择题：识别合法变量名、判断题：变量名是否正确"
+        },
+        {
+          "name": "cin输入语句",
+          "category": "基础语法",
+          "description": "使用cin >> 变量名; 接收用户从键盘输入的数据，数据保存到变量中",
+          "gesp_level": 1,
+          "parent_explanation": "就像通过键盘把数据'放进'程序的变量里，和cout方向相反",
+          "exam_focus": "选择题：cin语法正确性、填空题：补全输入语句"
+        },
+        {
+          "name": "连续输入",
+          "category": "编程技巧",
+          "description": "使用cin >> 变量1 >> 变量2 >> ...; 一次性输入多个数据",
+          "gesp_level": 1,
+          "parent_explanation": "可以一次输入多个数字，用空格或回车分隔",
+          "exam_focus": "选择题：连续输入语法、阅读程序：数据分配"
+        },
+        {
+          "name": "变量交换",
+          "category": "编程技巧",
+          "description": "使用第三个临时变量交换两个变量的值：temp=a; a=b; b=temp;",
+          "gesp_level": 1,
+          "parent_explanation": "就像交换两个盒子里的东西，需要借助第三个临时盒子",
+          "exam_focus": "编程题：交换两个变量、阅读程序：交换后的值"
+        }
+      ]
+    },
+    {
+      "lesson_num": 2,
+      "title": "算数运算符和字符型",
+      "knowledge_points": [
+        {
+          "name": "表达式概念",
+          "category": "基础概念",
+          "description": "用运算符将操作数连接起来的式子叫做表达式，表达式会计算出一个结果",
+          "gesp_level": 1,
+          "parent_explanation": "就像数学算式一样，C++表达式也会算出结果",
+          "exam_focus": "选择题：识别表达式、计算表达式的值"
+        },
+        {
+          "name": "算术运算符",
+          "category": "基础语法",
+          "description": "+加法、-减法、*乘法、/除法、%取余，用于数学四则运算",
+          "gesp_level": 1,
+          "parent_explanation": "和数学运算符号类似，*表示乘法，/表示除法，%表示求余数",
+          "exam_focus": "选择题：运算符使用、计算题：表达式结果"
+        },
+        {
+          "name": "运算符优先级",
+          "category": "基础概念",
+          "description": "先小括号，再乘除取余，最后加减。算术运算符优先级高于赋值和输出运算符",
+          "gesp_level": 1,
+          "parent_explanation": "和数学运算顺序一样，先算括号里的，再算乘除，最后算加减",
+          "exam_focus": "选择题：优先级判断、计算题：含优先级的表达式"
+        },
+        {
+          "name": "整数除法",
+          "category": "基础语法",
+          "description": "两个整数相除，结果只保留整数部分（商），余数被舍弃。如7/3=2",
+          "gesp_level": 1,
+          "parent_explanation": "整数除法会'丢弃'小数部分，就像分东西分不完时只算完整的份数",
+          "exam_focus": "选择题：整数除法结果、计算题：除法表达式"
+        },
+        {
+          "name": "取余运算",
+          "category": "基础语法",
+          "description": "%运算符计算两个整数相除的余数，如7%3=1。只有整数能进行取余运算",
+          "gesp_level": 1,
+          "parent_explanation": "取余就是求除法后剩下的部分，比如7除以3余1",
+          "exam_focus": "选择题：取余运算结果、应用题：用取余解决实际问题"
+        },
+        {
+          "name": "字符型char",
+          "category": "基础语法",
+          "description": "char类型用于存储单个字符，如char c = 'A'; 字符用单引号包围",
+          "gesp_level": 1,
+          "parent_explanation": "char类型就像一个小盒子，只能放一个字母或符号",
+          "exam_focus": "选择题：char类型定义、字符与字符串区别"
+        },
+        {
+          "name": "ASCII码",
+          "category": "基础概念",
+          "description": "每个字符对应一个ASCII码值，如'A'对应65，'a'对应97，'0'对应48",
+          "gesp_level": 1,
+          "parent_explanation": "计算机用数字表示字符，每个字符都有对应的数字编号",
+          "exam_focus": "选择题：ASCII码值、字符比较大小"
+        }
+      ]
+    },
+    {
+      "lesson_num": 3,
+      "title": "比较运算符和if语句",
+      "knowledge_points": [
+        {
+          "name": "比较运算符",
+          "category": "基础语法",
+          "description": ">大于、<小于、==等于、!=不等于、>=大于等于、<=小于等于，用于比较两个值的大小关系",
+          "gesp_level": 1,
+          "parent_explanation": "比较运算符就像问问题：A大于B吗？答案是'是'或'否'",
+          "exam_focus": "选择题：比较运算符使用、判断题：比较结果"
+        },
+        {
+          "name": "关系表达式",
+          "category": "基础概念",
+          "description": "用比较运算符连接起来的式子，结果为真(1)或假(0)",
+          "gesp_level": 1,
+          "parent_explanation": "比较运算的结果只有两种：真（对）或假（错）",
+          "exam_focus": "选择题：关系表达式结果、编程题：条件判断"
+        },
+        {
+          "name": "if单分支语句",
+          "category": "基础语法",
+          "description": "if (条件) { 语句; } 当条件为真时执行大括号内的语句",
+          "gesp_level": 1,
+          "parent_explanation": "如果条件满足，就做某事；不满足就跳过",
+          "exam_focus": "选择题：if语法、阅读程序：条件执行流程"
+        },
+        {
+          "name": "if-else双分支语句",
+          "category": "基础语法",
+          "description": "if (条件) { 语句1; } else { 语句2; } 条件为真执行语句1，否则执行语句2",
+          "gesp_level": 1,
+          "parent_explanation": "如果条件满足做A，不满足就做B，二选一",
+          "exam_focus": "选择题：if-else语法、阅读程序：分支执行"
+        },
+        {
+          "name": "条件判断",
+          "category": "编程技巧",
+          "description": "使用if语句根据不同条件执行不同代码，实现程序的分支逻辑",
+          "gesp_level": 1,
+          "parent_explanation": "程序可以根据情况走不同的路，就像路口选择方向",
+          "exam_focus": "编程题：条件判断实现、阅读程序：多条件分析"
+        }
+      ]
+    },
+    {
+      "lesson_num": 4,
+      "title": "逻辑运算符和多分支语句",
+      "knowledge_points": [
+        {
+          "name": "逻辑运算符",
+          "category": "基础语法",
+          "description": "&&逻辑与（并且）、||逻辑或（或者）、!逻辑非（取反），用于组合多个条件",
+          "gesp_level": 1,
+          "parent_explanation": "&&表示两个条件都要满足，||表示满足其中一个就行，!表示反过来",
+          "exam_focus": "选择题：逻辑运算符使用、计算题：复合条件结果"
+        },
+        {
+          "name": "逻辑表达式",
+          "category": "基础概念",
+          "description": "用逻辑运算符连接关系表达式，结果为真或假",
+          "gesp_level": 1,
+          "parent_explanation": "可以把多个问题组合成一个大问题，比如'A>5并且B<10'",
+          "exam_focus": "选择题：逻辑表达式结果、短路求值"
+        },
+        {
+          "name": "if-else if多分支",
+          "category": "基础语法",
+          "description": "if (条件1) {} else if (条件2) {} else {} 实现多条件多分支选择",
+          "gesp_level": 1,
+          "parent_explanation": "多个条件依次判断，满足哪个就做哪个，都不满足做最后的else",
+          "exam_focus": "选择题：多分支语法、阅读程序：分支选择"
+        },
+        {
+          "name": "嵌套if语句",
+          "category": "编程技巧",
+          "description": "在一个if语句的大括号内再写if语句，实现复杂的条件判断",
+          "gesp_level": 1,
+          "parent_explanation": "条件里还可以有条件，就像大分类里再细分小分类",
+          "exam_focus": "阅读程序：嵌套条件分析、编程题：复杂条件实现"
+        }
+      ]
+    },
+    {
+      "lesson_num": 5,
+      "title": "阶段复习与练习一",
+      "knowledge_points": [
+        {
+          "name": "综合练习-输入输出",
+          "category": "综合应用",
+          "description": "综合运用cin和cout进行数据的输入输出处理",
+          "gesp_level": 1,
+          "parent_explanation": "把学过的输入输出知识综合运用",
+          "exam_focus": "编程题：输入输出综合"
+        },
+        {
+          "name": "综合练习-变量与运算",
+          "category": "综合应用",
+          "description": "综合运用变量定义、赋值、算术运算解决实际问题",
+          "gesp_level": 1,
+          "parent_explanation": "把变量和运算结合起来解决问题",
+          "exam_focus": "编程题：简单计算问题"
+        },
+        {
+          "name": "综合练习-条件判断",
+          "category": "综合应用",
+          "description": "综合运用if语句和逻辑运算符进行条件判断",
+          "gesp_level": 1,
+          "parent_explanation": "用条件判断解决有分支逻辑的问题",
+          "exam_focus": "编程题：条件分支问题"
+        }
+      ]
+    },
+    {
+      "lesson_num": 6,
+      "title": "for循环",
+      "knowledge_points": [
+        {
+          "name": "for循环语法",
+          "category": "基础语法",
+          "description": "for (初始化; 条件; 增量) { 循环体; } 用于重复执行代码",
+          "gesp_level": 1,
+          "parent_explanation": "for循环就像自动重复做某事，从1数到10就是重复10次",
+          "exam_focus": "选择题：for循环语法、填空题：补全循环结构"
+        },
+        {
+          "name": "循环变量",
+          "category": "基础概念",
+          "description": "for循环中用于控制循环次数的变量，通常用i表示",
+          "gesp_level": 1,
+          "parent_explanation": "循环变量就像一个计数器，记录循环执行到第几次了",
+          "exam_focus": "选择题：循环变量作用、阅读程序：追踪变量值"
+        },
+        {
+          "name": "循环条件",
+          "category": "基础概念",
+          "description": "决定循环是否继续执行的条件表达式，为真时继续循环",
+          "gesp_level": 1,
+          "parent_explanation": "只要条件满足就继续循环，不满足就停下来",
+          "exam_focus": "选择题：循环条件判断、阅读程序：循环次数"
+        },
+        {
+          "name": "循环执行流程",
+          "category": "基础概念",
+          "description": "初始化→判断条件→执行循环体→增量→判断条件...直到条件为假",
+          "gesp_level": 1,
+          "parent_explanation": "for循环有固定的执行步骤，一步步来",
+          "exam_focus": "阅读程序：追踪循环执行过程"
+        },
+        {
+          "name": "累加求和",
+          "category": "编程技巧",
+          "description": "使用循环和累加变量实现求和，如sum = sum + i",
+          "gesp_level": 1,
+          "parent_explanation": "重复做加法，把每个数都加到总和中",
+          "exam_focus": "编程题：求和计算"
+        }
+      ]
+    },
+    {
+      "lesson_num": 7,
+      "title": "for循环进阶",
+      "knowledge_points": [
+        {
+          "name": "循环步长控制",
+          "category": "编程技巧",
+          "description": "通过修改增量部分控制循环步长，如i+=2实现每次加2",
+          "gesp_level": 1,
+          "parent_explanation": "不仅可以每次加1，还可以加2、加3，甚至可以减",
+          "exam_focus": "选择题：步长控制、编程题：特定步长循环"
+        },
+        {
+          "name": "递减循环",
+          "category": "编程技巧",
+          "description": "从大到小循环，如for (int i=10; i>=1; i--)",
+          "gesp_level": 1,
+          "parent_explanation": "循环也可以倒着数，从10到1",
+          "exam_focus": "选择题：递减循环语法、编程题：倒序处理"
+        },
+        {
+          "name": "循环中的条件判断",
+          "category": "编程技巧",
+          "description": "在循环体内使用if语句进行条件判断，实现复杂逻辑",
+          "gesp_level": 1,
+          "parent_explanation": "循环里可以加上条件判断，比如只处理偶数",
+          "exam_focus": "编程题：循环+条件综合"
+        },
+        {
+          "name": "计数器",
+          "category": "编程技巧",
+          "description": "在循环中使用变量统计满足条件的元素个数",
+          "gesp_level": 1,
+          "parent_explanation": "边循环边计数，统计有多少个满足条件的",
+          "exam_focus": "编程题：统计计数问题"
+        }
+      ]
+    },
+    {
+      "lesson_num": 8,
+      "title": "数组",
+      "knowledge_points": [
+        {
+          "name": "数组概念",
+          "category": "基础概念",
+          "description": "数组是一组相同类型数据的集合，可以存储多个数据",
+          "gesp_level": 1,
+          "parent_explanation": "数组就像一排盒子，每个盒子都能存数据，用编号区分",
+          "exam_focus": "选择题：数组概念理解"
+        },
+        {
+          "name": "数组定义",
+          "category": "基础语法",
+          "description": "数据类型 数组名[长度]; 如int a[5]; 定义能存5个整数的数组",
+          "gesp_level": 1,
+          "parent_explanation": "定义数组时要指定类型和大小，就像预订一排多少个盒子",
+          "exam_focus": "选择题：数组定义语法、填空题：补全数组定义"
+        },
+        {
+          "name": "数组元素访问",
+          "category": "基础语法",
+          "description": "使用数组名[下标]访问元素，下标从0开始，如a[0]访问第一个元素",
+          "gesp_level": 1,
+          "parent_explanation": "数组元素用编号访问，注意第一个元素的编号是0不是1",
+          "exam_focus": "选择题：下标范围、阅读程序：数组访问"
+        },
+        {
+          "name": "数组初始化",
+          "category": "基础语法",
+          "description": "定义数组时赋值，如int a[5] = {1,2,3,4,5}; 未初始化的元素为0",
+          "gesp_level": 1,
+          "parent_explanation": "可以在定义时给数组赋值，没赋值的自动变成0",
+          "exam_focus": "选择题：数组初始化、阅读程序：数组初始值"
+        },
+        {
+          "name": "数组遍历",
+          "category": "编程技巧",
+          "description": "使用for循环依次访问数组的每个元素，下标从0到n-1",
+          "gesp_level": 1,
+          "parent_explanation": "用循环可以一个一个处理数组里的所有数据",
+          "exam_focus": "编程题：数组遍历处理"
+        },
+        {
+          "name": "break语句",
+          "category": "基础语法",
+          "description": "break用于立即终止整个循环，跳出循环体执行后续代码",
+          "gesp_level": 1,
+          "parent_explanation": "遇到break循环立刻停止，不再继续",
+          "exam_focus": "选择题：break作用、阅读程序：break影响"
+        },
+        {
+          "name": "continue语句",
+          "category": "基础语法",
+          "description": "continue用于跳过本次循环的剩余代码，直接进入下一次循环",
+          "gesp_level": 1,
+          "parent_explanation": "continue跳过当前这次，直接开始下一次循环",
+          "exam_focus": "选择题：continue作用、阅读程序：continue影响"
+        }
+      ]
+    },
+    {
+      "lesson_num": 9,
+      "title": "数组进阶",
+      "knowledge_points": [
+        {
+          "name": "数组求最值",
+          "category": "编程技巧",
+          "description": "遍历数组找出最大值或最小值，需要设置初始最值",
+          "gesp_level": 1,
+          "parent_explanation": "一个一个比较，找出数组中最大或最小的数",
+          "exam_focus": "编程题：求最值问题"
+        },
+        {
+          "name": "数组查找",
+          "category": "编程技巧",
+          "description": "在数组中查找特定元素，找到返回位置或标记",
+          "gesp_level": 1,
+          "parent_explanation": "在数组中找某个数，看看它在哪个位置",
+          "exam_focus": "编程题：查找元素"
+        },
+        {
+          "name": "数组元素统计",
+          "category": "编程技巧",
+          "description": "统计数组中满足特定条件的元素个数",
+          "gesp_level": 1,
+          "parent_explanation": "数一数组里有多少个符合条件的元素",
+          "exam_focus": "编程题：统计问题"
+        },
+        {
+          "name": "数组元素累加",
+          "category": "编程技巧",
+          "description": "计算数组所有元素或部分元素的和",
+          "gesp_level": 1,
+          "parent_explanation": "把数组里的数都加起来求总和",
+          "exam_focus": "编程题：数组求和"
+        }
+      ]
+    },
+    {
+      "lesson_num": 10,
+      "title": "阶段复习与练习二",
+      "knowledge_points": [
+        {
+          "name": "综合练习-for循环",
+          "category": "综合应用",
+          "description": "综合运用for循环解决重复执行类问题",
+          "gesp_level": 1,
+          "parent_explanation": "用循环解决需要重复做的问题",
+          "exam_focus": "编程题：循环综合应用"
+        },
+        {
+          "name": "综合练习-数组操作",
+          "category": "综合应用",
+          "description": "综合运用数组定义、访问、遍历解决数据处理问题",
+          "gesp_level": 1,
+          "parent_explanation": "用数组存储和处理多个数据",
+          "exam_focus": "编程题：数组综合应用"
+        },
+        {
+          "name": "综合练习-循环与数组结合",
+          "category": "综合应用",
+          "description": "结合循环和数组进行批量数据处理",
+          "gesp_level": 1,
+          "parent_explanation": "循环和数组经常一起使用，循环处理数组的每个元素",
+          "exam_focus": "编程题：循环+数组综合"
+        }
+      ]
+    },
+    {
+      "lesson_num": 11,
+      "title": "while循环",
+      "knowledge_points": [
+        {
+          "name": "while循环语法",
+          "category": "基础语法",
+          "description": "while (条件) { 循环体; } 当条件为真时重复执行循环体",
+          "gesp_level": 2,
+          "parent_explanation": "while循环只要条件满足就一直做，不知道什么时候停的时候用它",
+          "exam_focus": "选择题：while语法、与for循环区别"
+        },
+        {
+          "name": "while循环执行流程",
+          "category": "基础概念",
+          "description": "先判断条件，为真则执行循环体，再判断条件，直到条件为假",
+          "gesp_level": 2,
+          "parent_explanation": "while循环先检查条件，满足了才做，做完再检查",
+          "exam_focus": "阅读程序：while循环执行过程"
+        },
+        {
+          "name": "do-while循环",
+          "category": "基础语法",
+          "description": "do { 循环体; } while (条件); 先执行一次循环体，再判断条件",
+          "gesp_level": 2,
+          "parent_explanation": "do-while至少执行一次，做完再判断要不要继续",
+          "exam_focus": "选择题：do-while语法、与while区别"
+        },
+        {
+          "name": "循环条件设置",
+          "category": "编程技巧",
+          "description": "while循环需要在循环体内修改条件变量，避免死循环",
+          "gesp_level": 2,
+          "parent_explanation": "while循环要记得在循环里改变条件，否则可能永远停不下来",
+          "exam_focus": "选择题：死循环原因、编程题：正确设置条件"
+        },
+        {
+          "name": "不确定次数循环",
+          "category": "编程技巧",
+          "description": "使用while处理循环次数不确定的情况，如读取到特定值停止",
+          "gesp_level": 2,
+          "parent_explanation": "不知道要循环多少次的时候，用while更合适",
+          "exam_focus": "编程题：不确定次数循环"
+        }
+      ]
+    },
+    {
+      "lesson_num": 12,
+      "title": "格式化输入输出和浮点数",
+      "knowledge_points": [
+        {
+          "name": "浮点型double",
+          "category": "基础语法",
+          "description": "double类型用于存储带小数的数值，如double a = 3.14;",
+          "gesp_level": 2,
+          "parent_explanation": "double类型可以存小数，比int范围更大更精确",
+          "exam_focus": "选择题：double类型特点、与int区别"
+        },
+        {
+          "name": "浮点数输入输出",
+          "category": "基础语法",
+          "description": "使用cin和cout可以直接读写double类型的浮点数",
+          "gesp_level": 2,
+          "parent_explanation": "浮点数的输入输出和整数类似",
+          "exam_focus": "选择题：浮点数IO语法"
+        },
+        {
+          "name": "格式化输出头文件",
+          "category": "基础语法",
+          "description": "使用#include <iomanip>引入格式化输出函数",
+          "gesp_level": 2,
+          "parent_explanation": "要控制输出格式需要先包含iomanip头文件",
+          "exam_focus": "选择题：头文件作用"
+        },
+        {
+          "name": "setw函数",
+          "category": "编程技巧",
+          "description": "setw(n)设置输出内容占用的宽度，用于对齐输出",
+          "gesp_level": 2,
+          "parent_explanation": "setw可以设置输出占多宽，让输出对齐更好看",
+          "exam_focus": "选择题：setw用法、编程题：格式化输出"
+        },
+        {
+          "name": "setprecision函数",
+          "category": "编程技巧",
+          "description": "setprecision(n)设置浮点数输出的小数位数",
+          "gesp_level": 2,
+          "parent_explanation": "控制小数点后显示几位，比如保留2位小数",
+          "exam_focus": "选择题：精度控制、编程题：保留小数位"
+        },
+        {
+          "name": "fixed操控符",
+          "category": "编程技巧",
+          "description": "fixed用于固定小数点表示法，配合setprecision使用",
+          "gesp_level": 2,
+          "parent_explanation": "fixed让小数固定显示，不变成科学计数法",
+          "exam_focus": "选择题：fixed作用、编程题：固定小数位输出"
+        }
+      ]
+    },
+    {
+      "lesson_num": 13,
+      "title": "浮点数和数据类型转换",
+      "knowledge_points": [
+        {
+          "name": "浮点数运算",
+          "category": "基础语法",
+          "description": "浮点数可以进行加减乘除运算，注意精度问题",
+          "gesp_level": 2,
+          "parent_explanation": "浮点数计算要注意，有时候会有微小的误差",
+          "exam_focus": "选择题：浮点数运算特点"
+        },
+        {
+          "name": "整数转浮点数",
+          "category": "基础概念",
+          "description": "整数可以自动转换为浮点数，如double a = 5; 结果是5.0",
+          "gesp_level": 2,
+          "parent_explanation": "整数可以变成浮点数，后面自动加.0",
+          "exam_focus": "选择题：类型转换结果"
+        },
+        {
+          "name": "浮点数转整数",
+          "category": "基础概念",
+          "description": "浮点数转整数会截断小数部分，如int a = 3.9; 结果是3",
+          "gesp_level": 2,
+          "parent_explanation": "浮点数变整数会丢掉小数部分，不是四舍五入",
+          "exam_focus": "选择题：强制转换结果、截断规则"
+        },
+        {
+          "name": "强制类型转换",
+          "category": "编程技巧",
+          "description": "使用(类型)表达式进行强制转换，如(int)a将a转为整数",
+          "gesp_level": 2,
+          "parent_explanation": "可以强制把一种类型变成另一种类型",
+          "exam_focus": "选择题：强制转换语法、阅读程序：转换结果"
+        },
+        {
+          "name": "类型转换注意事项",
+          "category": "编程规范",
+          "description": "注意类型转换可能导致的精度丢失和数据溢出",
+          "gesp_level": 2,
+          "parent_explanation": "类型转换要小心，可能丢失精度或超出范围",
+          "exam_focus": "选择题：类型转换风险"
+        }
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "title": "字符串和字符数组",
+      "knowledge_points": [
+        {
+          "name": "字符数组存储字符串",
+          "category": "基础概念",
+          "description": "使用char数组存储字符串，如char s[20] = \"hello\";",
+          "gesp_level": 2,
+          "parent_explanation": "字符数组可以存一串字符，就是字符串",
+          "exam_focus": "选择题：字符数组定义"
+        },
+        {
+          "name": "字符串结束符",
+          "category": "基础概念",
+          "description": "字符串以'\\0'结尾，占一个字符位置，表示字符串结束",
+          "gesp_level": 2,
+          "parent_explanation": "字符串末尾有个看不见的结束标记'\\0'",
+          "exam_focus": "选择题：字符串长度计算"
+        },
+        {
+          "name": "字符数组初始化",
+          "category": "基础语法",
+          "description": "char s[] = \"abc\"; 或 char s[10] = {'a','b','c','\\0'};",
+          "gesp_level": 2,
+          "parent_explanation": "可以用双引号字符串直接初始化字符数组",
+          "exam_focus": "选择题：初始化方法"
+        },
+        {
+          "name": "字符串输入",
+          "category": "基础语法",
+          "description": "使用cin >> 字符数组名; 读取字符串，遇到空格停止",
+          "gesp_level": 2,
+          "parent_explanation": "cin读字符串时，遇到空格就认为结束了",
+          "exam_focus": "选择题：字符串输入特点"
+        },
+        {
+          "name": "字符串遍历",
+          "category": "编程技巧",
+          "description": "使用循环遍历字符串的每个字符，直到遇到'\\0'",
+          "gesp_level": 2,
+          "parent_explanation": "可以用循环逐个处理字符串里的字符",
+          "exam_focus": "编程题：字符串处理"
+        }
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "title": "string类型的字符串",
+      "knowledge_points": [
+        {
+          "name": "string类型",
+          "category": "基础概念",
+          "description": "C++提供的string类，比字符数组更方便，需要#include <string>",
+          "gesp_level": 2,
+          "parent_explanation": "string是专门处理字符串的类型，比字符数组好用",
+          "exam_focus": "选择题：string优势"
+        },
+        {
+          "name": "string定义和初始化",
+          "category": "基础语法",
+          "description": "string s; 或 string s = \"hello\"; 定义字符串变量",
+          "gesp_level": 2,
+          "parent_explanation": "string定义很简单，就像普通变量一样",
+          "exam_focus": "选择题：string定义语法"
+        },
+        {
+          "name": "string输入输出",
+          "category": "基础语法",
+          "description": "可以直接使用cin >> s和cout << s进行输入输出",
+          "gesp_level": 2,
+          "parent_explanation": "string的输入输出和基本类型一样方便",
+          "exam_focus": "选择题：string IO语法"
+        },
+        {
+          "name": "string长度函数",
+          "category": "编程技巧",
+          "description": "使用s.length()或s.size()获取字符串长度",
+          "gesp_level": 2,
+          "parent_explanation": "用length()函数可以得到字符串有多长",
+          "exam_focus": "选择题：length函数用法"
+        },
+        {
+          "name": "string元素访问",
+          "category": "基础语法",
+          "description": "使用s[i]访问第i个字符，下标从0开始",
+          "gesp_level": 2,
+          "parent_explanation": "string也可以用下标访问每个字符",
+          "exam_focus": "选择题：string访问语法"
+        },
+        {
+          "name": "getline函数",
+          "category": "编程技巧",
+          "description": "使用getline(cin, s)读取整行字符串，包括空格",
+          "gesp_level": 2,
+          "parent_explanation": "getline可以读一整行，包括空格，比cin更强大",
+          "exam_focus": "选择题：getline用法、编程题：读含空格的字符串"
+        }
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "title": "阶段复习与练习三",
+      "knowledge_points": [
+        {
+          "name": "综合练习-while循环",
+          "category": "综合应用",
+          "description": "综合运用while和do-while解决不确定次数循环问题",
+          "gesp_level": 2,
+          "parent_explanation": "用while解决不知道循环多少次的问题",
+          "exam_focus": "编程题：while循环综合"
+        },
+        {
+          "name": "综合练习-浮点数处理",
+          "category": "综合应用",
+          "description": "综合运用double类型和格式化输出处理小数",
+          "gesp_level": 2,
+          "parent_explanation": "处理小数数据时要注意精度和格式",
+          "exam_focus": "编程题：浮点数综合应用"
+        },
+        {
+          "name": "综合练习-字符串处理",
+          "category": "综合应用",
+          "description": "综合运用string类型进行字符串操作和处理",
+          "gesp_level": 2,
+          "parent_explanation": "用string类型处理文本数据",
+          "exam_focus": "编程题：字符串综合应用"
+        }
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "title": "函数基础",
+      "knowledge_points": [
+        {
+          "name": "函数概念",
+          "category": "基础概念",
+          "description": "函数是完成特定功能的代码块，可以重复使用，提高代码复用性",
+          "gesp_level": 2,
+          "parent_explanation": "函数就像一个小工具，做好了可以反复用，不用重复写代码",
+          "exam_focus": "选择题：函数作用"
+        },
+        {
+          "name": "函数定义语法",
+          "category": "基础语法",
+          "description": "返回类型 函数名(参数列表) { 函数体; return 返回值; }",
+          "gesp_level": 2,
+          "parent_explanation": "定义函数要说清楚返回什么类型、叫什么名字、接受什么参数",
+          "exam_focus": "选择题：函数定义语法、填空题：补全函数定义"
+        },
+        {
+          "name": "void无返回值函数",
+          "category": "基础语法",
+          "description": "void表示函数不返回任何值，不需要return语句",
+          "gesp_level": 2,
+          "parent_explanation": "void表示'空'，这种函数只是做事，不返回结果",
+          "exam_focus": "选择题：void含义、使用场景"
+        },
+        {
+          "name": "函数调用",
+          "category": "基础语法",
+          "description": "使用函数名(参数值)调用函数，程序会跳转到函数执行",
+          "gesp_level": 2,
+          "parent_explanation": "调用函数就是使用这个函数，程序会去执行函数里的代码",
+          "exam_focus": "选择题：函数调用语法"
+        },
+        {
+          "name": "函数参数",
+          "category": "基础概念",
+          "description": "函数可以接受参数，参数是函数接收的输入数据",
+          "gesp_level": 2,
+          "parent_explanation": "参数就是给函数的数据，函数用这些数据来工作",
+          "exam_focus": "选择题：参数概念、阅读程序：参数传递"
+        },
+        {
+          "name": "函数返回值",
+          "category": "基础概念",
+          "description": "函数可以返回计算结果给调用者，使用return语句",
+          "gesp_level": 2,
+          "parent_explanation": "return把函数的结果送回调用处",
+          "exam_focus": "选择题：return作用、阅读程序：返回值"
+        }
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "title": "函数进阶",
+      "knowledge_points": [
+        {
+          "name": "函数声明",
+          "category": "基础语法",
+          "description": "函数调用前需要声明，格式：返回类型 函数名(参数列表);",
+          "gesp_level": 2,
+          "parent_explanation": "如果函数定义在后面，前面要先声明一下这个函数存在",
+          "exam_focus": "选择题：函数声明语法"
+        },
+        {
+          "name": "参数传递",
+          "category": "基础概念",
+          "description": "函数参数通过值传递，函数内修改参数不影响原变量",
+          "gesp_level": 2,
+          "parent_explanation": "传进去的只是值的拷贝，函数里改不影响外面的变量",
+          "exam_focus": "选择题：值传递特点、阅读程序：参数修改影响"
+        },
+        {
+          "name": "max函数",
+          "category": "编程技巧",
+          "description": "max(a,b)返回a和b中较大的值，a和b必须是相同类型",
+          "gesp_level": 2,
+          "parent_explanation": "max函数比较两个数，返回大的那个",
+          "exam_focus": "选择题：max函数用法"
+        },
+        {
+          "name": "min函数",
+          "category": "编程技巧",
+          "description": "min(a,b)返回a和b中较小的值，a和b必须是相同类型",
+          "gesp_level": 2,
+          "parent_explanation": "min函数比较两个数，返回小的那个",
+          "exam_focus": "选择题：min函数用法"
+        },
+        {
+          "name": "swap函数",
+          "category": "编程技巧",
+          "description": "swap(a,b)交换两个变量的值，需要#include <algorithm>",
+          "gesp_level": 2,
+          "parent_explanation": "swap函数可以直接交换两个变量的值，不用自己写三行",
+          "exam_focus": "选择题：swap函数用法"
+        }
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "title": "结构体",
+      "knowledge_points": [
+        {
+          "name": "结构体概念",
+          "category": "基础概念",
+          "description": "结构体是将多个不同类型数据组合在一起的复合数据类型",
+          "gesp_level": 2,
+          "parent_explanation": "结构体就像一个文件夹，可以把不同类型的数据打包在一起",
+          "exam_focus": "选择题：结构体作用"
+        },
+        {
+          "name": "结构体定义",
+          "category": "基础语法",
+          "description": "struct 结构体名 { 数据类型1 成员1; 数据类型2 成员2; ...; };",
+          "gesp_level": 2,
+          "parent_explanation": "定义结构体就是设计一个自定义的数据类型",
+          "exam_focus": "选择题：结构体定义语法"
+        },
+        {
+          "name": "结构体变量",
+          "category": "基础语法",
+          "description": "使用结构体类型定义变量，如Student stu;",
+          "gesp_level": 2,
+          "parent_explanation": "定义好结构体后，就可以用它定义变量了",
+          "exam_focus": "选择题：结构体变量定义"
+        },
+        {
+          "name": "结构体成员访问",
+          "category": "基础语法",
+          "description": "使用.运算符访问结构体成员，如stu.name访问name成员",
+          "gesp_level": 2,
+          "parent_explanation": "用点号可以访问结构体里的具体数据",
+          "exam_focus": "选择题：成员访问语法"
+        },
+        {
+          "name": "结构体初始化",
+          "category": "基础语法",
+          "description": "定义时初始化：Student stu = {1, \"Tom\", 90};",
+          "gesp_level": 2,
+          "parent_explanation": "可以在定义结构体变量时直接给成员赋值",
+          "exam_focus": "选择题：结构体初始化"
+        },
+        {
+          "name": "结构体数组",
+          "category": "编程技巧",
+          "description": "可以定义结构体数组存储多个结构体数据，如Student stu[50];",
+          "gesp_level": 2,
+          "parent_explanation": "结构体也可以做成数组，存很多条记录",
+          "exam_focus": "选择题：结构体数组定义、编程题：结构体数组应用"
+        }
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "title": "循环的嵌套",
+      "knowledge_points": [
+        {
+          "name": "循环嵌套概念",
+          "category": "基础概念",
+          "description": "在一个循环体内再写一个循环，称为循环嵌套或多重循环",
+          "gesp_level": 2,
+          "parent_explanation": "循环里面还可以有循环，就像大循环套小循环",
+          "exam_focus": "选择题：循环嵌套概念"
+        },
+        {
+          "name": "双重for循环",
+          "category": "基础语法",
+          "description": "外层for循环控制行，内层for循环控制列，常用于输出图形",
+          "gesp_level": 2,
+          "parent_explanation": "外层循环控制行数，内层循环控制每行输出什么",
+          "exam_focus": "选择题：双重循环执行流程、阅读程序：嵌套循环输出"
+        },
+        {
+          "name": "循环嵌套执行次数",
+          "category": "基础概念",
+          "description": "外层循环执行m次，内层循环执行n次，总共执行m×n次",
+          "gesp_level": 2,
+          "parent_explanation": "嵌套循环的总次数是外层次数乘以内层次数",
+          "exam_focus": "选择题：循环次数计算"
+        },
+        {
+          "name": "图形输出",
+          "category": "编程技巧",
+          "description": "使用循环嵌套输出矩形、三角形等有规律图形",
+          "gesp_level": 2,
+          "parent_explanation": "用嵌套循环可以输出各种图形图案",
+          "exam_focus": "编程题：图形输出"
+        },
+        {
+          "name": "九九乘法表",
+          "category": "编程技巧",
+          "description": "使用双重循环输出九九乘法表，外层控制行，内层控制列",
+          "gesp_level": 2,
+          "parent_explanation": "九九乘法表是双重循环的经典例子",
+          "exam_focus": "编程题：九九乘法表"
+        }
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "title": "桶排序",
+      "knowledge_points": [
+        {
+          "name": "排序概念",
+          "category": "基础概念",
+          "description": "将数据按从小到大（升序）或从大到小（降序）排列",
+          "gesp_level": 2,
+          "parent_explanation": "排序就是把数据按顺序排好，从小到大或从大到小",
+          "exam_focus": "选择题：排序概念"
+        },
+        {
+          "name": "桶排序思想",
+          "category": "算法思想",
+          "description": "根据数据范围准备'桶'，统计数据出现次数，按桶的顺序输出",
+          "gesp_level": 2,
+          "parent_explanation": "桶排序就像分类放东西，每个桶放一种数，最后按顺序倒出",
+          "exam_focus": "选择题：桶排序原理"
+        },
+        {
+          "name": "桶排序步骤",
+          "category": "算法步骤",
+          "description": "①准备桶数组并清零 ②统计每个数出现次数 ③按顺序输出",
+          "gesp_level": 2,
+          "parent_explanation": "桶排序分三步：准备桶、数数、输出",
+          "exam_focus": "选择题：桶排序步骤、编程题：桶排序实现"
+        },
+        {
+          "name": "桶排序适用场景",
+          "category": "算法分析",
+          "description": "数据范围小、数据量大时适合用桶排序，时间复杂度O(n)",
+          "gesp_level": 2,
+          "parent_explanation": "数据范围不大但数量很多时，桶排序很快",
+          "exam_focus": "选择题：桶排序适用条件"
+        },
+        {
+          "name": "桶排序局限性",
+          "category": "算法分析",
+          "description": "不适合数据范围大的情况，不能对浮点数排序",
+          "gesp_level": 2,
+          "parent_explanation": "数据范围太大时桶太多，而且只能排整数",
+          "exam_focus": "选择题：桶排序局限"
+        }
+      ]
+    },
+    {
+      "lesson_num": 22,
+      "title": "选择排序",
+      "knowledge_points": [
+        {
+          "name": "选择排序思想",
+          "category": "算法思想",
+          "description": "每轮从待排序元素中选出最小（大）的，放到已排序序列末尾",
+          "gesp_level": 2,
+          "parent_explanation": "选择排序每次选最小的放前面，一步步排好",
+          "exam_focus": "选择题：选择排序原理"
+        },
+        {
+          "name": "选择排序步骤",
+          "category": "算法步骤",
+          "description": "n个元素需要n-1轮，每轮找最小值下标，与当前位置交换",
+          "gesp_level": 2,
+          "parent_explanation": "重复找最小值并交换位置，直到全部有序",
+          "exam_focus": "选择题：选择排序步骤、编程题：选择排序实现"
+        },
+        {
+          "name": "选择排序代码",
+          "category": "编程技巧",
+          "description": "双重循环实现，外层控制轮数，内层找最值",
+          "gesp_level": 2,
+          "parent_explanation": "用双重循环实现选择排序",
+          "exam_focus": "编程题：选择排序代码"
+        },
+        {
+          "name": "选择排序复杂度",
+          "category": "算法分析",
+          "description": "时间复杂度O(n²)，空间复杂度O(1)，适合数据量小的情况",
+          "gesp_level": 2,
+          "parent_explanation": "选择排序实现简单，但数据量大时比较慢",
+          "exam_focus": "选择题：选择排序复杂度"
+        },
+        {
+          "name": "排序算法选择",
+          "category": "算法分析",
+          "description": "数据范围小用桶排序，数据范围大数量少用选择排序",
+          "gesp_level": 2,
+          "parent_explanation": "不同情况用不同排序方法，选合适的才高效",
+          "exam_focus": "选择题：排序算法选择"
+        }
+      ]
+    },
+    {
+      "lesson_num": 23,
+      "title": "冒泡排序、插入排序和二维数组",
+      "knowledge_points": [
+        {
+          "name": "冒泡排序思想",
+          "category": "算法思想",
+          "description": "相邻元素两两比较，大的往后冒，每轮把最大的移到最后",
+          "gesp_level": 2,
+          "parent_explanation": "冒泡排序像气泡上浮，大的数慢慢'冒'到后面",
+          "exam_focus": "选择题：冒泡排序原理"
+        },
+        {
+          "name": "冒泡排序步骤",
+          "category": "算法步骤",
+          "description": "n个元素需要n-1轮，每轮比较相邻元素，逆序则交换",
+          "gesp_level": 2,
+          "parent_explanation": "一遍遍比较交换，直到全部有序",
+          "exam_focus": "选择题：冒泡排序步骤、编程题：冒泡排序实现"
+        },
+        {
+          "name": "插入排序思想",
+          "category": "算法思想",
+          "description": "将待排序元素插入到已排序序列的合适位置，保持有序",
+          "gesp_level": 2,
+          "parent_explanation": "插入排序像整理扑克牌，把牌插到合适的位置",
+          "exam_focus": "选择题：插入排序原理"
+        },
+        {
+          "name": "二维数组概念",
+          "category": "基础概念",
+          "description": "数组的数组，可以存储表格形式的数据，有行和列",
+          "gesp_level": 2,
+          "parent_explanation": "二维数组像表格，有行有列，可以存矩阵数据",
+          "exam_focus": "选择题：二维数组概念"
+        },
+        {
+          "name": "二维数组定义",
+          "category": "基础语法",
+          "description": "数据类型 数组名[行数][列数]; 如int a[3][4];",
+          "gesp_level": 2,
+          "parent_explanation": "定义二维数组要指定行数和列数",
+          "exam_focus": "选择题：二维数组定义语法"
+        },
+        {
+          "name": "二维数组初始化",
+          "category": "基础语法",
+          "description": "int a[2][3] = {{1,2,3}, {4,5,6}}; 行内用逗号，行间用大括号",
+          "gesp_level": 2,
+          "parent_explanation": "二维数组初始化可以按行分组，也可以省略行数",
+          "exam_focus": "选择题：二维数组初始化"
+        },
+        {
+          "name": "二维数组遍历",
+          "category": "编程技巧",
+          "description": "使用双重循环遍历，外层控制行，内层控制列",
+          "gesp_level": 2,
+          "parent_explanation": "二维数组用双重循环遍历，外层行内层列",
+          "exam_focus": "编程题：二维数组遍历"
+        }
+      ]
+    },
+    {
+      "lesson_num": 24,
+      "title": "二维数组进阶",
+      "knowledge_points": [
+        {
+          "name": "二维数组部分初始化",
+          "category": "基础语法",
+          "description": "可以只初始化部分元素，未初始化的自动为0",
+          "gesp_level": 2,
+          "parent_explanation": "二维数组可以只给部分元素赋值，其他的自动变0",
+          "exam_focus": "选择题：部分初始化结果"
+        },
+        {
+          "name": "省略行数的初始化",
+          "category": "基础语法",
+          "description": "int a[][3] = {{1,2,3}, {4,5,6}}; 可以省略行数，自动计算",
+          "gesp_level": 2,
+          "parent_explanation": "初始化时行数可以省略，编译器会自动算",
+          "exam_focus": "选择题：省略行数语法"
+        },
+        {
+          "name": "按行遍历",
+          "category": "编程技巧",
+          "description": "外层循环行，内层循环列，逐行访问元素",
+          "gesp_level": 2,
+          "parent_explanation": "按行遍历就是一行一行地处理",
+          "exam_focus": "阅读程序：按行遍历输出"
+        },
+        {
+          "name": "按列遍历",
+          "category": "编程技巧",
+          "description": "外层循环列，内层循环行，逐列访问元素",
+          "gesp_level": 2,
+          "parent_explanation": "按列遍历就是一列一列地处理",
+          "exam_focus": "阅读程序：按列遍历输出"
+        },
+        {
+          "name": "二维数组行和列和",
+          "category": "编程技巧",
+          "description": "分别计算每行或每列的元素之和",
+          "gesp_level": 2,
+          "parent_explanation": "可以计算每行或每列的总和",
+          "exam_focus": "编程题：行列求和"
+        },
+        {
+          "name": "二维数组最值",
+          "category": "编程技巧",
+          "description": "在二维数组中查找最大值或最小值及其位置",
+          "gesp_level": 2,
+          "parent_explanation": "在二维数组中找最大最小值",
+          "exam_focus": "编程题：二维数组最值"
+        }
+      ]
+    }
+  ]
+}
