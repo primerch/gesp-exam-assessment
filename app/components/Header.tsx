@@ -13,26 +13,23 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="五个奶爸"
-              width={120}
-              height={120}
+              width={48}
+              height={48}
               className="object-contain"
             />
-            <div>
-              <h1 className="text-xl font-bold text-slate-900">五个奶爸</h1>
-              <p className="text-xs text-slate-500">少儿编程教育</p>
-            </div>
+            <span className="text-xl font-bold text-slate-900">五个奶爸</span>
           </div>
 
           {/* 导航 */}
           <nav className="hidden md:flex items-center gap-8">
+            <a href="/" className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
+              首页
+            </a>
+            <a href="/analyze" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+              试卷分析
+            </a>
             <a href="#" className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
               课程介绍
-            </a>
-            <a href="#" className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
-              GESP考试
-            </a>
-            <a href="#" className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
-              学习路径
             </a>
             <a href="#" className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
               关于我们
