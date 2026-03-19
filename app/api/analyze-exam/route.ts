@@ -11,6 +11,8 @@ interface AnalyzeRequestBody {
   examLevel: number;
   studentLevel: number;
   studentLesson: number;
+  teacherName?: string;  // 学管老师名称（可选）
+  studentName?: string;  // 学生姓名占位符（可选，默认cc）
 }
 
 // 响应类型
@@ -46,7 +48,14 @@ export async function POST(
       );
     }
 
-    const { pdfBase64, examLevel, studentLevel, studentLesson } = body;
+    const { 
+      pdfBase64, 
+      examLevel, 
+      studentLevel, 
+      studentLesson, 
+      teacherName = "", 
+      studentName = "cc" 
+    } = body;
 
     // 3. 验证必填字段
     if (!pdfBase64) {
@@ -97,13 +106,15 @@ export async function POST(
     }
 
     // 6. 调用 DeepSeek API 分析
-    console.log(`开始分析试卷: Level ${examLevel}, 学生进度: Level ${studentLevel} - 第 ${studentLesson} 课`);
+    console.log(`开始分析试卷: Level ${examLevel}, 学生进度: Level ${studentLevel} - 第 ${studentLesson}课, 老师: ${teacherName || "未填写"}, 学生: ${studentName}`);
     
     const result = await analyzeExam({
       pdfBuffer,
       examLevel,
       studentLevel,
       studentLesson,
+      teacherName,
+      studentName,
     });
 
     // 7. 返回结果

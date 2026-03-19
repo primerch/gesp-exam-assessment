@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { 
   AlertTriangle, 
   CheckCircle, 
@@ -9,7 +9,9 @@ import {
   FileText,
   BookOpen,
   BarChart3,
-  MessageSquare
+  MessageSquare,
+  Baby,
+  Edit3
 } from "lucide-react";
 import type { ExamAnalysisResult as AnalysisResult } from "@/app/lib/deepseek";
 import { getLevelName } from "@/app/data/gesp-outline";
@@ -21,10 +23,22 @@ interface ExamAnalysisResultProps {
 
 export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisResultProps) {
   const [copied, setCopied] = useState(false);
+  const [realStudentName, setRealStudentName] = useState<string>(""); // 学生真实姓名
+
+  // 替换学生姓名为真实姓名
+  const displayFeedback = useMemo(() => {
+    if (!realStudentName.trim()) {
+      return result.parentFeedback;
+    }
+    // 使用正则替换所有占位符（支持多个匹配）
+    const placeholder = result.studentName || "cc";
+    const regex = new RegExp(placeholder, 'g');
+    return result.parentFeedback.replace(regex, realStudentName.trim());
+  }, [result.parentFeedback, result.studentName, realStudentName]);
 
   const handleCopyFeedback = async () => {
     try {
-      await navigator.clipboard.writeText(result.parentFeedback);
+      await navigator.clipboard.writeText(displayFeedback);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -180,14 +194,44 @@ export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisRe
           </button>
         </div>
 
+        {/* 学生真实姓名输入 */}
+        <div className="mb-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
+          <label className="block text-sm font-medium text-amber-800 mb-2 flex items-center gap-2">
+            <Baby className="w-4 h-4" />
+            学生真实姓名（将替换反馈中的"{result.studentName || "cc"}"）
+          </label>
+          <div className="flex gap-3">
+            <input
+              type="text"
+              value={realStudentName}
+              onChange={(e) => setRealStudentName(e.target.value)}
+              placeholder={`输入真实姓名替换${result.studentName || "cc"}`}
+              className="flex-1 p-3 bg-white border border-amber-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500"
+            />
+            {realStudentName && (
+              <button
+                onClick={() => setRealStudentName("")}
+                className="px-4 py-2 text-amber-600 bg-white border border-amber-200 rounded-xl hover:bg-amber-100 transition-colors text-sm"
+              >
+                重置
+              </button>
+            )}
+          </div>
+          <p className="text-xs text-amber-600 mt-2">
+            {realStudentName.trim() 
+              ? `反馈中将显示"${realStudentName.trim()}"，复制时会自动替换` 
+              : `当前使用占位符"${result.studentName || "cc"}"，输入真实姓名后可一键替换`}
+          </p>
+        </div>
+
         <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
           <div className="whitespace-pre-wrap text-slate-700 leading-relaxed text-sm">
-            {result.parentFeedback}
+            {displayFeedback}
           </div>
         </div>
 
         <p className="mt-3 text-sm text-slate-500">
-          💡 提示：点击"一键复制"可复制上述内容，建议根据实际情况调整后再发给家长
+          💡 提示：点击"一键复制"可复制上述内容，建议根据实际情况微调后再发给家长
         </p>
       </div>
     </div>

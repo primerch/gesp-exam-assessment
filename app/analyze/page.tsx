@@ -8,7 +8,9 @@ import {
   GraduationCap, 
   Loader2,
   AlertCircle,
-  ChevronDown
+  ChevronDown,
+  User,
+  Baby
 } from "lucide-react";
 import Header from "@/app/components/Header";
 import PdfUploader from "@/app/components/PdfUploader";
@@ -37,6 +39,8 @@ export default function AnalyzePage() {
   const [examLevel, setExamLevel] = useState<number>(3); // 默认三级
   const [studentLevel, setStudentLevel] = useState<number>(1);
   const [studentLesson, setStudentLesson] = useState<number>(12);
+  const [teacherName, setTeacherName] = useState<string>(""); // 学管老师名称
+  const [studentPlaceholder, setStudentPlaceholder] = useState<string>("cc"); // 学生姓名占位符
   
   // 分析状态
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -81,6 +85,8 @@ export default function AnalyzePage() {
           examLevel,
           studentLevel,
           studentLesson,
+          teacherName,
+          studentName: studentPlaceholder.trim() || "cc",
         }),
       });
 
@@ -212,6 +218,58 @@ export default function AnalyzePage() {
             </div>
           </div>
 
+          {/* 老师和学生信息 */}
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-slate-700 mb-3">
+              <span className="flex items-center gap-2">
+                <User className="w-4 h-4" />
+                反馈文案设置
+              </span>
+            </label>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* 学管老师名称 */}
+              <div>
+                <label className="block text-xs text-slate-500 mb-2">
+                  您的名字（用于反馈开头）
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={teacherName}
+                    onChange={(e) => setTeacherName(e.target.value)}
+                    placeholder="例如：多多"
+                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <p className="text-xs text-slate-400 mt-1">
+                  反馈开头将显示：你好，我是{teacherName || "XX"}老师
+                </p>
+              </div>
+
+              {/* 学生姓名占位符 */}
+              <div>
+                <label className="block text-xs text-slate-500 mb-2">
+                  <span className="flex items-center gap-1">
+                    <Baby className="w-3 h-3" />
+                    学生姓名占位符
+                  </span>
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={studentPlaceholder}
+                    onChange={(e) => setStudentPlaceholder(e.target.value)}
+                    placeholder="例如：cc"
+                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <p className="text-xs text-slate-400 mt-1">
+                  AI生成反馈时用此占位符，分析后可替换为真实姓名
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* 错误提示 */}
           {error && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3">
@@ -272,6 +330,8 @@ export default function AnalyzePage() {
               <li>• 支持上传 GESP 1-8 级 C++ 考试 PDF 试卷</li>
               <li>• 请确保 PDF 是文字版而非扫描件/图片</li>
               <li>• 文件大小限制 10MB</li>
+              <li>• 填写您的名字，反馈将显示"你好，我是XX老师"</li>
+              <li>• 学生姓名用占位符（如cc），分析后可替换为真实姓名</li>
               <li>• AI 分析需要 DeepSeek API Key（首次使用需配置）</li>
             </ul>
           </div>
