@@ -34,7 +34,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <a 
             href="/analyze"
-            className="group bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 text-white hover:shadow-xl transition-all"
+            className="group bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 text-white hover:shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             <div className="flex items-start justify-between">
               <div>
@@ -80,28 +80,36 @@ export default function Home() {
         </div>
 
         {/* 学习进度选择 */}
-        <LevelSelector
-          currentLevel={currentLevel}
-          currentLesson={currentLesson}
-          onLevelChange={setCurrentLevel}
-          onLessonChange={setCurrentLesson}
-        />
+        <section className="mb-8">
+          <LevelSelector
+            currentLevel={currentLevel}
+            currentLesson={currentLesson}
+            onLevelChange={setCurrentLevel}
+            onLessonChange={setCurrentLesson}
+          />
+        </section>
 
         {/* 考试预测卡片 */}
-        <ExamPrediction
-          probabilities={probabilities}
-          recommendedExam={recommendedExam}
-        />
+        <section className="mb-8">
+          <ExamPrediction
+            probabilities={probabilities}
+            recommendedExam={recommendedExam}
+          />
+        </section>
 
         {/* 知识点分析 */}
-        <KnowledgeAnalysis
-          currentLevel={currentLevel}
-          currentLesson={currentLesson}
-          probabilities={probabilities}
-        />
+        <section className="mb-8">
+          <KnowledgeAnalysis
+            currentLevel={currentLevel}
+            currentLesson={currentLesson}
+            probabilities={probabilities}
+          />
+        </section>
 
         {/* 学习路径 */}
-        <StudyPath />
+        <section className="mb-8">
+          <StudyPath />
+        </section>
       </div>
 
       {/* 页脚 */}

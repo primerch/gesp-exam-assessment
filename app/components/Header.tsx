@@ -37,7 +37,7 @@ export default function Header() {
           </nav>
 
           {/* 联系按钮 */}
-          <button className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
             <GraduationCap className="w-4 h-4" />
             <span className="hidden sm:inline">咨询课程</span>
           </button>

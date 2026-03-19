@@ -15,34 +15,34 @@ const getDeepSeekClient = () => {
   
   return new OpenAI({
     apiKey: apiKey,
-    baseURL: "https://api.deepseek.com/v1", // DeepSeek API 地址
+    baseURL: "https://api.deepseek.com/v1",
   });
 };
 
 // 分析试卷的请求类型
 export interface ExamAnalysisRequest {
-  pdfBuffer: Buffer; // PDF 文件 Buffer
-  examLevel: number; // 试卷声称的 GESP 级别 (1-8)
-  studentLevel: number; // 学生当前课程级别 (1-4)
-  studentLesson: number; // 学生当前课程进度
+  pdfBuffer: Buffer;
+  examLevel: number;
+  studentLevel: number;
+  studentLesson: number;
 }
 
 // 超纲知识点类型
 export interface BeyondKnowledgePoint {
   name: string;
-  gespLevel: number; // 该知识点实际属于的 GESP 级别
-  reason: string; // 为什么认为超纲
-  questionContext?: string; // 在试卷中的上下文
+  gespLevel: number;
+  reason: string;
+  questionContext?: string;
 }
 
 // 分析结果类型
 export interface ExamAnalysisResult {
-  difficultyScore: number; // 难度系数 1-10
-  isBeyondSyllabus: boolean; // 是否超纲
-  beyondPoints: BeyondKnowledgePoint[]; // 超纲知识点列表
-  parentFeedback: string; // 给家长的反馈文案
-  summary: string; // 总体评价
-  confidence: number; // AI 分析的置信度 0-1
+  difficultyScore: number;
+  isBeyondSyllabus: boolean;
+  beyondPoints: BeyondKnowledgePoint[];
+  parentFeedback: string;
+  summary: string;
+  confidence: number;
 }
 
 // 提取 PDF 文本
@@ -66,7 +66,6 @@ export async function extractPdfText(pdfBuffer: Buffer): Promise<string> {
             
             for (const textItem of page.Texts) {
               for (const r of textItem.R) {
-                // decodeURIComponent 用于解码 URI 编码的字符
                 try {
                   text += decodeURIComponent(r.T) + " ";
                 } catch {
@@ -77,15 +76,14 @@ export async function extractPdfText(pdfBuffer: Buffer): Promise<string> {
             text += "\n";
           }
           resolve(text);
-        } catch (error) {
+        } catch {
           reject(new Error("提取 PDF 文本时出错"));
         }
       });
       
       pdfParser.parseBuffer(pdfBuffer);
     });
-  } catch (error) {
-    console.error("PDF 解析初始化错误:", error);
+  } catch {
     throw new Error("PDF 解析模块加载失败");
   }
 }
@@ -153,7 +151,7 @@ function buildAnalysisPrompt(
 
 ## 试卷内容
 \`\`\`
-${pdfText.slice(0, 15000)} // 限制文本长度，避免超出 token 限制
+${pdfText.slice(0, 15000)}
 \`\`\`
 
 ## 分析任务
@@ -201,17 +199,12 @@ export async function analyzeExam(
 ): Promise<ExamAnalysisResult> {
   const client = getDeepSeekClient();
   
-  // 1. 提取 PDF 文本
-  console.log("正在提取 PDF 文本...");
   const pdfText = await extractPdfText(request.pdfBuffer);
   
   if (!pdfText || pdfText.trim().length === 0) {
     throw new Error("PDF 文件无法提取文本，可能是扫描件或图片 PDF");
   }
-  
-  console.log(`PDF 提取成功，文本长度: ${pdfText.length} 字符`);
 
-  // 2. 构建 Prompt
   const prompt = buildAnalysisPrompt(
     request.examLevel,
     request.studentLevel,
@@ -219,12 +212,9 @@ export async function analyzeExam(
     pdfText
   );
 
-  // 3. 调用 DeepSeek API
   try {
-    console.log("正在调用 DeepSeek API 分析...");
-    
     const completion = await client.chat.completions.create({
-      model: "deepseek-chat", // DeepSeek-V3 模型
+      model: "deepseek-chat",
       messages: [
         {
           role: "system",
@@ -235,7 +225,7 @@ export async function analyzeExam(
           content: prompt,
         },
       ],
-      temperature: 0.1, // 低温度以获得更确定的结果
+      temperature: 0.1,
       max_tokens: 4096,
     });
 
@@ -245,31 +235,22 @@ export async function analyzeExam(
       throw new Error("DeepSeek API 返回空响应");
     }
 
-    console.log("DeepSeek API 响应成功，正在解析...");
-
-    // 4. 提取 JSON
     const jsonMatch = responseText.match(/\{[\s\S]*\}/);
     if (!jsonMatch) {
-      console.error("AI 返回内容:", responseText);
       throw new Error("无法解析 AI 返回的结果格式");
     }
 
     const analysisResult: ExamAnalysisResult = JSON.parse(jsonMatch[0]);
     
-    // 5. 验证结果格式
     if (typeof analysisResult.difficultyScore !== 'number' ||
         typeof analysisResult.isBeyondSyllabus !== 'boolean' ||
         !Array.isArray(analysisResult.beyondPoints)) {
-      console.error("解析后的结果:", analysisResult);
       throw new Error("AI 返回的结果格式不正确");
     }
 
-    console.log("分析完成");
     return analysisResult;
 
   } catch (error) {
-    console.error("DeepSeek API 调用失败:", error);
-    
     if (error instanceof Error) {
       if (error.message.includes("401")) {
         throw new Error("API Key 无效，请检查 DEEPSEEK_API_KEY 配置");

@@ -158,8 +158,9 @@ export default function PdfUploader({ onFileSelect, onClear }: PdfUploaderProps)
               <CheckCircle className="w-5 h-5 text-emerald-500" />
               <button
                 onClick={handleClear}
-                className="p-2 hover:bg-slate-200 rounded-lg transition-colors"
+                className="p-2 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-1"
                 title="删除文件"
+                aria-label="删除文件"
               >
                 <X className="w-5 h-5 text-slate-500" />
               </button>

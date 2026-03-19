@@ -100,25 +100,25 @@ export default function LevelSelector({
             <div className="flex gap-2 mt-4">
               <button
                 onClick={() => onLessonChange(Math.max(1, currentLesson - 4))}
-                className="px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50"
+                className="px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-1"
               >
                 -4课
               </button>
               <button
                 onClick={() => onLessonChange(Math.floor(maxLessons / 2))}
-                className="px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50"
+                className="px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-1"
               >
                 一半
               </button>
               <button
                 onClick={() => onLessonChange(Math.min(maxLessons, currentLesson + 4))}
-                className="px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50"
+                className="px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-1"
               >
                 +4课
               </button>
               <button
                 onClick={() => onLessonChange(maxLessons)}
-                className="px-3 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 ml-auto"
+                className="px-3 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 ml-auto focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
               >
                 完成全部
               </button>

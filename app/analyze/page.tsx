@@ -106,7 +106,7 @@ export default function AnalyzePage() {
         {/* 返回按钮 */}
         <button
           onClick={() => router.push("/")}
-          className="flex items-center gap-2 text-slate-600 hover:text-slate-900 mb-6 transition-colors"
+          className="flex items-center gap-2 text-slate-600 hover:text-slate-900 mb-6 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded-lg"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>返回首页</span>
@@ -143,12 +143,12 @@ export default function AnalyzePage() {
             <label className="block text-sm font-medium text-slate-700 mb-3">
               试卷级别
             </label>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {gespLevels.map((level) => (
                 <button
                   key={level.level}
                   onClick={() => setExamLevel(level.level)}
-                  className={`p-3 rounded-xl border-2 text-left transition-all ${
+                  className={`p-3 rounded-xl border-2 text-left transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                     examLevel === level.level
                       ? "border-blue-600 bg-blue-50"
                       : "border-slate-200 hover:border-slate-300 hover:bg-slate-50"
@@ -229,7 +229,7 @@ export default function AnalyzePage() {
             disabled={isAnalyzing || !pdfBase64}
             className={`
               w-full py-4 rounded-xl font-semibold text-lg transition-all
-              flex items-center justify-center gap-2
+              flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
               ${isAnalyzing || !pdfBase64
                 ? "bg-slate-200 text-slate-400 cursor-not-allowed"
                 : "bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/20"
