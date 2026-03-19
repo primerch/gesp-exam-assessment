@@ -155,12 +155,12 @@ export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisRe
         </div>
       )}
 
-      {/* 家长反馈文案 */}
+      {/* 学管反馈建议 */}
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
             <MessageSquare className="w-5 h-5 text-blue-600" />
-            家长反馈建议
+            学管反馈建议
           </h3>
           <button
             onClick={handleCopyFeedback}
@@ -181,15 +181,13 @@ export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisRe
         </div>
 
         <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-          <div className="prose prose-slate max-w-none">
-            <div className="whitespace-pre-wrap text-slate-700 leading-relaxed font-mono text-sm">
-              {result.parentFeedback}
-            </div>
+          <div className="whitespace-pre-wrap text-slate-700 leading-relaxed text-sm">
+            {result.parentFeedback}
           </div>
         </div>
 
         <p className="mt-3 text-sm text-slate-500">
-          💡 提示：点击"一键复制"可直接将上述文案发送给家长
+          💡 提示：点击"一键复制"可复制上述内容，建议根据实际情况调整后再发给家长
         </p>
       </div>
     </div>

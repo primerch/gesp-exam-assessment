@@ -1,5 +1,10 @@
 import OpenAI from "openai";
-import { PDFDocument } from "pdf-lib";
+
+// 使用动态导入来处理 pdf2json
+async function getPDFParser() {
+  const pdf2json = await import("pdf2json");
+  return pdf2json.default || pdf2json;
+}
 
 // 初始化 DeepSeek 客户端（兼容 OpenAI API 格式）
 const getDeepSeekClient = () => {
@@ -43,39 +48,45 @@ export interface ExamAnalysisResult {
 // 提取 PDF 文本
 export async function extractPdfText(pdfBuffer: Buffer): Promise<string> {
   try {
-    const pdfDoc = await PDFDocument.load(pdfBuffer);
-    const pages = pdfDoc.getPages();
+    const PDFParser = await getPDFParser();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const pdfParser = new (PDFParser as any)(null, 1);
     
-    // 注意：pdf-lib 本身不提供文本提取功能
-    // 我们需要使用其他方法，这里简化处理，将页面信息发送给 AI
-    // 实际上对于文本提取，我们需要使用更底层的库
-    
-    // 临时解决方案：返回一个标记，告诉上层需要特殊处理
-    // 由于 pdf-lib 不直接支持文本提取，我们使用另一种方法
-    
-    // 使用 pdf-parse 的替代方案
-    // 这里我们通过 dynamic import 使用一个简化的方法
-    const textContent: string[] = [];
-    
-    for (let i = 0; i < Math.min(pages.length, 20); i++) {
-      // 提取页面基本信息
-      const page = pages[i];
-      const { width, height } = page.getSize();
-      textContent.push(`[Page ${i + 1}: ${width}x${height}]`);
-    }
-    
-    // 如果 pdf-lib 无法提取文本，返回提示
-    if (textContent.length === 0) {
-      throw new Error("PDF 内容为空");
-    }
-    
-    // 由于 pdf-lib 主要是用于操作 PDF，不是提取文本
-    // 我们需要使用 pdf2json 或其他专门的库
-    // 这里返回一个特殊标记，让调用者知道需要额外处理
-    return "[PDF_UPLOADED]";
+    return new Promise((resolve, reject) => {
+      pdfParser.on("pdfParser_dataError", (errData: { parserError: Error }) => {
+        reject(new Error(`PDF 解析错误: ${errData.parserError.message}`));
+      });
+      
+      pdfParser.on("pdfParser_dataReady", (pdfData: { Pages: Array<{ Texts: Array<{ R: Array<{ T: string }> }> }> }) => {
+        try {
+          let text = "";
+          for (let i = 0; i < pdfData.Pages.length; i++) {
+            const page = pdfData.Pages[i];
+            text += `\n--- Page ${i + 1} ---\n`;
+            
+            for (const textItem of page.Texts) {
+              for (const r of textItem.R) {
+                // decodeURIComponent 用于解码 URI 编码的字符
+                try {
+                  text += decodeURIComponent(r.T) + " ";
+                } catch {
+                  text += r.T + " ";
+                }
+              }
+            }
+            text += "\n";
+          }
+          resolve(text);
+        } catch (error) {
+          reject(new Error("提取 PDF 文本时出错"));
+        }
+      });
+      
+      pdfParser.parseBuffer(pdfBuffer);
+    });
   } catch (error) {
-    console.error("PDF 解析错误:", error);
-    throw new Error("无法解析 PDF 文件，请确保文件格式正确");
+    console.error("PDF 解析初始化错误:", error);
+    throw new Error("PDF 解析模块加载失败");
   }
 }
 
@@ -169,11 +180,14 @@ ${pdfText.slice(0, 15000)} // 限制文本长度，避免超出 token 限制
   "confidence": 数字(0-1)
 }
 
-## 给家长反馈文案要求
-- 首先说明试卷整体难度评估
-- 如果有超纲内容，明确指出哪些知识点超纲，属于什么级别
-- 建议学生是否需要补充学习
-- 语气专业、客观、友好，适合直接发送给家长
+## 给学管老师的反馈文案要求
+- 语气委婉、温和，避免过于强硬或批评性语言
+- 从鼓励学生的角度出发，肯定学生的努力和现有水平
+- 说明试卷整体难度评估时，用客观描述而非主观评判
+- 如果有超纲内容，用"涉及了一些进阶知识点"、"可以提前了解"等委婉表达，避免"超纲"、"未掌握"等负面词汇
+- 建议学习方向时，用"建议逐步学习"、"可以循序渐进地接触"等积极表达
+- 文案格式为纯文本，不要使用 markdown 格式（不要加 ** 等符号）
+- 整体风格：温和、鼓励、建设性，让家长感受到机构的专业和对学生的关心
 
 ## 注意事项
 - 只分析 C++ 相关内容，忽略 Python 或其他语言内容
