@@ -1,0 +1,95 @@
+{
+  "level": 2,
+  "lesson_number": 7,
+  "title": "大整数加法",
+  "file_name": "L2-07.pptx",
+  "total_slides": 87,
+  "knowledge_points": [
+    "进制转换",
+    "位运算",
+    "模拟算法",
+    "递推算法",
+    "函数基础",
+    "二维数组",
+    "选择排序",
+    "高精度运算",
+    "贪心算法"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_02",
+      "name": "进制转换",
+      "category": "算法"
+    },
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_07",
+      "name": "递推算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_09",
+      "name": "选择排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_13",
+      "name": "高精度运算",
+      "category": "算法"
+    },
+    {
+      "id": "l4_19",
+      "name": "贪心算法",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "大整数加法"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "贪心概念\n①  阶段最优解可以被称为：局部最优解。\n这些局部最优解合起来，形成一个最终的最优结果，称为：全局最优解。\n通过局部最优解逐步推导出全局最优解，称为贪心算法。\n案例：选胡萝卜\n4堆胡萝卜，每..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "贪心算法题型总结\n①  选择类问题：\nn堆胡萝卜，每堆选一根，要求选出的总重最大。\n策略：每堆选最重。\n②  最优装载问题：\nn个人，上一搜船，要求上船人最多。\n策略：每次选最轻。\n③  部分背包问题..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "贪心算法题型总结\n⑤  排队等待问题：\nn个人排队答疑，每个人都有一个答疑时长，每个人花的时间等于自己的答疑时间加等前面人的时间，怎样排队，达到所有人所花时间总和最小。\n    策略：答疑时间短的先答..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "回顾练习\n有1个书包和5种物品，书包最多可以装20kg，给出了每种物品的库存量和单位价值。请问装进书包的最大物品总价值？（       ）\n779.4           B.  779       ..."
+    }
+  ],
+  "summary": {
+    "total_slides": 87,
+    "total_knowledge_points": 9,
+    "gesp_level3_points_count": 5,
+    "gesp_level4_points_count": 4
+  }
+}

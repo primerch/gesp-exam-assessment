@@ -1,0 +1,101 @@
+{
+  "level": 2,
+  "lesson_number": 22,
+  "title": "广度优先搜索1",
+  "file_name": "L2-22.pptx",
+  "total_slides": 65,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "结构体",
+    "变量作用域",
+    "选择排序",
+    "队列",
+    "链表"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_05",
+      "name": "结构体",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_07",
+      "name": "变量作用域",
+      "category": "函数"
+    },
+    {
+      "id": "l4_09",
+      "name": "选择排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_15",
+      "name": "队列",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_16",
+      "name": "链表",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "广度优先搜索1"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "想要给动态数组v添加一个元素5，以下哪个选项可以添加？（     ）\u000bA. v.push_back(5);\u000bB. v.end()=5;\u000bC. v.push(5);\u000bD. v.pop_back(5);\n..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "广度优先搜索"
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "码上得知-1-广度优先搜索的概念"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "深度优先搜索\n复习一下深度优先搜索概念\n从某一个点开始，按照一定的顺序（先左后右）\n开始搜索的点\n能深则深\n沿着某条路往下走，能深则深\n如果走完后发现不能到达目标，退回上一个点（\n不能深则退），换条路..."
+    }
+  ],
+  "summary": {
+    "total_slides": 65,
+    "total_knowledge_points": 10,
+    "gesp_level3_points_count": 4,
+    "gesp_level4_points_count": 6
+  }
+}

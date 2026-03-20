@@ -1,0 +1,403 @@
+{
+  "level": "Level 2",
+  "total_lessons": 24,
+  "target_gesp": "GESP 3-4级",
+  "lessons": [
+    {
+      "lesson_num": 1,
+      "filename": "L2-01.pptx",
+      "total_pages": 70,
+      "knowledge_points": [
+        "枚举算法概念：在明确范围内对所有数据进行验证",
+        "枚举算法基本步骤：确定范围、枚举验证、输出结果",
+        "水仙花数：三位整数，各位数字立方和等于本身",
+        "四叶玫瑰数：四位整数，各位数字四次方和等于本身",
+        "枚举算法优化：减少循环次数、减少嵌套层数",
+        "百钱买百鸡问题：经典枚举优化案例",
+        "二维数组枚举：矩阵遍历、查找特定元素",
+        "不高兴的津津：NOIP2004普及组真题"
+      ],
+      "gesp_mapping": [
+        "4级-枚举算法",
+        "4级-算法优化",
+        "3级-二维数组基础"
+      ]
+    },
+    {
+      "lesson_num": 2,
+      "filename": "L2-02.pptx",
+      "total_pages": 77,
+      "knowledge_points": [
+        "递推算法：从已知初始条件出发，依据递推关系推出结果",
+        "顺推：从事件开始状态推导到结束状态",
+        "逆推：从事件结束状态推导到开始状态",
+        "初始条件与递推关系的确定",
+        "斐波那契数列：a[i]=a[i-1]+a[i-2]",
+        "兔子繁殖问题：斐波那契数列经典应用",
+        "猴子分桃问题：逆推法经典案例",
+        "运输椰子问题：顺推法应用",
+        "台阶问题：斐波那契变种",
+        "铺瓷砖问题：递推思想应用",
+        "直线分割平面：递推公式推导"
+      ],
+      "gesp_mapping": [
+        "4级-递归与递推",
+        "3级-for循环",
+        "3级-while循环",
+        "3级-数组应用"
+      ]
+    },
+    {
+      "lesson_num": 3,
+      "filename": "L2-03.pptx",
+      "total_pages": 81,
+      "knowledge_points": [
+        "前缀和概念：前n项的和",
+        "前缀和数组：s[i] = s[i-1] + a[i]",
+        "区间和计算：sum[L,R] = s[R] - s[L-1]",
+        "前缀和算法优势：多次计算区间和时效率高",
+        "差分概念：每一项与前一项的差",
+        "差分数组：d[i] = a[i] - a[i-1]",
+        "差分与前缀和的互逆关系",
+        "K个元素和问题",
+        "m倍区间问题",
+        "最大区间和问题"
+      ],
+      "gesp_mapping": [
+        "4级-前缀和与差分",
+        "4级-算法优化",
+        "4级-双指针技术"
+      ]
+    },
+    {
+      "lesson_num": 4,
+      "filename": "L2-04.pptx",
+      "total_pages": 67,
+      "knowledge_points": [
+        "二分算法概念：每次将查找范围缩小一半",
+        "二分查找原理：基于中间值的比较",
+        "二分查找前提：数据必须有序",
+        "中间值选择：left + (right-left)/2",
+        "二分查找边界处理：左闭右闭、左闭右开",
+        "二分查找时间复杂度：O(log n)",
+        "二分答案：将求解问题转化为判定问题",
+        "整数二分的边界问题处理"
+      ],
+      "gesp_mapping": [
+        "4级-二分查找",
+        "4级-二分答案",
+        "4级-分治算法"
+      ]
+    },
+    {
+      "lesson_num": 5,
+      "filename": "L2-05.pptx",
+      "total_pages": 57,
+      "knowledge_points": [
+        "排序算法概述",
+        "冒泡排序原理与实现",
+        "选择排序原理与实现",
+        "插入排序原理与实现",
+        "排序算法时间复杂度分析",
+        "STL sort函数使用"
+      ],
+      "gesp_mapping": [
+        "3级-简单排序",
+        "4级-排序算法"
+      ]
+    },
+    {
+      "lesson_num": 6,
+      "filename": "L2-06.pptx",
+      "total_pages": 46,
+      "knowledge_points": [
+        "结构体概念与定义",
+        "结构体成员访问",
+        "结构体数组",
+        "结构体与函数",
+        "结构体排序"
+      ],
+      "gesp_mapping": [
+        "4级-结构体基础"
+      ]
+    },
+    {
+      "lesson_num": 7,
+      "filename": "L2-07.pptx",
+      "total_pages": 87,
+      "knowledge_points": [
+        "指针基本概念",
+        "指针变量定义与初始化",
+        "取地址运算符&与解引用运算符*",
+        "指针与数组",
+        "指针运算",
+        "指针与函数参数"
+      ],
+      "gesp_mapping": [
+        "4级-指针基础"
+      ]
+    },
+    {
+      "lesson_num": 8,
+      "filename": "L2-08.pptx",
+      "total_pages": 62,
+      "knowledge_points": [
+        "动态内存管理概念",
+        "new运算符使用",
+        "delete运算符使用",
+        "动态数组",
+        "内存泄漏与注意事项"
+      ],
+      "gesp_mapping": [
+        "4级-动态内存管理"
+      ]
+    },
+    {
+      "lesson_num": 9,
+      "filename": "L2-09.pptx",
+      "total_pages": 63,
+      "knowledge_points": [
+        "STL概述",
+        "vector容器：定义、插入、删除、遍历",
+        "vector常用方法：push_back, pop_back, size",
+        "string容器：字符串操作",
+        "迭代器基础"
+      ],
+      "gesp_mapping": [
+        "4级-STL容器"
+      ]
+    },
+    {
+      "lesson_num": 10,
+      "filename": "L2-10.pptx",
+      "total_pages": 57,
+      "knowledge_points": [
+        "map容器概念",
+        "map的插入与查找",
+        "map的遍历",
+        "set容器概念",
+        "set的插入与查找",
+        "STL容器的应用"
+      ],
+      "gesp_mapping": [
+        "4级-STL容器"
+      ]
+    },
+    {
+      "lesson_num": 11,
+      "filename": "L2-11.pptx",
+      "total_pages": 80,
+      "knowledge_points": [
+        "贪心算法概念",
+        "贪心策略的选择",
+        "活动选择问题",
+        "区间调度问题",
+        "贪心算法的证明"
+      ],
+      "gesp_mapping": [
+        "4级-贪心算法"
+      ]
+    },
+    {
+      "lesson_num": 12,
+      "filename": "L2-12.pptx",
+      "total_pages": 31,
+      "knowledge_points": [
+        "分治算法概念",
+        "分治算法步骤：分解、解决、合并",
+        "归并排序",
+        "快速排序",
+        "分治算法应用"
+      ],
+      "gesp_mapping": [
+        "4级-分治算法",
+        "4级-排序算法"
+      ]
+    },
+    {
+      "lesson_num": 13,
+      "filename": "L2-13.pptx",
+      "total_pages": 54,
+      "knowledge_points": [
+        "递归概念与原理",
+        "递归函数设计",
+        "递归与迭代的转换",
+        "递归的应用：阶乘、斐波那契",
+        "递归的时间复杂度分析"
+      ],
+      "gesp_mapping": [
+        "3级-递归函数入门",
+        "4级-递归与递推"
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "filename": "L2-14.pptx",
+      "total_pages": 88,
+      "knowledge_points": [
+        "深度优先搜索DFS概念",
+        "DFS算法实现",
+        "DFS与递归",
+        "迷宫问题",
+        "连通块问题",
+        "DFS剪枝"
+      ],
+      "gesp_mapping": [
+        "4级-搜索算法（DFS）"
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "filename": "L2-15.pptx",
+      "total_pages": 122,
+      "knowledge_points": [
+        "广度优先搜索BFS概念",
+        "BFS算法实现",
+        "BFS与队列",
+        "最短路径问题",
+        "BFS与DFS的比较",
+        "队列的STL实现"
+      ],
+      "gesp_mapping": [
+        "4级-搜索算法（BFS）"
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "filename": "L2-16.pptx",
+      "total_pages": 63,
+      "knowledge_points": [
+        "动态规划概念",
+        "动态规划基本步骤",
+        "记忆化搜索",
+        "经典DP问题：数字三角形",
+        "DP状态定义与转移方程"
+      ],
+      "gesp_mapping": [
+        "4级-动态规划入门"
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "filename": "L2-17.pptx",
+      "total_pages": 51,
+      "knowledge_points": [
+        "背包问题概述",
+        "01背包问题",
+        "完全背包问题",
+        "背包问题的DP解法",
+        "背包问题的空间优化"
+      ],
+      "gesp_mapping": [
+        "4级-动态规划入门"
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "filename": "L2-18.pptx",
+      "total_pages": 38,
+      "knowledge_points": [
+        "线性动态规划",
+        "最长上升子序列LIS",
+        "最长公共子序列LCS",
+        "线性DP的解法"
+      ],
+      "gesp_mapping": [
+        "4级-动态规划入门"
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "filename": "L2-19.pptx",
+      "total_pages": 80,
+      "knowledge_points": [
+        "字符串处理基础",
+        "字符串常用操作",
+        "字符串匹配算法：KMP",
+        "字符串哈希",
+        "字符串与STL"
+      ],
+      "gesp_mapping": [
+        "4级-字符串处理"
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "filename": "L2-20.pptx",
+      "total_pages": 99,
+      "knowledge_points": [
+        "图的基本概念",
+        "图的存储：邻接矩阵",
+        "图的存储：邻接表",
+        "图的遍历：DFS",
+        "图的遍历：BFS",
+        "拓扑排序"
+      ],
+      "gesp_mapping": [
+        "4级-简单图论"
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "filename": "L2-21.pptx",
+      "total_pages": 58,
+      "knowledge_points": [
+        "高精度计算概念",
+        "高精度加法",
+        "高精度减法",
+        "高精度乘法",
+        "高精度除法"
+      ],
+      "gesp_mapping": [
+        "4级-高精度计算"
+      ]
+    },
+    {
+      "lesson_num": 22,
+      "filename": "L2-22.pptx",
+      "total_pages": 65,
+      "knowledge_points": [
+        "位运算概念",
+        "按位与&",
+        "按位或|",
+        "按位异或^",
+        "按位取反~",
+        "左移<<与右移>>",
+        "位运算的应用"
+      ],
+      "gesp_mapping": [
+        "4级-位运算"
+      ]
+    },
+    {
+      "lesson_num": 23,
+      "filename": "L2-23.pptx",
+      "total_pages": 78,
+      "knowledge_points": [
+        "滑动窗口概念",
+        "双指针技术",
+        "滑动窗口最大值",
+        "滑动窗口应用",
+        "单调队列"
+      ],
+      "gesp_mapping": [
+        "4级-滑动窗口",
+        "4级-双指针技术"
+      ]
+    },
+    {
+      "lesson_num": 24,
+      "filename": "L2-24.pptx",
+      "total_pages": 62,
+      "knowledge_points": [
+        "综合复习",
+        "模拟考试",
+        "真题讲解",
+        "考前准备"
+      ],
+      "gesp_mapping": [
+        "GESP 3-4级综合复习"
+      ]
+    }
+  ]
+}

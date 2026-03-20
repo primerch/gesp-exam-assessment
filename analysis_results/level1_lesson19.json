@@ -1,0 +1,76 @@
+{
+  "level": 1,
+  "lesson_number": 19,
+  "title": "结构体",
+  "file_name": "19. 结构体.pptx",
+  "total_slides": 108,
+  "slides_with_content": 108,
+  "knowledge_points": [
+    {
+      "name": "结构体",
+      "desc": "struct定义、成员访问"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_11",
+    "l2_4",
+    "l2_8",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "函数声明\n函数调用前需要进行函数声明，表示该函数存在\n函数的声明\n调用前定义，\n无需声明"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "万能头文件\n万能头文件"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "max( )函数\n作用：计算两个数（整数、小数、字符）中较大的数\n语法格式：max(x, y)\n说明：x和y必须是同一类型的数据\n比较ASCII码值"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "min( )函数\n作用：计算两个数（整数、小数、字符）中较小的数\n语法格式：min(x, y)\n说明：x和y必须是同一类型的数据"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "swap( )函数\n作用：交换两个变量的值\n语法格式：swap(x, y)\n说明：x和y必须是同一类型的数据\nint a=3;\u000bint b=5;\u000bint t=a;\u000ba=b;\u000bb=t;\u000bcout<<a<<\" \"<<b<<endl;\nswap(a,b);"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "sort( )函数\nsort函数可以给数组中指定范围内的元素进行排序\nsort函数默认为升序排序，若想要降序，需要设置第三个参数\nsort(begin,end,cmp)\n开始位置\n函数名\n结束位置\nbool cmp(int a,int b){\u000b    return a>b;\u000b}"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "回顾练习1\n下方代码的输出结果是？（    ）\nB\n759\n795\n975\n579"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "回顾练习2\n阅读如下程序，请分析程序的运行结果为_____________________。\n2 9 5 4 6"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "结构体"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "保存学生信息\n学号：1\n姓名：yaya\n分数：98\nint id=1;\u000bstring name=\"yaya\";\u000bdouble score=98;"
+    }
+  ]
+}

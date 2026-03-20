@@ -1,0 +1,80 @@
+{
+  "level": 1,
+  "lesson_number": 1,
+  "title": "变量和数据的输入输出",
+  "file_name": "1. 变量和数据的输入输出.pptx",
+  "total_slides": 121,
+  "slides_with_content": 121,
+  "knowledge_points": [
+    {
+      "name": "输出语句cout",
+      "desc": "使用cout和<<进行标准输出"
+    },
+    {
+      "name": "输入语句cin",
+      "desc": "使用cin和>>进行标准输入"
+    },
+    {
+      "name": "变量定义与命名规则",
+      "desc": "变量的定义、初始化、赋值、标识符命名规则"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_11",
+    "l1_12",
+    "l1_14",
+    "l1_2",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_3",
+    "l2_4"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "变量和数据的输入输出"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "输出的信息是多样的，可以输出文字。\n晓出净慈寺送林子方\n         【唐】 杨万里\n毕竟西湖六月中，\n风光不与四时同。\n接天莲叶无穷碧，\n映日荷花别样红。"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "还可以输出图片。"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "还可以输出动画。"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "通过学习C++语言，我们可以自己输   \n   出信息到屏幕上。"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "首先，完成最简单的输出：输出文字。\nHello world"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "输出文字信息"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "码上得知-1-编写并运行程序"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "编程工具：Dev-C++\n请大家在电脑桌面找到Dev-C++，并双击打开。"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "编程工具：Dev-C++\n菜单栏\n工具栏\n编辑区\n左侧项目管理窗口\n底部报告窗口\n在此区域编写内容"
+    }
+  ]
+}

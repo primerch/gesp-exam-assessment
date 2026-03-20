@@ -1,0 +1,5250 @@
+{
+  "1": [
+    {
+      "id": "l1_1_0",
+      "name": "变量定义",
+      "description": "Level 1 第1课: 变量定义",
+      "difficulty": 1,
+      "gespMapping": [
+        "1.1",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "id": "l1_1_1",
+      "name": "cin/cout",
+      "description": "Level 1 第1课: cin/cout",
+      "difficulty": 1,
+      "gespMapping": [
+        "1.1",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "id": "l1_1_2",
+      "name": "数据类型",
+      "description": "Level 1 第1课: 数据类型",
+      "difficulty": 1,
+      "gespMapping": [
+        "1.1",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "id": "l1_1_3",
+      "name": "程序框架",
+      "description": "Level 1 第1课: 程序框架",
+      "difficulty": 1,
+      "gespMapping": [
+        "1.1",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "id": "l1_2_4",
+      "name": "算术运算符",
+      "description": "Level 1 第2课: 算术运算符",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.2",
+        "1.7",
+        "1.8",
+        "2.5"
+      ]
+    },
+    {
+      "id": "l1_2_5",
+      "name": "取余运算",
+      "description": "Level 1 第2课: 取余运算",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.2",
+        "1.7",
+        "1.8",
+        "2.5"
+      ]
+    },
+    {
+      "id": "l1_2_6",
+      "name": "字符型",
+      "description": "Level 1 第2课: 字符型",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.2",
+        "1.7",
+        "1.8",
+        "2.5"
+      ]
+    },
+    {
+      "id": "l1_2_7",
+      "name": "ASCII",
+      "description": "Level 1 第2课: ASCII",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.2",
+        "1.7",
+        "1.8",
+        "2.5"
+      ]
+    },
+    {
+      "id": "l1_3_8",
+      "name": "关系运算符",
+      "description": "Level 1 第3课: 关系运算符",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_3_9",
+      "name": "if语句",
+      "description": "Level 1 第3课: if语句",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_3_10",
+      "name": "逻辑运算",
+      "description": "Level 1 第3课: 逻辑运算",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_3_11",
+      "name": "多分支",
+      "description": "Level 1 第3课: 多分支",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_4_12",
+      "name": "switch语句",
+      "description": "Level 1 第4课: switch语句",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.2",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_4_13",
+      "name": "break",
+      "description": "Level 1 第4课: break",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.2",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_4_14",
+      "name": "case分支",
+      "description": "Level 1 第4课: case分支",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.2",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_5_15",
+      "name": "for循环",
+      "description": "Level 1 第5课: for循环",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.3",
+        "2.6",
+        "2.7"
+      ]
+    },
+    {
+      "id": "l1_5_16",
+      "name": "循环变量",
+      "description": "Level 1 第5课: 循环变量",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.3",
+        "2.6",
+        "2.7"
+      ]
+    },
+    {
+      "id": "l1_5_17",
+      "name": "循环条件",
+      "description": "Level 1 第5课: 循环条件",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.3",
+        "2.6",
+        "2.7"
+      ]
+    },
+    {
+      "id": "l1_5_18",
+      "name": "循环步长",
+      "description": "Level 1 第5课: 循环步长",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.3",
+        "2.6",
+        "2.7"
+      ]
+    },
+    {
+      "id": "l1_6_19",
+      "name": "综合练习",
+      "description": "Level 1 第6课: 综合练习",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.1",
+        "1.2",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.6"
+      ]
+    },
+    {
+      "id": "l1_7_20",
+      "name": "数组定义",
+      "description": "Level 1 第7课: 数组定义",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.9"
+      ]
+    },
+    {
+      "id": "l1_7_21",
+      "name": "数组访问",
+      "description": "Level 1 第7课: 数组访问",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.9"
+      ]
+    },
+    {
+      "id": "l1_7_22",
+      "name": "数组遍历",
+      "description": "Level 1 第7课: 数组遍历",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.9"
+      ]
+    },
+    {
+      "id": "l1_7_23",
+      "name": "数组初始化",
+      "description": "Level 1 第7课: 数组初始化",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.9"
+      ]
+    },
+    {
+      "id": "l1_8_24",
+      "name": "数组插入",
+      "description": "Level 1 第8课: 数组插入",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_8_25",
+      "name": "数组删除",
+      "description": "Level 1 第8课: 数组删除",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_8_26",
+      "name": "数组移动",
+      "description": "Level 1 第8课: 数组移动",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_9_27",
+      "name": "二维数组",
+      "description": "Level 1 第9课: 二维数组",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.8",
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_9_28",
+      "name": "矩阵操作",
+      "description": "Level 1 第9课: 矩阵操作",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.8",
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_9_29",
+      "name": "双重循环",
+      "description": "Level 1 第9课: 双重循环",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.8",
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_10_30",
+      "name": "数组综合",
+      "description": "Level 1 第10课: 数组综合",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_10_31",
+      "name": "约瑟夫环",
+      "description": "Level 1 第10课: 约瑟夫环",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_11_32",
+      "name": "while循环",
+      "description": "Level 1 第11课: while循环",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_11_33",
+      "name": "do-while",
+      "description": "Level 1 第11课: do-while",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_11_34",
+      "name": "数位分离",
+      "description": "Level 1 第11课: 数位分离",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_12_35",
+      "name": "格式化输出",
+      "description": "Level 1 第12课: 格式化输出",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.4",
+        "1.5",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_12_36",
+      "name": "setw",
+      "description": "Level 1 第12课: setw",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.4",
+        "1.5",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_12_37",
+      "name": "setprecision",
+      "description": "Level 1 第12课: setprecision",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.4",
+        "1.5",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_12_38",
+      "name": "浮点数",
+      "description": "Level 1 第12课: 浮点数",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.4",
+        "1.5",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_13_39",
+      "name": "浮点精度",
+      "description": "Level 1 第13课: 浮点精度",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.2",
+        "1.3",
+        "1.6",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_13_40",
+      "name": "类型转换",
+      "description": "Level 1 第13课: 类型转换",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.2",
+        "1.3",
+        "1.6",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_13_41",
+      "name": "long long",
+      "description": "Level 1 第13课: long long",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.2",
+        "1.3",
+        "1.6",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_14_42",
+      "name": "字符数组",
+      "description": "Level 1 第14课: 字符数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_14_43",
+      "name": "字符串输入",
+      "description": "Level 1 第14课: 字符串输入",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_14_44",
+      "name": "字符串长度",
+      "description": "Level 1 第14课: 字符串长度",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_14_45",
+      "name": "字符串遍历",
+      "description": "Level 1 第14课: 字符串遍历",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_15_46",
+      "name": "string类型",
+      "description": "Level 1 第15课: string类型",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_15_47",
+      "name": "string操作",
+      "description": "Level 1 第15课: string操作",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_15_48",
+      "name": "string函数",
+      "description": "Level 1 第15课: string函数",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_16_49",
+      "name": "字符串综合",
+      "description": "Level 1 第16课: 字符串综合",
+      "difficulty": 4,
+      "gespMapping": [
+        "1.4",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_16_50",
+      "name": "凯撒加密",
+      "description": "Level 1 第16课: 凯撒加密",
+      "difficulty": 4,
+      "gespMapping": [
+        "1.4",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_16_51",
+      "name": "回文判断",
+      "description": "Level 1 第16课: 回文判断",
+      "difficulty": 4,
+      "gespMapping": [
+        "1.4",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_17_52",
+      "name": "函数定义",
+      "description": "Level 1 第17课: 函数定义",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_17_53",
+      "name": "函数调用",
+      "description": "Level 1 第17课: 函数调用",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_17_54",
+      "name": "参数",
+      "description": "Level 1 第17课: 参数",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_17_55",
+      "name": "返回值",
+      "description": "Level 1 第17课: 返回值",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_18_56",
+      "name": "变量作用域",
+      "description": "Level 1 第18课: 变量作用域",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_18_57",
+      "name": "局部变量",
+      "description": "Level 1 第18课: 局部变量",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_18_58",
+      "name": "全局变量",
+      "description": "Level 1 第18课: 全局变量",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_18_59",
+      "name": "max/min函数",
+      "description": "Level 1 第18课: max/min函数",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_19_60",
+      "name": "结构体定义",
+      "description": "Level 1 第19课: 结构体定义",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.12",
+        "2.13"
+      ]
+    },
+    {
+      "id": "l1_19_61",
+      "name": "结构体数组",
+      "description": "Level 1 第19课: 结构体数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.12",
+        "2.13"
+      ]
+    },
+    {
+      "id": "l1_19_62",
+      "name": "结构体排序",
+      "description": "Level 1 第19课: 结构体排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.12",
+        "2.13"
+      ]
+    },
+    {
+      "id": "l1_20_63",
+      "name": "循环嵌套",
+      "description": "Level 1 第20课: 循环嵌套",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_20_64",
+      "name": "图形输出",
+      "description": "Level 1 第20课: 图形输出",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_20_65",
+      "name": "九九乘法表",
+      "description": "Level 1 第20课: 九九乘法表",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_21_66",
+      "name": "桶排序",
+      "description": "Level 1 第21课: 桶排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.8",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_21_67",
+      "name": "排序应用",
+      "description": "Level 1 第21课: 排序应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.8",
+        "2.10"
+      ]
+    }
+  ],
+  "2": [
+    {
+      "id": "l1_1_0",
+      "name": "变量定义",
+      "description": "Level 1 第1课: 变量定义",
+      "difficulty": 1,
+      "gespMapping": [
+        "1.1",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "id": "l1_1_1",
+      "name": "cin/cout",
+      "description": "Level 1 第1课: cin/cout",
+      "difficulty": 1,
+      "gespMapping": [
+        "1.1",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "id": "l1_1_2",
+      "name": "数据类型",
+      "description": "Level 1 第1课: 数据类型",
+      "difficulty": 1,
+      "gespMapping": [
+        "1.1",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "id": "l1_1_3",
+      "name": "程序框架",
+      "description": "Level 1 第1课: 程序框架",
+      "difficulty": 1,
+      "gespMapping": [
+        "1.1",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "id": "l1_2_4",
+      "name": "算术运算符",
+      "description": "Level 1 第2课: 算术运算符",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.2",
+        "1.7",
+        "1.8",
+        "2.5"
+      ]
+    },
+    {
+      "id": "l1_2_5",
+      "name": "取余运算",
+      "description": "Level 1 第2课: 取余运算",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.2",
+        "1.7",
+        "1.8",
+        "2.5"
+      ]
+    },
+    {
+      "id": "l1_2_6",
+      "name": "字符型",
+      "description": "Level 1 第2课: 字符型",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.2",
+        "1.7",
+        "1.8",
+        "2.5"
+      ]
+    },
+    {
+      "id": "l1_2_7",
+      "name": "ASCII",
+      "description": "Level 1 第2课: ASCII",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.2",
+        "1.7",
+        "1.8",
+        "2.5"
+      ]
+    },
+    {
+      "id": "l1_3_8",
+      "name": "关系运算符",
+      "description": "Level 1 第3课: 关系运算符",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_3_9",
+      "name": "if语句",
+      "description": "Level 1 第3课: if语句",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_3_10",
+      "name": "逻辑运算",
+      "description": "Level 1 第3课: 逻辑运算",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_3_11",
+      "name": "多分支",
+      "description": "Level 1 第3课: 多分支",
+      "difficulty": 2,
+      "gespMapping": [
+        "1.8",
+        "2.2",
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_4_12",
+      "name": "switch语句",
+      "description": "Level 1 第4课: switch语句",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.2",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_4_13",
+      "name": "break",
+      "description": "Level 1 第4课: break",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.2",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_4_14",
+      "name": "case分支",
+      "description": "Level 1 第4课: case分支",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.2",
+        "2.4"
+      ]
+    },
+    {
+      "id": "l1_5_15",
+      "name": "for循环",
+      "description": "Level 1 第5课: for循环",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.3",
+        "2.6",
+        "2.7"
+      ]
+    },
+    {
+      "id": "l1_5_16",
+      "name": "循环变量",
+      "description": "Level 1 第5课: 循环变量",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.3",
+        "2.6",
+        "2.7"
+      ]
+    },
+    {
+      "id": "l1_5_17",
+      "name": "循环条件",
+      "description": "Level 1 第5课: 循环条件",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.3",
+        "2.6",
+        "2.7"
+      ]
+    },
+    {
+      "id": "l1_5_18",
+      "name": "循环步长",
+      "description": "Level 1 第5课: 循环步长",
+      "difficulty": 2,
+      "gespMapping": [
+        "2.3",
+        "2.6",
+        "2.7"
+      ]
+    },
+    {
+      "id": "l1_6_19",
+      "name": "综合练习",
+      "description": "Level 1 第6课: 综合练习",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.1",
+        "1.2",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.6"
+      ]
+    },
+    {
+      "id": "l1_7_20",
+      "name": "数组定义",
+      "description": "Level 1 第7课: 数组定义",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.9"
+      ]
+    },
+    {
+      "id": "l1_7_21",
+      "name": "数组访问",
+      "description": "Level 1 第7课: 数组访问",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.9"
+      ]
+    },
+    {
+      "id": "l1_7_22",
+      "name": "数组遍历",
+      "description": "Level 1 第7课: 数组遍历",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.9"
+      ]
+    },
+    {
+      "id": "l1_7_23",
+      "name": "数组初始化",
+      "description": "Level 1 第7课: 数组初始化",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.9"
+      ]
+    },
+    {
+      "id": "l1_8_24",
+      "name": "数组插入",
+      "description": "Level 1 第8课: 数组插入",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_8_25",
+      "name": "数组删除",
+      "description": "Level 1 第8课: 数组删除",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_8_26",
+      "name": "数组移动",
+      "description": "Level 1 第8课: 数组移动",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_9_27",
+      "name": "二维数组",
+      "description": "Level 1 第9课: 二维数组",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.8",
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_9_28",
+      "name": "矩阵操作",
+      "description": "Level 1 第9课: 矩阵操作",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.8",
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_9_29",
+      "name": "双重循环",
+      "description": "Level 1 第9课: 双重循环",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.8",
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_10_30",
+      "name": "数组综合",
+      "description": "Level 1 第10课: 数组综合",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_10_31",
+      "name": "约瑟夫环",
+      "description": "Level 1 第10课: 约瑟夫环",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_11_32",
+      "name": "while循环",
+      "description": "Level 1 第11课: while循环",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_11_33",
+      "name": "do-while",
+      "description": "Level 1 第11课: do-while",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_11_34",
+      "name": "数位分离",
+      "description": "Level 1 第11课: 数位分离",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.6",
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_12_35",
+      "name": "格式化输出",
+      "description": "Level 1 第12课: 格式化输出",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.4",
+        "1.5",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_12_36",
+      "name": "setw",
+      "description": "Level 1 第12课: setw",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.4",
+        "1.5",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_12_37",
+      "name": "setprecision",
+      "description": "Level 1 第12课: setprecision",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.4",
+        "1.5",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_12_38",
+      "name": "浮点数",
+      "description": "Level 1 第12课: 浮点数",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.4",
+        "1.5",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_13_39",
+      "name": "浮点精度",
+      "description": "Level 1 第13课: 浮点精度",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.2",
+        "1.3",
+        "1.6",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_13_40",
+      "name": "类型转换",
+      "description": "Level 1 第13课: 类型转换",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.2",
+        "1.3",
+        "1.6",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_13_41",
+      "name": "long long",
+      "description": "Level 1 第13课: long long",
+      "difficulty": 3,
+      "gespMapping": [
+        "1.2",
+        "1.3",
+        "1.6",
+        "2.1"
+      ]
+    },
+    {
+      "id": "l1_14_42",
+      "name": "字符数组",
+      "description": "Level 1 第14课: 字符数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_14_43",
+      "name": "字符串输入",
+      "description": "Level 1 第14课: 字符串输入",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_14_44",
+      "name": "字符串长度",
+      "description": "Level 1 第14课: 字符串长度",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_14_45",
+      "name": "字符串遍历",
+      "description": "Level 1 第14课: 字符串遍历",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_15_46",
+      "name": "string类型",
+      "description": "Level 1 第15课: string类型",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_15_47",
+      "name": "string操作",
+      "description": "Level 1 第15课: string操作",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_15_48",
+      "name": "string函数",
+      "description": "Level 1 第15课: string函数",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.9",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_16_49",
+      "name": "字符串综合",
+      "description": "Level 1 第16课: 字符串综合",
+      "difficulty": 4,
+      "gespMapping": [
+        "1.4",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_16_50",
+      "name": "凯撒加密",
+      "description": "Level 1 第16课: 凯撒加密",
+      "difficulty": 4,
+      "gespMapping": [
+        "1.4",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_16_51",
+      "name": "回文判断",
+      "description": "Level 1 第16课: 回文判断",
+      "difficulty": 4,
+      "gespMapping": [
+        "1.4",
+        "2.11"
+      ]
+    },
+    {
+      "id": "l1_17_52",
+      "name": "函数定义",
+      "description": "Level 1 第17课: 函数定义",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_17_53",
+      "name": "函数调用",
+      "description": "Level 1 第17课: 函数调用",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_17_54",
+      "name": "参数",
+      "description": "Level 1 第17课: 参数",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_17_55",
+      "name": "返回值",
+      "description": "Level 1 第17课: 返回值",
+      "difficulty": 3,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_18_56",
+      "name": "变量作用域",
+      "description": "Level 1 第18课: 变量作用域",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_18_57",
+      "name": "局部变量",
+      "description": "Level 1 第18课: 局部变量",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_18_58",
+      "name": "全局变量",
+      "description": "Level 1 第18课: 全局变量",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_18_59",
+      "name": "max/min函数",
+      "description": "Level 1 第18课: max/min函数",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.4",
+        "2.12"
+      ]
+    },
+    {
+      "id": "l1_19_60",
+      "name": "结构体定义",
+      "description": "Level 1 第19课: 结构体定义",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.12",
+        "2.13"
+      ]
+    },
+    {
+      "id": "l1_19_61",
+      "name": "结构体数组",
+      "description": "Level 1 第19课: 结构体数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.12",
+        "2.13"
+      ]
+    },
+    {
+      "id": "l1_19_62",
+      "name": "结构体排序",
+      "description": "Level 1 第19课: 结构体排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.12",
+        "2.13"
+      ]
+    },
+    {
+      "id": "l1_20_63",
+      "name": "循环嵌套",
+      "description": "Level 1 第20课: 循环嵌套",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_20_64",
+      "name": "图形输出",
+      "description": "Level 1 第20课: 图形输出",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_20_65",
+      "name": "九九乘法表",
+      "description": "Level 1 第20课: 九九乘法表",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.7",
+        "2.8"
+      ]
+    },
+    {
+      "id": "l1_21_66",
+      "name": "桶排序",
+      "description": "Level 1 第21课: 桶排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.8",
+        "2.10"
+      ]
+    },
+    {
+      "id": "l1_21_67",
+      "name": "排序应用",
+      "description": "Level 1 第21课: 排序应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "2.8",
+        "2.10"
+      ]
+    }
+  ],
+  "3": [
+    {
+      "id": "l2_1_0",
+      "name": "枚举算法",
+      "description": "Level 2 第1课: 枚举算法",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11"
+      ]
+    },
+    {
+      "id": "l2_1_1",
+      "name": "水仙花数",
+      "description": "Level 2 第1课: 水仙花数",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11"
+      ]
+    },
+    {
+      "id": "l2_1_2",
+      "name": "百钱买百鸡",
+      "description": "Level 2 第1课: 百钱买百鸡",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11"
+      ]
+    },
+    {
+      "id": "l2_2_3",
+      "name": "递推算法",
+      "description": "Level 2 第2课: 递推算法",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_2_4",
+      "name": "斐波那契",
+      "description": "Level 2 第2课: 斐波那契",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_2_5",
+      "name": "兔子繁殖",
+      "description": "Level 2 第2课: 兔子繁殖",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_3_6",
+      "name": "前缀和",
+      "description": "Level 2 第3课: 前缀和",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_3_7",
+      "name": "差分",
+      "description": "Level 2 第3课: 差分",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_3_8",
+      "name": "区间求和",
+      "description": "Level 2 第3课: 区间求和",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_4_9",
+      "name": "二分查找",
+      "description": "Level 2 第4课: 二分查找",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.7",
+        "4.12"
+      ]
+    },
+    {
+      "id": "l2_4_10",
+      "name": "二分答案",
+      "description": "Level 2 第4课: 二分答案",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.7",
+        "4.12"
+      ]
+    },
+    {
+      "id": "l2_5_11",
+      "name": "冒泡排序",
+      "description": "Level 2 第5课: 冒泡排序",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.12",
+        "4.8",
+        "4.9",
+        "4.10",
+        "4.11"
+      ]
+    },
+    {
+      "id": "l2_5_12",
+      "name": "选择排序",
+      "description": "Level 2 第5课: 选择排序",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.12",
+        "4.8",
+        "4.9",
+        "4.10",
+        "4.11"
+      ]
+    },
+    {
+      "id": "l2_5_13",
+      "name": "插入排序",
+      "description": "Level 2 第5课: 插入排序",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.12",
+        "4.8",
+        "4.9",
+        "4.10",
+        "4.11"
+      ]
+    },
+    {
+      "id": "l2_6_14",
+      "name": "结构体进阶",
+      "description": "Level 2 第6课: 结构体进阶",
+      "difficulty": 3,
+      "gespMapping": [
+        "4.3"
+      ]
+    },
+    {
+      "id": "l2_6_15",
+      "name": "结构体指针",
+      "description": "Level 2 第6课: 结构体指针",
+      "difficulty": 3,
+      "gespMapping": [
+        "4.3"
+      ]
+    },
+    {
+      "id": "l2_7_16",
+      "name": "指针基础",
+      "description": "Level 2 第7课: 指针基础",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_7_17",
+      "name": "取地址",
+      "description": "Level 2 第7课: 取地址",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_7_18",
+      "name": "解引用",
+      "description": "Level 2 第7课: 解引用",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_8_19",
+      "name": "动态内存",
+      "description": "Level 2 第8课: 动态内存",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_8_20",
+      "name": "new/delete",
+      "description": "Level 2 第8课: new/delete",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_9_21",
+      "name": "vector容器",
+      "description": "Level 2 第9课: vector容器",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.10",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_9_22",
+      "name": "STL基础",
+      "description": "Level 2 第9课: STL基础",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.10",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_10_23",
+      "name": "map/set容器",
+      "description": "Level 2 第10课: map/set容器",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10"
+      ]
+    },
+    {
+      "id": "l2_11_24",
+      "name": "贪心算法",
+      "description": "Level 2 第11课: 贪心算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_11_25",
+      "name": "活动选择",
+      "description": "Level 2 第11课: 活动选择",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_12_26",
+      "name": "分治算法",
+      "description": "Level 2 第12课: 分治算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.12",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_12_27",
+      "name": "归并排序",
+      "description": "Level 2 第12课: 归并排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.12",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_13_28",
+      "name": "递归",
+      "description": "Level 2 第13课: 递归",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_13_29",
+      "name": "递归与迭代",
+      "description": "Level 2 第13课: 递归与迭代",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_14_30",
+      "name": "DFS搜索",
+      "description": "Level 2 第14课: DFS搜索",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_14_31",
+      "name": "迷宫问题",
+      "description": "Level 2 第14课: 迷宫问题",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_15_32",
+      "name": "BFS搜索",
+      "description": "Level 2 第15课: BFS搜索",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_15_33",
+      "name": "最短路径",
+      "description": "Level 2 第15课: 最短路径",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_16_34",
+      "name": "动态规划入门",
+      "description": "Level 2 第16课: 动态规划入门",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_16_35",
+      "name": "数字三角形",
+      "description": "Level 2 第16课: 数字三角形",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_17_36",
+      "name": "01背包",
+      "description": "Level 2 第17课: 01背包",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_17_37",
+      "name": "完全背包",
+      "description": "Level 2 第17课: 完全背包",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_18_38",
+      "name": "线性DP",
+      "description": "Level 2 第18课: 线性DP",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_18_39",
+      "name": "LIS",
+      "description": "Level 2 第18课: LIS",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_18_40",
+      "name": "LCS",
+      "description": "Level 2 第18课: LCS",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_19_41",
+      "name": "字符串处理",
+      "description": "Level 2 第19课: 字符串处理",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10"
+      ]
+    },
+    {
+      "id": "l2_19_42",
+      "name": "KMP入门",
+      "description": "Level 2 第19课: KMP入门",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10"
+      ]
+    },
+    {
+      "id": "l2_20_43",
+      "name": "图论基础",
+      "description": "Level 2 第20课: 图论基础",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_20_44",
+      "name": "邻接矩阵",
+      "description": "Level 2 第20课: 邻接矩阵",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_20_45",
+      "name": "拓扑排序",
+      "description": "Level 2 第20课: 拓扑排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_21_46",
+      "name": "高精度计算",
+      "description": "Level 2 第21课: 高精度计算",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_21_47",
+      "name": "高精度加减乘除",
+      "description": "Level 2 第21课: 高精度加减乘除",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_22_48",
+      "name": "位运算",
+      "description": "Level 2 第22课: 位运算",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7"
+      ]
+    },
+    {
+      "id": "l2_22_49",
+      "name": "按位与或异或",
+      "description": "Level 2 第22课: 按位与或异或",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7"
+      ]
+    },
+    {
+      "id": "l2_23_50",
+      "name": "滑动窗口",
+      "description": "Level 2 第23课: 滑动窗口",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_23_51",
+      "name": "双指针",
+      "description": "Level 2 第23课: 双指针",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_24_52",
+      "name": "综合复习",
+      "description": "Level 2 第24课: 综合复习",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12",
+        "4.7",
+        "4.8",
+        "4.9",
+        "4.10"
+      ]
+    }
+  ],
+  "4": [
+    {
+      "id": "l2_1_0",
+      "name": "枚举算法",
+      "description": "Level 2 第1课: 枚举算法",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11"
+      ]
+    },
+    {
+      "id": "l2_1_1",
+      "name": "水仙花数",
+      "description": "Level 2 第1课: 水仙花数",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11"
+      ]
+    },
+    {
+      "id": "l2_1_2",
+      "name": "百钱买百鸡",
+      "description": "Level 2 第1课: 百钱买百鸡",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11"
+      ]
+    },
+    {
+      "id": "l2_2_3",
+      "name": "递推算法",
+      "description": "Level 2 第2课: 递推算法",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_2_4",
+      "name": "斐波那契",
+      "description": "Level 2 第2课: 斐波那契",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_2_5",
+      "name": "兔子繁殖",
+      "description": "Level 2 第2课: 兔子繁殖",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_3_6",
+      "name": "前缀和",
+      "description": "Level 2 第3课: 前缀和",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_3_7",
+      "name": "差分",
+      "description": "Level 2 第3课: 差分",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_3_8",
+      "name": "区间求和",
+      "description": "Level 2 第3课: 区间求和",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_4_9",
+      "name": "二分查找",
+      "description": "Level 2 第4课: 二分查找",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.7",
+        "4.12"
+      ]
+    },
+    {
+      "id": "l2_4_10",
+      "name": "二分答案",
+      "description": "Level 2 第4课: 二分答案",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.7",
+        "4.12"
+      ]
+    },
+    {
+      "id": "l2_5_11",
+      "name": "冒泡排序",
+      "description": "Level 2 第5课: 冒泡排序",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.12",
+        "4.8",
+        "4.9",
+        "4.10",
+        "4.11"
+      ]
+    },
+    {
+      "id": "l2_5_12",
+      "name": "选择排序",
+      "description": "Level 2 第5课: 选择排序",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.12",
+        "4.8",
+        "4.9",
+        "4.10",
+        "4.11"
+      ]
+    },
+    {
+      "id": "l2_5_13",
+      "name": "插入排序",
+      "description": "Level 2 第5课: 插入排序",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.12",
+        "4.8",
+        "4.9",
+        "4.10",
+        "4.11"
+      ]
+    },
+    {
+      "id": "l2_6_14",
+      "name": "结构体进阶",
+      "description": "Level 2 第6课: 结构体进阶",
+      "difficulty": 3,
+      "gespMapping": [
+        "4.3"
+      ]
+    },
+    {
+      "id": "l2_6_15",
+      "name": "结构体指针",
+      "description": "Level 2 第6课: 结构体指针",
+      "difficulty": 3,
+      "gespMapping": [
+        "4.3"
+      ]
+    },
+    {
+      "id": "l2_7_16",
+      "name": "指针基础",
+      "description": "Level 2 第7课: 指针基础",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_7_17",
+      "name": "取地址",
+      "description": "Level 2 第7课: 取地址",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_7_18",
+      "name": "解引用",
+      "description": "Level 2 第7课: 解引用",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_8_19",
+      "name": "动态内存",
+      "description": "Level 2 第8课: 动态内存",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_8_20",
+      "name": "new/delete",
+      "description": "Level 2 第8课: new/delete",
+      "difficulty": 4,
+      "gespMapping": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "l2_9_21",
+      "name": "vector容器",
+      "description": "Level 2 第9课: vector容器",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.10",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_9_22",
+      "name": "STL基础",
+      "description": "Level 2 第9课: STL基础",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.10",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_10_23",
+      "name": "map/set容器",
+      "description": "Level 2 第10课: map/set容器",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10"
+      ]
+    },
+    {
+      "id": "l2_11_24",
+      "name": "贪心算法",
+      "description": "Level 2 第11课: 贪心算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_11_25",
+      "name": "活动选择",
+      "description": "Level 2 第11课: 活动选择",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_12_26",
+      "name": "分治算法",
+      "description": "Level 2 第12课: 分治算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.12",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_12_27",
+      "name": "归并排序",
+      "description": "Level 2 第12课: 归并排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.12",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_13_28",
+      "name": "递归",
+      "description": "Level 2 第13课: 递归",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_13_29",
+      "name": "递归与迭代",
+      "description": "Level 2 第13课: 递归与迭代",
+      "difficulty": 3,
+      "gespMapping": [
+        "3.11",
+        "4.7"
+      ]
+    },
+    {
+      "id": "l2_14_30",
+      "name": "DFS搜索",
+      "description": "Level 2 第14课: DFS搜索",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_14_31",
+      "name": "迷宫问题",
+      "description": "Level 2 第14课: 迷宫问题",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_15_32",
+      "name": "BFS搜索",
+      "description": "Level 2 第15课: BFS搜索",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_15_33",
+      "name": "最短路径",
+      "description": "Level 2 第15课: 最短路径",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_16_34",
+      "name": "动态规划入门",
+      "description": "Level 2 第16课: 动态规划入门",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_16_35",
+      "name": "数字三角形",
+      "description": "Level 2 第16课: 数字三角形",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_17_36",
+      "name": "01背包",
+      "description": "Level 2 第17课: 01背包",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_17_37",
+      "name": "完全背包",
+      "description": "Level 2 第17课: 完全背包",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_18_38",
+      "name": "线性DP",
+      "description": "Level 2 第18课: 线性DP",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_18_39",
+      "name": "LIS",
+      "description": "Level 2 第18课: LIS",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_18_40",
+      "name": "LCS",
+      "description": "Level 2 第18课: LCS",
+      "difficulty": 5,
+      "gespMapping": [
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_19_41",
+      "name": "字符串处理",
+      "description": "Level 2 第19课: 字符串处理",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10"
+      ]
+    },
+    {
+      "id": "l2_19_42",
+      "name": "KMP入门",
+      "description": "Level 2 第19课: KMP入门",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10"
+      ]
+    },
+    {
+      "id": "l2_20_43",
+      "name": "图论基础",
+      "description": "Level 2 第20课: 图论基础",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_20_44",
+      "name": "邻接矩阵",
+      "description": "Level 2 第20课: 邻接矩阵",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_20_45",
+      "name": "拓扑排序",
+      "description": "Level 2 第20课: 拓扑排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_21_46",
+      "name": "高精度计算",
+      "description": "Level 2 第21课: 高精度计算",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_21_47",
+      "name": "高精度加减乘除",
+      "description": "Level 2 第21课: 高精度加减乘除",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_22_48",
+      "name": "位运算",
+      "description": "Level 2 第22课: 位运算",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7"
+      ]
+    },
+    {
+      "id": "l2_22_49",
+      "name": "按位与或异或",
+      "description": "Level 2 第22课: 按位与或异或",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7"
+      ]
+    },
+    {
+      "id": "l2_23_50",
+      "name": "滑动窗口",
+      "description": "Level 2 第23课: 滑动窗口",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_23_51",
+      "name": "双指针",
+      "description": "Level 2 第23课: 双指针",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12"
+      ]
+    },
+    {
+      "id": "l2_24_52",
+      "name": "综合复习",
+      "description": "Level 2 第24课: 综合复习",
+      "difficulty": 4,
+      "gespMapping": [
+        "3.11",
+        "3.12",
+        "4.7",
+        "4.8",
+        "4.9",
+        "4.10"
+      ]
+    }
+  ],
+  "5": [
+    {
+      "id": "l3_1_0",
+      "name": "string进阶",
+      "description": "Level 3 第1课: string进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_1_1",
+      "name": "字符串函数",
+      "description": "Level 3 第1课: 字符串函数",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_1_2",
+      "name": "万能头文件",
+      "description": "Level 3 第1课: 万能头文件",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_2_3",
+      "name": "结构体应用",
+      "description": "Level 3 第2课: 结构体应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_2_4",
+      "name": "复合赋值",
+      "description": "Level 3 第2课: 复合赋值",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_2_5",
+      "name": "枚举",
+      "description": "Level 3 第2课: 枚举",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_3_6",
+      "name": "函数进阶",
+      "description": "Level 3 第3课: 函数进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_3_7",
+      "name": "二维数组",
+      "description": "Level 3 第3课: 二维数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_3_8",
+      "name": "分支结构",
+      "description": "Level 3 第3课: 分支结构",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_4_9",
+      "name": "for循环进阶",
+      "description": "Level 3 第4课: for循环进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_4_10",
+      "name": "while循环",
+      "description": "Level 3 第4课: while循环",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_4_11",
+      "name": "sort函数",
+      "description": "Level 3 第4课: sort函数",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_5_12",
+      "name": "循环控制",
+      "description": "Level 3 第5课: 循环控制",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_5_13",
+      "name": "数据结构",
+      "description": "Level 3 第5课: 数据结构",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_6_14",
+      "name": "循环嵌套",
+      "description": "Level 3 第6课: 循环嵌套",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_6_15",
+      "name": "图形输出",
+      "description": "Level 3 第6课: 图形输出",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_6_16",
+      "name": "结构体数组",
+      "description": "Level 3 第6课: 结构体数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_7_17",
+      "name": "字符串遍历",
+      "description": "Level 3 第7课: 字符串遍历",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.4",
+        "5.5"
+      ]
+    },
+    {
+      "id": "l3_7_18",
+      "name": "for循环应用",
+      "description": "Level 3 第7课: for循环应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.4",
+        "5.5"
+      ]
+    },
+    {
+      "id": "l3_7_19",
+      "name": "函数返回值",
+      "description": "Level 3 第7课: 函数返回值",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.4",
+        "5.5"
+      ]
+    },
+    {
+      "id": "l3_8_20",
+      "name": "string类型",
+      "description": "Level 3 第8课: string类型",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_8_21",
+      "name": "字符数组",
+      "description": "Level 3 第8课: 字符数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_8_22",
+      "name": "标记法",
+      "description": "Level 3 第8课: 标记法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_8_23",
+      "name": "桶排序",
+      "description": "Level 3 第8课: 桶排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_9_24",
+      "name": "字符串操作",
+      "description": "Level 3 第9课: 字符串操作",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_9_25",
+      "name": "排序算法",
+      "description": "Level 3 第9课: 排序算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_10_26",
+      "name": "数位分离",
+      "description": "Level 3 第10课: 数位分离",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_10_27",
+      "name": "格式化输入输出",
+      "description": "Level 3 第10课: 格式化输入输出",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_10_28",
+      "name": "模拟算法",
+      "description": "Level 3 第10课: 模拟算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_11_29",
+      "name": "浮点数运算",
+      "description": "Level 3 第11课: 浮点数运算",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_11_30",
+      "name": "字符串查找",
+      "description": "Level 3 第11课: 字符串查找",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_11_31",
+      "name": "结构体排序",
+      "description": "Level 3 第11课: 结构体排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_12_32",
+      "name": "数据类型转换",
+      "description": "Level 3 第12课: 数据类型转换",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_12_33",
+      "name": "结构体应用",
+      "description": "Level 3 第12课: 结构体应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_13_34",
+      "name": "链表基础",
+      "description": "Level 3 第13课: 链表基础",
+      "difficulty": 5,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_13_35",
+      "name": "指针操作",
+      "description": "Level 3 第13课: 指针操作",
+      "difficulty": 5,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_14_36",
+      "name": "二叉树基础",
+      "description": "Level 3 第14课: 二叉树基础",
+      "difficulty": 5,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_14_37",
+      "name": "树遍历",
+      "description": "Level 3 第14课: 树遍历",
+      "difficulty": 5,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_15_38",
+      "name": "string操作进阶",
+      "description": "Level 3 第15课: string操作进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_15_39",
+      "name": "数组应用",
+      "description": "Level 3 第15课: 数组应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_15_40",
+      "name": "结构体",
+      "description": "Level 3 第15课: 结构体",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_16_41",
+      "name": "查找算法",
+      "description": "Level 3 第16课: 查找算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_16_42",
+      "name": "标记法",
+      "description": "Level 3 第16课: 标记法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_16_43",
+      "name": "字符串综合",
+      "description": "Level 3 第16课: 字符串综合",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_17_44",
+      "name": "字符串处理",
+      "description": "Level 3 第17课: 字符串处理",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_17_45",
+      "name": "函数调用",
+      "description": "Level 3 第17课: 函数调用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_17_46",
+      "name": "结构体数组",
+      "description": "Level 3 第17课: 结构体数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_18_47",
+      "name": "数组排序",
+      "description": "Level 3 第18课: 数组排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_18_48",
+      "name": "字符串操作",
+      "description": "Level 3 第18课: 字符串操作",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_18_49",
+      "name": "结构体",
+      "description": "Level 3 第18课: 结构体",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_19_50",
+      "name": "数组查找",
+      "description": "Level 3 第19课: 数组查找",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_19_51",
+      "name": "排序应用",
+      "description": "Level 3 第19课: 排序应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_20_52",
+      "name": "循环嵌套进阶",
+      "description": "Level 3 第20课: 循环嵌套进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_20_53",
+      "name": "结构体排序",
+      "description": "Level 3 第20课: 结构体排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_20_54",
+      "name": "数组",
+      "description": "Level 3 第20课: 数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_21_55",
+      "name": "桶排序进阶",
+      "description": "Level 3 第21课: 桶排序进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_21_56",
+      "name": "算法优化",
+      "description": "Level 3 第21课: 算法优化",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_22_57",
+      "name": "二维数组应用",
+      "description": "Level 3 第22课: 二维数组应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_22_58",
+      "name": "矩阵操作",
+      "description": "Level 3 第22课: 矩阵操作",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_23_59",
+      "name": "综合应用一",
+      "description": "Level 3 第23课: 综合应用一",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_23_60",
+      "name": "算法综合",
+      "description": "Level 3 第23课: 算法综合",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_24_61",
+      "name": "综合应用二",
+      "description": "Level 3 第24课: 综合应用二",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_24_62",
+      "name": "编程技巧",
+      "description": "Level 3 第24课: 编程技巧",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_25_63",
+      "name": "阶段测试",
+      "description": "Level 3 第25课: 阶段测试",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_25_64",
+      "name": "复习巩固",
+      "description": "Level 3 第25课: 复习巩固",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    }
+  ],
+  "6": [
+    {
+      "id": "l3_1_0",
+      "name": "string进阶",
+      "description": "Level 3 第1课: string进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_1_1",
+      "name": "字符串函数",
+      "description": "Level 3 第1课: 字符串函数",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_1_2",
+      "name": "万能头文件",
+      "description": "Level 3 第1课: 万能头文件",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_2_3",
+      "name": "结构体应用",
+      "description": "Level 3 第2课: 结构体应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_2_4",
+      "name": "复合赋值",
+      "description": "Level 3 第2课: 复合赋值",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_2_5",
+      "name": "枚举",
+      "description": "Level 3 第2课: 枚举",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_3_6",
+      "name": "函数进阶",
+      "description": "Level 3 第3课: 函数进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_3_7",
+      "name": "二维数组",
+      "description": "Level 3 第3课: 二维数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_3_8",
+      "name": "分支结构",
+      "description": "Level 3 第3课: 分支结构",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_4_9",
+      "name": "for循环进阶",
+      "description": "Level 3 第4课: for循环进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_4_10",
+      "name": "while循环",
+      "description": "Level 3 第4课: while循环",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_4_11",
+      "name": "sort函数",
+      "description": "Level 3 第4课: sort函数",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "id": "l3_5_12",
+      "name": "循环控制",
+      "description": "Level 3 第5课: 循环控制",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_5_13",
+      "name": "数据结构",
+      "description": "Level 3 第5课: 数据结构",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_6_14",
+      "name": "循环嵌套",
+      "description": "Level 3 第6课: 循环嵌套",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_6_15",
+      "name": "图形输出",
+      "description": "Level 3 第6课: 图形输出",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_6_16",
+      "name": "结构体数组",
+      "description": "Level 3 第6课: 结构体数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_7_17",
+      "name": "字符串遍历",
+      "description": "Level 3 第7课: 字符串遍历",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.4",
+        "5.5"
+      ]
+    },
+    {
+      "id": "l3_7_18",
+      "name": "for循环应用",
+      "description": "Level 3 第7课: for循环应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.4",
+        "5.5"
+      ]
+    },
+    {
+      "id": "l3_7_19",
+      "name": "函数返回值",
+      "description": "Level 3 第7课: 函数返回值",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.1",
+        "5.4",
+        "5.5"
+      ]
+    },
+    {
+      "id": "l3_8_20",
+      "name": "string类型",
+      "description": "Level 3 第8课: string类型",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_8_21",
+      "name": "字符数组",
+      "description": "Level 3 第8课: 字符数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_8_22",
+      "name": "标记法",
+      "description": "Level 3 第8课: 标记法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_8_23",
+      "name": "桶排序",
+      "description": "Level 3 第8课: 桶排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_9_24",
+      "name": "字符串操作",
+      "description": "Level 3 第9课: 字符串操作",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_9_25",
+      "name": "排序算法",
+      "description": "Level 3 第9课: 排序算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_10_26",
+      "name": "数位分离",
+      "description": "Level 3 第10课: 数位分离",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_10_27",
+      "name": "格式化输入输出",
+      "description": "Level 3 第10课: 格式化输入输出",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_10_28",
+      "name": "模拟算法",
+      "description": "Level 3 第10课: 模拟算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_11_29",
+      "name": "浮点数运算",
+      "description": "Level 3 第11课: 浮点数运算",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_11_30",
+      "name": "字符串查找",
+      "description": "Level 3 第11课: 字符串查找",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_11_31",
+      "name": "结构体排序",
+      "description": "Level 3 第11课: 结构体排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.3"
+      ]
+    },
+    {
+      "id": "l3_12_32",
+      "name": "数据类型转换",
+      "description": "Level 3 第12课: 数据类型转换",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_12_33",
+      "name": "结构体应用",
+      "description": "Level 3 第12课: 结构体应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_13_34",
+      "name": "链表基础",
+      "description": "Level 3 第13课: 链表基础",
+      "difficulty": 5,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_13_35",
+      "name": "指针操作",
+      "description": "Level 3 第13课: 指针操作",
+      "difficulty": 5,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_14_36",
+      "name": "二叉树基础",
+      "description": "Level 3 第14课: 二叉树基础",
+      "difficulty": 5,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_14_37",
+      "name": "树遍历",
+      "description": "Level 3 第14课: 树遍历",
+      "difficulty": 5,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_15_38",
+      "name": "string操作进阶",
+      "description": "Level 3 第15课: string操作进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_15_39",
+      "name": "数组应用",
+      "description": "Level 3 第15课: 数组应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_15_40",
+      "name": "结构体",
+      "description": "Level 3 第15课: 结构体",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_16_41",
+      "name": "查找算法",
+      "description": "Level 3 第16课: 查找算法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_16_42",
+      "name": "标记法",
+      "description": "Level 3 第16课: 标记法",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_16_43",
+      "name": "字符串综合",
+      "description": "Level 3 第16课: 字符串综合",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_17_44",
+      "name": "字符串处理",
+      "description": "Level 3 第17课: 字符串处理",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_17_45",
+      "name": "函数调用",
+      "description": "Level 3 第17课: 函数调用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_17_46",
+      "name": "结构体数组",
+      "description": "Level 3 第17课: 结构体数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1"
+      ]
+    },
+    {
+      "id": "l3_18_47",
+      "name": "数组排序",
+      "description": "Level 3 第18课: 数组排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_18_48",
+      "name": "字符串操作",
+      "description": "Level 3 第18课: 字符串操作",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_18_49",
+      "name": "结构体",
+      "description": "Level 3 第18课: 结构体",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_19_50",
+      "name": "数组查找",
+      "description": "Level 3 第19课: 数组查找",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_19_51",
+      "name": "排序应用",
+      "description": "Level 3 第19课: 排序应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_20_52",
+      "name": "循环嵌套进阶",
+      "description": "Level 3 第20课: 循环嵌套进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_20_53",
+      "name": "结构体排序",
+      "description": "Level 3 第20课: 结构体排序",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_20_54",
+      "name": "数组",
+      "description": "Level 3 第20课: 数组",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_21_55",
+      "name": "桶排序进阶",
+      "description": "Level 3 第21课: 桶排序进阶",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_21_56",
+      "name": "算法优化",
+      "description": "Level 3 第21课: 算法优化",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_22_57",
+      "name": "二维数组应用",
+      "description": "Level 3 第22课: 二维数组应用",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_22_58",
+      "name": "矩阵操作",
+      "description": "Level 3 第22课: 矩阵操作",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_23_59",
+      "name": "综合应用一",
+      "description": "Level 3 第23课: 综合应用一",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_23_60",
+      "name": "算法综合",
+      "description": "Level 3 第23课: 算法综合",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.3",
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_24_61",
+      "name": "综合应用二",
+      "description": "Level 3 第24课: 综合应用二",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_24_62",
+      "name": "编程技巧",
+      "description": "Level 3 第24课: 编程技巧",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.5",
+        "5.6",
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_25_63",
+      "name": "阶段测试",
+      "description": "Level 3 第25课: 阶段测试",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    },
+    {
+      "id": "l3_25_64",
+      "name": "复习巩固",
+      "description": "Level 3 第25课: 复习巩固",
+      "difficulty": 4,
+      "gespMapping": [
+        "5.4",
+        "5.5",
+        "5.6",
+        "6.2"
+      ]
+    }
+  ],
+  "7": [
+    {
+      "id": "l4_1_0",
+      "name": "排列组合",
+      "description": "Level 4 第1课: 排列组合",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.3"
+      ]
+    },
+    {
+      "id": "l4_1_1",
+      "name": "组合数学",
+      "description": "Level 4 第1课: 组合数学",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.3"
+      ]
+    },
+    {
+      "id": "l4_2_2",
+      "name": "排列组合进阶",
+      "description": "Level 4 第2课: 排列组合进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4"
+      ]
+    },
+    {
+      "id": "l4_2_3",
+      "name": "计数原理",
+      "description": "Level 4 第2课: 计数原理",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4"
+      ]
+    },
+    {
+      "id": "l4_3_4",
+      "name": "质数筛法",
+      "description": "Level 4 第3课: 质数筛法",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_3_5",
+      "name": "埃氏筛",
+      "description": "Level 4 第3课: 埃氏筛",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_3_6",
+      "name": "线性筛",
+      "description": "Level 4 第3课: 线性筛",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_4_7",
+      "name": "区间DP",
+      "description": "Level 4 第4课: 区间DP",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_4_8",
+      "name": "石子合并",
+      "description": "Level 4 第4课: 石子合并",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_5_9",
+      "name": "区间DP进阶",
+      "description": "Level 4 第5课: 区间DP进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_5_10",
+      "name": "矩阵链乘",
+      "description": "Level 4 第5课: 矩阵链乘",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_6_11",
+      "name": "阶段测试",
+      "description": "Level 4 第6课: 阶段测试",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.7"
+      ]
+    },
+    {
+      "id": "l4_7_12",
+      "name": "参赛指导",
+      "description": "Level 4 第7课: 参赛指导",
+      "difficulty": 3,
+      "gespMapping": [
+        "7.1",
+        "7.5"
+      ]
+    },
+    {
+      "id": "l4_7_13",
+      "name": "考试技巧",
+      "description": "Level 4 第7课: 考试技巧",
+      "difficulty": 3,
+      "gespMapping": [
+        "7.1",
+        "7.5"
+      ]
+    },
+    {
+      "id": "l4_8_14",
+      "name": "枚举优化",
+      "description": "Level 4 第8课: 枚举优化",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_8_15",
+      "name": "折半枚举",
+      "description": "Level 4 第8课: 折半枚举",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_9_16",
+      "name": "贪心应用",
+      "description": "Level 4 第9课: 贪心应用",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_9_17",
+      "name": "区间调度",
+      "description": "Level 4 第9课: 区间调度",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_10_18",
+      "name": "模拟优化",
+      "description": "Level 4 第10课: 模拟优化",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_10_19",
+      "name": "复杂模拟",
+      "description": "Level 4 第10课: 复杂模拟",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_11_20",
+      "name": "搜索进阶",
+      "description": "Level 4 第11课: 搜索进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_11_21",
+      "name": "记忆化搜索",
+      "description": "Level 4 第11课: 记忆化搜索",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_11_22",
+      "name": "剪枝",
+      "description": "Level 4 第11课: 剪枝",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_12_23",
+      "name": "复赛模拟",
+      "description": "Level 4 第12课: 复赛模拟",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.5",
+        "7.6",
+        "7.9"
+      ]
+    },
+    {
+      "id": "l4_13_24",
+      "name": "计算机基础",
+      "description": "Level 4 第13课: 计算机基础",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_13_25",
+      "name": "复杂度分析",
+      "description": "Level 4 第13课: 复杂度分析",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_13_26",
+      "name": "位运算",
+      "description": "Level 4 第13课: 位运算",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_14_27",
+      "name": "数据结构",
+      "description": "Level 4 第14课: 数据结构",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_14_28",
+      "name": "栈队列",
+      "description": "Level 4 第14课: 栈队列",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_14_29",
+      "name": "单调栈",
+      "description": "Level 4 第14课: 单调栈",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_15_30",
+      "name": "树与图",
+      "description": "Level 4 第15课: 树与图",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_15_31",
+      "name": "二叉树",
+      "description": "Level 4 第15课: 二叉树",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_15_32",
+      "name": "并查集",
+      "description": "Level 4 第15课: 并查集",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_16_33",
+      "name": "数论",
+      "description": "Level 4 第16课: 数论",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_16_34",
+      "name": "GCD/LCM",
+      "description": "Level 4 第16课: GCD/LCM",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_16_35",
+      "name": "快速幂",
+      "description": "Level 4 第16课: 快速幂",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_17_36",
+      "name": "高精度进阶",
+      "description": "Level 4 第17课: 高精度进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_18_37",
+      "name": "字符串算法",
+      "description": "Level 4 第18课: 字符串算法",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_18_38",
+      "name": "KMP",
+      "description": "Level 4 第18课: KMP",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_18_39",
+      "name": "LCS",
+      "description": "Level 4 第18课: LCS",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_18_40",
+      "name": "回文",
+      "description": "Level 4 第18课: 回文",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_19_41",
+      "name": "二分进阶",
+      "description": "Level 4 第19课: 二分进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_19_42",
+      "name": "三分查找",
+      "description": "Level 4 第19课: 三分查找",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_20_43",
+      "name": "排序进阶",
+      "description": "Level 4 第20课: 排序进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_20_44",
+      "name": "归并",
+      "description": "Level 4 第20课: 归并",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_20_45",
+      "name": "快排",
+      "description": "Level 4 第20课: 快排",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_20_46",
+      "name": "堆排",
+      "description": "Level 4 第20课: 堆排",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_21_47",
+      "name": "递归分治",
+      "description": "Level 4 第21课: 递归分治",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_21_48",
+      "name": "分治思想",
+      "description": "Level 4 第21课: 分治思想",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_22_49",
+      "name": "DP进阶",
+      "description": "Level 4 第22课: DP进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_22_50",
+      "name": "背包",
+      "description": "Level 4 第22课: 背包",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_22_51",
+      "name": "LIS",
+      "description": "Level 4 第22课: LIS",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_22_52",
+      "name": "滚动数组",
+      "description": "Level 4 第22课: 滚动数组",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_23_53",
+      "name": "初赛模拟",
+      "description": "Level 4 第23课: 初赛模拟",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.5",
+        "7.11"
+      ]
+    }
+  ],
+  "8": [
+    {
+      "id": "l4_1_0",
+      "name": "排列组合",
+      "description": "Level 4 第1课: 排列组合",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.3"
+      ]
+    },
+    {
+      "id": "l4_1_1",
+      "name": "组合数学",
+      "description": "Level 4 第1课: 组合数学",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.3"
+      ]
+    },
+    {
+      "id": "l4_2_2",
+      "name": "排列组合进阶",
+      "description": "Level 4 第2课: 排列组合进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4"
+      ]
+    },
+    {
+      "id": "l4_2_3",
+      "name": "计数原理",
+      "description": "Level 4 第2课: 计数原理",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4"
+      ]
+    },
+    {
+      "id": "l4_3_4",
+      "name": "质数筛法",
+      "description": "Level 4 第3课: 质数筛法",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_3_5",
+      "name": "埃氏筛",
+      "description": "Level 4 第3课: 埃氏筛",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_3_6",
+      "name": "线性筛",
+      "description": "Level 4 第3课: 线性筛",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_4_7",
+      "name": "区间DP",
+      "description": "Level 4 第4课: 区间DP",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_4_8",
+      "name": "石子合并",
+      "description": "Level 4 第4课: 石子合并",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_5_9",
+      "name": "区间DP进阶",
+      "description": "Level 4 第5课: 区间DP进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_5_10",
+      "name": "矩阵链乘",
+      "description": "Level 4 第5课: 矩阵链乘",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_6_11",
+      "name": "阶段测试",
+      "description": "Level 4 第6课: 阶段测试",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.2",
+        "7.7"
+      ]
+    },
+    {
+      "id": "l4_7_12",
+      "name": "参赛指导",
+      "description": "Level 4 第7课: 参赛指导",
+      "difficulty": 3,
+      "gespMapping": [
+        "7.1",
+        "7.5"
+      ]
+    },
+    {
+      "id": "l4_7_13",
+      "name": "考试技巧",
+      "description": "Level 4 第7课: 考试技巧",
+      "difficulty": 3,
+      "gespMapping": [
+        "7.1",
+        "7.5"
+      ]
+    },
+    {
+      "id": "l4_8_14",
+      "name": "枚举优化",
+      "description": "Level 4 第8课: 枚举优化",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_8_15",
+      "name": "折半枚举",
+      "description": "Level 4 第8课: 折半枚举",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_9_16",
+      "name": "贪心应用",
+      "description": "Level 4 第9课: 贪心应用",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_9_17",
+      "name": "区间调度",
+      "description": "Level 4 第9课: 区间调度",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_10_18",
+      "name": "模拟优化",
+      "description": "Level 4 第10课: 模拟优化",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_10_19",
+      "name": "复杂模拟",
+      "description": "Level 4 第10课: 复杂模拟",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_11_20",
+      "name": "搜索进阶",
+      "description": "Level 4 第11课: 搜索进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_11_21",
+      "name": "记忆化搜索",
+      "description": "Level 4 第11课: 记忆化搜索",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_11_22",
+      "name": "剪枝",
+      "description": "Level 4 第11课: 剪枝",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_12_23",
+      "name": "复赛模拟",
+      "description": "Level 4 第12课: 复赛模拟",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.5",
+        "7.6",
+        "7.9"
+      ]
+    },
+    {
+      "id": "l4_13_24",
+      "name": "计算机基础",
+      "description": "Level 4 第13课: 计算机基础",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_13_25",
+      "name": "复杂度分析",
+      "description": "Level 4 第13课: 复杂度分析",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_13_26",
+      "name": "位运算",
+      "description": "Level 4 第13课: 位运算",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_14_27",
+      "name": "数据结构",
+      "description": "Level 4 第14课: 数据结构",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_14_28",
+      "name": "栈队列",
+      "description": "Level 4 第14课: 栈队列",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_14_29",
+      "name": "单调栈",
+      "description": "Level 4 第14课: 单调栈",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_15_30",
+      "name": "树与图",
+      "description": "Level 4 第15课: 树与图",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_15_31",
+      "name": "二叉树",
+      "description": "Level 4 第15课: 二叉树",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_15_32",
+      "name": "并查集",
+      "description": "Level 4 第15课: 并查集",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.11",
+        "7.12",
+        "7.13"
+      ]
+    },
+    {
+      "id": "l4_16_33",
+      "name": "数论",
+      "description": "Level 4 第16课: 数论",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_16_34",
+      "name": "GCD/LCM",
+      "description": "Level 4 第16课: GCD/LCM",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_16_35",
+      "name": "快速幂",
+      "description": "Level 4 第16课: 快速幂",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_17_36",
+      "name": "高精度进阶",
+      "description": "Level 4 第17课: 高精度进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_18_37",
+      "name": "字符串算法",
+      "description": "Level 4 第18课: 字符串算法",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_18_38",
+      "name": "KMP",
+      "description": "Level 4 第18课: KMP",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_18_39",
+      "name": "LCS",
+      "description": "Level 4 第18课: LCS",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_18_40",
+      "name": "回文",
+      "description": "Level 4 第18课: 回文",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.9",
+        "7.10"
+      ]
+    },
+    {
+      "id": "l4_19_41",
+      "name": "二分进阶",
+      "description": "Level 4 第19课: 二分进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_19_42",
+      "name": "三分查找",
+      "description": "Level 4 第19课: 三分查找",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_20_43",
+      "name": "排序进阶",
+      "description": "Level 4 第20课: 排序进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_20_44",
+      "name": "归并",
+      "description": "Level 4 第20课: 归并",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_20_45",
+      "name": "快排",
+      "description": "Level 4 第20课: 快排",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_20_46",
+      "name": "堆排",
+      "description": "Level 4 第20课: 堆排",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.5",
+        "7.6"
+      ]
+    },
+    {
+      "id": "l4_21_47",
+      "name": "递归分治",
+      "description": "Level 4 第21课: 递归分治",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_21_48",
+      "name": "分治思想",
+      "description": "Level 4 第21课: 分治思想",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_22_49",
+      "name": "DP进阶",
+      "description": "Level 4 第22课: DP进阶",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_22_50",
+      "name": "背包",
+      "description": "Level 4 第22课: 背包",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_22_51",
+      "name": "LIS",
+      "description": "Level 4 第22课: LIS",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_22_52",
+      "name": "滚动数组",
+      "description": "Level 4 第22课: 滚动数组",
+      "difficulty": 5,
+      "gespMapping": [
+        "7.7",
+        "7.8"
+      ]
+    },
+    {
+      "id": "l4_23_53",
+      "name": "初赛模拟",
+      "description": "Level 4 第23课: 初赛模拟",
+      "difficulty": 4,
+      "gespMapping": [
+        "7.1",
+        "7.5",
+        "7.11"
+      ]
+    }
+  ]
+}

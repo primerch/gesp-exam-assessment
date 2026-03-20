@@ -1,0 +1,83 @@
+{
+  "level": 2,
+  "lesson_number": 9,
+  "title": "大整数乘法",
+  "file_name": "L2-09.pptx",
+  "total_slides": 63,
+  "knowledge_points": [
+    "进制转换",
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "高精度运算"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_02",
+      "name": "进制转换",
+      "category": "算法"
+    },
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_13",
+      "name": "高精度运算",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "大整数乘法"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "大整数减法\n1、大整数减法步骤：\n① 当字符串输入\n② 转换反转整数数组\n③ 对应位相减\n④ 去除前导0\n⑤ 逆序输出\n(1) 被减数大于等于减数\n(2) 被减数小于减数\n当字符串输入\n判断处理被减数..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "大整数减法\n2、程序模版（被减数大于等于减数）："
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "大整数减法\n2、程序模版（被减数大于等于减数）：\n1)交换字符串\n2)交换长度\n3)输出负号"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "回顾练习\n根据已学的大整数减法，小童编写了程序，测试649-645时输出004。判断程序缺少了哪一部分的代码。（           ）\nD\n没有处理被减数小于减数\n没有转换反转\n没有处理借位的情况\n..."
+    }
+  ],
+  "summary": {
+    "total_slides": 63,
+    "total_knowledge_points": 7,
+    "gesp_level3_points_count": 5,
+    "gesp_level4_points_count": 2
+  }
+}

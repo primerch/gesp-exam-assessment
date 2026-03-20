@@ -1,0 +1,75 @@
+{
+  "level": 1,
+  "lesson_number": 24,
+  "title": "期末复习",
+  "file_name": "24.pptx",
+  "total_slides": 88,
+  "slides_with_content": 88,
+  "knowledge_points": [
+    {
+      "name": "期末综合复习",
+      "desc": "全学期知识点回顾和巩固"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_10",
+    "l2_4",
+    "l2_8",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "二维数组\n一维数组的每一个元素又是一个一维数组，将这样的数组称为二维数组。\na[0]\na[1]\na[2]\n二维数组a\n1 | 2 | 3 | 4\n5 | 6 | 7 | 8\n9 | 10 | 11 | 12\n行\n列"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "二维数组的初始化\na[0]\na[2]\na[1]"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "元素初始化为零\n方法1：\n方法2：\n方法3：\na[0]\na[2]\na[1]"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "二维数组的部分初始化\n部分初始化：未被初始化的部分自动填充为0。\na[0]\na[2]\na[1]\n省略行合并部分初始化：自动推断行数，未被初始化的部分自动填充为0。\na[0]\na[2]\na[1]"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "按行遍历和按列遍历的区别\n按行遍历\n按列遍历\n外层循环遍历行\n内层循环遍历列\n外层循环遍历列\n内层循环遍历行"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "回顾练习1\n下方代码的输出结果是（        ）。\nD\nA. 140123  B.14123  C. 000014123  D. 000140123\n#include<bits/stdc++.h>\nusing namespace std;\nint main(){\n    int a[3][3] = {{1,2,3},{1,4}};\n    for(int i=2;i>=0;i--)\n     ..."
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "回顾练习2\n下方代码的输出结果是?（        ）。\nB\nA. 2          B.4            C. 6                D. 8\n#include<bits/stdc++.h>\nusing namespace std;\nint main(){\n    int a[2][3] = {{1},{1}};\n    int b[2][3] = {1,1},{1,1}..."
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "阶段复习与练习（四）"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "数字方阵"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "数字方阵\n1 | 2 | 3 | 4\n5 | 6 | 7 | 8\n9 | 10 | 11 | 12\n13 | 14 | 15 | 16\n4行\n4列\n数字方阵就是行列相同的数字矩阵"
+    }
+  ]
+}

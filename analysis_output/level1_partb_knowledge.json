@@ -1,0 +1,180 @@
+{
+  "level": 1,
+  "lessons": [
+    {
+      "lesson_num": 12,
+      "title": "格式化输入输出和浮点数",
+      "knowledge_points": [
+        {"name": "setw()设置输出宽度", "category": "格式化输出", "is_new": true},
+        {"name": "setfill()设置填充字符", "category": "格式化输出", "is_new": true},
+        {"name": "iomanip头文件", "category": "头文件", "is_new": true},
+        {"name": "printf()格式化输出函数", "category": "格式化输出", "is_new": true},
+        {"name": "scanf()格式化输入函数", "category": "格式化输入", "is_new": true},
+        {"name": "cstdio头文件", "category": "头文件", "is_new": true},
+        {"name": "%d格式控制符", "category": "格式化输出", "is_new": true},
+        {"name": "%02d修饰符(前导零)", "category": "格式化输出", "is_new": true},
+        {"name": "换行符\\n", "category": "转义字符", "is_new": true},
+        {"name": "float浮点型", "category": "数据类型", "is_new": true},
+        {"name": "fixed定点输出格式", "category": "格式化输出", "is_new": true},
+        {"name": "setprecision()设置精度", "category": "格式化输出", "is_new": true},
+        {"name": "%.nf格式控制符", "category": "格式化输出", "is_new": true},
+        {"name": "%f格式控制符", "category": "格式化输出", "is_new": true},
+        {"name": "万能头文件#include<bits/stdc++.h>", "category": "头文件", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 13,
+      "title": "浮点数和数据类型转换",
+      "knowledge_points": [
+        {"name": "double双精度浮点型", "category": "数据类型", "is_new": true},
+        {"name": "有效数字概念", "category": "数据类型", "is_new": true},
+        {"name": "float精度(7位有效数字)", "category": "数据类型", "is_new": true},
+        {"name": "double精度(16位有效数字)", "category": "数据类型", "is_new": true},
+        {"name": "%lf格式控制符", "category": "格式化输出", "is_new": true},
+        {"name": "%.nlf保留小数", "category": "格式化输出", "is_new": true},
+        {"name": "字面常量(字面值)", "category": "基础概念", "is_new": true},
+        {"name": "float字面常量(3.14f)", "category": "数据类型", "is_new": true},
+        {"name": "自动数据类型转换", "category": "类型转换", "is_new": true},
+        {"name": "低精度到高精度自动转换", "category": "类型转换", "is_new": true},
+        {"name": "强制数据类型转换", "category": "类型转换", "is_new": true},
+        {"name": "类型名(变量/表达式)转换语法", "category": "类型转换", "is_new": true},
+        {"name": "四舍五入运算(int(浮点数+0.5))", "category": "算法技巧", "is_new": true},
+        {"name": "long long数据类型", "category": "数据类型", "is_new": true},
+        {"name": "long long数值范围", "category": "数据类型", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "title": "字符串和字符数组",
+      "knowledge_points": [
+        {"name": "字符串概念(双引号包含)", "category": "字符串", "is_new": true},
+        {"name": "字符数组存储字符串", "category": "字符串", "is_new": true},
+        {"name": "字符串结束符'\\0'", "category": "字符串", "is_new": true},
+        {"name": "字符数组初始化方式", "category": "数组", "is_new": true},
+        {"name": "cin输入字符串(不含空格)", "category": "输入输出", "is_new": true},
+        {"name": "cin.getline()输入含空格字符串", "category": "输入输出", "is_new": true},
+        {"name": "strlen()计算字符串长度", "category": "字符串函数", "is_new": true},
+        {"name": "cstring头文件", "category": "头文件", "is_new": true},
+        {"name": "strcpy()字符串复制", "category": "字符串函数", "is_new": true},
+        {"name": "strcmp()字符串比较", "category": "字符串函数", "is_new": true},
+        {"name": "strcat()字符串拼接", "category": "字符串函数", "is_new": true},
+        {"name": "回文串判断算法", "category": "算法应用", "is_new": true},
+        {"name": "遍历字符串统计字符", "category": "算法技巧", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "title": "string类型的字符串",
+      "knowledge_points": [
+        {"name": "string数据类型", "category": "字符串", "is_new": true},
+        {"name": "string字符串定义与初始化", "category": "字符串", "is_new": true},
+        {"name": "string字符串的cin输入", "category": "输入输出", "is_new": true},
+        {"name": "getline()函数输入string", "category": "输入输出", "is_new": true},
+        {"name": "string下标访问运算符[]", "category": "字符串", "is_new": true},
+        {"name": "length()获取字符串长度", "category": "字符串函数", "is_new": true},
+        {"name": "size()获取字符串长度", "category": "字符串函数", "is_new": true},
+        {"name": "字符串拷贝(赋值运算符=)", "category": "字符串", "is_new": true},
+        {"name": "字符串拼接(+和+=运算符)", "category": "字符串", "is_new": true},
+        {"name": "字符串比较(关系运算符)", "category": "字符串", "is_new": true},
+        {"name": "find()函数查找子串", "category": "字符串函数", "is_new": true},
+        {"name": "find()带起始位置参数", "category": "字符串函数", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "title": "阶段复习与练习三",
+      "knowledge_points": [
+        {"name": "格式化输入输出综合应用", "category": "综合应用", "is_new": false},
+        {"name": "浮点数精度处理", "category": "综合应用", "is_new": false},
+        {"name": "字符串处理综合应用", "category": "综合应用", "is_new": false},
+        {"name": "类型转换综合应用", "category": "综合应用", "is_new": false}
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "title": "函数基础",
+      "knowledge_points": [
+        {"name": "函数概念与作用", "category": "函数", "is_new": true},
+        {"name": "void无返回值类型", "category": "函数", "is_new": true},
+        {"name": "函数定义语法格式", "category": "函数", "is_new": true},
+        {"name": "函数调用语法", "category": "函数", "is_new": true},
+        {"name": "函数定义位置(先于调用)", "category": "函数", "is_new": true},
+        {"name": "函数参数(形参和实参)", "category": "函数", "is_new": true},
+        {"name": "带参数函数的定义与调用", "category": "函数", "is_new": true},
+        {"name": "多参数函数", "category": "函数", "is_new": true},
+        {"name": "函数返回值类型声明", "category": "函数", "is_new": true},
+        {"name": "return关键字返回结果", "category": "函数", "is_new": true},
+        {"name": "return提前退出函数", "category": "函数", "is_new": true},
+        {"name": "main函数特点", "category": "函数", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "title": "函数进阶",
+      "knowledge_points": [
+        {"name": "变量作用域概念", "category": "作用域", "is_new": true},
+        {"name": "流程控制语句中变量的作用域", "category": "作用域", "is_new": true},
+        {"name": "函数中变量的作用域", "category": "作用域", "is_new": true},
+        {"name": "局部变量", "category": "作用域", "is_new": true},
+        {"name": "全局变量", "category": "作用域", "is_new": true},
+        {"name": "局部优先原则", "category": "作用域", "is_new": true},
+        {"name": "全局数组自动初始化为0", "category": "数组", "is_new": true},
+        {"name": "函数声明", "category": "函数", "is_new": true},
+        {"name": "头文件的作用", "category": "头文件", "is_new": true},
+        {"name": "algorithm头文件", "category": "头文件", "is_new": true},
+        {"name": "max()函数", "category": "系统函数", "is_new": true},
+        {"name": "min()函数", "category": "系统函数", "is_new": true},
+        {"name": "swap()函数", "category": "系统函数", "is_new": true},
+        {"name": "sort()函数(升序排序)", "category": "系统函数", "is_new": true},
+        {"name": "sort(begin,end)语法", "category": "系统函数", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "title": "结构体",
+      "knowledge_points": [
+        {"name": "结构体概念", "category": "结构体", "is_new": true},
+        {"name": "struct关键字", "category": "结构体", "is_new": true},
+        {"name": "结构体定义语法", "category": "结构体", "is_new": true},
+        {"name": "结构体成员变量", "category": "结构体", "is_new": true},
+        {"name": "结构体变量定义", "category": "结构体", "is_new": true},
+        {"name": "结构体变量初始化", "category": "结构体", "is_new": true},
+        {"name": "结构体成员访问运算符(.)", "category": "结构体", "is_new": true},
+        {"name": "结构体数组定义", "category": "结构体", "is_new": true},
+        {"name": "结构体数组初始化", "category": "结构体", "is_new": true},
+        {"name": "结构体数组输入输出", "category": "结构体", "is_new": true},
+        {"name": "结构体数组排序", "category": "结构体", "is_new": true},
+        {"name": "自定义排序规则cmp函数", "category": "结构体", "is_new": true},
+        {"name": "多关键字排序", "category": "结构体", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "title": "循环的嵌套",
+      "knowledge_points": [
+        {"name": "循环嵌套概念", "category": "循环", "is_new": true},
+        {"name": "双重for循环语法", "category": "循环", "is_new": true},
+        {"name": "外层循环控制行数", "category": "循环", "is_new": true},
+        {"name": "内层循环控制列数", "category": "循环", "is_new": true},
+        {"name": "双重循环中的变量关系", "category": "循环", "is_new": true},
+        {"name": "输出矩形/三角形图案", "category": "循环应用", "is_new": true},
+        {"name": "空心矩形输出", "category": "循环应用", "is_new": true},
+        {"name": "九九乘法表输出", "category": "循环应用", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "title": "简单排序",
+      "knowledge_points": [
+        {"name": "桶排序思想", "category": "排序算法", "is_new": true},
+        {"name": "桶排序步骤", "category": "排序算法", "is_new": true},
+        {"name": "桶排序代码实现", "category": "排序算法", "is_new": true},
+        {"name": "桶排序适用场景", "category": "排序算法", "is_new": true},
+        {"name": "选择排序思想", "category": "排序算法", "is_new": true},
+        {"name": "选择排序步骤", "category": "排序算法", "is_new": true},
+        {"name": "选择排序代码实现", "category": "排序算法", "is_new": true},
+        {"name": "swap()交换数组元素", "category": "排序算法", "is_new": false}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "level": 2,
+  "lesson_number": 12,
+  "title": "阶段复习与测试",
+  "file_name": "L2-12.pptx",
+  "total_slides": 31,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "高精度运算",
+    "栈",
+    "队列"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_13",
+      "name": "高精度运算",
+      "category": "算法"
+    },
+    {
+      "id": "l4_14",
+      "name": "栈",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_15",
+      "name": "队列",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "阶段复习与测试"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "大整数加法模板"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "大整数减法模板"
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "大整数乘法模板"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "栈\n栈的概念\n① 只有一个端口的容器，数据的操作只从一端完成，如存、取等。\n② 数据存取遵循：先进后出、后进先出的原则。\n栈的操作函数"
+    }
+  ],
+  "summary": {
+    "total_slides": 31,
+    "total_knowledge_points": 8,
+    "gesp_level3_points_count": 4,
+    "gesp_level4_points_count": 4
+  }
+}

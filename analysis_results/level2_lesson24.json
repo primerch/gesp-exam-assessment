@@ -1,0 +1,125 @@
+{
+  "level": 2,
+  "lesson_number": 24,
+  "title": "阶段复习与测试",
+  "file_name": "L2-24.pptx",
+  "total_slides": 62,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "数组与指针",
+    "结构体",
+    "变量作用域",
+    "冒泡排序",
+    "选择排序",
+    "插入排序",
+    "栈",
+    "队列",
+    "链表"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_04",
+      "name": "数组与指针",
+      "category": "指针"
+    },
+    {
+      "id": "l4_05",
+      "name": "结构体",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_07",
+      "name": "变量作用域",
+      "category": "函数"
+    },
+    {
+      "id": "l4_08",
+      "name": "冒泡排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_09",
+      "name": "选择排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_10",
+      "name": "插入排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_14",
+      "name": "栈",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_15",
+      "name": "队列",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_16",
+      "name": "链表",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "阶段复习与测试"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "认识树\n树是一种非线性的数据结构，能很好地描述有分支和层次特性的数据集合。"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "认识树\n一棵树是由n(n≥0)个元素组成的有限集合。\n1）每个元素都可以称为结点(node)；\n2）任意一棵非空树中（n>0），有一个特定的结点，称为根结点或树根(root)；\n3）除根结点外，其余结..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "认识树\n一个结点的子树个数，称为这个结点的度。\n结点1的度：3\n结点2的度：2\n……\n树中各结点度的最大值，称为这个树的度。\n右侧树中，结点1的度最大，所以树的度为3。"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "二叉树\n二叉树是一种特殊的树型结构，树中结点的度都不大于2。\n在二叉树的第i层上最多有2i-1个结点（i ≥ 1)。\n深度为k的二叉树最多有2k-1个结点（k ≥ 1) 。\n深度3的二叉树结点最多有：..."
+    }
+  ],
+  "summary": {
+    "total_slides": 62,
+    "total_knowledge_points": 14,
+    "gesp_level3_points_count": 4,
+    "gesp_level4_points_count": 10
+  }
+}

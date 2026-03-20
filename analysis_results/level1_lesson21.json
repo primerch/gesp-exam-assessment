@@ -1,0 +1,78 @@
+{
+  "level": 1,
+  "lesson_number": 21,
+  "title": "枚举算法",
+  "file_name": "21.pptx",
+  "total_slides": 98,
+  "slides_with_content": 97,
+  "knowledge_points": [
+    {
+      "name": "算法思维",
+      "desc": "问题分析和算法设计"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_1",
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_11",
+    "l2_4",
+    "l2_6",
+    "l2_7",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "双层for循环\n①   循环的嵌套\n②  双层for循环的嵌套\n语法格式：\n循环体里包含循环语句的结构叫做循环嵌套\nfor(;;){\u000b    for(;;){\u000b        ......\u000b    }\u000b    ......\u000b}"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "双层for循环\n③   行列问题\n外层循环控制行\n内层循环控制列\nfor(;;){\u000b    for(;;){\u000b        ......\u000b    }\u000b    ......\u000b}\n控制行\n控制列"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "双层for循环\n③   两个变量分别需要循环处理的问题\n外层循环处理变量1\n内层循环处理变量2\nfor(;;){\u000b    for(;;){\u000b        ......\u000b    }\u000b    ......\u000b}\n处理变量1\n处理变量2"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "简单排序（一）"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "桶排序"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "码上得知-1-桶排序的步骤"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "排序\n数据\n①  按从小到大的顺序升序排列\n②  按从大到小的顺序降序排列"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "程序里如何排序？\n从键盘输入10个整数，如何实现10个数的升序排序呢？\n0       1       8       3       4       0       3       8       2       4\n0       0       1       2       3       3       4       4       8       8"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "排序思路\n0       1       8       3       4       0       3       8       2       4\n根据数据找对应编号的桶，进行计数。\n0\n1\n8\n3\n4\n0\n3\n4\n8\n2\n从左到右依次遍历每个桶，根据小旗子的个数列出桶的编号，    就可以将数据进行升序排列了。"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "8\n8\n4\n4\n3\n3\n2\n1\n0\n0\n排序思路\n0       1       8       3       4       0       3       8       2       4\n根据数据找对应编号的桶，进行计数。\n0\n1\n8\n3\n4\n0\n3\n4\n8\n2\n从左到右依次遍历每个桶，根据小旗子的个数列出桶的编号，    就可以将数据进行升序排列了。"
+    }
+  ]
+}

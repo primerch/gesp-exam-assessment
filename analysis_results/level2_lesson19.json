@@ -1,0 +1,83 @@
+{
+  "level": 2,
+  "lesson_number": 19,
+  "title": "认识树",
+  "file_name": "L2-19.pptx",
+  "total_slides": 80,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "二维数组",
+    "栈",
+    "队列",
+    "链表"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_14",
+      "name": "栈",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_15",
+      "name": "队列",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_16",
+      "name": "链表",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "认识树"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "连通块\n1\n3\n4\n5\n6\n2\n1\n2\n3\n4\n5\n6\n格子元素相同，任意2个格子都能直接或间接相互到达，格子数量尽可能的多，这种区域称之为连通块。"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "连通块\n一个地图内，可能存在一个或多个联通块。\n例如下图所示，1表示障碍物不能通行，0表示可通行，格子之间只能“上下左右”四个方向移动。\n用0表示的连通块一共有4个。\n1\n3\n4\n5\n6\n2\n1\n2\n..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "连通块搜索模板"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "给定的地图中，0表示能通行，1表示不能通行，格子之间只能“上下左右”四个方向移动，用0组成的连通块有（\t）个？\n回顾练习\nA.  2\t\t\t\nB.  3\nC.  4\t\t\t\nD.  5\nC\n1\n3\n4\n5..."
+    }
+  ],
+  "summary": {
+    "total_slides": 80,
+    "total_knowledge_points": 7,
+    "gesp_level3_points_count": 3,
+    "gesp_level4_points_count": 4
+  }
+}

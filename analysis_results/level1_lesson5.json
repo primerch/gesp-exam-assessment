@@ -1,0 +1,70 @@
+{
+  "level": 1,
+  "lesson_number": 5,
+  "title": "阶段复习与练习一",
+  "file_name": "5. 阶段复习与练习一.pptx",
+  "total_slides": 64,
+  "slides_with_content": 64,
+  "knowledge_points": [
+    {
+      "name": "阶段复习一",
+      "desc": "复习第1-4课：变量、运算符、分支结构"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_10",
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_2",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "逻辑运算符\n逻辑运算符用于计算逻辑关系，其计算结果是一个布尔值。\n名称 | 符号 | 结果\n逻辑与 | && | true(1)或false(0)\n逻辑或 | || | true(1)或false(0)\n逻辑非 | ! | true(1)或false(0)"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "逻辑符的优先级\n①  小括号优先级最高\n单目运算符  高于  双目运算符  高于  三目运算符                               \n③  双目运算符：\n     算术  高于  比较  高于  逻辑   高于  赋值\n④  算术运算符遵循数学规则，小括号的优先级最高\n⑤  运算符优先级相同，按照从左往右的顺序进\n      行计算，只有赋值运算符是从右往左计算。\n优先级 ..."
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "if-else多分支语句\nif(条件1) 语句1; \nelse if(条件2) 语句2; \n……\nelse if(条件n)  语句n;\nelse 语句n+1;\n① 当条件为真，则执行对应的语句，并终止整个  \n    多分支语句的执行；\n② 条件都不成立，则执行else语句；\n③ else if的数量可以有任意多个；\n④ 最后的else语句不是必须的；\n⑤ 当有多个条件成立时，只会执行第一个满足条..."
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "switch语句\nswitch (变量或表达式) {\ncase 数值1: 语句1; break;\ncase 数值2: 语句2; break;\n……\ncase 数值n: 语句n; break;\ndefault: 语句; break;\n}\n①  switch语句也是选择结构的一种。\n②  根据表达式的结果，找到匹配的分支语句执行。"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "switch语法格式和注意事项\nswitch (表达式) {\ncase 数值1: 语句1; break;\ncase 数值2: 语句2; break;\n……\ncase 数值n: 语句n; break;\ndefault: 语句; break;\n}\n① switch语句小括号里结果必须为整型；\n② case后面不能是变量，必须为具体数值；\n③ case后面的数值可以是整数、字符、布尔值；\n④ case后..."
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "switch语句的执行流程"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "break关键字的作用\nswitch (表达式) {\ncase 数值1: 语句1; break;\ncase 数值2: 语句2; break;\n……\ncase 数值n: 语句n; break;\ndefault: 语句;          break;\n}\nbreak的作用是结束整个switch语句。\nswitch语句的执行过程：\n通过表达式的结果找到匹配的case分支语句执行，直到遇到break，结..."
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "switch语句的执行流程"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "阶段复习与练习(一)"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "虫子吃苹果\n【问题描述】\n美美买了一箱苹果共有n个，但是很不幸的是箱子里混进了一条虫子，虫子每x小时能吃掉一个苹果。假设虫子在吃完一个苹果之前不会吃另一个，那么经过y小时，这箱苹果中还有多少个苹果没有被虫子吃过？\n【输入描述】\n一行三个整数，表示n、x、y，使用空格隔开（1≤n≤10000，1≤x≤10000，1≤y≤10000）。\n【输出描述】\n一行一个整数，表示没被虫子吃过的苹果数量。\n【输入..."
+    }
+  ]
+}

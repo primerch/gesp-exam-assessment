@@ -1,0 +1,3782 @@
+{
+  "level": 4,
+  "totalLessons": 23,
+  "lessons": [
+    {
+      "lessonNum": 1,
+      "title": "排列组合1",
+      "fileName": "1-排列组合1.pptx",
+      "totalPages": 113,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 排列组合1",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_6",
+        "l7_7",
+        "l7_8",
+        "l8_1"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 2,
+      "title": "排列组合2",
+      "fileName": "2-排列组合2.pptx",
+      "totalPages": 69,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 排列组合2",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_1",
+        "l8_2",
+        "l8_3"
+      ],
+      "gespLevelsCovered": [
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 3,
+      "title": "质数筛法",
+      "fileName": "3-质数筛法.pptx",
+      "totalPages": 108,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 质数筛法",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l7_2",
+        "l7_3"
+      ],
+      "gespLevelsCovered": [
+        7
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 4,
+      "title": "区间动态规划1",
+      "fileName": "4-区间动态规划1.pptx",
+      "totalPages": 107,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 区间动态规划1",
+          "knowledgePoints": [
+            "l8_12"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_12"
+      ],
+      "gespLevelsCovered": [
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 5,
+      "title": "区间动态规划2",
+      "fileName": "5-区间动态规划2.pptx",
+      "totalPages": 91,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 区间动态规划2",
+          "knowledgePoints": [
+            "l8_12",
+            "l8_11"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_12",
+        "l8_11"
+      ],
+      "gespLevelsCovered": [
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 6,
+      "title": "阶段测试",
+      "fileName": "6-阶段测试.pptx",
+      "totalPages": 48,
+      "isReview": true,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 阶段测试",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 阶段测试",
+          "knowledgePoints": []
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l7_2",
+        "l7_3",
+        "l7_6",
+        "l7_7",
+        "l7_8",
+        "l8_1",
+        "l8_11",
+        "l8_12",
+        "l8_2",
+        "l8_3"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "lessonNum": 7,
+      "title": "参赛相关",
+      "fileName": "7-参赛相关.pptx",
+      "totalPages": 101,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 参赛相关",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 参赛相关",
+          "knowledgePoints": []
+        }
+      ],
+      "allKnowledgePoints": [],
+      "gespLevelsCovered": [],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 8,
+      "title": "枚举算法应用",
+      "fileName": "8-枚举算法应用.pptx",
+      "totalPages": 95,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 枚举算法应用",
+          "knowledgePoints": [
+            "l7_6",
+            "l7_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_6",
+        "l7_7"
+      ],
+      "gespLevelsCovered": [
+        7
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 9,
+      "title": "贪心算法应用（复赛）",
+      "fileName": "9-贪心算法应用（复赛）.pptx",
+      "totalPages": 94,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 贪心算法应用（复赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_11"
+      ],
+      "gespLevelsCovered": [
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 10,
+      "title": "模拟算法应用（复赛）",
+      "fileName": "10-模拟算法应用（复赛）.pptx",
+      "totalPages": 124,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 模拟算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l7_2",
+        "l7_3"
+      ],
+      "gespLevelsCovered": [
+        7
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 11,
+      "title": "搜索算法应用（复赛）",
+      "fileName": "11-搜索算法应用（复赛）.pptx",
+      "totalPages": 86,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 搜索算法应用（复赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l7_8"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_7",
+        "l7_8",
+        "l8_13"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 12,
+      "title": "复赛模拟比赛",
+      "fileName": "12-复赛模拟比赛.pptx",
+      "totalPages": 44,
+      "isReview": true,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 复赛模拟比赛",
+          "knowledgePoints": []
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l7_2",
+        "l7_3",
+        "l7_6",
+        "l7_7",
+        "l7_8",
+        "l8_11",
+        "l8_13"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "lessonNum": 13,
+      "title": "计算机基础知识",
+      "fileName": "13-计算机基础知识.pptx",
+      "totalPages": 105,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 计算机基础知识",
+          "knowledgePoints": [
+            "l7_6"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_6"
+      ],
+      "gespLevelsCovered": [
+        7
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 14,
+      "title": "数据结构1（初赛）",
+      "fileName": "14-数据结构1（初赛）.pptx",
+      "totalPages": 127,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 数据结构1（初赛）",
+          "knowledgePoints": [
+            "l7_10"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_10"
+      ],
+      "gespLevelsCovered": [
+        7
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 15,
+      "title": "数据结构2（初赛）",
+      "fileName": "15-数据结构2（初赛）.pptx",
+      "totalPages": 78,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 数据结构2（初赛）",
+          "knowledgePoints": [
+            "l7_10",
+            "l8_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_10",
+        "l8_7",
+        "l8_8"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 16,
+      "title": "数学专题1（初赛）",
+      "fileName": "16-数学专题1（初赛）.pptx",
+      "totalPages": 79,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 数学专题1（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l7_2",
+        "l7_3",
+        "l8_5",
+        "l8_6"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 17,
+      "title": "数学专题2（初赛）",
+      "fileName": "17-数学专题2（初赛）.pptx",
+      "totalPages": 75,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 数学专题2（初赛）",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l7_2",
+        "l7_3",
+        "l8_4"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 18,
+      "title": "字符串专题（初赛）",
+      "fileName": "18-字符串专题（初赛）.pptx",
+      "totalPages": 91,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 字符串专题（初赛）",
+          "knowledgePoints": [
+            "l7_5"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_5"
+      ],
+      "gespLevelsCovered": [
+        7
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 19,
+      "title": "二分算法专题（初赛）",
+      "fileName": "19-二分算法专题（初赛）.pptx",
+      "totalPages": 131,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 二分算法专题（初赛）",
+          "knowledgePoints": [
+            "l8_11"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_11"
+      ],
+      "gespLevelsCovered": [
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 20,
+      "title": "排序专题（初赛）",
+      "fileName": "20-排序专题（初赛）.pptx",
+      "totalPages": 156,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 排序专题（初赛）",
+          "knowledgePoints": [
+            "l8_11",
+            "l8_10"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_11",
+        "l8_10"
+      ],
+      "gespLevelsCovered": [
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 21,
+      "title": "递归专题（初赛）",
+      "fileName": "21-递归专题（初赛）.pptx",
+      "totalPages": 82,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 递归专题（初赛）",
+          "knowledgePoints": [
+            "l7_7",
+            "l8_13"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_7",
+        "l8_13"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 22,
+      "title": "动态规划（初赛）",
+      "fileName": "22-动态规划（初赛）.pptx",
+      "totalPages": 98,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 动态规划（初赛）",
+          "knowledgePoints": [
+            "l7_4",
+            "l7_5"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_4",
+        "l7_5",
+        "l8_12"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": null
+    },
+    {
+      "lessonNum": 23,
+      "title": "初赛模拟比赛",
+      "fileName": "23-初赛模拟比赛.pptx",
+      "totalPages": 66,
+      "isReview": true,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "Slide 1 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "Slide 2 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "Slide 3 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "Slide 4 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 5,
+          "content": "Slide 5 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 6,
+          "content": "Slide 6 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 7,
+          "content": "Slide 7 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 8,
+          "content": "Slide 8 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 9,
+          "content": "Slide 9 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 10,
+          "content": "Slide 10 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 11,
+          "content": "Slide 11 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 12,
+          "content": "Slide 12 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 13,
+          "content": "Slide 13 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 14,
+          "content": "Slide 14 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 15,
+          "content": "Slide 15 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 16,
+          "content": "Slide 16 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 17,
+          "content": "Slide 17 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 18,
+          "content": "Slide 18 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 19,
+          "content": "Slide 19 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 20,
+          "content": "Slide 20 content from 初赛模拟比赛",
+          "knowledgePoints": []
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l7_10",
+        "l7_2",
+        "l7_3",
+        "l7_4",
+        "l7_5",
+        "l7_6",
+        "l7_7",
+        "l8_10",
+        "l8_11",
+        "l8_12",
+        "l8_13",
+        "l8_4",
+        "l8_5",
+        "l8_6",
+        "l8_7",
+        "l8_8"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ],
+      "reviewOfLessons": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    }
+  ]
+}

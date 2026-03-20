@@ -1,0 +1,82 @@
+{
+  "level": 1,
+  "lesson_number": 4,
+  "title": "逻辑运算符和多分支语句",
+  "file_name": "4. 逻辑运算符和多分支语句.pptx",
+  "total_slides": 99,
+  "slides_with_content": 99,
+  "knowledge_points": [
+    {
+      "name": "逻辑运算符",
+      "desc": "逻辑与、逻辑或、逻辑非"
+    },
+    {
+      "name": "多分支if-else if",
+      "desc": "多条件分支判断"
+    },
+    {
+      "name": "switch语句",
+      "desc": "switch-case-break-default结构"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_10",
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_2",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_3",
+    "l2_4",
+    "l2_6"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "比较运算符\n①  比较运算符用于对数据进行比较，计算两个数据的大小\n      关系，因此也称为关系运算符\n      > >= < <= == !=\n比较运算的结果表示关系是否成立"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "运算符的优先级\n类别 | 运算符 | 优先级\n小括号 | （ ） | 由\n高\n到\n低\n算术运算符 | *  /  %\n+  -\n输出运算符 | <<\n比较运算符 | <  >  <=  >=\n==  !=\n赋值运算符 | = += -= *= /= %="
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "bool布尔类型\n① 布尔bool是一种数据类型，常用于表示比较运算的结果，  \n     布尔类型只有两种取值。\n      0 false    1 true\n可以使用bool类型的变量保存比较运算的结果。\n     int a = 10 , b = 20 ;\n     bool c = a > b ;\n③   C++中的所有数据都有真假性，布尔值可以用来表示\n      数据的真假性。\n  ..."
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "选择结构\n① 顺序结构：代码默认是顺序执行，这种结构称为顺序结构。\n选择结构：根据条件成立与否，选择其中一条语句执行，也称为分支结构。\n③ 实现分支结构的语句称为分支语句。\n条件\n语句2\n成立\n语句1\n不成立\n选择结构\n语句2\n语句2\n语句2\n顺序结构"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "if语句\n条件\ntrue\n成立\n语句1\nif\nfalse\n不成立\n语句2\nelse\nif语句就是一种分支语句，由关键字if和else构成，\n它有如下两种形式:\nif ( 条件 ) 语句1；\nelse 语句2；\n条件\ntrue\n成立\n语句\nif\nfalse\n不成立\nif ( 条件 ) 语句；"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "if语句的嵌套\nif语句中又包含一个或多个if语句，称为if语句的嵌套。\n其嵌套形式有多种，根据需要编写。\nif ( 条件1 ) {\n    if (条件2) 语句1 ；\n    else 语句2 ；\n}else 语句3 ；\nif ( 条件1 ) {\n    if (条件2) 语句1 ；\n    else 语句2 ；\n}else {\n     if (条件3) 语句3 ；\n     else 语句..."
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "回顾练习1\n分析以下程序的运行结果是\n10\n输入：20\n输出：____\n输入：8\n输出：____\n16"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "逻辑运算符和多分支结构"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "报数游戏\n游戏规则：\n参与者从1开始，按顺序轮流报数，如果遇到所报的数\n能够被3整除，或者能够被5整除，则说\"过\"，说错则淘汰出局，坚持到最后的为获胜者。\n过\n过"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "程序里如何判断呢？\n输入一个整数x，判断x是否能被3整除，或者能被5整除。\n3  5  6  9  10  12  15   ......\nif(                                       ) \n   cout <<\"guo\"<< endl;\nx%3==0 或者 x%5==0\n其中一个成立\n或者如何表\n示呢？"
+    }
+  ]
+}

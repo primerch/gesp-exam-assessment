@@ -1,0 +1,79 @@
+{
+  "level": 1,
+  "lesson_number": 3,
+  "title": "比较运算符和 if 语句",
+  "file_name": "3. 比较运算符和 if 语句.pptx",
+  "total_slides": 109,
+  "slides_with_content": 109,
+  "knowledge_points": [
+    {
+      "name": "关系运算符",
+      "desc": "大于、小于、等于、不等于等比较运算"
+    },
+    {
+      "name": "if分支语句",
+      "desc": "单分支if和双分支if-else语句"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_1",
+    "l1_11",
+    "l1_12",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_3",
+    "l2_4",
+    "l2_6",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "运算符与表达式\n① C++中，用运算符将操作数连接起来的式子叫做表达式。\n② 表达式的主要作用就是计算求值，表达式都会有一个计 算结果。\n③ 运算符优先级：运算符的计算顺序。\n6 + 3\n运算符\n操作数\n表达式\n计算结果"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "运算符的优先级"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "字符类型\n① 字符是计算机中所使用的基本符号，包括字母、数字、空格、             标点符号及其他特殊符号等，C++中字符需要使用单引号包含。     'A'   '9'  '@'  '+'  ' '\n② char表示字符类型（字符型），char类型的变量可以存储字符。      char c = 'A' ;\nchar d = '9' ;"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "字符编码\n③ 计算机中，字符全都是以整数形式存储的，用于表示字符的整数称为字符的编码。\n\n\n\n④ ASCII编码是国际通用的编码规则，对128个字符进行编码，常见的字符编码如下：\n'A'\n65\n编码"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "int类型与char类型\n④ int类型与char类型\n使用int类型的变量存储，输出的内容为整数。\n使用char类型的变量存储，输出的内容为字符。\n⑤ char类型可以参与表达式的运算，参与运算的是字符对应的ASCII编码。\n     char c = 'A';\n     c = c + 3;"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "回顾练习1\n阅读以下程序，分析程序的运行结果是______。\n32 4"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "回顾练习1\n下列代码的输出结果是什么 （  ）。\nA. k\nB. 107\nC. K\nD. 报错\nB"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "比较运算符和if语句"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "童程童美组织了一次紧张激   烈的跳绳比赛。\n跳绳成绩统计\n\n       童童  98\n       美美  85\n       …\n谁跳的多？\n98 > 85\n童童跳的多\n不等式运算符"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "比较运算符"
+    }
+  ]
+}

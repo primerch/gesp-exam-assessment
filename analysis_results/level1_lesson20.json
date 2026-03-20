@@ -1,0 +1,75 @@
+{
+  "level": 1,
+  "lesson_number": 20,
+  "title": "循环的嵌套",
+  "file_name": "20. 循环的嵌套.pptx",
+  "total_slides": 69,
+  "slides_with_content": 69,
+  "knowledge_points": [
+    {
+      "name": "循环嵌套",
+      "desc": "多重循环的执行流程"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_11",
+    "l2_3",
+    "l2_4",
+    "l2_6",
+    "l2_7",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "结构体\n结构体是由多个类型不同（或相同）的数据组合而成的数据类型。\nstruct 结构体名{\n数据类型1 变量名1;\n数据类型2 变量名2;\n……\n};\nstruct stu{\nint id;\nstring name;\ndouble score;\n};"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "结构体变量\n结构体变量的定义和初始化：\n使用结构体变量："
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "结构体数组\n定义结构体数组：\n数组的初始化：\n数组元素的成员变量："
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "结构体数组排序\n使用sort()函数对结构体数组的排序步骤：\n自定义排序规则\n调用sort()函数进行排序"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "结构体数组排序\n单关键字排序\n多关键字排序\n自定义排序规则步骤\n1、列出所有关键字的排序情况。\n2、将每个关键字的排序作为if-else if语句的一个分支。\n3、根据if-else语句结构写出代码。"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "回顾练习1\n阅读以下代码，分析输出结果。\n输入：\n8 1\n4 9\n3 6\n输出：\n\n—————\n4 9"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "循环的嵌套"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "循环的嵌套"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "码上得知-1-认识循环嵌套"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "有规律的图案\n给你一个'*'， 输出如下三行五列的举行图案。\n*****\n*****\n*****\n行\n列\n【注意】\n① 每次只能输出一个'*'；\n② 使用for循环解决该问题。"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "level": 2,
+  "lesson_number": 23,
+  "title": "广度优先搜索2",
+  "file_name": "L2-23.pptx",
+  "total_slides": 78,
+  "knowledge_points": [
+    "位运算",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "结构体",
+    "变量作用域",
+    "队列",
+    "链表",
+    "递归算法"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_05",
+      "name": "结构体",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_07",
+      "name": "变量作用域",
+      "category": "函数"
+    },
+    {
+      "id": "l4_15",
+      "name": "队列",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_16",
+      "name": "链表",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_17",
+      "name": "递归算法",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "广度优先搜索2"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "广度优先搜索的概念\n从某一个点开始，首先探索所有与该点相邻的点，然后再进一步探索这些点的相邻点，以此类推找到目标。这种全面扩散，逐层递进的搜索方法，称之为广度优先搜索简称BFS。"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "广度优先搜索模板\nstruct node{\u000b    int x,y;\u000b};\u000bqueue<node> q;\u000bint mp[N][M];\u000bint vis[N][M];\u000bint dx[4]={-1,0,1,..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "回顾练习\n观察下图，用广搜从（1,1）开始搜索，0可以走，1不可以走，可以第3步到达的点有哪些（     ）。\n(1,3)、(3,1)\n(2,3)、(2,4)\n(2,3)、(4,1)\n(3,1)、(4..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "最短路径长度问题"
+    }
+  ],
+  "summary": {
+    "total_slides": 78,
+    "total_knowledge_points": 9,
+    "gesp_level3_points_count": 3,
+    "gesp_level4_points_count": 6
+  }
+}

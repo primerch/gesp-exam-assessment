@@ -1,0 +1,2017 @@
+{
+  "level": 4,
+  "totalLessons": 23,
+  "gespTarget": "Level 7-8",
+  "analysisDate": "2026-03-19",
+  "lessons": [
+    {
+      "lessonNum": 1,
+      "title": "排列组合1",
+      "fileName": "1-排列组合1.pptx",
+      "totalPages": 113,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "课程导入：排列组合在编程竞赛中的应用",
+          "knowledgePoints": [
+            "l8_1"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "加法原理：分类计数，完成一件事有n类方法",
+          "knowledgePoints": [
+            "l8_1"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "乘法原理：分步计数，完成一件事需要n个步骤",
+          "knowledgePoints": [
+            "l8_1"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "加法原理与乘法原理的区别与联系",
+          "knowledgePoints": [
+            "l8_1"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "例题：分类计数问题解析",
+          "knowledgePoints": [
+            "l8_1"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "例题：分步计数问题解析",
+          "knowledgePoints": [
+            "l8_1"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "排列的概念：从n个不同元素中取出m个元素的有序排列",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "排列数公式：P(n,m) = n!/(n-m)!",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "全排列：n个元素全部取出的排列",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "排列数计算例题",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "编程实现排列数计算",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "全排列生成算法",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "next_permutation函数使用",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 14,
+          "content": "排列问题综合练习",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 15,
+          "content": "课堂小结与作业",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_1",
+        "l8_2"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 2,
+      "title": "排列组合2",
+      "fileName": "2-排列组合2.pptx",
+      "totalPages": 69,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "复习：排列与排列数",
+          "knowledgePoints": [
+            "l8_2"
+          ],
+          "isReview": true
+        },
+        {
+          "pageNum": 2,
+          "content": "组合的概念：从n个不同元素中取出m个元素的无序组合",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "组合数公式：C(n,m) = n!/((n-m)!×m!)",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "组合数性质：C(n,m) = C(n,n-m)",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "杨辉三角形的定义与性质",
+          "knowledgePoints": [
+            "l8_3"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "杨辉三角与组合数的关系",
+          "knowledgePoints": [
+            "l8_2",
+            "l8_3"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "利用杨辉三角计算组合数",
+          "knowledgePoints": [
+            "l8_3"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "二项式定理简介",
+          "knowledgePoints": [
+            "l8_3"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "捆绑法：处理必须相邻的元素",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "插空法：处理不能相邻的元素",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "隔板法：相同元素分配到不同盒子",
+          "knowledgePoints": [
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "排列组合综合应用题",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2"
+          ]
+        },
+        {
+          "pageNum": 13,
+          "content": "课堂练习",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2",
+            "l8_3"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_1",
+        "l8_2",
+        "l8_3"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 3,
+      "title": "质数筛法",
+      "fileName": "3-质数筛法.pptx",
+      "totalPages": 108,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "质数与合数的定义",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "试除法判断质数",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "埃氏筛法（Eratosthenes筛法）原理",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "埃氏筛法代码实现",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 5,
+          "content": "埃氏筛法时间复杂度分析O(n log log n)",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "欧拉筛法（线性筛）原理",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 7,
+          "content": "欧拉筛法代码实现",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 8,
+          "content": "线性筛时间复杂度O(n)",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "质因数分解",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 10,
+          "content": "快速幂算法：倍增思想",
+          "knowledgePoints": [
+            "l8_4"
+          ]
+        },
+        {
+          "pageNum": 11,
+          "content": "快速幂代码实现",
+          "knowledgePoints": [
+            "l8_4"
+          ]
+        },
+        {
+          "pageNum": 12,
+          "content": "快速幂时间复杂度O(log n)",
+          "knowledgePoints": [
+            "l8_4",
+            "l8_6"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_4",
+        "l8_6"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 4,
+      "title": "区间动态规划1",
+      "fileName": "4-区间动态规划1.pptx",
+      "totalPages": 107,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "动态规划复习",
+          "knowledgePoints": [
+            "l7_2"
+          ],
+          "isReview": true
+        },
+        {
+          "pageNum": 2,
+          "content": "区间DP问题特点：以区间作为状态",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "区间DP状态设计：dp[i][j]表示区间[i,j]的最优解",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "区间DP状态转移：枚举分割点k",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "石子合并问题描述",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "石子合并问题分析",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "石子合并代码实现",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "区间DP时间复杂度分析O(n³)",
+          "knowledgePoints": [
+            "l7_2",
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 9,
+          "content": "矩阵链乘问题",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 10,
+          "content": "矩阵链乘代码实现",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_2",
+        "l8_6"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    },
+    {
+      "lessonNum": 5,
+      "title": "区间动态规划2",
+      "fileName": "5-区间动态规划2.pptx",
+      "totalPages": 91,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "复习区间DP",
+          "knowledgePoints": [
+            "l7_2"
+          ],
+          "isReview": true
+        },
+        {
+          "pageNum": 2,
+          "content": "括号匹配问题：最少添加次数",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "括号匹配DP解法",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "回文串问题：最长回文子序列",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "回文串DP解法",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "区间DP空间优化：滚动数组",
+          "knowledgePoints": [
+            "l7_2",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 7,
+          "content": "四边形不等式优化",
+          "knowledgePoints": [
+            "l7_2",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 8,
+          "content": "区间DP综合练习",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_2",
+        "l8_7"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    },
+    {
+      "lessonNum": 6,
+      "title": "阶段测试",
+      "fileName": "6-阶段测试.pptx",
+      "totalPages": 48,
+      "isReview": true,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "阶段测试：排列组合与计数原理",
+          "knowledgePoints": [
+            "l8_1",
+            "l8_2",
+            "l8_3"
+          ],
+          "isReview": true
+        },
+        {
+          "pageNum": 2,
+          "content": "阶段测试：质数筛与快速幂",
+          "knowledgePoints": [
+            "l8_4"
+          ],
+          "isReview": true
+        },
+        {
+          "pageNum": 3,
+          "content": "阶段测试：区间动态规划",
+          "knowledgePoints": [
+            "l7_2"
+          ],
+          "isReview": true
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_2",
+        "l8_1",
+        "l8_2",
+        "l8_3",
+        "l8_4"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    },
+    {
+      "lessonNum": 7,
+      "title": "参赛相关",
+      "fileName": "7-参赛相关.pptx",
+      "totalPages": 101,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "竞赛规则介绍",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "考试环境使用说明",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "答题策略与时间分配",
+          "knowledgePoints": []
+        }
+      ],
+      "allKnowledgePoints": [],
+      "gespLevelsCovered": []
+    },
+    {
+      "lessonNum": 8,
+      "title": "枚举算法应用",
+      "fileName": "8-枚举算法应用.pptx",
+      "totalPages": 95,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "枚举算法思想复习",
+          "knowledgePoints": [],
+          "isReview": true
+        },
+        {
+          "pageNum": 2,
+          "content": "枚举算法时间复杂度分析",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "枚举优化策略：减少枚举范围",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "枚举优化策略：剪枝",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "子集枚举：位运算法",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "全排列枚举：next_permutation",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_6",
+        "l8_7"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 9,
+      "title": "贪心算法应用",
+      "fileName": "9-贪心算法应用（复赛）.pptx",
+      "totalPages": 94,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "贪心算法思想",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "活动选择问题：贪心策略",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "活动选择问题正确性证明",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "区间覆盖问题",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 5,
+          "content": "贪心算法适用场景分析",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_7"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 10,
+      "title": "模拟算法应用",
+      "fileName": "10-模拟算法应用（复赛）.pptx",
+      "totalPages": 124,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "模拟算法思想",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "高精度计算：大整数模拟",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "日期计算与闰年判断",
+          "knowledgePoints": [
+            "l8_5"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "几何图形模拟计算",
+          "knowledgePoints": [
+            "l8_5"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "平面几何基础：坐标与距离",
+          "knowledgePoints": [
+            "l8_5"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "模拟算法优化技巧",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_5",
+        "l8_7"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 11,
+      "title": "搜索算法应用",
+      "fileName": "11-搜索算法应用（复赛）.pptx",
+      "totalPages": 86,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "深度优先搜索DFS原理",
+          "knowledgePoints": [
+            "l7_3"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "DFS在图中的应用",
+          "knowledgePoints": [
+            "l7_3"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "广度优先搜索BFS原理",
+          "knowledgePoints": [
+            "l7_3"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "BFS求最短路径",
+          "knowledgePoints": [
+            "l7_3",
+            "l8_8"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "搜索剪枝优化",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "记忆化搜索",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_3",
+        "l8_7",
+        "l8_8"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    },
+    {
+      "lessonNum": 12,
+      "title": "复赛模拟比赛",
+      "fileName": "12-复赛模拟比赛.pptx",
+      "totalPages": 44,
+      "isReview": true,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "复赛模拟题讲解",
+          "knowledgePoints": [
+            "l7_2",
+            "l7_3",
+            "l8_7"
+          ],
+          "isReview": true
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_2",
+        "l7_3",
+        "l8_7"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    },
+    {
+      "lessonNum": 13,
+      "title": "计算机基础知识",
+      "fileName": "13-计算机基础知识.pptx",
+      "totalPages": 105,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "计算机硬件组成",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "进制转换与存储单位",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "网络基础概念",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "算法复杂度基础概念",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_6"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 14,
+      "title": "数据结构1",
+      "fileName": "14-数据结构1（初赛）.pptx",
+      "totalPages": 127,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "数组与链表",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "栈的应用",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "队列与循环队列",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "哈希表原理",
+          "knowledgePoints": [
+            "l7_4"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "哈希冲突解决方法",
+          "knowledgePoints": [
+            "l7_4"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_4"
+      ],
+      "gespLevelsCovered": [
+        7
+      ]
+    },
+    {
+      "lessonNum": 15,
+      "title": "数据结构2",
+      "fileName": "15-数据结构2（初赛）.pptx",
+      "totalPages": 78,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "二叉树基础",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "二叉搜索树",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "堆与优先队列",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "图的定义与存储",
+          "knowledgePoints": [
+            "l7_3"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "图的遍历：DFS与BFS",
+          "knowledgePoints": [
+            "l7_3"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "图论算法综合应用",
+          "knowledgePoints": [
+            "l7_3",
+            "l8_8"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_3",
+        "l8_8"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    },
+    {
+      "lessonNum": 16,
+      "title": "数学专题1",
+      "fileName": "16-数学专题1（初赛）.pptx",
+      "totalPages": 79,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "整数性质与模运算",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "GCD与LCM",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "等差数列与等比数列",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "平面几何：基础图形面积",
+          "knowledgePoints": [
+            "l8_5"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "坐标几何基础",
+          "knowledgePoints": [
+            "l8_5"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_5"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 17,
+      "title": "数学专题2",
+      "fileName": "17-数学专题2（初赛）.pptx",
+      "totalPages": 75,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "数学库函数：sin/cos/tan",
+          "knowledgePoints": [
+            "l7_1"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "数学库函数：log/exp/sqrt",
+          "knowledgePoints": [
+            "l7_1"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "快速幂与矩阵快速幂",
+          "knowledgePoints": [
+            "l8_4"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "高精度计算",
+          "knowledgePoints": []
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l8_4"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    },
+    {
+      "lessonNum": 18,
+      "title": "字符串专题",
+      "fileName": "18-字符串专题（初赛）.pptx",
+      "totalPages": 91,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "字符串基础操作",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "字符串匹配算法",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 3,
+          "content": "字符串哈希",
+          "knowledgePoints": [
+            "l7_4"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "KMP算法原理",
+          "knowledgePoints": []
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_4"
+      ],
+      "gespLevelsCovered": [
+        7
+      ]
+    },
+    {
+      "lessonNum": 19,
+      "title": "二分算法专题",
+      "fileName": "19-二分算法专题（初赛）.pptx",
+      "totalPages": 131,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "二分查找原理",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "二分查找时间复杂度O(log n)",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "二分答案思想",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "二分算法边界处理技巧",
+          "knowledgePoints": [
+            "l8_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_6",
+        "l8_7"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 20,
+      "title": "排序专题",
+      "fileName": "20-排序专题（初赛）.pptx",
+      "totalPages": 156,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "冒泡、选择、插入排序",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "冒泡排序复杂度O(n²)",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "快速排序与归并排序",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 4,
+          "content": "快排平均复杂度O(n log n)",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "排序算法比较与选择",
+          "knowledgePoints": [
+            "l8_6",
+            "l8_7"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_6",
+        "l8_7"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 21,
+      "title": "递归专题",
+      "fileName": "21-递归专题（初赛）.pptx",
+      "totalPages": 82,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "递归思想与三要素",
+          "knowledgePoints": []
+        },
+        {
+          "pageNum": 2,
+          "content": "递归时间复杂度分析",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "递归空间复杂度：栈深度",
+          "knowledgePoints": [
+            "l8_6"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "分治算法与递归",
+          "knowledgePoints": []
+        }
+      ],
+      "allKnowledgePoints": [
+        "l8_6"
+      ],
+      "gespLevelsCovered": [
+        8
+      ]
+    },
+    {
+      "lessonNum": 22,
+      "title": "动态规划",
+      "fileName": "22-动态规划（初赛）.pptx",
+      "totalPages": 98,
+      "isReview": false,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "动态规划思想",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 2,
+          "content": "DP三大性质",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 3,
+          "content": "记忆化搜索",
+          "knowledgePoints": [
+            "l7_2",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 4,
+          "content": "递推实现DP",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        },
+        {
+          "pageNum": 5,
+          "content": "DP空间优化：滚动数组",
+          "knowledgePoints": [
+            "l7_2",
+            "l8_7"
+          ]
+        },
+        {
+          "pageNum": 6,
+          "content": "背包问题：01背包与完全背包",
+          "knowledgePoints": [
+            "l7_2"
+          ]
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_2",
+        "l8_7"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    },
+    {
+      "lessonNum": 23,
+      "title": "初赛模拟比赛",
+      "fileName": "23-初赛模拟比赛.pptx",
+      "totalPages": 66,
+      "isReview": true,
+      "pages": [
+        {
+          "pageNum": 1,
+          "content": "初赛模拟题讲解",
+          "knowledgePoints": [
+            "l7_1",
+            "l7_2",
+            "l7_3",
+            "l7_4",
+            "l8_1",
+            "l8_2",
+            "l8_3",
+            "l8_4",
+            "l8_5",
+            "l8_6",
+            "l8_7",
+            "l8_8"
+          ],
+          "isReview": true
+        }
+      ],
+      "allKnowledgePoints": [
+        "l7_1",
+        "l7_2",
+        "l7_3",
+        "l7_4",
+        "l8_1",
+        "l8_2",
+        "l8_3",
+        "l8_4",
+        "l8_5",
+        "l8_6",
+        "l8_7",
+        "l8_8"
+      ],
+      "gespLevelsCovered": [
+        7,
+        8
+      ]
+    }
+  ],
+  "coverage": {
+    "level7": {
+      "total": 4,
+      "covered": 4,
+      "percentage": 100.0,
+      "points": {
+        "l7_1": {
+          "covered": true,
+          "lessons": [
+            17,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 17,
+              "page": 1
+            },
+            {
+              "lesson": 17,
+              "page": 2
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l7_2": {
+          "covered": true,
+          "lessons": [
+            4,
+            5,
+            6,
+            12,
+            22,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 4,
+              "page": 1
+            },
+            {
+              "lesson": 4,
+              "page": 2
+            },
+            {
+              "lesson": 4,
+              "page": 3
+            },
+            {
+              "lesson": 4,
+              "page": 4
+            },
+            {
+              "lesson": 4,
+              "page": 5
+            },
+            {
+              "lesson": 4,
+              "page": 6
+            },
+            {
+              "lesson": 4,
+              "page": 7
+            },
+            {
+              "lesson": 4,
+              "page": 8
+            },
+            {
+              "lesson": 4,
+              "page": 9
+            },
+            {
+              "lesson": 4,
+              "page": 10
+            },
+            {
+              "lesson": 5,
+              "page": 1
+            },
+            {
+              "lesson": 5,
+              "page": 2
+            },
+            {
+              "lesson": 5,
+              "page": 3
+            },
+            {
+              "lesson": 5,
+              "page": 4
+            },
+            {
+              "lesson": 5,
+              "page": 5
+            },
+            {
+              "lesson": 5,
+              "page": 6
+            },
+            {
+              "lesson": 5,
+              "page": 7
+            },
+            {
+              "lesson": 5,
+              "page": 8
+            },
+            {
+              "lesson": 6,
+              "page": 3
+            },
+            {
+              "lesson": 12,
+              "page": 1
+            },
+            {
+              "lesson": 22,
+              "page": 1
+            },
+            {
+              "lesson": 22,
+              "page": 2
+            },
+            {
+              "lesson": 22,
+              "page": 3
+            },
+            {
+              "lesson": 22,
+              "page": 4
+            },
+            {
+              "lesson": 22,
+              "page": 5
+            },
+            {
+              "lesson": 22,
+              "page": 6
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l7_3": {
+          "covered": true,
+          "lessons": [
+            11,
+            12,
+            15,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 11,
+              "page": 1
+            },
+            {
+              "lesson": 11,
+              "page": 2
+            },
+            {
+              "lesson": 11,
+              "page": 3
+            },
+            {
+              "lesson": 11,
+              "page": 4
+            },
+            {
+              "lesson": 12,
+              "page": 1
+            },
+            {
+              "lesson": 15,
+              "page": 4
+            },
+            {
+              "lesson": 15,
+              "page": 5
+            },
+            {
+              "lesson": 15,
+              "page": 6
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l7_4": {
+          "covered": true,
+          "lessons": [
+            14,
+            18,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 14,
+              "page": 4
+            },
+            {
+              "lesson": 14,
+              "page": 5
+            },
+            {
+              "lesson": 18,
+              "page": 3
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        }
+      }
+    },
+    "level8": {
+      "total": 8,
+      "covered": 8,
+      "percentage": 100.0,
+      "points": {
+        "l8_1": {
+          "covered": true,
+          "lessons": [
+            1,
+            2,
+            6,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 1,
+              "page": 1
+            },
+            {
+              "lesson": 1,
+              "page": 2
+            },
+            {
+              "lesson": 1,
+              "page": 3
+            },
+            {
+              "lesson": 1,
+              "page": 4
+            },
+            {
+              "lesson": 1,
+              "page": 5
+            },
+            {
+              "lesson": 1,
+              "page": 6
+            },
+            {
+              "lesson": 1,
+              "page": 14
+            },
+            {
+              "lesson": 1,
+              "page": 15
+            },
+            {
+              "lesson": 2,
+              "page": 12
+            },
+            {
+              "lesson": 2,
+              "page": 13
+            },
+            {
+              "lesson": 6,
+              "page": 1
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l8_2": {
+          "covered": true,
+          "lessons": [
+            1,
+            2,
+            6,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 1,
+              "page": 7
+            },
+            {
+              "lesson": 1,
+              "page": 8
+            },
+            {
+              "lesson": 1,
+              "page": 9
+            },
+            {
+              "lesson": 1,
+              "page": 10
+            },
+            {
+              "lesson": 1,
+              "page": 11
+            },
+            {
+              "lesson": 1,
+              "page": 12
+            },
+            {
+              "lesson": 1,
+              "page": 13
+            },
+            {
+              "lesson": 1,
+              "page": 14
+            },
+            {
+              "lesson": 1,
+              "page": 15
+            },
+            {
+              "lesson": 2,
+              "page": 1
+            },
+            {
+              "lesson": 2,
+              "page": 2
+            },
+            {
+              "lesson": 2,
+              "page": 3
+            },
+            {
+              "lesson": 2,
+              "page": 4
+            },
+            {
+              "lesson": 2,
+              "page": 6
+            },
+            {
+              "lesson": 2,
+              "page": 9
+            },
+            {
+              "lesson": 2,
+              "page": 10
+            },
+            {
+              "lesson": 2,
+              "page": 11
+            },
+            {
+              "lesson": 2,
+              "page": 12
+            },
+            {
+              "lesson": 2,
+              "page": 13
+            },
+            {
+              "lesson": 6,
+              "page": 1
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l8_3": {
+          "covered": true,
+          "lessons": [
+            2,
+            6,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 2,
+              "page": 5
+            },
+            {
+              "lesson": 2,
+              "page": 6
+            },
+            {
+              "lesson": 2,
+              "page": 7
+            },
+            {
+              "lesson": 2,
+              "page": 8
+            },
+            {
+              "lesson": 2,
+              "page": 13
+            },
+            {
+              "lesson": 6,
+              "page": 1
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l8_4": {
+          "covered": true,
+          "lessons": [
+            3,
+            6,
+            17,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 3,
+              "page": 10
+            },
+            {
+              "lesson": 3,
+              "page": 11
+            },
+            {
+              "lesson": 3,
+              "page": 12
+            },
+            {
+              "lesson": 6,
+              "page": 2
+            },
+            {
+              "lesson": 17,
+              "page": 3
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l8_5": {
+          "covered": true,
+          "lessons": [
+            10,
+            16,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 10,
+              "page": 3
+            },
+            {
+              "lesson": 10,
+              "page": 4
+            },
+            {
+              "lesson": 10,
+              "page": 5
+            },
+            {
+              "lesson": 16,
+              "page": 4
+            },
+            {
+              "lesson": 16,
+              "page": 5
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l8_6": {
+          "covered": true,
+          "lessons": [
+            3,
+            4,
+            8,
+            13,
+            19,
+            20,
+            21,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 3,
+              "page": 5
+            },
+            {
+              "lesson": 3,
+              "page": 8
+            },
+            {
+              "lesson": 3,
+              "page": 12
+            },
+            {
+              "lesson": 4,
+              "page": 8
+            },
+            {
+              "lesson": 8,
+              "page": 2
+            },
+            {
+              "lesson": 13,
+              "page": 4
+            },
+            {
+              "lesson": 19,
+              "page": 2
+            },
+            {
+              "lesson": 20,
+              "page": 2
+            },
+            {
+              "lesson": 20,
+              "page": 4
+            },
+            {
+              "lesson": 20,
+              "page": 5
+            },
+            {
+              "lesson": 21,
+              "page": 2
+            },
+            {
+              "lesson": 21,
+              "page": 3
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l8_7": {
+          "covered": true,
+          "lessons": [
+            5,
+            8,
+            9,
+            10,
+            11,
+            12,
+            19,
+            20,
+            22,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 5,
+              "page": 6
+            },
+            {
+              "lesson": 5,
+              "page": 7
+            },
+            {
+              "lesson": 8,
+              "page": 3
+            },
+            {
+              "lesson": 8,
+              "page": 4
+            },
+            {
+              "lesson": 8,
+              "page": 5
+            },
+            {
+              "lesson": 8,
+              "page": 6
+            },
+            {
+              "lesson": 9,
+              "page": 5
+            },
+            {
+              "lesson": 10,
+              "page": 6
+            },
+            {
+              "lesson": 11,
+              "page": 5
+            },
+            {
+              "lesson": 11,
+              "page": 6
+            },
+            {
+              "lesson": 12,
+              "page": 1
+            },
+            {
+              "lesson": 19,
+              "page": 4
+            },
+            {
+              "lesson": 20,
+              "page": 5
+            },
+            {
+              "lesson": 22,
+              "page": 3
+            },
+            {
+              "lesson": 22,
+              "page": 5
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        },
+        "l8_8": {
+          "covered": true,
+          "lessons": [
+            11,
+            15,
+            23
+          ],
+          "pages": [
+            {
+              "lesson": 11,
+              "page": 4
+            },
+            {
+              "lesson": 15,
+              "page": 6
+            },
+            {
+              "lesson": 23,
+              "page": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "gespLevel7Points": {
+    "l7_1": {
+      "name": "数学库函数",
+      "description": "sin/cos/log/exp等数学库函数"
+    },
+    "l7_2": {
+      "name": "复杂动态规划",
+      "description": "二维DP/DP优化"
+    },
+    "l7_3": {
+      "name": "图的定义及遍历",
+      "description": "图的存储表示、DFS/BFS遍历"
+    },
+    "l7_4": {
+      "name": "哈希表",
+      "description": "哈希表原理及应用"
+    }
+  },
+  "gespLevel8Points": {
+    "l8_1": {
+      "name": "计数原理",
+      "description": "加法/乘法原理"
+    },
+    "l8_2": {
+      "name": "排列与组合",
+      "description": "排列数、组合数计算"
+    },
+    "l8_3": {
+      "name": "杨辉三角",
+      "description": "杨辉三角形与组合数关系"
+    },
+    "l8_4": {
+      "name": "倍增法",
+      "description": "倍增思想、快速幂"
+    },
+    "l8_5": {
+      "name": "代数与平面几何",
+      "description": "方程求解、几何计算"
+    },
+    "l8_6": {
+      "name": "算法复杂度分析",
+      "description": "时间/空间复杂度分析"
+    },
+    "l8_7": {
+      "name": "算法优化",
+      "description": "剪枝、记忆化、空间优化"
+    },
+    "l8_8": {
+      "name": "图论算法综合应用",
+      "description": "最小生成树、最短路径"
+    }
+  }
+}

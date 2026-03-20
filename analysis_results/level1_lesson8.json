@@ -1,0 +1,78 @@
+{
+  "level": 1,
+  "lesson_number": 8,
+  "title": "数组",
+  "file_name": "8. 数组.pptx",
+  "total_slides": 83,
+  "slides_with_content": 83,
+  "knowledge_points": [
+    {
+      "name": "一维数组定义",
+      "desc": "数组的定义、初始化方法"
+    },
+    {
+      "name": "数组元素访问",
+      "desc": "通过下标访问数组元素"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_4",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "continue和break\ncontinue语句的作用是跳过本次循环，\n进入下一次循环。\nbreak语句的作用是终止整个循环，\n执行循环后面的语句。"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "统计与计数\n●  循环中的循环变量可以用于计数。\n     例如：统计循环次数、输出几个星等"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "统计与计数\n● 有时不能直接使用循环变量计数，需要单独\n     在循环外定义计数变量，并且初始化为0，在\n     循环 中满足某种条件才计数。\n● 循环结束后，在循环外部输出计数变量的结果。\n     例如：统计偶数的个数、奇数的个数....\nint n；\ncin >> n；\nint a；\nint cnt=0；\nfor(int i=0; i<n; i++) {\ncin >> a；\n      ..."
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "数列问题\n等差数列：0 5 10 15 20\n斐波那契数列：1 1 2 3 5 8 13 21 34 55\n1. 总结数列中数字之间的规律。\n2. 确定数列的初始值。\n3. 使用循环计算出数列中的每个整数。\n4. 输出。"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "回顾练习1\n观察以下程序，分析程序的执行结果为                  。\n4\n#include<iostream>\nusing namespace std;\nint main(){\n    int sum=0;\n    int i = 1;\n    for(;i<=100;i++) {\n        sum+=i;\n        if(sum>=10)  break;\n    }\n..."
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "回顾练习2\n观察以下程序，分析程序的执行结果。\n1 4 7 10\n输入： 5 3\n输出：\n#include<iostream>\nusing namespace std;\nint main(){\n    int a,b;\n    cin>>a>>b;\n    int n=1;\n    for(int i=1;i<=a;i++) {\n        if(i==3)    continue;\n    ..."
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "数组"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "查分程序\n童程童美学院对100名学生都进行了信息学测试，请编写一个程序，保存这100名学生的成绩，输入某名学生的学号即可查询该名学生的成绩。\n学号 | 1 | 2 | 3 | ... | ... | 100\n分数 | 98 | 88 | 85 | ... | 78 | 92"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "变量存储学生成绩\n学号 | 1 | 2 | 3 | ... | 99 | 100\n分数 | 98 | 88 | 85 | ... | 78 | 92\nint a1=98, a2=88, a3=85, ... , a100=92;\n难道要使用100个变量么？"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "使用数组存储数据"
+    }
+  ]
+}

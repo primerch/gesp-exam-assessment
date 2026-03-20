@@ -1,0 +1,83 @@
+{
+  "level": 1,
+  "lesson_number": 18,
+  "title": "函数进阶",
+  "file_name": "18. 函数进阶.pptx",
+  "total_slides": 103,
+  "slides_with_content": 103,
+  "knowledge_points": [
+    {
+      "name": "数学函数",
+      "desc": "abs、sqrt、max、min、rand/srand"
+    },
+    {
+      "name": "函数参数传递",
+      "desc": "值传递和引用传递"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_1",
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_10",
+    "l2_11",
+    "l2_4",
+    "l2_5",
+    "l2_8",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "定义和调用函数\n①  定义函数的语法格式\n②  函数的调用\n函数名(实参1，实参2...)；"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "函数的参数\n③  函数的参数 \n ∙  传递给函数的信息，可以没有，也可以有多个。\n ∙  参数分为形参和实参；\n ∙  传参的过程是实参给形参赋值的过程\n ∙  传递多个参数时，参数之间用逗号分隔；\n∙  传递的实参和形参的数据类型不一致，会发生\n    数据类型转换，实参转换成形参的数据类型。\n形参\nvoid bigger(int a) {\n        a*=2；\n        cout..."
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "函数的返回值\nint Max(int a, int b) {\n     if(a > b) return a;\n     else return b;\n     cout<<a;\n}\n④  函数的返回值\n      ∙  函数的计算结果称为函数的返回值。\n      ∙  函数没有返回值，需要写void，注意返回值的类型不能不写。\n      ∙  返回值最多只能有一个。\ncout << Max(..."
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "回顾练习1\n阅读如下程序，分析程序的输出结果。\n输入：10 6 30\n输出：________\n92"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "回顾练习2\n阅读如下程序，观察程序的运行结果为______\nB"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "函数进阶"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "想一想\n变量i的\n使用范围\nfor循环外部无法访问变量i。"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "修改代码\n变量i的\n使用范围\n将int i=1挪到       for循环的外面，改变了变量i的使用范围。\n1 2 3 4 5"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "变量的作用域"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "码上得知-1-变量的作用域"
+    }
+  ]
+}

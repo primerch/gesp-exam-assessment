@@ -1,0 +1,63 @@
+{
+  "gesp_mapping_validation": {
+    "level1_to_gesp1": {
+      "coverage": "57%",
+      "covered_count": 8,
+      "total_count": 14,
+      "missing": [
+        "三目运算",
+        "顺序结构",
+        "分支结构",
+        "循环结构",
+        "程序注释与调试",
+        "关系运算"
+      ],
+      "excess": []
+    },
+    "level1_to_gesp2": {
+      "coverage": "108%",
+      "covered_count": 13,
+      "total_count": 12,
+      "missing": [],
+      "excess": ["部分知识点与GESP 2级以外内容有交叉覆盖"]
+    },
+    "level2_to_gesp3": {
+      "coverage": "67%",
+      "covered_count": 8,
+      "total_count": 12,
+      "missing": [
+        "数据编码(原码反码补码)",
+        "进制转换",
+        "算法描述",
+        "一维数组"
+      ],
+      "excess": []
+    },
+    "level2_to_gesp4": {
+      "coverage": "57%",
+      "covered_count": 8,
+      "total_count": 14,
+      "missing": [
+        "文件操作",
+        "异常处理",
+        "二维及多维数组",
+        "函数定义与调用",
+        "形参与实参",
+        "变量作用域"
+      ],
+      "excess": []
+    }
+  },
+  "analysis_summary": {
+    "verification_date": "2026-03-20",
+    "data_source": "gesp_cpp_outline.json + curriculum-data.ts",
+    "level1_to_gesp1_2": "Level 1课程目标是覆盖GESP 1-2级，实际对GESP 1级覆盖57%，对GESP 2级覆盖108%（有超纲）",
+    "level2_to_gesp3_4": "Level 2课程目标是覆盖GESP 3-4级，实际对GESP 3级覆盖67%，对GESP 4级覆盖57%",
+    "key_findings": [
+      "GESP 1级缺失6个考点：主要是程序结构类知识点（三目运算、顺序/分支/循环结构、程序注释）",
+      "GESP 2级全覆盖，甚至有扩展内容",
+      "GESP 3级缺失4个考点：数据编码、进制转换、算法描述、一维数组",
+      "GESP 4级缺失6个考点：文件操作、异常处理、二维数组、函数相关、变量作用域"
+    ]
+  }
+}

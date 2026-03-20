@@ -1,0 +1,561 @@
+{
+  "level": 1,
+  "lessons": [
+    {
+      "lesson_num": 1,
+      "title": "变量和数据的输入输出",
+      "knowledge_points": [
+        {
+          "name": "Dev-C++编程工具使用",
+          "category": "开发环境",
+          "is_new": true
+        },
+        {
+          "name": "cout输出语句",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "输出运算符<<",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "字符串输出",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "换行符endl",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "连续输出多个内容",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "程序框架结构",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "变量的概念",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "int类型变量定义",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "变量赋值",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "变量初始化",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "变量命名规则",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "cin输入语句",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "输入运算符>>",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "连续输入多个数据",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "变量交换(借助第三个变量)",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "程序、代码、编程语言概念",
+          "category": "概念理解",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 2,
+      "title": "算数运算符和字符型",
+      "knowledge_points": [
+        {
+          "name": "表达式的概念",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "算术运算符(+ - * /)",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "除法运算符/(整除)",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "取余运算符%",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "复合赋值运算符(+= -= *= /= %=)",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "自增运算符++",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "自减运算符--",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "char字符类型",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "字符常量(单引号)",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "ASCII码概念",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "字符与整数的关系",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "字符加减运算",
+          "category": "基础语法",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 3,
+      "title": "比较运算符和if语句",
+      "knowledge_points": [
+        {
+          "name": "比较运算符(> < == >= <= !=)",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "bool布尔类型",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "布尔值true/false",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "数据的真假性(非0为真)",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "运算符优先级",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "if语句语法",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "if-else语句",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "if-else if多分支",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "if语句嵌套",
+          "category": "流程控制",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 4,
+      "title": "逻辑运算符和多分支语句",
+      "knowledge_points": [
+        {
+          "name": "逻辑与运算符&&",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "逻辑或运算符||",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "逻辑非运算符!",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "逻辑运算符短路特性",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "switch-case语句",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "break关键字",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "switch语句注意事项",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "条件运算符(三目运算符)?:",
+          "category": "基础语法",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 5,
+      "title": "阶段复习与练习一",
+      "knowledge_points": [
+        {
+          "name": "阶段复习：变量与输入输出",
+          "category": "复习",
+          "is_new": false
+        },
+        {
+          "name": "阶段复习：运算符",
+          "category": "复习",
+          "is_new": false
+        },
+        {
+          "name": "阶段复习：if语句",
+          "category": "复习",
+          "is_new": false
+        },
+        {
+          "name": "阶段复习：逻辑运算符",
+          "category": "复习",
+          "is_new": false
+        },
+        {
+          "name": "阶段复习：switch语句",
+          "category": "复习",
+          "is_new": false
+        },
+        {
+          "name": "综合运用：条件判断",
+          "category": "综合应用",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 6,
+      "title": "for循环",
+      "knowledge_points": [
+        {
+          "name": "for循环语法",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "循环变量",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "循环条件",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "循环步长",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "循环执行流程",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "循环次数计算",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "累加算法",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "累乘算法",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "自增自减在循环中的应用",
+          "category": "流程控制",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 7,
+      "title": "for循环进阶",
+      "knowledge_points": [
+        {
+          "name": "break关键字(跳出循环)",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "continue关键字(跳过当前)",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "break与continue区别",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "嵌套循环(双重循环)",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "九九乘法表",
+          "category": "综合应用",
+          "is_new": true
+        },
+        {
+          "name": "循环输出图形",
+          "category": "综合应用",
+          "is_new": true
+        },
+        {
+          "name": "斐波那契数列",
+          "category": "基础算法",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 8,
+      "title": "数组",
+      "knowledge_points": [
+        {
+          "name": "数组的概念",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "数组定义语法",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "数组下标(从0开始)",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "数组元素访问",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "数组初始化方式",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "循环遍历数组",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "数组存储多个数据",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "数组越界问题",
+          "category": "易错点",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 9,
+      "title": "数组进阶",
+      "knowledge_points": [
+        {
+          "name": "数组元素查找(顺序查找)",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "求数组最大/最小值",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "数组元素插入",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "数组元素删除",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "const关键字",
+          "category": "基础语法",
+          "is_new": true
+        },
+        {
+          "name": "数组逆序",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "数组元素累加求和",
+          "category": "基础算法",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 10,
+      "title": "阶段复习与练习二",
+      "knowledge_points": [
+        {
+          "name": "阶段复习：for循环",
+          "category": "复习",
+          "is_new": false
+        },
+        {
+          "name": "阶段复习：数组操作",
+          "category": "复习",
+          "is_new": false
+        },
+        {
+          "name": "查找数组最大值及下标",
+          "category": "综合应用",
+          "is_new": true
+        },
+        {
+          "name": "查找数组最小值及下标",
+          "category": "综合应用",
+          "is_new": true
+        },
+        {
+          "name": "标记数组(布尔数组)",
+          "category": "综合应用",
+          "is_new": true
+        },
+        {
+          "name": "约瑟夫问题(猴子选大王)",
+          "category": "综合应用",
+          "is_new": true
+        },
+        {
+          "name": "数组综合应用",
+          "category": "综合应用",
+          "is_new": true
+        }
+      ]
+    },
+    {
+      "lesson_num": 11,
+      "title": "while循环",
+      "knowledge_points": [
+        {
+          "name": "while循环语法",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "while与for循环的区别",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "do-while循环语法",
+          "category": "流程控制",
+          "is_new": true
+        },
+        {
+          "name": "do-while与while的区别",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "数位分离算法(n%10, n/=10)",
+          "category": "基础算法",
+          "is_new": true
+        },
+        {
+          "name": "循环次数未知的情况",
+          "category": "概念理解",
+          "is_new": true
+        },
+        {
+          "name": "角谷猜想",
+          "category": "综合应用",
+          "is_new": true
+        },
+        {
+          "name": "三种循环对比(for/while/do-while)",
+          "category": "概念理解",
+          "is_new": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "level": 2,
+  "lesson_number": 17,
+  "title": "深度优先搜索（二）",
+  "file_name": "L2-17.pptx",
+  "total_slides": 51,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "变量作用域"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_07",
+      "name": "变量作用域",
+      "category": "函数"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "深度优先搜索（二）"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "深度优先搜索\n从一个点开始，沿着某条路往下走，一直走到底（能深则深），如果走完后发现不能达到目标解，返回到上一个点（不能深则退），换条路，然后继续走到底，如此往复，直至所有可能的结果都被搜索完。\n这种..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "深度优先搜索模板\nint vis[10][10];//标记数组\nint dx[4]={1,0,-1,0};//下右上左\nint dy[4]={0,1,0,-1};//下右上左\nvoid dfs(int..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "回顾练习\n根据深度优先搜索思想，下图按照先左后右的顺序从1号开始搜索，搜索的路径是\n（搜索过的点不再统计）\nD\n1-2-3-4-5-6-7-8\n1-2-4-7-3-6-5-8\n1-2-4-7-5-8-..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "连通块"
+    }
+  ],
+  "summary": {
+    "total_slides": 51,
+    "total_knowledge_points": 6,
+    "gesp_level3_points_count": 4,
+    "gesp_level4_points_count": 2
+  }
+}

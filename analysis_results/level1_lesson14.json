@@ -1,0 +1,83 @@
+{
+  "level": 1,
+  "lesson_number": 14,
+  "title": "字符串和字符数组",
+  "file_name": "14. 字符串和字符数组.pptx",
+  "total_slides": 100,
+  "slides_with_content": 100,
+  "knowledge_points": [
+    {
+      "name": "字符数组",
+      "desc": "用字符数组存储字符串"
+    },
+    {
+      "name": "字符串操作",
+      "desc": "strlen、strcpy等字符串函数"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_1",
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_10",
+    "l2_11",
+    "l2_2",
+    "l2_4",
+    "l2_5",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "双精度浮点数\n① double是一个关键字，表示双精度浮点类型。\t       \n② 双精度浮点数：16位有效数字，精度相较float更高，\n     编程解题时推荐使用双精度浮点数。\ndouble b=3.1415926;\nprintf(“%.20lf”,b);\n3.14159260000000006841\n16位"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "占位符\n占位符 | 说明\n%d | 整型int\n%c | 字符型char\n%f | 单精度浮点型float\n%g | 单精度浮点型去除小数尾0\n%lf | 双精度浮点型double\n%lg | 双精度浮点型去除小数尾0"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "字面常量\n字面常量 | 数据类型\n整型字面常量：0、1、20、100 | int\n浮点型字面常量：3.14、2.5、0.0 | double\n字符型字面常量：'A'、'1'、'!' | char\n布尔型字面常量：true、false | bool\n① 字面常量（字面值）：将程序中的数字、字符、文本称为字面常量，也称\n     为字面值。\n② 在浮点数后面加上f或F，该字面常量数据类型为float，..."
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "数据类型转换\n① 自动数据类型转换\n     1、不同数据类型之间进行计算时，会发生自动数据类型转换，   \n          转换规则：低精度 -> 高精度。\n     2、数据存储到与其数据类型不一致的变量中，会发生\n          自动数据类型转换。\n② 强制数据类型转换\n     格式：类型名（变量/常量/表达式）"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "int和long long类型\n① int类型的数值范围是：\n     -2147483648 ~ 2147483647\n     最大值的近似值是2*109，是一个十位数。\n\n② long long类型的数值范围是：\n   -9223372036854775808 ~ 9223372036854775807 \n   最大值的近似值是9*1018，是一个十九位数。"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "回顾练习1\n（GESP一级）如果a和b为int类型的变量，且值分别为7和2，则下列哪个表达式的计算结果不是3.5？（        ）\nA\nA. 0.0+a/b \nB. (a+0.0)/b\nC. (0.0+a)/b\nD. a/(0.0+b)"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "字符串和字符数组"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "认识字符串"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "码上得知-1-字符串的概念及存储"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "还记得你的第一个程序吗？\n字符串"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "level": 2,
+  "lesson_number": 3,
+  "title": "前缀和与差分",
+  "file_name": "L2-03.pptx",
+  "total_slides": 81,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "递推算法",
+    "函数基础",
+    "二维数组"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_07",
+      "name": "递推算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "前缀和与差分"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "递推概念\n①  递推算法：从已知的初始条件出发，依据递推关系，推出所求的结果。\n递推题目需要满足的条件：\n            从已知条件到所求问题之间，总存在相互的联系。（递推关系）\n递推要确定2..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "递推与逆推\n①  顺推和逆推\n顺推：从事件的开始状态推导到结束状态。\n               种树问题    运输椰子 \n     逆推：从事件的结束状态推导到开始状态。\n           ..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "斐波那契数列\n①  斐波那契数列\n1   1   2   3   5   8   13 … …\n这个数列从第三项开始，每一项都等于前两项之和。\n②  斐波那契数列问题难点\n难点在于如何确认它是斐波那契..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "斐波那契数列\n③  斐波那契数列问题代码模板\nfor(int i=3;i<=n;i++){\u000b    a[i]=a[i-1]+a[i-2];\u000b}\n求第n项\n前两项不需要求，从第3项开始"
+    }
+  ],
+  "summary": {
+    "total_slides": 81,
+    "total_knowledge_points": 6,
+    "gesp_level3_points_count": 5,
+    "gesp_level4_points_count": 1
+  }
+}

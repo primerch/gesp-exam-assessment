@@ -1,0 +1,113 @@
+{
+  "level": 2,
+  "lesson_number": 18,
+  "title": "阶段复习与测试",
+  "file_name": "L2-18.pptx",
+  "total_slides": 38,
+  "knowledge_points": [
+    "进制转换",
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "递推算法",
+    "函数基础",
+    "指针基础",
+    "二维数组",
+    "结构体",
+    "变量作用域",
+    "链表",
+    "递归算法"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_02",
+      "name": "进制转换",
+      "category": "算法"
+    },
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_07",
+      "name": "递推算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_01",
+      "name": "指针基础",
+      "category": "指针"
+    },
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_05",
+      "name": "结构体",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_07",
+      "name": "变量作用域",
+      "category": "函数"
+    },
+    {
+      "id": "l4_16",
+      "name": "链表",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_17",
+      "name": "递归算法",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "阶段复习与测试"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "指针\n1.指针的创建：\nint  *p;\n星号\n类型\n名称\n当指针不需要存储地址时\n     int  *p=NULL;\np为空指针\n①创建时直接赋值\n     int a=10; \n     int..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "链表\n链表中的结点有两部分组成，一部分存储数据，另一部分存放指针。\n链表是一种内存中非连续（或连续）的存储结构，链表中的结点通过指针链接实现串联。"
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "链表\n1.  创建结构体\nstruct node{\u000b    int data; //数据\u000b    node *next; //指针\u000b};\n3.  通过结构体成员next指针链接成链表。\na.next=..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "递归\n自定义递归函数的流程\n① 寻找递归转换公式（子问题到原问题的转换方式）\n② 寻找递归出口（递进到边界开始回归）\n如累加问题转换公式：\nint  f(int n) {\n     if (n == ..."
+    }
+  ],
+  "summary": {
+    "total_slides": 38,
+    "total_knowledge_points": 12,
+    "gesp_level3_points_count": 6,
+    "gesp_level4_points_count": 6
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "level": 2,
+  "lesson_number": 10,
+  "title": "栈",
+  "file_name": "L2-10.pptx",
+  "total_slides": 57,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "高精度运算",
+    "栈"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_13",
+      "name": "高精度运算",
+      "category": "算法"
+    },
+    {
+      "id": "l4_14",
+      "name": "栈",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "栈"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "大整数乘法\n第一个整数长度la，第二个整数长度lb；\n1、双重循环模拟整数乘法\n2、最后的进位非0，长度加1\n第二个整数\n第一个整数\n加进位x\n更新进位\n更新当前位\n存储最高位的进位\n进位重新赋0\n无..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "大整数乘法\n3、程序模板。"
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "大整数乘以小整数\n解法1：将两个整数都当作大整数，使用大整数乘法模板。\n解法2：两个整数类型不变，大整数用数组存，小整数用变量存。\n     第一步：从下标0开始，数组元素依次乘以变量。（进位是多位数..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "回顾练习\n在大整数乘法中，两个大整数最多各有500位，请问保存结果的数组最少定义多大？（\t）\nA.  500\t\t\tB.  700\nC.  1000\t\t\tD.  2000\nC\n解析：无进位结果长度lc ..."
+    }
+  ],
+  "summary": {
+    "total_slides": 57,
+    "total_knowledge_points": 7,
+    "gesp_level3_points_count": 4,
+    "gesp_level4_points_count": 3
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "level": 2,
+  "lesson_number": 1,
+  "title": "枚举算法",
+  "file_name": "L2-01.pptx",
+  "total_slides": 70,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "二维数组",
+    "冒泡排序",
+    "选择排序",
+    "插入排序"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_08",
+      "name": "冒泡排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_09",
+      "name": "选择排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_10",
+      "name": "插入排序",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "枚举算法"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "枚举算法概念及步骤"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "码上得知-1-枚举算法概念"
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "问题：有5个苹果，每个苹果的重量不确定，可以确定的是有的苹果刚好是300g，现在需要找出重量为300g的苹果。\n什么是枚举算法\n5个待判断的苹果：\n依次访问所有苹果：枚举\n230g\n310g\n300g..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "什么是枚举算法\n再来看一个问题：\n一把锁\n5把钥匙\n这里只有一把钥匙可以打开左侧的锁。\n很简单，一个一个尝试就可以了。"
+    }
+  ],
+  "summary": {
+    "total_slides": 70,
+    "total_knowledge_points": 7,
+    "gesp_level3_points_count": 3,
+    "gesp_level4_points_count": 4
+  }
+}

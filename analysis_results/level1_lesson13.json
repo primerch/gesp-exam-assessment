@@ -1,0 +1,75 @@
+{
+  "level": 1,
+  "lesson_number": 13,
+  "title": "浮点数和数据类型转换",
+  "file_name": "13. 浮点数和数据类型转换.pptx",
+  "total_slides": 93,
+  "slides_with_content": 93,
+  "knowledge_points": [
+    {
+      "name": "数据类型转换",
+      "desc": "隐式转换和显式(强制)类型转换"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_4",
+    "l2_5",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "格式化输入输出\n控制符 | 作用\nsetw(n) | 设置输出内容所占的总宽度\nsetfill(c) | 设置填充字符\n① cout 格式化输出：\n     1、setw() 和 setfill() 包含在头文件iomanip文件中，所以  必须在程序中包含该头文件。\n\n\n\n\n\n     2、首先 cout <<, 再 setw() 和 setfill(), 两者可以调换顺序，然后输出内容。"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "1、控制紧跟其后的输出内容。\n2、输出内容原宽度大于设置宽度，内容原样输出。\n3、输出内容原宽度小于设置宽度，在内容前填充指定字     \n      符（默认空格）。\nsetw()和setfill()注意事项\n000182"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "1、 printf()和scanf()包含在cstdio文件中，所以必须在程序中先包含该文件\nscanf() | 按规定格式输入内容 | scanf(\"格式字符串\",数据1,数据2......)\nprintf() | 按规定格式输出内容 | printf(\"格式字符串\",数据1,数据2......)\n2、 换行符：\\n\n② printf() 和 scanf()\n格式化输入输出\n3、 修饰符：%02..."
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "float浮点型\n1、C++中小数称为浮点数，可以使用float类型的变量保存浮点数。\n2、float是一个关键字，表示浮点类型。\n3、浮点型变量定义：\nfloat 变量名;"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "cout输出float\n控制符 | 作用\nfixed | 保留小数点后n位数\nsetprecision(n)\n#include <iomanip>\n两者必须\n同时使用"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "scanf和printf输入输出float\n占位符 | 说明\n%d | 整数int\n%c | 字符char\n%f | 浮点数float\n%g | 去除浮点数\nfloat小数尾0\nprintf(\"%.1f\", b);\n保留小数点后1位"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "回顾练习1\n以下程序运行，输入123，输出结果是______\n**123"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "回顾练习2\n以下程序运行结果是_________\n11.0 13.6"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "浮点数和数据类型转换"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "双精度浮点型"
+    }
+  ]
+}

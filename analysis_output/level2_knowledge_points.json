@@ -1,0 +1,165 @@
+{
+  "level": 2,
+  "lessons": [
+    {
+      "lesson_num": 13,
+      "title": "枚举算法",
+      "knowledge_points": [
+        {"name": "枚举算法概念", "category": "算法", "is_new": true},
+        {"name": "枚举算法基本步骤：确定范围、遍历、判断、输出结果", "category": "算法", "is_new": true},
+        {"name": "水仙花数问题", "category": "算法应用", "is_new": true},
+        {"name": "四叶玫瑰数问题", "category": "算法应用", "is_new": true},
+        {"name": "二维数组枚举应用", "category": "算法应用", "is_new": true},
+        {"name": "枚举算法优化：减少循环次数", "category": "算法优化", "is_new": true},
+        {"name": "枚举算法优化：减少循环嵌套层数", "category": "算法优化", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "title": "递推算法",
+      "knowledge_points": [
+        {"name": "递推算法概念", "category": "算法", "is_new": true},
+        {"name": "初始条件确定", "category": "算法", "is_new": true},
+        {"name": "递推关系建立", "category": "算法", "is_new": true},
+        {"name": "顺推：从初始状态推导到结束状态", "category": "算法", "is_new": true},
+        {"name": "逆推：从结束状态推导到初始状态", "category": "算法", "is_new": true},
+        {"name": "斐波那契数列", "category": "数学", "is_new": true},
+        {"name": "斐波那契数列应用：兔子繁殖问题", "category": "算法应用", "is_new": true},
+        {"name": "斐波那契数列应用：台阶问题", "category": "算法应用", "is_new": true},
+        {"name": "斐波那契数列应用：铺瓷砖问题", "category": "算法应用", "is_new": true},
+        {"name": "直线分割平面问题", "category": "算法应用", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "title": "前缀和与差分",
+      "knowledge_points": [
+        {"name": "前缀和概念", "category": "数据结构", "is_new": true},
+        {"name": "前缀和数组", "category": "数据结构", "is_new": true},
+        {"name": "前缀和递推关系：s[i] = s[i-1] + a[i]", "category": "数据结构", "is_new": true},
+        {"name": "前缀和计算区间和：s[R] - s[L-1]", "category": "数据结构", "is_new": true},
+        {"name": "前缀和应用：多次计算区间和", "category": "算法应用", "is_new": true},
+        {"name": "前缀和应用：K个元素和", "category": "算法应用", "is_new": true},
+        {"name": "前缀和应用：m倍的区间统计", "category": "算法应用", "is_new": true},
+        {"name": "前缀和应用：最大区间和", "category": "算法应用", "is_new": true},
+        {"name": "差分概念", "category": "数据结构", "is_new": true},
+        {"name": "差分数组", "category": "数据结构", "is_new": true},
+        {"name": "差分数组性质：对差分数组求前缀和得到原数组", "category": "数据结构", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "title": "二分算法",
+      "knowledge_points": [
+        {"name": "二分算法概念", "category": "算法", "is_new": true},
+        {"name": "二分算法三个值：最小值、中间值、最大值", "category": "算法", "is_new": true},
+        {"name": "中间值计算：(最小值+最大值)/2", "category": "算法", "is_new": true},
+        {"name": "二分算法实现步骤：取中间、比较、调整范围", "category": "算法", "is_new": true},
+        {"name": "二分算法代码模板", "category": "算法", "is_new": true},
+        {"name": "二分查找次数分析", "category": "算法分析", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "title": "贪心算法",
+      "knowledge_points": [
+        {"name": "贪心算法概念", "category": "算法", "is_new": true},
+        {"name": "局部最优解", "category": "算法", "is_new": true},
+        {"name": "全局最优解", "category": "算法", "is_new": true},
+        {"name": "贪心算法题型：选择类问题", "category": "算法应用", "is_new": true},
+        {"name": "贪心算法题型：最优装载问题", "category": "算法应用", "is_new": true},
+        {"name": "贪心算法题型：部分背包问题", "category": "算法应用", "is_new": true},
+        {"name": "贪心算法题型：分组乘船问题", "category": "算法应用", "is_new": true},
+        {"name": "贪心算法题型：排队等待问题", "category": "算法应用", "is_new": true},
+        {"name": "贪心算法题型：区间问题", "category": "算法应用", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "title": "阶段复习与测试（一）",
+      "knowledge_points": [
+        {"name": "枚举算法复习", "category": "复习", "is_new": true},
+        {"name": "递推算法复习", "category": "复习", "is_new": true},
+        {"name": "前缀和与差分复习", "category": "复习", "is_new": true},
+        {"name": "二分算法复习", "category": "复习", "is_new": true},
+        {"name": "贪心算法复习", "category": "复习", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "title": "大整数加法",
+      "knowledge_points": [
+        {"name": "大整数（高精度数）概念：超过19位的整数", "category": "数据结构", "is_new": true},
+        {"name": "大整数存储：字符串转整数数组", "category": "数据结构", "is_new": true},
+        {"name": "大整数存储：字符数组逆序存储", "category": "数据结构", "is_new": true},
+        {"name": "大整数加法：数位对齐", "category": "算法", "is_new": true},
+        {"name": "大整数加法：对应位相加处理进位", "category": "算法", "is_new": true},
+        {"name": "大整数加法：处理最高位进位", "category": "算法", "is_new": true},
+        {"name": "大整数加法：逆序输出结果", "category": "算法", "is_new": true},
+        {"name": "大整数加法程序模板", "category": "算法", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "title": "大整数减法",
+      "knowledge_points": [
+        {"name": "大整数减法：被减数大于等于减数", "category": "算法", "is_new": true},
+        {"name": "大整数减法：处理借位", "category": "算法", "is_new": true},
+        {"name": "大整数减法：去除前导零", "category": "算法", "is_new": true},
+        {"name": "大整数减法：被减数小于减数处理", "category": "算法", "is_new": true},
+        {"name": "大整数减法：输出负号", "category": "算法", "is_new": true},
+        {"name": "大整数减法程序模板", "category": "算法", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "title": "大整数乘法",
+      "knowledge_points": [
+        {"name": "大整数乘法：模拟竖式乘法", "category": "算法", "is_new": true},
+        {"name": "大整数乘法：错位累加", "category": "算法", "is_new": true},
+        {"name": "大整数乘法：处理进位", "category": "算法", "is_new": true},
+        {"name": "大整数乘法：结果长度计算", "category": "算法", "is_new": true},
+        {"name": "大整数乘以小整数", "category": "算法应用", "is_new": true},
+        {"name": "大整数乘法程序模板", "category": "算法", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 22,
+      "title": "栈",
+      "knowledge_points": [
+        {"name": "栈的概念：先进后出、后进先出", "category": "数据结构", "is_new": true},
+        {"name": "栈的基本操作：入栈", "category": "数据结构", "is_new": true},
+        {"name": "栈的基本操作：出栈", "category": "数据结构", "is_new": true},
+        {"name": "栈的基本操作：获取栈顶元素", "category": "数据结构", "is_new": true},
+        {"name": "栈底元素、栈顶元素、空栈、满栈", "category": "数据结构", "is_new": true},
+        {"name": "数组模拟栈实现", "category": "数据结构", "is_new": true},
+        {"name": "栈的应用：括号匹配", "category": "算法应用", "is_new": true},
+        {"name": "栈的应用：序列逆序", "category": "算法应用", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 23,
+      "title": "队列",
+      "knowledge_points": [
+        {"name": "队列的概念：先进先出", "category": "数据结构", "is_new": true},
+        {"name": "队列的基本操作：入队", "category": "数据结构", "is_new": true},
+        {"name": "队列的基本操作：出队", "category": "数据结构", "is_new": true},
+        {"name": "队列的基本操作：获取队首元素", "category": "数据结构", "is_new": true},
+        {"name": "队列的基本操作：获取队列长度", "category": "数据结构", "is_new": true},
+        {"name": "队首、队尾、空队列", "category": "数据结构", "is_new": true},
+        {"name": "数组模拟队列实现", "category": "数据结构", "is_new": true},
+        {"name": "队列的应用：约瑟夫环问题", "category": "算法应用", "is_new": true},
+        {"name": "队列的应用：密码生成", "category": "算法应用", "is_new": true}
+      ]
+    },
+    {
+      "lesson_num": 24,
+      "title": "阶段复习与测试（二）",
+      "knowledge_points": [
+        {"name": "大整数运算复习", "category": "复习", "is_new": true},
+        {"name": "栈的复习", "category": "复习", "is_new": true},
+        {"name": "队列的复习", "category": "复习", "is_new": true}
+      ]
+    }
+  ]
+}

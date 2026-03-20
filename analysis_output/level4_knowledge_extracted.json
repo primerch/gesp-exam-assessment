@@ -1,0 +1,300 @@
+{
+  "level": 4,
+  "description": "GESP Level 4 - 竞赛准备级别（对应GESP 7-8级），包含排列组合、高级数据结构、图论算法、动态规划等竞赛核心内容",
+  "total_lessons": 23,
+  "lessons": [
+    {
+      "lesson_num": 1,
+      "title": "排列组合1",
+      "knowledge_points": [
+        {"name": "排列的概念与计算", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "组合的概念与计算", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "排列数公式 P(n,m)", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "组合数公式 C(n,m)", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "阶乘的计算与应用", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "加法原理", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "乘法原理", "category": "数学", "is_new": true, "gesp_level": 7}
+      ]
+    },
+    {
+      "lesson_num": 2,
+      "title": "排列组合2",
+      "knowledge_points": [
+        {"name": "有重复元素的排列", "category": "数学", "is_new": true, "gesp_level": 8},
+        {"name": "不相邻排列问题", "category": "数学", "is_new": true, "gesp_level": 8},
+        {"name": "捆绑法", "category": "竞赛技巧", "is_new": true, "gesp_level": 8},
+        {"name": "插空法", "category": "竞赛技巧", "is_new": true, "gesp_level": 8},
+        {"name": "隔板法", "category": "竞赛技巧", "is_new": true, "gesp_level": 8},
+        {"name": "容斥原理基础", "category": "数学", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 3,
+      "title": "质数筛法",
+      "knowledge_points": [
+        {"name": "埃氏筛法（埃拉托斯特尼筛法）", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "线性筛法（欧拉筛法）", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "质数判定算法", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "质因数分解", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "素数表预处理", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "时间复杂度分析 O(nloglogn)", "category": "算法", "is_new": true, "gesp_level": 7}
+      ]
+    },
+    {
+      "lesson_num": 4,
+      "title": "区间动态规划1",
+      "knowledge_points": [
+        {"name": "区间DP的基本概念", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "区间DP的状态定义", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "区间DP的状态转移方程", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "石子合并问题", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "区间DP的递推顺序", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "前缀和在区间DP中的应用", "category": "动态规划", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 5,
+      "title": "区间动态规划2",
+      "knowledge_points": [
+        {"name": "矩阵链乘法问题", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "括号化问题", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "回文串划分问题", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "区间DP的优化技巧", "category": "动态规划", "is_new": true, "gesp_level": 8},
+        {"name": "四边形不等式优化（入门）", "category": "动态规划", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 6,
+      "title": "阶段测试",
+      "knowledge_points": [
+        {"name": "排列组合综合练习", "category": "复习", "is_new": false, "gesp_level": 7},
+        {"name": "质数筛法应用练习", "category": "复习", "is_new": false, "gesp_level": 7},
+        {"name": "区间DP基础练习", "category": "复习", "is_new": false, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 7,
+      "title": "参赛相关",
+      "knowledge_points": [
+        {"name": "GESP 7-8级考试大纲解读", "category": "竞赛指导", "is_new": true, "gesp_level": 7},
+        {"name": "考试注意事项与技巧", "category": "竞赛指导", "is_new": true, "gesp_level": 7},
+        {"name": "常见错误与避免方法", "category": "竞赛指导", "is_new": true, "gesp_level": 7},
+        {"name": "时间管理与解题策略", "category": "竞赛指导", "is_new": true, "gesp_level": 7}
+      ]
+    },
+    {
+      "lesson_num": 8,
+      "title": "枚举算法应用",
+      "knowledge_points": [
+        {"name": "枚举算法的设计思想", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "枚举算法的优化策略", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "枚举子集的方法", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "枚举排列的方法", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "位运算在枚举中的应用", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "折半枚举（meet in the middle）", "category": "算法", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 9,
+      "title": "贪心算法应用（复赛）",
+      "knowledge_points": [
+        {"name": "贪心算法的基本思想", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "贪心算法的正确性证明", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "活动选择问题", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "区间调度问题", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "霍夫曼编码思想", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "贪心与排序的结合应用", "category": "算法", "is_new": true, "gesp_level": 7}
+      ]
+    },
+    {
+      "lesson_num": 10,
+      "title": "模拟算法应用（复赛）",
+      "knowledge_points": [
+        {"name": "模拟算法的设计方法", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "过程模拟技巧", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "游戏规则模拟", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "日期与时间计算", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "大数模拟运算", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "模拟优化技巧", "category": "算法", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 11,
+      "title": "搜索算法应用（复赛）",
+      "knowledge_points": [
+        {"name": "深度优先搜索（DFS）进阶", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "广度优先搜索（BFS）进阶", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "记忆化搜索", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "剪枝优化技巧", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "双向搜索", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "迭代加深搜索（IDDFS）", "category": "算法", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 12,
+      "title": "复赛模拟比赛",
+      "knowledge_points": [
+        {"name": "复赛编程题综合练习", "category": "竞赛模拟", "is_new": true, "gesp_level": 7},
+        {"name": "代码调试技巧", "category": "竞赛模拟", "is_new": true, "gesp_level": 7},
+        {"name": "复杂问题分析与拆解", "category": "竞赛模拟", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 13,
+      "title": "计算机基础知识",
+      "knowledge_points": [
+        {"name": "计算机系统组成", "category": "计算机基础", "is_new": false, "gesp_level": 7},
+        {"name": "操作系统基础", "category": "计算机基础", "is_new": false, "gesp_level": 7},
+        {"name": "二进制与数据表示", "category": "计算机基础", "is_new": false, "gesp_level": 7},
+        {"name": "原码、反码、补码", "category": "计算机基础", "is_new": false, "gesp_level": 7},
+        {"name": "位运算基础", "category": "计算机基础", "is_new": false, "gesp_level": 7},
+        {"name": "网络基础概念", "category": "计算机基础", "is_new": false, "gesp_level": 7},
+        {"name": "算法复杂度分析", "category": "计算机基础", "is_new": true, "gesp_level": 7},
+        {"name": "时间复杂度与空间复杂度", "category": "计算机基础", "is_new": true, "gesp_level": 7}
+      ]
+    },
+    {
+      "lesson_num": 14,
+      "title": "数据结构1（初赛）",
+      "knowledge_points": [
+        {"name": "线性表的概念与实现", "category": "数据结构", "is_new": false, "gesp_level": 7},
+        {"name": "栈（Stack）的原理与应用", "category": "数据结构", "is_new": false, "gesp_level": 7},
+        {"name": "队列（Queue）的原理与应用", "category": "数据结构", "is_new": false, "gesp_level": 7},
+        {"name": "链表基础", "category": "数据结构", "is_new": false, "gesp_level": 7},
+        {"name": "单调栈", "category": "数据结构", "is_new": true, "gesp_level": 8},
+        {"name": "单调队列", "category": "数据结构", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 15,
+      "title": "数据结构2（初赛）",
+      "knowledge_points": [
+        {"name": "树的基本概念", "category": "数据结构", "is_new": false, "gesp_level": 7},
+        {"name": "二叉树的性质与遍历", "category": "数据结构", "is_new": false, "gesp_level": 7},
+        {"name": "完全二叉树与满二叉树", "category": "数据结构", "is_new": false, "gesp_level": 7},
+        {"name": "堆（优先队列）基础", "category": "数据结构", "is_new": true, "gesp_level": 8},
+        {"name": "并查集（Disjoint Set）", "category": "数据结构", "is_new": true, "gesp_level": 8},
+        {"name": "图的基本概念", "category": "数据结构", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 16,
+      "title": "数学专题1（初赛）",
+      "knowledge_points": [
+        {"name": "数论基础", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "最大公约数（GCD）", "category": "数学", "is_new": false, "gesp_level": 7},
+        {"name": "最小公倍数（LCM）", "category": "数学", "is_new": false, "gesp_level": 7},
+        {"name": "辗转相除法", "category": "数学", "is_new": false, "gesp_level": 7},
+        {"name": "同余与模运算", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "快速幂算法", "category": "数学", "is_new": true, "gesp_level": 8},
+        {"name": "逆元基础", "category": "数学", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 17,
+      "title": "数学专题2（初赛）",
+      "knowledge_points": [
+        {"name": "高精度加法", "category": "数学", "is_new": false, "gesp_level": 7},
+        {"name": "高精度减法", "category": "数学", "is_new": false, "gesp_level": 7},
+        {"name": "高精度乘法", "category": "数学", "is_new": true, "gesp_level": 8},
+        {"name": "高精度除法", "category": "数学", "is_new": true, "gesp_level": 8},
+        {"name": "概率基础", "category": "数学", "is_new": true, "gesp_level": 7},
+        {"name": "期望值计算", "category": "数学", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 18,
+      "title": "字符串专题（初赛）",
+      "knowledge_points": [
+        {"name": "字符串的基本操作", "category": "字符串", "is_new": false, "gesp_level": 7},
+        {"name": "字符串匹配（暴力算法）", "category": "字符串", "is_new": false, "gesp_level": 7},
+        {"name": "KMP算法基础", "category": "字符串", "is_new": true, "gesp_level": 8},
+        {"name": "最长公共子序列（LCS）", "category": "字符串", "is_new": true, "gesp_level": 8},
+        {"name": "最长回文子串", "category": "字符串", "is_new": true, "gesp_level": 8},
+        {"name": "字符串哈希", "category": "字符串", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 19,
+      "title": "二分算法专题（初赛）",
+      "knowledge_points": [
+        {"name": "二分查找的原理与实现", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "二分答案思想", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "lower_bound 与 upper_bound", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "二分查找的边界处理", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "三分查找（入门）", "category": "算法", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 20,
+      "title": "排序专题（初赛）",
+      "knowledge_points": [
+        {"name": "冒泡排序与选择排序", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "插入排序", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "归并排序（Merge Sort）", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "快速排序（Quick Sort）", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "堆排序（入门）", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "计数排序与桶排序", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "排序算法的稳定性分析", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "排序算法的时间复杂度比较", "category": "算法", "is_new": true, "gesp_level": 7}
+      ]
+    },
+    {
+      "lesson_num": 21,
+      "title": "递归专题（初赛）",
+      "knowledge_points": [
+        {"name": "递归的基本思想", "category": "算法", "is_new": false, "gesp_level": 7},
+        {"name": "递归的三要素", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "递归与迭代的转换", "category": "算法", "is_new": true, "gesp_level": 7},
+        {"name": "分治算法思想", "category": "算法", "is_new": false, "gesp_level": 8},
+        {"name": "递归树分析", "category": "算法", "is_new": true, "gesp_level": 8},
+        {"name": "尾递归优化", "category": "算法", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 22,
+      "title": "动态规划（初赛）",
+      "knowledge_points": [
+        {"name": "动态规划的基本思想", "category": "动态规划", "is_new": false, "gesp_level": 7},
+        {"name": "DP状态的定义", "category": "动态规划", "is_new": false, "gesp_level": 7},
+        {"name": "状态转移方程的建立", "category": "动态规划", "is_new": false, "gesp_level": 7},
+        {"name": "背包问题（0/1背包）", "category": "动态规划", "is_new": false, "gesp_level": 8},
+        {"name": "完全背包问题", "category": "动态规划", "is_new": false, "gesp_level": 8},
+        {"name": "最长上升子序列（LIS）", "category": "动态规划", "is_new": false, "gesp_level": 8},
+        {"name": "DP的空间优化（滚动数组）", "category": "动态规划", "is_new": true, "gesp_level": 8}
+      ]
+    },
+    {
+      "lesson_num": 23,
+      "title": "初赛模拟比赛",
+      "knowledge_points": [
+        {"name": "选择题答题技巧", "category": "竞赛模拟", "is_new": true, "gesp_level": 7},
+        {"name": "判断题答题技巧", "category": "竞赛模拟", "is_new": true, "gesp_level": 7},
+        {"name": "阅读程序题分析方法", "category": "竞赛模拟", "is_new": true, "gesp_level": 7},
+        {"name": "完善程序题解题技巧", "category": "竞赛模拟", "is_new": true, "gesp_level": 7},
+        {"name": "GESP初赛全真模拟", "category": "竞赛模拟", "is_new": true, "gesp_level": 7}
+      ]
+    }
+  ],
+  "statistics": {
+    "total_knowledge_points": 118,
+    "new_knowledge_points": 78,
+    "review_knowledge_points": 40,
+    "category_distribution": {
+      "数学": 20,
+      "算法": 45,
+      "动态规划": 18,
+      "数据结构": 12,
+      "字符串": 6,
+      "计算机基础": 8,
+      "竞赛技巧": 6,
+      "竞赛模拟": 13,
+      "复习": 3
+    },
+    "gesp_level_distribution": {
+      "level_7": 68,
+      "level_8": 50
+    }
+  },
+  "is_new_explanation": "is_new标记基于与Level 1/2/3的内容对比。Level 4是高级课程，大部分内容为GESP 7-8级特有，包括：排列组合、区间DP、高级搜索、复杂数据结构（单调栈/队列、并查集、堆）、高级字符串算法（KMP、LCS）、数论进阶（快速幂、逆元）等。标记为is_new=false的内容表示在Level 1/2/3中已有类似基础知识点。"
+}

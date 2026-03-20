@@ -1,0 +1,83 @@
+{
+  "level": 2,
+  "lesson_number": 2,
+  "title": "递推算法",
+  "file_name": "L2-02.pptx",
+  "total_slides": 77,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "递推算法",
+    "函数基础",
+    "二维数组",
+    "高精度运算"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_07",
+      "name": "递推算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_13",
+      "name": "高精度运算",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "递推算法"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "枚举算法\n特点：\n实现步骤：\n确定范围。\n遍历。\n判断。\n输出结果。\n在寻找结果时，有一个明确的范围。\n对范围内所有数据进行验证。\n水仙花数问题代码实现步骤---枚举算法\n①  确定范围 \n②  验证..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "枚举算法\n优势：\n算法简单好实现 --- 只需要循环和判断条件配合\n如：安放地雷问题\n循环遍历数组矩阵           判断安放地雷的位置\n2.  生活中最容易应用的算法\n如：班上的学生谁的身高在..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "回顾练习\n针对下方代码说法错误的是（          ）。\n左边代码使用了枚举法，枚举范围是：2到n-1。\n如果输入数据是8，左边代码的输出结果是no。\n如果输入数据是7，左边代码的输出结果是yes..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "认识递推算法"
+    }
+  ],
+  "summary": {
+    "total_slides": 77,
+    "total_knowledge_points": 7,
+    "gesp_level3_points_count": 5,
+    "gesp_level4_points_count": 2
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "level": 2,
+  "lesson_number": 5,
+  "title": "贪心算法",
+  "file_name": "L2-05.pptx",
+  "total_slides": 57,
+  "knowledge_points": [
+    "进制转换",
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "递推算法",
+    "函数基础",
+    "二维数组",
+    "结构体",
+    "冒泡排序",
+    "选择排序",
+    "插入排序",
+    "二分查找",
+    "贪心算法"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_02",
+      "name": "进制转换",
+      "category": "算法"
+    },
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_07",
+      "name": "递推算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_05",
+      "name": "结构体",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_08",
+      "name": "冒泡排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_09",
+      "name": "选择排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_10",
+      "name": "插入排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_18",
+      "name": "二分查找",
+      "category": "算法"
+    },
+    {
+      "id": "l4_19",
+      "name": "贪心算法",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "贪心算法"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "二分算法\n每次都把数据一分为二（均分），筛除掉不合理的一半数据，周而复始，最终找到答案，这种算法称之为二分算法。\n①\n②\n③\n④\n二分算法的三个值：最小值、中间值、最大值。\n取中间值的两种方式：\n中间..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "二分算法实现步骤\n二分法的实现步骤：\n1、通过最小值、最大值计算中间值。\n中间值 = （最小值 + 最大值）/ 2\n2、中间值与被查找的数字进行比较。\n有三种情况：\n① 相等        ② 中间值..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "二分算法代码模板"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "回顾练习\n有数字序列：1  2  5  12  25，二分法查找数字12，至少需要几次比较？（        ）\nA. 1\t\t\t\tB. 2\nC. 3\t\t\t\tD. 4\nB"
+    }
+  ],
+  "summary": {
+    "total_slides": 57,
+    "total_knowledge_points": 13,
+    "gesp_level3_points_count": 6,
+    "gesp_level4_points_count": 7
+  }
+}

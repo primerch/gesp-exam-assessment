@@ -1,0 +1,74 @@
+{
+  "level": 1,
+  "lesson_number": 10,
+  "title": "阶段复习与练习二",
+  "file_name": "10. 阶段复习与练习二.pptx",
+  "total_slides": 80,
+  "slides_with_content": 80,
+  "knowledge_points": [
+    {
+      "name": "阶段复习二",
+      "desc": "复习第6-9课：循环、数组"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_10",
+    "l2_4",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "查找数组中的最大最小值和下标\nint maxi=0, mini=0 ；\nfor(int i=0; i<n; i++) {\n     if(a[maxi]<a[i]) \n        maxi=i;\n     if(a[mini]>a[i]) \n        mini=i;\n}\n找最大值\n以及下标\n找最小值\n以及下标\n元素 | 100 | 80 | 120 | 93 | 134 | 99 | 9..."
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "在数组指定位置插入元素\n元素 | 100 | 80 | 120\n下标 | 0 | 1 | 2 | id | … | n | n+1\n93\n134\n99\n105\n插入操作后，数组中数据个数+1\n插入操作需要保证数组长度足够！"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "删除数组中指定位置的元素\n元素 | 100 | 80\n下标 | 0 | 1 | id | id+1 | … | … | n\n105\n93\n134\n120\n删除操作后，数组中数据个数-1\n99\n99"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "回顾练习1\n阅读以下程序，请分析程序运行的结果_____________________。\n100 120 89 9 77 110"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "回顾练习2\n阅读以下程序，请分析程序运行的结果_____________________。\n100 120 77 110 93"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "阶段复习与练习(二)"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "字母配对\n【问题描述】\n       输入n个小写字母。从这些小写字母中找出某个大写字母对应的小写字母。如果查找成功，则输出\"yes\"，否则输出\"no\"。\n【输入格式】\n      第一行，一个正整数 n，代表输入小写字母的个数（1≤n≤26）。\n      第二行，n 个小写字母，中间使用空格分隔。注意：输入小写字母时不能重复输入。\n      第三行，一个大写字母。。\n【输出格式】\n     ..."
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "z a x k\nA\n思路分析\n循环输入n个小写字母\n输入大写字母\n，存到字符数组中\n下标 | 0 | 1 | 2 | 3\n元素 | z | a | x | k\n③  遍历n个小写字母，查找大写字母对应的小写字母\na\n×\n√\nyes\n不查找"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "思路分析\n输小写字母个数n（1≤n≤26）\n     int n；\n     cin>>n；\n循环输入n个小写字母，存入字符数组中\n     char c[26]={0}；\n     for(int i=0;i<n;i++){\n           cin>>c[i];\n     }\n③ 输入大写字母\n     char  a；\n     cin>>a；"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "思路分析\n下标 | 0 | 1 | 2 | 3\n元素 | z | a | x | k\n×\n√\nyes\n不查找\n④  遍历n个小写字母，查找大写字母对应的小写字母\nfor(int i=0;i<n;i++){\u000b    if(c[i]==a+32){\u000b        cout<<\"yes\";\u000b        break;\u000b    }\u000b}"
+    }
+  ]
+}

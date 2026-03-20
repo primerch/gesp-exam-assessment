@@ -1,0 +1,77 @@
+{
+  "level": 2,
+  "lesson_number": 16,
+  "title": "深度优先搜索1",
+  "file_name": "L2-16.pptx",
+  "total_slides": 63,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "递归算法"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_17",
+      "name": "递归算法",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "深度优先搜索1"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "递归\n① 递归关键步骤\n上方的语句是递进时执行\n以递归函数为关键点\n下方的语句是回归时执行\n用来限制递进的条件，被称为递归出口，它的作用是在某个时刻可以使递归函数不再递进。\n② 递归的执行流程\n先递进..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "回顾练习\n阅读下列程序，输出结果为（\t）\nA. 32\nB. 30\nC. 20\nD. 16\nD"
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "认识深度优先搜索"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "码上得知-1-深度优先搜索的概念"
+    }
+  ],
+  "summary": {
+    "total_slides": 63,
+    "total_knowledge_points": 6,
+    "gesp_level3_points_count": 4,
+    "gesp_level4_points_count": 2
+  }
+}

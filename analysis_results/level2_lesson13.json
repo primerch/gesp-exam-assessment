@@ -1,0 +1,95 @@
+{
+  "level": 2,
+  "lesson_number": 13,
+  "title": "指针",
+  "file_name": "L2-13.pptx",
+  "total_slides": 54,
+  "knowledge_points": [
+    "位运算",
+    "函数基础",
+    "指针基础",
+    "二维数组",
+    "结构体",
+    "变量作用域",
+    "选择排序",
+    "插入排序",
+    "队列"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_01",
+      "name": "指针基础",
+      "category": "指针"
+    },
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_05",
+      "name": "结构体",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_07",
+      "name": "变量作用域",
+      "category": "函数"
+    },
+    {
+      "id": "l4_09",
+      "name": "选择排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_10",
+      "name": "插入排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_15",
+      "name": "队列",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "指针"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "队列的概念\n队列：\n1）具有两个端口的容器，一个端口负责进，另一个端口负责出。\n2）数据存储特点：先进先出。"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "队列的实现\n队列的实现\n队列的初始化\n入队函数\n出队函数\nint q[N]={};\u000bint front=0,rear=0;\nvoid push(int x){\u000b    if(rear<N){\u000b    ..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "回顾练习1\n在一个初始为空的队列中，先依次插入元素a，b，c，d，然后做了两次删除操作，问：此时队首元素是（      ）。\n              \nA. a\nB. b\nC. c\nD. d\nC"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "回顾练习2\n如果进队的顺序为：a，b，c，d，则出队的顺序是（      ）。\n              \nA. b，c，d，a\nB. a，b，c，d\nC. a，c，b，d\nD. c，b，d，a\nB..."
+    }
+  ],
+  "summary": {
+    "total_slides": 54,
+    "total_knowledge_points": 9,
+    "gesp_level3_points_count": 2,
+    "gesp_level4_points_count": 7
+  }
+}

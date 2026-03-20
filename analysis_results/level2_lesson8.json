@@ -1,0 +1,83 @@
+{
+  "level": 2,
+  "lesson_number": 8,
+  "title": "大整数减法",
+  "file_name": "L2-08.pptx",
+  "total_slides": 62,
+  "knowledge_points": [
+    "进制转换",
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "高精度运算"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_02",
+      "name": "进制转换",
+      "category": "算法"
+    },
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_13",
+      "name": "高精度运算",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "大整数减法"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "大整数加法\n1、大整数（高精度数）的概念：\n超过19位的整数叫做大整数（高精度数）。\n2、大整数加法步骤：\n① 以字符串形式输入。\n② 逆序存储到整型数组中。\n③ 对应位相加，处理进位。\n④ 处理最高..."
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "大整数加法\n3、程序模板。"
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "回顾练习\n下面代码要计算两个大整数的和，请选出缺失的部分。（\t）\nA.    c1[i] = a1[i] + b1[i];\n\nB.    c1[i] = a1[i] + b1[i] + x;\n\nC. ..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "被减数大于等于减数"
+    }
+  ],
+  "summary": {
+    "total_slides": 62,
+    "total_knowledge_points": 7,
+    "gesp_level3_points_count": 5,
+    "gesp_level4_points_count": 2
+  }
+}

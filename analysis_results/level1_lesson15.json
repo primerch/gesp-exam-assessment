@@ -1,0 +1,79 @@
+{
+  "level": 1,
+  "lesson_number": 15,
+  "title": "string 类型的字符串",
+  "file_name": "15. string 类型的字符串.pptx",
+  "total_slides": 71,
+  "slides_with_content": 71,
+  "knowledge_points": [
+    {
+      "name": "string类型",
+      "desc": "C++ string类的使用"
+    },
+    {
+      "name": "string成员函数",
+      "desc": "length、substr、find等方法"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_1",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_10",
+    "l2_11",
+    "l2_4",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "字符串和字符数组\n① 字符串\n     0个或1个或多个字符组成的一串字符，可以是字母、数字、\n     中文或其他符号。\n     C++中，字符串需要使用双引号包含。\n② 使用字符数组存储字符串\n\n\n\n③ 字符串的控制符'\\0'，'\\0'是字符串结尾的标志。"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "字符串的输入\n① cin接受用户输入字符串\n     1、不能接受输入空格，遇到回车结束输入；\n     2、不能控制输入字符串的长度。\n② 使用cin.getline(字符数组s,长度n)输入字符串\n     1、接受输入空格；\n     2、控制输入字符串的长度；\n     3、只能用于输入字符串。"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "字符串的操作\n① 计算字符串的长度\n     strlen(字符串s)；\n     作用：用于计算字符串s的长度（不含'\\0'）。\n     参数：s为需要计算长度的字符串。\n② 复制字符串\n     strcpy(字符串s1, 字符串s2)；\n     作用：将 s2 的内容复制给 s1。\n     参数：s1 和 s2 均为字符串。"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "字符串的操作\n① 比较字符串\n     strcmp(字符串s1, 字符串s2)；\n     作用：比较字符串 s1 和 s2 的内容。\n     参数：s1 和 s2 均为字符串。。\n② 拼接字符串\n     strcat(字符串s1, 字符串s2)；\n     作用：将 s2 的内容拼接在 s1 的尾部。\n     参数：s1 和 s2 均为字符串。"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "回顾练习1\n分析以下代码的输出结果：\n输出：____________\n4"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "回顾练习2\n以下代码的输出结果是什么（\t）？\nA. 20\nB. 24\nC. 10\nD. 5\nD"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "string类型的字符串"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "两种保存字符串的方式\n1、字符数组\n2、string类型的变量"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "string字符串"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "码上得知-1-string字符串"
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "analysis_info": {
+    "level": 2,
+    "total_lessons": 24,
+    "analysis_date": "2025-03-20",
+    "analyzer": "Level 2 PPT Analysis Tool"
+  },
+  "lessons_summary": [
+    {
+      "lesson_number": 1,
+      "title": "枚举算法",
+      "total_slides": 70,
+      "knowledge_points_count": 7,
+      "gesp_level3_count": 3,
+      "gesp_level4_count": 4
+    },
+    {
+      "lesson_number": 2,
+      "title": "递推算法",
+      "total_slides": 77,
+      "knowledge_points_count": 7,
+      "gesp_level3_count": 5,
+      "gesp_level4_count": 2
+    },
+    {
+      "lesson_number": 3,
+      "title": "前缀和与差分",
+      "total_slides": 81,
+      "knowledge_points_count": 6,
+      "gesp_level3_count": 5,
+      "gesp_level4_count": 1
+    },
+    {
+      "lesson_number": 4,
+      "title": "二分算法",
+      "total_slides": 67,
+      "knowledge_points_count": 8,
+      "gesp_level3_count": 5,
+      "gesp_level4_count": 3
+    },
+    {
+      "lesson_number": 5,
+      "title": "贪心算法",
+      "total_slides": 57,
+      "knowledge_points_count": 13,
+      "gesp_level3_count": 6,
+      "gesp_level4_count": 7
+    },
+    {
+      "lesson_number": 6,
+      "title": "阶段复习与测试",
+      "total_slides": 46,
+      "knowledge_points_count": 12,
+      "gesp_level3_count": 5,
+      "gesp_level4_count": 7
+    },
+    {
+      "lesson_number": 7,
+      "title": "大整数加法",
+      "total_slides": 87,
+      "knowledge_points_count": 9,
+      "gesp_level3_count": 5,
+      "gesp_level4_count": 4
+    },
+    {
+      "lesson_number": 8,
+      "title": "大整数减法",
+      "total_slides": 62,
+      "knowledge_points_count": 7,
+      "gesp_level3_count": 5,
+      "gesp_level4_count": 2
+    },
+    {
+      "lesson_number": 9,
+      "title": "大整数乘法",
+      "total_slides": 63,
+      "knowledge_points_count": 7,
+      "gesp_level3_count": 5,
+      "gesp_level4_count": 2
+    },
+    {
+      "lesson_number": 10,
+      "title": "栈",
+      "total_slides": 57,
+      "knowledge_points_count": 7,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 3
+    },
+    {
+      "lesson_number": 11,
+      "title": "队列",
+      "total_slides": 80,
+      "knowledge_points_count": 8,
+      "gesp_level3_count": 3,
+      "gesp_level4_count": 5
+    },
+    {
+      "lesson_number": 12,
+      "title": "阶段复习与测试",
+      "total_slides": 31,
+      "knowledge_points_count": 8,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 4
+    },
+    {
+      "lesson_number": 13,
+      "title": "指针",
+      "total_slides": 54,
+      "knowledge_points_count": 9,
+      "gesp_level3_count": 2,
+      "gesp_level4_count": 7
+    },
+    {
+      "lesson_number": 14,
+      "title": "链表",
+      "total_slides": 88,
+      "knowledge_points_count": 11,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 7
+    },
+    {
+      "lesson_number": 15,
+      "title": "递归",
+      "total_slides": 122,
+      "knowledge_points_count": 11,
+      "gesp_level3_count": 5,
+      "gesp_level4_count": 6
+    },
+    {
+      "lesson_number": 16,
+      "title": "深度优先搜索1",
+      "total_slides": 63,
+      "knowledge_points_count": 6,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 2
+    },
+    {
+      "lesson_number": 17,
+      "title": "深度优先搜索（二）",
+      "total_slides": 51,
+      "knowledge_points_count": 6,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 2
+    },
+    {
+      "lesson_number": 18,
+      "title": "阶段复习与测试",
+      "total_slides": 38,
+      "knowledge_points_count": 12,
+      "gesp_level3_count": 6,
+      "gesp_level4_count": 6
+    },
+    {
+      "lesson_number": 19,
+      "title": "认识树",
+      "total_slides": 80,
+      "knowledge_points_count": 7,
+      "gesp_level3_count": 3,
+      "gesp_level4_count": 4
+    },
+    {
+      "lesson_number": 20,
+      "title": "认识图",
+      "total_slides": 99,
+      "knowledge_points_count": 7,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 3
+    },
+    {
+      "lesson_number": 21,
+      "title": "STL模板",
+      "total_slides": 58,
+      "knowledge_points_count": 12,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 8
+    },
+    {
+      "lesson_number": 22,
+      "title": "广度优先搜索1",
+      "total_slides": 65,
+      "knowledge_points_count": 10,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 6
+    },
+    {
+      "lesson_number": 23,
+      "title": "广度优先搜索2",
+      "total_slides": 78,
+      "knowledge_points_count": 9,
+      "gesp_level3_count": 3,
+      "gesp_level4_count": 6
+    },
+    {
+      "lesson_number": 24,
+      "title": "阶段复习与测试",
+      "total_slides": 62,
+      "knowledge_points_count": 14,
+      "gesp_level3_count": 4,
+      "gesp_level4_count": 10
+    }
+  ],
+  "knowledge_coverage": {
+    "gesp_level_3": {
+      "total_defined": 8,
+      "covered_count": 6,
+      "coverage_rate": 75.0,
+      "covered_points": [
+        {
+          "id": "l3_02",
+          "name": "进制转换"
+        },
+        {
+          "id": "l3_03",
+          "name": "位运算"
+        },
+        {
+          "id": "l3_05",
+          "name": "枚举算法"
+        },
+        {
+          "id": "l3_06",
+          "name": "模拟算法"
+        },
+        {
+          "id": "l3_07",
+          "name": "递推算法"
+        },
+        {
+          "id": "l3_08",
+          "name": "函数基础"
+        }
+      ],
+      "missing_points": [
+        {
+          "id": "l3_01",
+          "name": "数据编码"
+        },
+        {
+          "id": "l3_04",
+          "name": "算法描述"
+        }
+      ]
+    },
+    "gesp_level_4": {
+      "total_defined": 20,
+      "covered_count": 15,
+      "coverage_rate": 75.0,
+      "covered_points": [
+        {
+          "id": "l4_01",
+          "name": "指针基础"
+        },
+        {
+          "id": "l4_03",
+          "name": "二维数组"
+        },
+        {
+          "id": "l4_04",
+          "name": "数组与指针"
+        },
+        {
+          "id": "l4_05",
+          "name": "结构体"
+        },
+        {
+          "id": "l4_07",
+          "name": "变量作用域"
+        },
+        {
+          "id": "l4_08",
+          "name": "冒泡排序"
+        },
+        {
+          "id": "l4_09",
+          "name": "选择排序"
+        },
+        {
+          "id": "l4_10",
+          "name": "插入排序"
+        },
+        {
+          "id": "l4_13",
+          "name": "高精度运算"
+        },
+        {
+          "id": "l4_14",
+          "name": "栈"
+        },
+        {
+          "id": "l4_15",
+          "name": "队列"
+        },
+        {
+          "id": "l4_16",
+          "name": "链表"
+        },
+        {
+          "id": "l4_17",
+          "name": "递归算法"
+        },
+        {
+          "id": "l4_18",
+          "name": "二分查找"
+        },
+        {
+          "id": "l4_19",
+          "name": "贪心算法"
+        }
+      ],
+      "missing_points": [
+        {
+          "id": "l4_02",
+          "name": "指针运算"
+        },
+        {
+          "id": "l4_06",
+          "name": "函数进阶"
+        },
+        {
+          "id": "l4_11",
+          "name": "算法复杂度"
+        },
+        {
+          "id": "l4_12",
+          "name": "文件操作"
+        },
+        {
+          "id": "l4_20",
+          "name": "分治算法"
+        }
+      ]
+    }
+  },
+  "exam_recommendations": {
+    "gesp_level_3": {
+      "coverage_rate": 75.0,
+      "recommendation": "Level 2课程覆盖了GESP 3级的6/8个知识点(75.0%)，学生可以直接参加GESP 3级考试。",
+      "priority_review": [
+        "数据编码",
+        "算法描述"
+      ]
+    },
+    "gesp_level_4": {
+      "coverage_rate": 75.0,
+      "recommendation": "Level 2课程覆盖了GESP 4级的15/20个知识点(75.0%)，建议补充学习缺失内容后再参加考试。",
+      "priority_review": [
+        "指针运算",
+        "函数进阶",
+        "算法复杂度",
+        "文件操作",
+        "分治算法"
+      ]
+    }
+  },
+  "study_path": {
+    "completed_level": "Level 2",
+    "target_exams": [
+      "GESP 3级",
+      "GESP 4级（需补充）"
+    ],
+    "recommendation": "完成Level 2课程后，学生可以直接参加GESP 3级考试。对于GESP 4级，建议补充学习缺失的数据结构和算法内容。"
+  }
+}

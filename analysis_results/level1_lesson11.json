@@ -1,0 +1,79 @@
+{
+  "level": 1,
+  "lesson_number": 11,
+  "title": "while 循环",
+  "file_name": "11. while 循环.pptx",
+  "total_slides": 86,
+  "slides_with_content": 86,
+  "knowledge_points": [
+    {
+      "name": "while循环",
+      "desc": "当型循环的执行流程"
+    },
+    {
+      "name": "do-while循环",
+      "desc": "直到型循环的执行流程"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_1",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_3",
+    "l2_4",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "while循环"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "当……\n当 房屋没有收拾干净\n就一直打扫\n当 没跑到终点\n就一直往前跑\n当 蜗牛没有爬到树顶\n就一直往上爬"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "while循环"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "码上得知-1-while循环的语法和执行流程"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "while循环\nwhile(条件){\n        语句；\n}\n当……\ntrue 执行循环语句\nfalse 循环结束"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "当\n没有输出到5\n一直输出i\n使用while循环\n使用while循环输出1~5的整数\nint i=1;\nwhile\n(i<=5)\n{\u000b  cout<<i<<\" \";\u000b  i++;\u000b}\n循环条件"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "写一写\n#include <iostream>\nusing namespace std ;\nint main( ){\n    int i=1;\n    while(i<=5){\n        cout<<i<<\" \";\n        i++;\n    }\n    return 0;\n}"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "while循环执行流程\ni的值 | 条件i<=5的结果 | 执行语句\n1 | true | 输出1；i++     2\n2 | true | 输出2；i++     3\n3 | true | 输出3；i++     4\n4 | true | 输出4；i++     5\n5 | true | 输出5；i++     6\n6 | false | 退出循环"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "练一练1\n#include <iostream>\nusing namespace std ;\nint main( ){\n    int i=8;\n    while(i>=5){\n        cout<<i<<\" \";\n        i--;\n    }\n    return 0;\n}\n以下程序的输出结果是什么（   ）\n5 6 7 8\n8 7 6 5\n8 7 6 5 4\n4 5 6 7 8..."
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "角谷猜想\n数学界有这样一种猜想：对于每个正整数，如果它是奇\n数，则对它乘3再加1，如果它是偶数，则对它除以2，得到的结果再按照上述规则重复处理，最终都能得到1。\u000b该思想最开始流传于美国，不久传到欧洲，后来由一位叫角谷的日本人带到亚洲，因此被称为\"角谷猜想\"。\n5\n16\n8\n4\n2\n1\n10\n5\n16\n8\n4\n2\n1"
+    }
+  ]
+}

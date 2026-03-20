@@ -1,0 +1,114 @@
+{
+  "level4_analysis": {
+    "total_points": 134,
+    "truly_new": 86,
+    "review_points": 42,
+    "suspicious_count": 6,
+    "suspicious_duplicates": [
+      {
+        "name": "字符串的基本操作",
+        "category": "字符串",
+        "lesson": 18,
+        "note": "基础概念，不应在Level 4出现（字符串专题（初赛））"
+      },
+      {
+        "name": "字符串匹配（暴力算法）",
+        "category": "字符串",
+        "lesson": 18,
+        "note": "基础概念，不应在Level 4出现（字符串专题（初赛））"
+      },
+      {
+        "name": "冒泡排序与选择排序",
+        "category": "算法",
+        "lesson": 20,
+        "note": "基础概念，不应在Level 4出现（排序专题（初赛））"
+      },
+      {
+        "name": "插入排序",
+        "category": "算法",
+        "lesson": 20,
+        "note": "基础概念，不应在Level 4出现（排序专题（初赛））"
+      },
+      {
+        "name": "计数排序与桶排序",
+        "category": "算法",
+        "lesson": 20,
+        "note": "基础概念，不应在Level 4出现（排序专题（初赛））"
+      },
+      {
+        "name": "DP的空间优化（滚动数组）",
+        "category": "动态规划",
+        "lesson": 22,
+        "note": "基础概念，不应在Level 4出现（动态规划（初赛））"
+      }
+    ],
+    "category_distribution": {
+      "数学": {
+        "total": 23,
+        "new": 16,
+        "review": 7,
+        "suspicious": 0
+      },
+      "竞赛技巧": {
+        "total": 3,
+        "new": 3,
+        "review": 0,
+        "suspicious": 0
+      },
+      "算法": {
+        "total": 49,
+        "new": 22,
+        "review": 24,
+        "suspicious": 3
+      },
+      "动态规划": {
+        "total": 18,
+        "new": 12,
+        "review": 5,
+        "suspicious": 1
+      },
+      "复习": {
+        "total": 3,
+        "new": 2,
+        "review": 1,
+        "suspicious": 0
+      },
+      "竞赛指导": {
+        "total": 4,
+        "new": 4,
+        "review": 0,
+        "suspicious": 0
+      },
+      "竞赛模拟": {
+        "total": 8,
+        "new": 8,
+        "review": 0,
+        "suspicious": 0
+      },
+      "计算机基础": {
+        "total": 8,
+        "new": 5,
+        "review": 3,
+        "suspicious": 0
+      },
+      "数据结构": {
+        "total": 12,
+        "new": 10,
+        "review": 2,
+        "suspicious": 0
+      },
+      "字符串": {
+        "total": 6,
+        "new": 4,
+        "review": 0,
+        "suspicious": 2
+      }
+    },
+    "recommendations": [
+      "移除或合并基础概念知识点到复习章节",
+      "确保'is_new'标记准确反映知识点的新旧程度",
+      "对于可疑重复项，需要人工确认其难度是否适合Level 4",
+      "考虑将部分基础知识点改为'进阶应用'形式呈现"
+    ]
+  }
+}

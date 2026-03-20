@@ -1,0 +1,83 @@
+{
+  "level": 1,
+  "lesson_number": 12,
+  "title": "格式化输入输出和浮点数",
+  "file_name": "12. 格式化输入输出和浮点数.pptx",
+  "total_slides": 108,
+  "slides_with_content": 108,
+  "knowledge_points": [
+    {
+      "name": "浮点数类型",
+      "desc": "float和double类型及精度"
+    },
+    {
+      "name": "printf格式化输出",
+      "desc": "printf函数和格式控制符"
+    },
+    {
+      "name": "scanf格式化输入",
+      "desc": "scanf函数和格式控制符"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_1",
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_4",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "while循环\nwhile(条件){\n        语句；\n}\n当\n循环条件\n循环体\n循环语句可以是一条语句也可以是复合语句"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "do while循环\n循环语句可以是一条语句也可以是复合语句\n循环语句至少会执行一次"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "while循环和do while循环\ndo while循环\nwhile循环\n先执行一次循环语句，\n再判断条件是否成立，\n成立则继续执行循环语句。\n先判断条件是否成立，\n成立则执行循环语句。"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "回顾练习1\n阅读如下程序，程序的运行结果为______\n1"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "回顾练习2\n阅读如下程序，程序的运行结果为___________\n3\n0"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "格式化输入输出和浮点数"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "输出年月日\n从键盘输入年份（四位整数）、月份和日期，并以YYYY-MM-DD的形式输出。\n例如：2023-05-01。"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "思路分析\n输出形式：YYYY-MM-DD\n2023 5 1\n2023-5-1\n2023 05 01\n2023-5-1"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "格式化输入输出\n需要借助控制符函数来实现。"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "码上得知-1-cout格式化输出"
+    }
+  ]
+}

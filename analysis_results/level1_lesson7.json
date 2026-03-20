@@ -1,0 +1,68 @@
+{
+  "level": 1,
+  "lesson_number": 7,
+  "title": "for 循环进阶",
+  "file_name": "7. for 循环进阶.pptx",
+  "total_slides": 74,
+  "slides_with_content": 74,
+  "knowledge_points": [],
+  "gesp_level_1_points": [
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_3",
+    "l2_4",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "程序的三种结构"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "for循环\n·  表达式1：\n       1. 定义循环变量\n       2. 确定循环开始的值（0、1等）\n       3. 只执行一次\n·  表达式2：\n       1. 条件成立，继续计数\n       2. 条件不成立，结束计数\n·  表达式3：\n       1. 确定循环间隔（循环步长）\n·  循环体：循环执行的语句，可以是一条语句，也可以是复合语句\n·  循环是在“表达式2”..."
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "自增和自减运算符\n1、自增和自减运算符\ni++\ni+=1\n自增：\ni--\ni-=1\n自减：\n2、后++和前++、后--和前--的区别是其表达式的计算结果不同。\nint i=1；\ni++；             变量i加1之前的值\n1\nint i=1；\n++i；             变量i加1之后的值\n2"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "运算符的优先级\n类别 | 运算符\n小括号 | （ ）\n自增自减 | ++ --\n逻辑非 | ！\n算术运算符 | *  /  %\n+  -\n输出运算符 | <<\n比较运算符 | <  >  <=  >=\n==  !=\n逻辑运算符 | &&  ||\n条件运算符 | ？：\n赋值运算符 | = += -= *= /= %="
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "回顾练习1\nB\n以下程序的输出结果是什么（    ）\nA. 0     B. 18     C. 45     D. 55"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "回顾练习2\n5 4 3 2 1\n以下程序的输出结果是什么：__________"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "for循环进阶"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "break和continue"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "学生报数\n100名学生报数，第一名报数为1，第二名报数为2，以此类推，将所有学生所报数字相加，当累加值大于等于1000时停止报数。输出当前的累加和。"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "学生报数\n循环1~100之间的每一个数\n累加求和\n如果 累加之和大于等于1000\n循环终止\n输出查看和\nfor(int i=1; i<=100; i++) {\n \n\n\n\n\n}\nint sum=0；\n保存累加和\n初始化为0\nsum+=i；\nif(sum>=1000)\ncout<<sum;\n怎样让循环终\n止呢！"
+    }
+  ]
+}

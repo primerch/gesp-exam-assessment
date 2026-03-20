@@ -1,0 +1,77 @@
+{
+  "level": 1,
+  "lesson_number": 17,
+  "title": "函数基础",
+  "file_name": "17. 函数基础.pptx",
+  "total_slides": 84,
+  "slides_with_content": 84,
+  "knowledge_points": [
+    {
+      "name": "函数基础",
+      "desc": "函数定义、声明、调用、参数、返回值"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_11",
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_10",
+    "l2_11",
+    "l2_4",
+    "l2_5",
+    "l2_8",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "函数基础"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "分界线\n分界线\n分界线\n分界线"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "输出分界线\n位置一：\n位置二：\n位置三："
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "输出分界线\n位置一：\n位置二：\n位置三：\n使用函数"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "函数"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "使用过的系统函数\n函数 | 功能\nstrlen(...) | 计算字符串长度\nscanf(...)/printf(...) | 输入输出\nsetw(...) | 设置域宽\ngetline(...) | 输入字符串\n... | ..."
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "输出分界线的函数\n自定义函数a( )，实现输出分界线的功能。"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "定义和使用函数"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "码上得知-1-函数的基本语法"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "定义函数的语法格式\n函数名\n函数名\n函数名：函数的名字，命名规则和变量名一样"
+    }
+  ]
+}

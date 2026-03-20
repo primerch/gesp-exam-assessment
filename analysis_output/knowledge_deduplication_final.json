@@ -1,0 +1,1852 @@
+{
+  "duplicates_found": [
+    {
+      "name": "斐波那契数列",
+      "first_in": "Level 1 Lesson 7",
+      "duplicated_in": [
+        "Level 2 Lesson 14"
+      ]
+    }
+  ],
+  "unique_knowledge_points": {
+    "level1": [
+      {
+        "name": "Dev-C++编程工具使用",
+        "lesson": 1,
+        "category": "开发环境",
+        "is_new": true
+      },
+      {
+        "name": "cout输出语句",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "输出运算符<<",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "字符串输出",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "换行符endl",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "连续输出多个内容",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "程序框架结构",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "变量的概念",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "int类型变量定义",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "变量赋值",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "变量初始化",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "变量命名规则",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "cin输入语句",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "输入运算符>>",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "连续输入多个数据",
+        "lesson": 1,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "变量交换(借助第三个变量)",
+        "lesson": 1,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "程序、代码、编程语言概念",
+        "lesson": 1,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "表达式的概念",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "算术运算符(+ - * /)",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "除法运算符/(整除)",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "取余运算符%",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "复合赋值运算符(+= -= *= /= %=)",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "自增运算符++",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "自减运算符--",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "char字符类型",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "字符常量(单引号)",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "ASCII码概念",
+        "lesson": 2,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "字符与整数的关系",
+        "lesson": 2,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "字符加减运算",
+        "lesson": 2,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "比较运算符(> < == >= <= !=)",
+        "lesson": 3,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "bool布尔类型",
+        "lesson": 3,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "布尔值true/false",
+        "lesson": 3,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "数据的真假性(非0为真)",
+        "lesson": 3,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "运算符优先级",
+        "lesson": 3,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "if语句语法",
+        "lesson": 3,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "if-else语句",
+        "lesson": 3,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "if-else if多分支",
+        "lesson": 3,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "if语句嵌套",
+        "lesson": 3,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "逻辑与运算符&&",
+        "lesson": 4,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "逻辑或运算符||",
+        "lesson": 4,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "逻辑非运算符!",
+        "lesson": 4,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "逻辑运算符短路特性",
+        "lesson": 4,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "switch-case语句",
+        "lesson": 4,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "break关键字",
+        "lesson": 4,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "switch语句注意事项",
+        "lesson": 4,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "条件运算符(三目运算符)?:",
+        "lesson": 4,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "阶段复习：变量与输入输出",
+        "lesson": 5,
+        "category": "复习",
+        "is_new": false
+      },
+      {
+        "name": "阶段复习：运算符",
+        "lesson": 5,
+        "category": "复习",
+        "is_new": false
+      },
+      {
+        "name": "阶段复习：if语句",
+        "lesson": 5,
+        "category": "复习",
+        "is_new": false
+      },
+      {
+        "name": "阶段复习：逻辑运算符",
+        "lesson": 5,
+        "category": "复习",
+        "is_new": false
+      },
+      {
+        "name": "阶段复习：switch语句",
+        "lesson": 5,
+        "category": "复习",
+        "is_new": false
+      },
+      {
+        "name": "综合运用：条件判断",
+        "lesson": 5,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "for循环语法",
+        "lesson": 6,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "循环变量",
+        "lesson": 6,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "循环条件",
+        "lesson": 6,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "循环步长",
+        "lesson": 6,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "循环执行流程",
+        "lesson": 6,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "循环次数计算",
+        "lesson": 6,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "累加算法",
+        "lesson": 6,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "累乘算法",
+        "lesson": 6,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "自增自减在循环中的应用",
+        "lesson": 6,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "break关键字(跳出循环)",
+        "lesson": 7,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "continue关键字(跳过当前)",
+        "lesson": 7,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "break与continue区别",
+        "lesson": 7,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "嵌套循环(双重循环)",
+        "lesson": 7,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "九九乘法表",
+        "lesson": 7,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "循环输出图形",
+        "lesson": 7,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "数组的概念",
+        "lesson": 8,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "数组定义语法",
+        "lesson": 8,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "数组下标(从0开始)",
+        "lesson": 8,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "数组元素访问",
+        "lesson": 8,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "数组初始化方式",
+        "lesson": 8,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "循环遍历数组",
+        "lesson": 8,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "数组存储多个数据",
+        "lesson": 8,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "数组越界问题",
+        "lesson": 8,
+        "category": "易错点",
+        "is_new": true
+      },
+      {
+        "name": "数组元素查找(顺序查找)",
+        "lesson": 9,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "求数组最大/最小值",
+        "lesson": 9,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "数组元素插入",
+        "lesson": 9,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "数组元素删除",
+        "lesson": 9,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "const关键字",
+        "lesson": 9,
+        "category": "基础语法",
+        "is_new": true
+      },
+      {
+        "name": "数组逆序",
+        "lesson": 9,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "数组元素累加求和",
+        "lesson": 9,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "阶段复习：for循环",
+        "lesson": 10,
+        "category": "复习",
+        "is_new": false
+      },
+      {
+        "name": "阶段复习：数组操作",
+        "lesson": 10,
+        "category": "复习",
+        "is_new": false
+      },
+      {
+        "name": "查找数组最大值及下标",
+        "lesson": 10,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "查找数组最小值及下标",
+        "lesson": 10,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "标记数组(布尔数组)",
+        "lesson": 10,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "约瑟夫问题(猴子选大王)",
+        "lesson": 10,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "数组综合应用",
+        "lesson": 10,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "while循环语法",
+        "lesson": 11,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "while与for循环的区别",
+        "lesson": 11,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "do-while循环语法",
+        "lesson": 11,
+        "category": "流程控制",
+        "is_new": true
+      },
+      {
+        "name": "do-while与while的区别",
+        "lesson": 11,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "数位分离算法(n%10, n/=10)",
+        "lesson": 11,
+        "category": "基础算法",
+        "is_new": true
+      },
+      {
+        "name": "循环次数未知的情况",
+        "lesson": 11,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "角谷猜想",
+        "lesson": 11,
+        "category": "综合应用",
+        "is_new": true
+      },
+      {
+        "name": "三种循环对比(for/while/do-while)",
+        "lesson": 11,
+        "category": "概念理解",
+        "is_new": true
+      },
+      {
+        "name": "setw()设置输出宽度",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "setfill()设置填充字符",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "iomanip头文件",
+        "lesson": 12,
+        "category": "头文件",
+        "is_new": true
+      },
+      {
+        "name": "printf()格式化输出函数",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "scanf()格式化输入函数",
+        "lesson": 12,
+        "category": "格式化输入",
+        "is_new": true
+      },
+      {
+        "name": "cstdio头文件",
+        "lesson": 12,
+        "category": "头文件",
+        "is_new": true
+      },
+      {
+        "name": "%d格式控制符",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "%02d修饰符(前导零)",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "换行符\\n",
+        "lesson": 12,
+        "category": "转义字符",
+        "is_new": true
+      },
+      {
+        "name": "float浮点型",
+        "lesson": 12,
+        "category": "数据类型",
+        "is_new": true
+      },
+      {
+        "name": "fixed定点输出格式",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "setprecision()设置精度",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "%.nf格式控制符",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "%f格式控制符",
+        "lesson": 12,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "万能头文件#include<bits/stdc++.h>",
+        "lesson": 12,
+        "category": "头文件",
+        "is_new": true
+      },
+      {
+        "name": "double双精度浮点型",
+        "lesson": 13,
+        "category": "数据类型",
+        "is_new": true
+      },
+      {
+        "name": "有效数字概念",
+        "lesson": 13,
+        "category": "数据类型",
+        "is_new": true
+      },
+      {
+        "name": "float精度(7位有效数字)",
+        "lesson": 13,
+        "category": "数据类型",
+        "is_new": true
+      },
+      {
+        "name": "double精度(16位有效数字)",
+        "lesson": 13,
+        "category": "数据类型",
+        "is_new": true
+      },
+      {
+        "name": "%lf格式控制符",
+        "lesson": 13,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "%.nlf保留小数",
+        "lesson": 13,
+        "category": "格式化输出",
+        "is_new": true
+      },
+      {
+        "name": "字面常量(字面值)",
+        "lesson": 13,
+        "category": "基础概念",
+        "is_new": true
+      },
+      {
+        "name": "float字面常量(3.14f)",
+        "lesson": 13,
+        "category": "数据类型",
+        "is_new": true
+      },
+      {
+        "name": "自动数据类型转换",
+        "lesson": 13,
+        "category": "类型转换",
+        "is_new": true
+      },
+      {
+        "name": "低精度到高精度自动转换",
+        "lesson": 13,
+        "category": "类型转换",
+        "is_new": true
+      },
+      {
+        "name": "强制数据类型转换",
+        "lesson": 13,
+        "category": "类型转换",
+        "is_new": true
+      },
+      {
+        "name": "类型名(变量/表达式)转换语法",
+        "lesson": 13,
+        "category": "类型转换",
+        "is_new": true
+      },
+      {
+        "name": "四舍五入运算(int(浮点数+0.5))",
+        "lesson": 13,
+        "category": "算法技巧",
+        "is_new": true
+      },
+      {
+        "name": "long long数据类型",
+        "lesson": 13,
+        "category": "数据类型",
+        "is_new": true
+      },
+      {
+        "name": "long long数值范围",
+        "lesson": 13,
+        "category": "数据类型",
+        "is_new": true
+      },
+      {
+        "name": "字符串概念(双引号包含)",
+        "lesson": 14,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "字符数组存储字符串",
+        "lesson": 14,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "字符串结束符'\\0'",
+        "lesson": 14,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "字符数组初始化方式",
+        "lesson": 14,
+        "category": "数组",
+        "is_new": true
+      },
+      {
+        "name": "cin输入字符串(不含空格)",
+        "lesson": 14,
+        "category": "输入输出",
+        "is_new": true
+      },
+      {
+        "name": "cin.getline()输入含空格字符串",
+        "lesson": 14,
+        "category": "输入输出",
+        "is_new": true
+      },
+      {
+        "name": "strlen()计算字符串长度",
+        "lesson": 14,
+        "category": "字符串函数",
+        "is_new": true
+      },
+      {
+        "name": "cstring头文件",
+        "lesson": 14,
+        "category": "头文件",
+        "is_new": true
+      },
+      {
+        "name": "strcpy()字符串复制",
+        "lesson": 14,
+        "category": "字符串函数",
+        "is_new": true
+      },
+      {
+        "name": "strcmp()字符串比较",
+        "lesson": 14,
+        "category": "字符串函数",
+        "is_new": true
+      },
+      {
+        "name": "strcat()字符串拼接",
+        "lesson": 14,
+        "category": "字符串函数",
+        "is_new": true
+      },
+      {
+        "name": "回文串判断算法",
+        "lesson": 14,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "遍历字符串统计字符",
+        "lesson": 14,
+        "category": "算法技巧",
+        "is_new": true
+      },
+      {
+        "name": "string数据类型",
+        "lesson": 15,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "string字符串定义与初始化",
+        "lesson": 15,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "string字符串的cin输入",
+        "lesson": 15,
+        "category": "输入输出",
+        "is_new": true
+      },
+      {
+        "name": "getline()函数输入string",
+        "lesson": 15,
+        "category": "输入输出",
+        "is_new": true
+      },
+      {
+        "name": "string下标访问运算符[]",
+        "lesson": 15,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "length()获取字符串长度",
+        "lesson": 15,
+        "category": "字符串函数",
+        "is_new": true
+      },
+      {
+        "name": "size()获取字符串长度",
+        "lesson": 15,
+        "category": "字符串函数",
+        "is_new": true
+      },
+      {
+        "name": "字符串拷贝(赋值运算符=)",
+        "lesson": 15,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "字符串拼接(+和+=运算符)",
+        "lesson": 15,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "字符串比较(关系运算符)",
+        "lesson": 15,
+        "category": "字符串",
+        "is_new": true
+      },
+      {
+        "name": "find()函数查找子串",
+        "lesson": 15,
+        "category": "字符串函数",
+        "is_new": true
+      },
+      {
+        "name": "find()带起始位置参数",
+        "lesson": 15,
+        "category": "字符串函数",
+        "is_new": true
+      },
+      {
+        "name": "格式化输入输出综合应用",
+        "lesson": 16,
+        "category": "综合应用",
+        "is_new": false
+      },
+      {
+        "name": "浮点数精度处理",
+        "lesson": 16,
+        "category": "综合应用",
+        "is_new": false
+      },
+      {
+        "name": "字符串处理综合应用",
+        "lesson": 16,
+        "category": "综合应用",
+        "is_new": false
+      },
+      {
+        "name": "类型转换综合应用",
+        "lesson": 16,
+        "category": "综合应用",
+        "is_new": false
+      },
+      {
+        "name": "函数概念与作用",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "void无返回值类型",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "函数定义语法格式",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "函数调用语法",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "函数定义位置(先于调用)",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "函数参数(形参和实参)",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "带参数函数的定义与调用",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "多参数函数",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "函数返回值类型声明",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "return关键字返回结果",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "return提前退出函数",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "main函数特点",
+        "lesson": 17,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "变量作用域概念",
+        "lesson": 18,
+        "category": "作用域",
+        "is_new": true
+      },
+      {
+        "name": "流程控制语句中变量的作用域",
+        "lesson": 18,
+        "category": "作用域",
+        "is_new": true
+      },
+      {
+        "name": "函数中变量的作用域",
+        "lesson": 18,
+        "category": "作用域",
+        "is_new": true
+      },
+      {
+        "name": "局部变量",
+        "lesson": 18,
+        "category": "作用域",
+        "is_new": true
+      },
+      {
+        "name": "全局变量",
+        "lesson": 18,
+        "category": "作用域",
+        "is_new": true
+      },
+      {
+        "name": "局部优先原则",
+        "lesson": 18,
+        "category": "作用域",
+        "is_new": true
+      },
+      {
+        "name": "全局数组自动初始化为0",
+        "lesson": 18,
+        "category": "数组",
+        "is_new": true
+      },
+      {
+        "name": "函数声明",
+        "lesson": 18,
+        "category": "函数",
+        "is_new": true
+      },
+      {
+        "name": "头文件的作用",
+        "lesson": 18,
+        "category": "头文件",
+        "is_new": true
+      },
+      {
+        "name": "algorithm头文件",
+        "lesson": 18,
+        "category": "头文件",
+        "is_new": true
+      },
+      {
+        "name": "max()函数",
+        "lesson": 18,
+        "category": "系统函数",
+        "is_new": true
+      },
+      {
+        "name": "min()函数",
+        "lesson": 18,
+        "category": "系统函数",
+        "is_new": true
+      },
+      {
+        "name": "swap()函数",
+        "lesson": 18,
+        "category": "系统函数",
+        "is_new": true
+      },
+      {
+        "name": "sort()函数(升序排序)",
+        "lesson": 18,
+        "category": "系统函数",
+        "is_new": true
+      },
+      {
+        "name": "sort(begin,end)语法",
+        "lesson": 18,
+        "category": "系统函数",
+        "is_new": true
+      },
+      {
+        "name": "结构体概念",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "struct关键字",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体定义语法",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体成员变量",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体变量定义",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体变量初始化",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体成员访问运算符(.)",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体数组定义",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体数组初始化",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体数组输入输出",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "结构体数组排序",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "自定义排序规则cmp函数",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "多关键字排序",
+        "lesson": 19,
+        "category": "结构体",
+        "is_new": true
+      },
+      {
+        "name": "循环嵌套概念",
+        "lesson": 20,
+        "category": "循环",
+        "is_new": true
+      },
+      {
+        "name": "双重for循环语法",
+        "lesson": 20,
+        "category": "循环",
+        "is_new": true
+      },
+      {
+        "name": "外层循环控制行数",
+        "lesson": 20,
+        "category": "循环",
+        "is_new": true
+      },
+      {
+        "name": "内层循环控制列数",
+        "lesson": 20,
+        "category": "循环",
+        "is_new": true
+      },
+      {
+        "name": "双重循环中的变量关系",
+        "lesson": 20,
+        "category": "循环",
+        "is_new": true
+      },
+      {
+        "name": "输出矩形/三角形图案",
+        "lesson": 20,
+        "category": "循环应用",
+        "is_new": true
+      },
+      {
+        "name": "空心矩形输出",
+        "lesson": 20,
+        "category": "循环应用",
+        "is_new": true
+      },
+      {
+        "name": "九九乘法表输出",
+        "lesson": 20,
+        "category": "循环应用",
+        "is_new": true
+      },
+      {
+        "name": "桶排序思想",
+        "lesson": 21,
+        "category": "排序算法",
+        "is_new": true
+      },
+      {
+        "name": "桶排序步骤",
+        "lesson": 21,
+        "category": "排序算法",
+        "is_new": true
+      },
+      {
+        "name": "桶排序代码实现",
+        "lesson": 21,
+        "category": "排序算法",
+        "is_new": true
+      },
+      {
+        "name": "桶排序适用场景",
+        "lesson": 21,
+        "category": "排序算法",
+        "is_new": true
+      },
+      {
+        "name": "选择排序思想",
+        "lesson": 21,
+        "category": "排序算法",
+        "is_new": true
+      },
+      {
+        "name": "选择排序步骤",
+        "lesson": 21,
+        "category": "排序算法",
+        "is_new": true
+      },
+      {
+        "name": "选择排序代码实现",
+        "lesson": 21,
+        "category": "排序算法",
+        "is_new": true
+      },
+      {
+        "name": "swap()交换数组元素",
+        "lesson": 21,
+        "category": "排序算法",
+        "is_new": false
+      }
+    ],
+    "level2": [
+      {
+        "name": "枚举算法概念",
+        "lesson": 13,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "枚举算法基本步骤：确定范围、遍历、判断、输出结果",
+        "lesson": 13,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "水仙花数问题",
+        "lesson": 13,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "四叶玫瑰数问题",
+        "lesson": 13,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "二维数组枚举应用",
+        "lesson": 13,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "枚举算法优化：减少循环次数",
+        "lesson": 13,
+        "category": "算法优化",
+        "is_new": true
+      },
+      {
+        "name": "枚举算法优化：减少循环嵌套层数",
+        "lesson": 13,
+        "category": "算法优化",
+        "is_new": true
+      },
+      {
+        "name": "递推算法概念",
+        "lesson": 14,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "初始条件确定",
+        "lesson": 14,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "递推关系建立",
+        "lesson": 14,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "顺推：从初始状态推导到结束状态",
+        "lesson": 14,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "逆推：从结束状态推导到初始状态",
+        "lesson": 14,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "斐波那契数列",
+        "lesson": 14,
+        "category": "数学",
+        "is_new": true
+      },
+      {
+        "name": "斐波那契数列应用：兔子繁殖问题",
+        "lesson": 14,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "斐波那契数列应用：台阶问题",
+        "lesson": 14,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "斐波那契数列应用：铺瓷砖问题",
+        "lesson": 14,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "直线分割平面问题",
+        "lesson": 14,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "前缀和概念",
+        "lesson": 15,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "前缀和数组",
+        "lesson": 15,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "前缀和递推关系：s[i] = s[i-1] + a[i]",
+        "lesson": 15,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "前缀和计算区间和：s[R] - s[L-1]",
+        "lesson": 15,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "前缀和应用：多次计算区间和",
+        "lesson": 15,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "前缀和应用：K个元素和",
+        "lesson": 15,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "前缀和应用：m倍的区间统计",
+        "lesson": 15,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "前缀和应用：最大区间和",
+        "lesson": 15,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "差分概念",
+        "lesson": 15,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "差分数组",
+        "lesson": 15,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "差分数组性质：对差分数组求前缀和得到原数组",
+        "lesson": 15,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "二分算法概念",
+        "lesson": 16,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "二分算法三个值：最小值、中间值、最大值",
+        "lesson": 16,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "中间值计算：(最小值+最大值)/2",
+        "lesson": 16,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "二分算法实现步骤：取中间、比较、调整范围",
+        "lesson": 16,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "二分算法代码模板",
+        "lesson": 16,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "二分查找次数分析",
+        "lesson": 16,
+        "category": "算法分析",
+        "is_new": true
+      },
+      {
+        "name": "贪心算法概念",
+        "lesson": 17,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "局部最优解",
+        "lesson": 17,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "全局最优解",
+        "lesson": 17,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "贪心算法题型：选择类问题",
+        "lesson": 17,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "贪心算法题型：最优装载问题",
+        "lesson": 17,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "贪心算法题型：部分背包问题",
+        "lesson": 17,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "贪心算法题型：分组乘船问题",
+        "lesson": 17,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "贪心算法题型：排队等待问题",
+        "lesson": 17,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "贪心算法题型：区间问题",
+        "lesson": 17,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "枚举算法复习",
+        "lesson": 18,
+        "category": "复习",
+        "is_new": true
+      },
+      {
+        "name": "递推算法复习",
+        "lesson": 18,
+        "category": "复习",
+        "is_new": true
+      },
+      {
+        "name": "前缀和与差分复习",
+        "lesson": 18,
+        "category": "复习",
+        "is_new": true
+      },
+      {
+        "name": "二分算法复习",
+        "lesson": 18,
+        "category": "复习",
+        "is_new": true
+      },
+      {
+        "name": "贪心算法复习",
+        "lesson": 18,
+        "category": "复习",
+        "is_new": true
+      },
+      {
+        "name": "大整数（高精度数）概念：超过19位的整数",
+        "lesson": 19,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "大整数存储：字符串转整数数组",
+        "lesson": 19,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "大整数存储：字符数组逆序存储",
+        "lesson": 19,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "大整数加法：数位对齐",
+        "lesson": 19,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数加法：对应位相加处理进位",
+        "lesson": 19,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数加法：处理最高位进位",
+        "lesson": 19,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数加法：逆序输出结果",
+        "lesson": 19,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数加法程序模板",
+        "lesson": 19,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数减法：被减数大于等于减数",
+        "lesson": 20,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数减法：处理借位",
+        "lesson": 20,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数减法：去除前导零",
+        "lesson": 20,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数减法：被减数小于减数处理",
+        "lesson": 20,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数减法：输出负号",
+        "lesson": 20,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数减法程序模板",
+        "lesson": 20,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数乘法：模拟竖式乘法",
+        "lesson": 21,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数乘法：错位累加",
+        "lesson": 21,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数乘法：处理进位",
+        "lesson": 21,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数乘法：结果长度计算",
+        "lesson": 21,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "大整数乘以小整数",
+        "lesson": 21,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "大整数乘法程序模板",
+        "lesson": 21,
+        "category": "算法",
+        "is_new": true
+      },
+      {
+        "name": "栈的概念：先进后出、后进先出",
+        "lesson": 22,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "栈的基本操作：入栈",
+        "lesson": 22,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "栈的基本操作：出栈",
+        "lesson": 22,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "栈的基本操作：获取栈顶元素",
+        "lesson": 22,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "栈底元素、栈顶元素、空栈、满栈",
+        "lesson": 22,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "数组模拟栈实现",
+        "lesson": 22,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "栈的应用：括号匹配",
+        "lesson": 22,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "栈的应用：序列逆序",
+        "lesson": 22,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "队列的概念：先进先出",
+        "lesson": 23,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "队列的基本操作：入队",
+        "lesson": 23,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "队列的基本操作：出队",
+        "lesson": 23,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "队列的基本操作：获取队首元素",
+        "lesson": 23,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "队列的基本操作：获取队列长度",
+        "lesson": 23,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "队首、队尾、空队列",
+        "lesson": 23,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "数组模拟队列实现",
+        "lesson": 23,
+        "category": "数据结构",
+        "is_new": true
+      },
+      {
+        "name": "队列的应用：约瑟夫环问题",
+        "lesson": 23,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "队列的应用：密码生成",
+        "lesson": 23,
+        "category": "算法应用",
+        "is_new": true
+      },
+      {
+        "name": "大整数运算复习",
+        "lesson": 24,
+        "category": "复习",
+        "is_new": true
+      },
+      {
+        "name": "栈的复习",
+        "lesson": 24,
+        "category": "复习",
+        "is_new": true
+      },
+      {
+        "name": "队列的复习",
+        "lesson": 24,
+        "category": "复习",
+        "is_new": true
+      }
+    ]
+  },
+  "analysis_summary": {
+    "total_level1_points": 213,
+    "total_level2_points": 88,
+    "cross_level_duplicates": 1,
+    "unique_concepts": 300
+  },
+  "special_findings": {
+    "斐波那契数列": {
+      "level1_lesson": 7,
+      "level1_title": "for循环进阶",
+      "level2_lesson": 14,
+      "level2_title": "递推算法",
+      "note": "Level 1作为基础算法引入，Level 2在递推算法中深入应用"
+    },
+    "结构体排序": {
+      "only_in": "Level 1 Lesson 19",
+      "note": "仅在Level 1出现，Level 2没有重复"
+    },
+    "数组排序": {
+      "only_in": "Level 1 Lesson 18 (sort函数), Level 1 Lesson 21 (桶排序/选择排序)",
+      "note": "数组排序算法仅在Level 1出现"
+    },
+    "桶排序": {
+      "only_in": "Level 1 Lesson 21",
+      "note": "仅在Level 1出现"
+    },
+    "循环嵌套": {
+      "level1_lesson": "Lesson 7 (嵌套循环), Lesson 20 (循环的嵌套)",
+      "level2_note": "Level 2 Lesson 13 提到'减少循环嵌套层数'是枚举优化，不是重复知识点",
+      "is_duplicate": false
+    },
+    "基础语法": {
+      "note": "for循环、if语句等基础语法仅在Level 1教授，Level 2直接应用不再重复教学"
+    }
+  }
+}

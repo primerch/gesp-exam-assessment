@@ -1,0 +1,107 @@
+{
+  "level": 2,
+  "lesson_number": 14,
+  "title": "链表",
+  "file_name": "L2-14.pptx",
+  "total_slides": 88,
+  "knowledge_points": [
+    "位运算",
+    "枚举算法",
+    "模拟算法",
+    "函数基础",
+    "指针基础",
+    "二维数组",
+    "结构体",
+    "变量作用域",
+    "选择排序",
+    "插入排序",
+    "链表"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_05",
+      "name": "枚举算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_01",
+      "name": "指针基础",
+      "category": "指针"
+    },
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_05",
+      "name": "结构体",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_07",
+      "name": "变量作用域",
+      "category": "函数"
+    },
+    {
+      "id": "l4_09",
+      "name": "选择排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_10",
+      "name": "插入排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_16",
+      "name": "链表",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "链表"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "指针\n概念：\n指针是用来存储内存地址的变量。\n当指针存好某个变量的地址时，如下：\nint a=10;\u000bint *p=&a;\n我们可以称指针p指向了变量a。"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "指针\n1. 指针的创建\n当指针不需要存储地址时\n2. 指针的赋值\n3. 指针的解引用\nint *p;\n类型\n类型\n名称\nint *p=NULL;\np为空指针\n①创建时直接赋值\n②创建后赋值\n③指针与指..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "①创建结构体指针\n结构体指针\n②成员访问方式\nstruct stu{\u000b    int id;\u000b    string name;\u000b    double score;\u000b};\u000bstu a={1,\"yaya\"..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "函数传指针\n当需要不同作用域的值同步时，可以传指针\nvoid fun(int a){\u000b    a=a+10;\u000b}\u000bint main(){\u000b    int a=5;\u000b    fun(a);\u000b    co..."
+    }
+  ],
+  "summary": {
+    "total_slides": 88,
+    "total_knowledge_points": 11,
+    "gesp_level3_points_count": 4,
+    "gesp_level4_points_count": 7
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "level": 1,
+  "lesson_number": 23,
+  "title": "计算机基础与流程图",
+  "file_name": "23.pptx",
+  "total_slides": 75,
+  "slides_with_content": 75,
+  "knowledge_points": [
+    {
+      "name": "算法思维",
+      "desc": "问题分析和算法设计"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_1",
+    "l1_11",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_5",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "冒泡排序思想\n每次比较两个相邻的元素，如果它们的顺序错误就把它们交换过来。\n每一轮进行两两比较，将该轮中最大/最小的值冒出来。\n45 | 26 | 77 | 9 | 86\n26 | 45 | 9 | 77 | 86\n26 | 9 | 45 | 77 | 86\n9 | 26 | 45 | 77 | 86\n0\n1\n2\n3\n4\n第一轮\n第二轮\n第三轮\n第四轮"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "插入排序思想\n将待排序的数字依次插入到已有序的数列中，并仍然保持有序。"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "排序算法对比\n排序算法 | 排序方式 | 适用场景 | 稳定性\n桶排序 | 计数 | 整数/字符、\n数值范围小且数据量大 | -\n选择排序 | 比较 | 任意数字 | 不稳定\n冒泡排序 | 比较 | 任意数字 | 稳定\n插入排序 | 比较 | 任意数字 | 稳定"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "回顾练习1\n下面代码的输出结果是_______________。\n1 2 3 8 9"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "二维数组"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "想一想\n1 | 2 | 3 | 4\n5 | 6 | 7 | 8\n9 | 10 | 11 | 12\n如何保存这种多行多列的数据？"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "二维数组"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "码上得知-1-二维数组的定义和初始化"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "一维数组\n1 | 2 | 3 | 4\na\na[0]\na[1]\na[2]\na[3]"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "二维数组\n一维数组的每一个元素又是一个一维数组，将这样的数组称为二维数组。\na[0]\na[1]\na[2]\n二维数组a\n1 | 2 | 3 | 4\n5 | 6 | 7 | 8\n9 | 10 | 11 | 12\n用\"行\"、\"列\"描述二维数组中的数据。\n行\n列"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "level": 1,
+  "lesson_number": 6,
+  "title": "for 循环",
+  "file_name": "6. for 循环.pptx",
+  "total_slides": 91,
+  "slides_with_content": 91,
+  "knowledge_points": [
+    {
+      "name": "for循环基础",
+      "desc": "for循环语法：初始化、条件、更新"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_4",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "for循环"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "输出五角星\n编写一个程序，输出如下图案：\n重\n复"
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "循环\n不断重复的做某些事情。\n重复\n反复\n往复"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "重复的事情\n太阳每天东升西落\n星期一到星期日不断重复"
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "for循环"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "码上得知-1-认识for循环"
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "for循环\n编写一个程序，输出如下图案：\n重\n复"
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "for循环\nfor (表达式1；表达式2；表达式3)  语句；\n循环变量\n循环条件\n循环间隔\n循环的范围"
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "for循环\nfor(   ； ； )\n    cout << “    ”<< endl；\n关键字for\n开始循环\n.\n.\n.\n一直输出，停\n不下来。"
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "给循环计数\nfor( ； ； )\n    cout << “    ”<< endl；\n.\n.\n需要给循环计数：\n1个，2个，3个，\n4个，5个。\n定义循环变量\n并初始化\nint i = 1\n.\n.\n."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "level": 1,
+  "lesson_number": 16,
+  "title": "阶段复习与练习三",
+  "file_name": "16. 阶段复习与练习三.pptx",
+  "total_slides": 60,
+  "slides_with_content": 60,
+  "knowledge_points": [
+    {
+      "name": "阶段复习三",
+      "desc": "复习第11-15课：while循环、浮点数、字符串"
+    }
+  ],
+  "gesp_level_1_points": [
+    "l1_12",
+    "l1_13",
+    "l1_14",
+    "l1_2",
+    "l1_3",
+    "l1_4",
+    "l1_5",
+    "l1_6",
+    "l1_7",
+    "l1_8",
+    "l1_9"
+  ],
+  "gesp_level_2_points": [
+    "l2_1",
+    "l2_10",
+    "l2_11",
+    "l2_2",
+    "l2_4",
+    "l2_5",
+    "l2_9"
+  ],
+  "slides_content": [
+    {
+      "slide_number": 1,
+      "content_preview": "string类型\n①  string类型变量的定义与初始化\n②  string类型数据的输入\n方式一：\n方式二：\n方式一：\n方式二：\nstring s1=\"hello\";\nstring s2(\"hello\");\ncin>>s;\ngetline(cin,string s);"
+    },
+    {
+      "slide_number": 2,
+      "content_preview": "计算字符串的长度\n字符数组和string\n字符串的操作\n字符数组：strlen(s1)\nstring: s1.length()、s1.size()\n操作 | 字符数组\n(函数实现) | String\n(运算符实现)\n复制/重新赋值 | strcpy(s1,s2) | s1=s2\n拼接 | / | s1+s2\n追加 | strcat(s1,s2) | s1+=s2\n比较 | strcmp(s1,s2..."
+    },
+    {
+      "slide_number": 3,
+      "content_preview": "阶段复习与练习(三)"
+    },
+    {
+      "slide_number": 4,
+      "content_preview": "偶数均值\n【问题描述】\n      输入一个正整数 n，接下来输入 n 个正整数，求出 n 个正整数中为偶数且个位数字为 2 的数字的均值，并把比均值小的数字打印输出。如果没有满足条件的数字则输出：NO。\n        要求：使用所学的格式化输入输出方式。\n【输入描述】\n      ​输入两行：第一个行一个正整数 n（n≤1000）。\u000b      第二行 n 个正整数，数字间以空格分隔（1≤数字..."
+    },
+    {
+      "slide_number": 5,
+      "content_preview": "思路分析\n【输入样例1】 \n  5\n  12 24 13 22 12           【输出样例1】\n  15.333\n  12 13 12\n数组arr：{12, 24, 13, 22, 12}\n累加和：\n均值：46/3=15.333\n比均值小的数字：12 13 12\n0\n12\n34\n46"
+    },
+    {
+      "slide_number": 6,
+      "content_preview": "思路分析\n定义变量n，保存输入数字的个数；\n②  输入n个整数保存到数组arr中；\n③  计算累加和；\nint n;\u000bscanf(\"%d\",&n);\nint arr[1000]={0};\n\u000b    \u000bfor(int i=0;i<n;i++){\u000b    scanf(\"%d\",&arr[i]);\u000b        \u000b        \u000b        \u000b        \u000b       \n\u000b}\ndouble..."
+    },
+    {
+      "slide_number": 7,
+      "content_preview": "思路分析\n根据题目要求输出结果\n     如果有满足条件的数字，则输出偶数均值\n     和比均值小的数字，否则则输出NO。\nint n;\u000bscanf(\"%d\",&n);\u000bint arr[1000]={0};\u000bdouble sum=0; //累加求和\u000bint cnt=0; //统计元素个数\u000bfor(int i=0;i<n;i++){\u000b    scanf(\"%d\",&arr[i]);\u000b    if(..."
+    },
+    {
+      "slide_number": 8,
+      "content_preview": "思路分析\n根据题目要求输出结果\n     如果有满足条件的数字，则输出偶数均值\n     和比均值小的数字，否则则输出NO。\n根据cnt输出结果\nif(cnt){\u000b    double a=sum/cnt; //计算均值\u000b    printf(\"%.3lf\\n\",a);\u000b    for(int i=0;i<n;i++){\u000b        if(arr[i]<a) printf(\"%d \",arr[..."
+    },
+    {
+      "slide_number": 9,
+      "content_preview": "【完整代码】\n#include <bits/stdc++.h>\u000busing namespace std;\u000bint main(){\u000b  int n;\u000b  scanf(\"%d\",&n);\u000b  int arr[1000]={0};\u000b  double sum=0; //累加求和\u000b  int cnt=0; //统计元素个数\u000b  for(int i=0;i<n;i++){\u000b    scanf(\"%d\",&ar..."
+    },
+    {
+      "slide_number": 10,
+      "content_preview": "OJ系统解题"
+    }
+  ]
+}

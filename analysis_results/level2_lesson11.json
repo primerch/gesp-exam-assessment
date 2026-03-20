@@ -1,0 +1,89 @@
+{
+  "level": 2,
+  "lesson_number": 11,
+  "title": "队列",
+  "file_name": "L2-11.pptx",
+  "total_slides": 80,
+  "knowledge_points": [
+    "位运算",
+    "模拟算法",
+    "函数基础",
+    "二维数组",
+    "变量作用域",
+    "插入排序",
+    "栈",
+    "队列"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_07",
+      "name": "变量作用域",
+      "category": "函数"
+    },
+    {
+      "id": "l4_10",
+      "name": "插入排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_14",
+      "name": "栈",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_15",
+      "name": "队列",
+      "category": "数据结构"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "队列"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "栈\n①  什么是栈\n数据的操作只从一端完成，如存、取等；\n数据存放遵循，先进后出，后进先出的原则；\n②  栈的操作\n入栈、出栈；\n栈顶元素、栈底元素、空栈、满栈；\n判断出栈顺序；"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "栈\n③  栈的实现\n栈的初始化\n入栈函数\n出栈函数\n显示栈顶元素\n清空栈"
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "有一个空栈S，对下列待进栈的数据元素序列a,b,c,d,e,f依次进行进栈、进栈、出栈、进栈、进栈、出栈的操作，则此操作完成后，栈S的栈顶元素为？（       ）\n回顾练习\nf           ..."
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "队列的概念及实现"
+    }
+  ],
+  "summary": {
+    "total_slides": 80,
+    "total_knowledge_points": 8,
+    "gesp_level3_points_count": 3,
+    "gesp_level4_points_count": 5
+  }
+}

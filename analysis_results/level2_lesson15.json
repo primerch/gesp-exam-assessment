@@ -1,0 +1,107 @@
+{
+  "level": 2,
+  "lesson_number": 15,
+  "title": "递归",
+  "file_name": "L2-15.pptx",
+  "total_slides": 122,
+  "knowledge_points": [
+    "进制转换",
+    "位运算",
+    "模拟算法",
+    "递推算法",
+    "函数基础",
+    "指针基础",
+    "二维数组",
+    "结构体",
+    "插入排序",
+    "链表",
+    "递归算法"
+  ],
+  "gesp_level3_points": [
+    {
+      "id": "l3_02",
+      "name": "进制转换",
+      "category": "算法"
+    },
+    {
+      "id": "l3_03",
+      "name": "位运算",
+      "category": "运算"
+    },
+    {
+      "id": "l3_06",
+      "name": "模拟算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_07",
+      "name": "递推算法",
+      "category": "算法"
+    },
+    {
+      "id": "l3_08",
+      "name": "函数基础",
+      "category": "函数"
+    }
+  ],
+  "gesp_level4_points": [
+    {
+      "id": "l4_01",
+      "name": "指针基础",
+      "category": "指针"
+    },
+    {
+      "id": "l4_03",
+      "name": "二维数组",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_05",
+      "name": "结构体",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_10",
+      "name": "插入排序",
+      "category": "算法"
+    },
+    {
+      "id": "l4_16",
+      "name": "链表",
+      "category": "数据结构"
+    },
+    {
+      "id": "l4_17",
+      "name": "递归算法",
+      "category": "算法"
+    }
+  ],
+  "slide_analysis": [
+    {
+      "slide_num": 1,
+      "text_preview": "递归"
+    },
+    {
+      "slide_num": 2,
+      "text_preview": "链表的概念\n链表中的结点有两部分组成，一部分存储数据，另一部分存放指针。\n链表是一种内存中非连续（或连续）的存储结构，链表中的结点通过指针链接实现串联。"
+    },
+    {
+      "slide_num": 3,
+      "text_preview": "链表的实现\nstruct node{\u000b  int data; //数据\u000b  node *next; //指针\u000b};\n2. 创建结构体变量\nnode a={1,NULL};\u000b  node b={2,NU..."
+    },
+    {
+      "slide_num": 4,
+      "text_preview": "链表插入结点\ndata\nnext\nNULL\nNULL\ndata\nnext\n&b\nA\nB\n链表：\n待插入结点：\ndata\nnext\nNULL\nE"
+    },
+    {
+      "slide_num": 5,
+      "text_preview": "链表删除结点\nNULL\n链表："
+    }
+  ],
+  "summary": {
+    "total_slides": 122,
+    "total_knowledge_points": 11,
+    "gesp_level3_points_count": 5,
+    "gesp_level4_points_count": 6
+  }
+}
