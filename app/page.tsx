@@ -8,7 +8,7 @@ import ExamPrediction from "./components/ExamPrediction";
 import KnowledgeAnalysis from "./components/KnowledgeAnalysis";
 import StudyPath from "./components/StudyPath";
 import { calculatePassProbability, getRecommendedExam } from "./data/curriculum-data";
-import { FileText, BarChart3, Sparkles } from "lucide-react";
+import { FileText, BarChart3, Sparkles, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const [currentLevel, setCurrentLevel] = useState(1);
@@ -42,56 +42,6 @@ export default function Home() {
           </p>
         </motion.div>
 
-        {/* Feature Cards */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 max-w-3xl mx-auto"
-        >
-          <a 
-            href="/analyze"
-            className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 p-5 text-white hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-            <div className="relative flex items-start justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <FileText className="w-5 h-5" />
-                  <h3 className="font-bold">试卷分析</h3>
-                </div>
-                <p className="text-blue-100 text-sm">
-                  上传 PDF 试卷，自动分析难度和超纲情况
-                </p>
-              </div>
-              <div className="bg-white/20 rounded-xl p-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-            </div>
-          </a>
-
-          <div className="rounded-2xl bg-white border border-slate-200 p-5">
-            <div className="flex items-start justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <BarChart3 className="w-5 h-5 text-blue-600" />
-                  <h3 className="font-bold text-slate-900">通过率评估</h3>
-                </div>
-                <p className="text-slate-600 text-sm">
-                  根据课程进度，实时预测各等级通过概率
-                </p>
-              </div>
-              <div className="bg-blue-50 rounded-xl p-2">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Main Dashboard - Side by Side */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -119,11 +69,63 @@ export default function Home() {
           </div>
         </motion.div>
 
+        {/* Feature Cards */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8"
+        >
+          <a 
+            href="/analyze"
+            className="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-xl hover:border-blue-300 transition-all duration-300"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+            <div className="relative flex items-start justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="p-2 bg-blue-100 rounded-xl">
+                    <FileText className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <h3 className="font-bold text-slate-900 text-lg">试卷分析</h3>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  上传 PDF 试卷，自动分析难度和超纲情况，生成给家长的反馈建议
+                </p>
+                <div className="mt-4 flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-700">
+                  立即使用
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div className="rounded-2xl bg-white border border-slate-200 p-6">
+            <div className="flex items-start justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="p-2 bg-emerald-100 rounded-xl">
+                    <BarChart3 className="w-5 h-5 text-emerald-600" />
+                  </div>
+                  <h3 className="font-bold text-slate-900 text-lg">通过率评估</h3>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  根据学生当前课程进度，科学预测各 GESP 级别的通过概率
+                </p>
+                <div className="mt-4 flex items-center text-sm font-medium text-emerald-600">
+                  实时计算中...
+                  <span className="ml-2 w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Knowledge Analysis */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8"
         >
           <KnowledgeAnalysis
@@ -137,7 +139,7 @@ export default function Home() {
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-8"
         >
           <StudyPath />
