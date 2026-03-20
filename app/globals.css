@@ -5,40 +5,20 @@
   --foreground: #0f172a;
   --card: #ffffff;
   --card-foreground: #0f172a;
-  --primary: #3b82f6;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
+  --secondary: #f8fafc;
   --secondary-foreground: #1e293b;
-  --muted: #f1f5f9;
+  --muted: #f8fafc;
   --muted-foreground: #64748b;
-  --accent: #6366f1;
+  --accent: #4f46e5;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #3b82f6;
+  --ring: #2563eb;
   --radius: 0.75rem;
-}
-
-.dark {
-  --background: #020617;
-  --foreground: #f8fafc;
-  --card: #0f172a;
-  --card-foreground: #f8fafc;
-  --primary: #60a5fa;
-  --primary-foreground: #0f172a;
-  --secondary: #1e293b;
-  --secondary-foreground: #f1f5f9;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #818cf8;
-  --accent-foreground: #0f172a;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #1e293b;
-  --input: #1e293b;
-  --ring: #60a5fa;
 }
 
 @theme inline {
@@ -69,7 +49,54 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-/* Custom scrollbar */
+/* ==============================================
+   FOCUS VISIBLE - Accessibility
+   ============================================== */
+
+*:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users, keep for keyboard */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ==============================================
+   REDUCED MOTION
+   ============================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==============================================
+   CUSTOM SCROLLBAR
+   ============================================== */
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -88,15 +115,10 @@ body {
   background: #94a3b8;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
+/* ==============================================
+   CUSTOM SLIDER
+   ============================================== */
 
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
-}
-
-/* Custom slider styling */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -105,121 +127,78 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  height: 8px;
+  height: 6px;
   background: #e2e8f0;
-  border-radius: 4px;
-}
-
-.dark input[type="range"]::-webkit-slider-runnable-track {
-  background: #1e293b;
+  border-radius: 3px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  margin-top: -6px;
-  width: 20px;
-  height: 20px;
-  background: #3b82f6;
+  margin-top: -5px;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
   border-radius: 50%;
   border: 2px solid white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.1s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 input[type="range"]::-moz-range-track {
-  height: 8px;
+  height: 6px;
   background: #e2e8f0;
-  border-radius: 4px;
-}
-
-.dark input[type="range"]::-moz-range-track {
-  background: #1e293b;
+  border-radius: 3px;
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: #3b82f6;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
   border-radius: 50%;
   border: 2px solid white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
-/* Glass morphism utilities */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
+/* ==============================================
+   TABULAR NUMBERS
+   ============================================== */
 
-.dark .glass {
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Animated gradient border */
-@keyframes gradient-rotate {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.gradient-border {
-  position: relative;
-  background: linear-gradient(var(--background), var(--background)) padding-box,
-              linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6, #3b82f6) border-box;
-  background-size: 300% 300%;
-  border: 2px solid transparent;
-  animation: gradient-rotate 3s ease infinite;
-}
-
-/* Progress bar animation */
-@keyframes progress-shine {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.progress-shine {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: progress-shine 2s ease-in-out infinite;
-}
-
-/* Card hover lift */
-.card-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
-}
-
-/* Number counter font */
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
 
-/* Smooth transitions */
+/* ==============================================
+   CARD HOVER LIFT
+   ============================================== */
+
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================================
+   SMOOTH TRANSITIONS
+   ============================================== */
+
 .transition-smooth {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==============================================
+   PRINT STYLES
+   ============================================== */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
 }
