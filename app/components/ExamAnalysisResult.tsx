@@ -13,8 +13,52 @@ import {
   Baby,
   Edit3
 } from "lucide-react";
-import type { ExamAnalysisResult as AnalysisResult } from "@/app/lib/deepseek";
+import type { ExamAnalysisResult as AnalysisResult, BeyondKnowledgePoint } from "@/app/lib/deepseek";
 import { getLevelName } from "@/app/data/gesp-outline";
+
+// 英文术语到中文的映射
+const KNOWLEDGE_POINT_NAMES: Record<string, string> = {
+  pointer: "指针",
+  array: "数组",
+  "2d_array": "二维数组",
+  linked_list: "链表",
+  binary_search: "二分查找",
+  dp: "动态规划",
+  advanced_dp: "复杂动态规划",
+  recurrence: "递推",
+  recursion: "递归",
+  divide_conquer: "分治算法",
+  tree: "树与二叉树",
+  graph: "图论",
+  sorting: "基础排序",
+  advanced_sorting: "高级排序",
+  base_conversion: "进制转换",
+  bit_operation: "位运算",
+  data_encoding: "数据编码",
+  function: "函数",
+  struct: "结构体",
+  file_operation: "文件操作",
+  high_precision: "高精度运算",
+  prime_sieve: "素数筛",
+  search: "搜索算法",
+  stack_queue: "栈和队列",
+  oop: "面向对象",
+  hash_table: "哈希表",
+  greedy: "贪心算法",
+  combinatorics: "排列组合",
+  shortest_path: "最短路径",
+  mst: "最小生成树",
+  binary_lifting: "倍增法",
+  math_lib: "数学库函数",
+  enumeration_simulation: "枚举模拟",
+  string: "字符串操作",
+  basic_concepts: "基础概念",
+};
+
+// 获取知识点的中文名称
+function getKnowledgePointName(name: string): string {
+  return KNOWLEDGE_POINT_NAMES[name] || name;
+}
 
 interface ExamAnalysisResultProps {
   result: AnalysisResult;
@@ -32,7 +76,9 @@ export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisRe
     }
     // 使用正则替换所有占位符（支持多个匹配）
     const placeholder = result.studentName || "cc";
-    const regex = new RegExp(placeholder, 'g');
+    // 如果 placeholder 为空，直接返回原文
+    if (!placeholder) return result.parentFeedback;
+    const regex = new RegExp(placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
     return result.parentFeedback.replace(regex, realStudentName.trim());
   }, [result.parentFeedback, result.studentName, realStudentName]);
 
@@ -150,7 +196,7 @@ export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisRe
                 {result.beyondPoints.map((point, index) => (
                   <tr key={index} className="border-b border-slate-100 last:border-b-0">
                     <td className="py-3 px-4">
-                      <span className="font-medium text-slate-900">{point.name}</span>
+                      <span className="font-medium text-slate-900">{getKnowledgePointName(point.name)}</span>
                       {point.questionContext && (
                         <p className="text-sm text-slate-500 mt-1">{point.questionContext}</p>
                       )}
@@ -198,14 +244,14 @@ export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisRe
         <div className="mb-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
           <label className="block text-sm font-medium text-amber-800 mb-2 flex items-center gap-2">
             <Baby className="w-4 h-4" />
-            学生真实姓名（将替换反馈中的"{result.studentName || "cc"}"）
+            学生姓名（可选）
           </label>
           <div className="flex gap-3">
             <input
               type="text"
               value={realStudentName}
               onChange={(e) => setRealStudentName(e.target.value)}
-              placeholder={`输入真实姓名替换${result.studentName || "cc"}`}
+              placeholder="输入学生姓名，反馈中会自动显示"
               className="flex-1 p-3 bg-white border border-amber-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500"
             />
             {realStudentName && (
@@ -220,7 +266,7 @@ export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisRe
           <p className="text-xs text-amber-600 mt-2">
             {realStudentName.trim() 
               ? `反馈中将显示"${realStudentName.trim()}"，复制时会自动替换` 
-              : `当前使用占位符"${result.studentName || "cc"}"，输入真实姓名后可一键替换`}
+              : "输入学生姓名后，分析报告中会自动添加个性化称呼"}
           </p>
         </div>
 

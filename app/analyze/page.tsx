@@ -40,7 +40,6 @@ export default function AnalyzePage() {
   const [studentLevel, setStudentLevel] = useState<number>(1);
   const [studentLesson, setStudentLesson] = useState<number>(12);
   const [teacherName, setTeacherName] = useState<string>(""); // 学管老师名称
-  const [studentPlaceholder, setStudentPlaceholder] = useState<string>("cc"); // 学生姓名占位符
   
   // 分析状态
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -86,7 +85,7 @@ export default function AnalyzePage() {
           studentLevel,
           studentLesson,
           teacherName,
-          studentName: studentPlaceholder.trim() || "cc",
+          studentName: "",
         }),
       });
 
@@ -307,7 +306,6 @@ export default function AnalyzePage() {
               <li>• 请确保 PDF 是文字版而非扫描件/图片</li>
               <li>• 文件大小限制 10MB</li>
               <li>• 填写您的名字，分析报告开头将显示"你好，我是XX老师"</li>
-              <li>• 分析功能需要 DeepSeek API Key（首次使用需配置）</li>
             </ul>
           </div>
         )}
