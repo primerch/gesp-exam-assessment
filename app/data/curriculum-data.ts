@@ -655,34 +655,39 @@ export function groupKnowledgeByCategory(points: KnowledgePoint[]): Record<strin
 }
 
 // 获取推荐考试等级
+// 推荐逻辑：
+// 1. 优先在当前级别目标范围内找 >=70% 的等级
+// 2. 如果当前级别没有，在看低级别范围内找 >=70% 的（学生已经学过）
+// 3. 推荐条件是：通过率 >= 70%
 export function getRecommendedExam(currentLevel: number, currentLesson: number): { level: number; probability: number } | null {
   const probabilities = calculatePassProbability(currentLevel, currentLesson);
   
-  // 找到通过概率在70%-95%之间的最高等级
-  let recommended: { level: number; probability: number } | null = null;
+  // 当前级别对应的目标 GESP 等级范围
+  // Level 1 -> GESP 1-2, Level 2 -> GESP 3-4, Level 3 -> GESP 5-6, Level 4 -> GESP 7-8
+  const targetGespStart = (currentLevel - 1) * 2 + 1; // 1, 3, 5, 7
+  const targetGespEnd = targetGespStart + 1; // 2, 4, 6, 8
   
-  for (let gespLevel = 8; gespLevel >= 1; gespLevel--) {
+  // ========== 核心推荐逻辑 ==========
+  
+  // 步骤1: 在当前级别目标范围内，找通过率 >= 70% 的最高等级
+  for (let gespLevel = targetGespEnd; gespLevel >= targetGespStart; gespLevel--) {
     const prob = probabilities[gespLevel];
-    if (prob >= 70 && prob <= 95) {
-      recommended = { level: gespLevel, probability: prob };
-      break;
+    if (prob >= 70) {
+      return { level: gespLevel, probability: prob };
     }
   }
   
-  // 如果没有找到合适的，找通过概率最高的
-  if (!recommended) {
-    let maxProb = 0;
-    let maxLevel = 1;
-    for (let gespLevel = 1; gespLevel <= 8; gespLevel++) {
-      if (probabilities[gespLevel] > maxProb) {
-        maxProb = probabilities[gespLevel];
-        maxLevel = gespLevel;
-      }
+  // 步骤2: 当前级别目标范围内没有 >=70% 的
+  // 在低级别范围内找 >=70% 的最高等级（学生已经学过前面的级别）
+  for (let gespLevel = targetGespStart - 1; gespLevel >= 1; gespLevel--) {
+    const prob = probabilities[gespLevel];
+    if (prob >= 70) {
+      return { level: gespLevel, probability: prob };
     }
-    recommended = { level: maxLevel, probability: maxProb };
   }
   
-  return recommended;
+  // 步骤3: 所有级别都 < 70%，不推荐使用（返回 null）
+  return null;
 }
 
 // ============================================

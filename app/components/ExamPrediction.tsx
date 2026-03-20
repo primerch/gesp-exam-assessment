@@ -6,11 +6,13 @@ import { gespLevels, calculateGespCoverage } from "../data/curriculum-data";
 interface ExamPredictionProps {
   probabilities: Record<number, number>;
   recommendedExam: { level: number; probability: number } | null;
+  currentLevel: number;
 }
 
 export default function ExamPrediction({
   probabilities,
   recommendedExam,
+  currentLevel,
 }: ExamPredictionProps) {
   // 根据概率获取颜色
   const getProbabilityColor = (prob: number) => {
@@ -89,7 +91,17 @@ export default function ExamPrediction({
                 </div>
               </div>
             ) : (
-              <div className="text-blue-100">暂无推荐</div>
+              <div className="h-full flex flex-col justify-center">
+                <div className="text-3xl font-bold mb-3">暂不建议报考</div>
+                <div className="text-blue-100 text-sm mb-4">
+                  当前课程进度对应的所有GESP级别通过率均不足70%，建议继续学习后再评估
+                </div>
+                <div className="mt-2 pt-4 border-t border-white/20">
+                  <p className="text-sm text-blue-100">
+                    完成更多课程后，系统将推荐合适的报考级别
+                  </p>
+                </div>
+              </div>
             )}
           </div>
         </div>

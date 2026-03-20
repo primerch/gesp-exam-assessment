@@ -94,6 +94,7 @@ export default function Home() {
           <ExamPrediction
             probabilities={probabilities}
             recommendedExam={recommendedExam}
+            currentLevel={currentLevel}
           />
         </section>
 
