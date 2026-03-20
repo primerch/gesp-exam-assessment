@@ -121,10 +121,10 @@ export default function AnalyzePage() {
         {/* 页面标题 */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 mb-2">
-            GESP 试卷分析
+            GESP 试卷质量评估
           </h1>
           <p className="text-slate-600">
-            上传 GESP 考试 PDF 试卷，AI 自动分析难度和超纲情况
+            上传空白 PDF 试卷，奶爸帮你评估试卷难度、超纲情况，给出教学建议
           </p>
         </div>
 
@@ -218,55 +218,30 @@ export default function AnalyzePage() {
             </div>
           </div>
 
-          {/* 老师和学生信息 */}
+          {/* 老师信息 */}
           <div className="mb-6">
             <label className="block text-sm font-medium text-slate-700 mb-3">
               <span className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                反馈文案设置
+                分析反馈署名
               </span>
             </label>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* 学管老师名称 */}
-              <div>
-                <label className="block text-xs text-slate-500 mb-2">
-                  您的名字（用于反馈开头）
-                </label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    value={teacherName}
-                    onChange={(e) => setTeacherName(e.target.value)}
-                    placeholder="例如：多多"
-                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-                <p className="text-xs text-slate-400 mt-1">
-                  反馈开头将显示：你好，我是{teacherName || "XX"}老师
-                </p>
+            <div>
+              <label className="block text-xs text-slate-500 mb-2">
+                您的名字（用于分析报告开头）
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={teacherName}
+                  onChange={(e) => setTeacherName(e.target.value)}
+                  placeholder="例如：多多"
+                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
-
-              {/* 学生姓名占位符 */}
-              <div>
-                <label className="block text-xs text-slate-500 mb-2">
-                  <span className="flex items-center gap-1">
-                    <Baby className="w-3 h-3" />
-                    学生姓名占位符
-                  </span>
-                </label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    value={studentPlaceholder}
-                    onChange={(e) => setStudentPlaceholder(e.target.value)}
-                    placeholder="例如：cc"
-                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-                <p className="text-xs text-slate-400 mt-1">
-                  AI生成反馈时用此占位符，分析后可替换为真实姓名
-                </p>
-              </div>
+              <p className="text-xs text-slate-400 mt-1">
+                分析报告开头将显示：你好，我是{teacherName || "XX"}老师
+              </p>
             </div>
           </div>
 
@@ -297,7 +272,7 @@ export default function AnalyzePage() {
             {isAnalyzing ? (
               <>
                 <Loader2 className="w-5 h-5 animate-spin" />
-                AI 分析中，请稍候...
+                分析中，请稍候...
               </>
             ) : (
               <>
@@ -327,12 +302,12 @@ export default function AnalyzePage() {
           <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
             <h3 className="font-semibold text-blue-900 mb-3">使用说明</h3>
             <ul className="space-y-2 text-blue-800 text-sm">
-              <li>• 支持上传 GESP 1-8 级 C++ 考试 PDF 试卷</li>
+              <li>• 上传 GESP 1-8 级 C++ 考试的<strong>空白 PDF 试卷</strong>（不是学生做完的）</li>
+              <li>• 系统会分析试卷本身的质量：难度、超纲情况、适合的学生群体</li>
               <li>• 请确保 PDF 是文字版而非扫描件/图片</li>
               <li>• 文件大小限制 10MB</li>
-              <li>• 填写您的名字，反馈将显示"你好，我是XX老师"</li>
-              <li>• 学生姓名用占位符（如cc），分析后可替换为真实姓名</li>
-              <li>• AI 分析需要 DeepSeek API Key（首次使用需配置）</li>
+              <li>• 填写您的名字，分析报告开头将显示"你好，我是XX老师"</li>
+              <li>• 分析功能需要 DeepSeek API Key（首次使用需配置）</li>
             </ul>
           </div>
         )}

@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { analyzeExam, ExamAnalysisResult } from "@/app/lib/deepseek";
+import { analyzeExamV2, ExamAnalysisResult } from "@/app/lib/deepseek";
 
 // 配置 API 路由
 export const runtime = "nodejs";
-export const maxDuration = 120; // 最多 120 秒（PDF 提取 + AI 分析需要时间）
+export const maxDuration = 120; // 最多 120 秒（PDF 提取 + 分析需要时间）
 
 // 请求类型
 interface AnalyzeRequestBody {
@@ -108,7 +108,7 @@ export async function POST(
     // 6. 调用 DeepSeek API 分析
     console.log(`开始分析试卷: Level ${examLevel}, 学生进度: Level ${studentLevel} - 第 ${studentLesson}课, 老师: ${teacherName || "未填写"}, 学生: ${studentName}`);
     
-    const result = await analyzeExam({
+    const result = await analyzeExamV2({
       pdfBuffer,
       examLevel,
       studentLevel,

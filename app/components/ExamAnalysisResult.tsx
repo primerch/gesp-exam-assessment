@@ -109,7 +109,7 @@ export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisRe
 
           {/* 置信度 */}
           <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-            <p className="text-sm text-slate-500 mb-1">AI 分析置信度</p>
+            <p className="text-sm text-slate-500 mb-1">分析置信度</p>
             <div className="flex items-baseline gap-2">
               <span className="text-3xl font-bold text-slate-700">
                 {Math.round(result.confidence * 100)}%

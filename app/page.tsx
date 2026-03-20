@@ -40,7 +40,7 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-bold mb-2">📝 试卷分析</h3>
                 <p className="text-blue-100 text-sm leading-relaxed">
-                  上传 GESP 考试 PDF 试卷，AI 自动分析难度系数和超纲情况，
+                  上传 GESP 考试 PDF 试卷，奶爸自动分析难度系数和超纲情况，
                   生成给家长的反馈建议
                 </p>
               </div>
