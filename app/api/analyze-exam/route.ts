@@ -109,9 +109,9 @@ export async function POST(
     // 6. 调用 DeepSeek API 分析（带超时控制）
     console.log(`开始分析试卷: Level ${examLevel}, 学生进度: Level ${studentLevel} - 第 ${studentLesson}课, 老师: ${teacherName || "未填写"}, 学生: ${studentName}`);
     
-    // 创建超时 Promise
+    // 创建超时 Promise（配合 Vercel 的 120 秒限制）
     const timeoutPromise = new Promise<never>((_, reject) => {
-      setTimeout(() => reject(new Error("ANALYSIS_TIMEOUT")), 60000); // 60 秒超时
+      setTimeout(() => reject(new Error("ANALYSIS_TIMEOUT")), 100000); // 100 秒超时
     });
     
     const analysisPromise = analyzeExamV2({

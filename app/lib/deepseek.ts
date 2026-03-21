@@ -19,7 +19,7 @@ const getDeepSeekClient = () => {
   return new OpenAI({
     apiKey: apiKey,
     baseURL: "https://api.deepseek.com/v1",
-    timeout: 30000, // 30 秒超时
+    timeout: 90000, // 90 秒超时（配合 API 路由的 120 秒）
     maxRetries: 2,  // 失败时重试 2 次
   });
 };
@@ -540,14 +540,24 @@ export async function analyzeExamV2(
 ): Promise<ExamAnalysisResult> {
   const startTime = Date.now();
   
-  // 1. 提取 PDF 文本
-  const pdfText = await extractPdfText(request.pdfBuffer);
+  // 1. 提取 PDF 文本（带单独超时控制）
+  const pdfExtractStart = Date.now();
+  const pdfText = await Promise.race([
+    extractPdfText(request.pdfBuffer),
+    new Promise<string>((_, reject) => 
+      setTimeout(() => reject(new Error("PDF 文本提取超时（20秒）")), 20000)
+    )
+  ]);
+  console.log(`PDF 文本提取耗时: ${(Date.now() - pdfExtractStart) / 1000}s, 文本长度: ${pdfText.length}`);
+  
   if (!pdfText || pdfText.trim().length === 0) {
     throw new Error("PDF 文件无法提取文本，可能是扫描件或图片 PDF");
   }
 
-  // 2. DeepSeek Chat 提取题目（约 2 秒）
+  // 2. DeepSeek Chat 提取题目（约 2-5 秒）
+  const extractStart = Date.now();
   let questions = await extractQuestions(pdfText);
+  console.log(`题目提取耗时: ${(Date.now() - extractStart) / 1000}s, 提取到 ${questions.length} 题`);
   
   // 如果 AI 提取失败，使用备用方案
   if (questions.length === 0) {
@@ -662,6 +672,7 @@ export async function analyzeExamV2(
   let parentFeedback: string;
   let summary: string;
   
+  const feedbackStart = Date.now();
   try {
     const feedbackResult = await generateFeedback({
       examLevel: request.examLevel,
@@ -674,6 +685,7 @@ export async function analyzeExamV2(
     });
     parentFeedback = feedbackResult.parentFeedback;
     summary = feedbackResult.summary;
+    console.log(`反馈生成耗时: ${(Date.now() - feedbackStart) / 1000}s`);
   } catch (feedbackError) {
     console.error("生成反馈失败:", feedbackError);
     // 使用降级反馈
