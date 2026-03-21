@@ -308,7 +308,7 @@ export default function AnalyzePage() {
 
           {isAnalyzing && (
             <p className="mt-3 text-center text-sm text-slate-500">
-              正在提取 PDF 文本并分析，大约需要 15-60 秒...
+              正在分析试卷，约需 2-5 秒...
             </p>
           )}
         </div>
