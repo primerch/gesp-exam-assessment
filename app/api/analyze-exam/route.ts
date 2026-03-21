@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { analyzeExamFast, FastAnalysisResult } from "@/app/lib/exam-analyzer-fast";
+import { analyzeExamAccurate, AccurateAnalysisResult } from "@/app/lib/exam-analyzer-accurate";
 
 // 配置 API 路由
 export const runtime = "nodejs";
@@ -18,7 +18,7 @@ interface AnalyzeRequestBody {
 // 响应类型
 interface AnalyzeResponse {
   success: boolean;
-  data?: FastAnalysisResult;
+  data?: AccurateAnalysisResult;
   error?: string;
 }
 
@@ -95,10 +95,10 @@ export async function POST(
       );
     }
 
-    // 5. 调用高性能本地分析引擎（无需 AI，<3秒）
+    // 5. 调用高精度本地分析引擎（无需 AI，<5秒）
     console.log(`[API] 开始分析试卷: Level ${examLevel}, 学生进度: Level ${studentLevel} - 第 ${studentLesson}课, 老师: ${teacherName || "未填写"}`);
     
-    const result = await analyzeExamFast({
+    const result = await analyzeExamAccurate({
       pdfBuffer,
       examLevel,
       studentLevel,
