@@ -41,9 +41,10 @@ export async function POST(
     let body: AnalyzeRequestBody;
     try {
       body = await request.json();
-    } catch {
+    } catch (parseError) {
+      console.error("请求体 JSON 解析失败:", parseError);
       return NextResponse.json(
-        { success: false, error: "请求格式错误" },
+        { success: false, error: "请求格式错误，请刷新页面后重试" },
         { status: 400 }
       );
     }
@@ -105,10 +106,15 @@ export async function POST(
       );
     }
 
-    // 6. 调用 DeepSeek API 分析
+    // 6. 调用 DeepSeek API 分析（带超时控制）
     console.log(`开始分析试卷: Level ${examLevel}, 学生进度: Level ${studentLevel} - 第 ${studentLesson}课, 老师: ${teacherName || "未填写"}, 学生: ${studentName}`);
     
-    const result = await analyzeExamV2({
+    // 创建超时 Promise
+    const timeoutPromise = new Promise<never>((_, reject) => {
+      setTimeout(() => reject(new Error("ANALYSIS_TIMEOUT")), 60000); // 60 秒超时
+    });
+    
+    const analysisPromise = analyzeExamV2({
       pdfBuffer,
       examLevel,
       studentLevel,
@@ -116,6 +122,9 @@ export async function POST(
       teacherName,
       studentName,
     });
+    
+    // 竞争：分析完成 vs 超时
+    const result = await Promise.race([analysisPromise, timeoutPromise]);
 
     // 7. 返回结果
     return NextResponse.json({
@@ -126,11 +135,34 @@ export async function POST(
   } catch (error) {
     console.error("API 错误:", error);
     
-    const errorMessage = error instanceof Error ? error.message : "分析过程中发生错误";
+    let errorMessage = "分析过程中发生错误";
+    let statusCode = 500;
+    
+    if (error instanceof Error) {
+      const msg = error.message;
+      
+      // 分类错误类型
+      if (msg === "ANALYSIS_TIMEOUT" || msg.includes("timeout") || msg.includes("超时")) {
+        errorMessage = "⏱️ 分析超时，可能原因：\n1. PDF 文件较大，请尝试压缩后上传\n2. 网络连接较慢，请稍后重试\n3. AI 服务繁忙，请等待几分钟后再次尝试";
+        statusCode = 504;
+      } else if (msg.includes("JSON") || msg.includes("json") || msg.includes("parse")) {
+        errorMessage = "🔧 AI 服务暂时不可用，返回数据格式错误\n请稍后重试，或联系管理员";
+        statusCode = 502;
+      } else if (msg.includes("API key") || msg.includes("认证") || msg.includes("unauthorized")) {
+        errorMessage = "🔑 API 认证失败，请联系管理员检查配置";
+        statusCode = 503;
+      } else if (msg.includes("PDF") || msg.includes("pdf")) {
+        errorMessage = "📄 " + msg;
+        statusCode = 400;
+      } else {
+        // 其他错误，使用原始消息
+        errorMessage = msg;
+      }
+    }
     
     return NextResponse.json(
       { success: false, error: errorMessage },
-      { status: 500 }
+      { status: statusCode }
     );
   }
 }

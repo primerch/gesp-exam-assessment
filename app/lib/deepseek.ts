@@ -19,8 +19,36 @@ const getDeepSeekClient = () => {
   return new OpenAI({
     apiKey: apiKey,
     baseURL: "https://api.deepseek.com/v1",
+    timeout: 30000, // 30 秒超时
+    maxRetries: 2,  // 失败时重试 2 次
   });
 };
+
+// 安全的 JSON 解析辅助函数
+function safeJSONParse(text: string, context: string): unknown {
+  if (!text || typeof text !== 'string') {
+    throw new Error(`${context}: 输入为空或不是字符串`);
+  }
+  
+  // 清理文本
+  const cleaned = text.trim().replace(/^\uFEFF/, '');
+  
+  if (!cleaned) {
+    throw new Error(`${context}: 清理后内容为空`);
+  }
+  
+  // 检查是否是有效的 JSON 开始字符
+  if (!cleaned.startsWith('{') && !cleaned.startsWith('[')) {
+    throw new Error(`${context}: 响应不是 JSON 格式，前 100 字符: ${cleaned.slice(0, 100)}`);
+  }
+  
+  try {
+    return JSON.parse(cleaned);
+  } catch (e) {
+    const errorMsg = e instanceof Error ? e.message : '未知解析错误';
+    throw new Error(`${context}: JSON 解析失败 - ${errorMsg}`);
+  }
+}
 
 // ==================== 类型定义 ====================
 
@@ -159,17 +187,26 @@ export async function extractQuestions(pdfText: string): Promise<Question[]> {
       return [];
     }
 
-    const result = JSON.parse(responseText);
+    // 使用安全解析
+    let result: unknown;
+    try {
+      result = safeJSONParse(responseText, "extractQuestions");
+    } catch (e) {
+      console.error("题目提取失败:", e instanceof Error ? e.message : e);
+      return [];
+    }
     
     // 兼容多种可能的返回格式
     let questions: Question[] = [];
     
-    if (Array.isArray(result.questions)) {
-      questions = result.questions;
-    } else if (Array.isArray(result)) {
-      questions = result;
-    } else if (result.data && Array.isArray(result.data)) {
-      questions = result.data;
+    if (result && typeof result === 'object') {
+      if (Array.isArray((result as { questions?: unknown }).questions)) {
+        questions = (result as { questions: Question[] }).questions;
+      } else if (Array.isArray(result)) {
+        questions = result as Question[];
+      } else if ((result as { data?: unknown }).data && Array.isArray((result as { data: unknown }).data)) {
+        questions = (result as { data: Question[] }).data;
+      }
     }
     
     // 验证每个题目的格式
@@ -312,13 +349,20 @@ export async function verifyUncertainQuestions(
       throw new Error("AI 返回空响应");
     }
 
-    const result = JSON.parse(responseText);
+    // 使用安全解析
+    let result: unknown;
+    try {
+      result = safeJSONParse(responseText, "verifyUncertainQuestions");
+    } catch (e) {
+      const errorMsg = e instanceof Error ? e.message : '解析失败';
+      throw new Error(`验证题目失败: ${errorMsg}`);
+    }
     
-    if (!Array.isArray(result.results)) {
-      throw new Error("AI 返回格式不正确");
+    if (!result || typeof result !== 'object' || !Array.isArray((result as { results?: unknown }).results)) {
+      throw new Error("AI 返回格式不正确，缺少 results 数组");
     }
 
-    return result.results.map((r: VerifiedResult) => ({
+    return ((result as { results: VerifiedResult[] }).results).map((r: VerifiedResult) => ({
       ...r,
       confidence: r.confidence || 0.85, // 默认置信度
     }));
@@ -417,11 +461,22 @@ export async function generateFeedback(
       throw new Error("AI 返回空响应");
     }
 
-    const result = JSON.parse(responseText);
+    // 使用安全解析
+    let result: unknown;
+    try {
+      result = safeJSONParse(responseText, "generateFeedback");
+    } catch (e) {
+      console.error("反馈生成解析失败:", e instanceof Error ? e.message : e);
+      throw new Error("AI 返回格式解析失败");
+    }
+    
+    if (!result || typeof result !== 'object') {
+      throw new Error("AI 返回格式不是对象");
+    }
     
     return {
-      parentFeedback: result.parentFeedback || generateFallbackFeedback(params),
-      summary: result.summary || "完成分析",
+      parentFeedback: (result as { parentFeedback?: string }).parentFeedback || generateFallbackFeedback(params),
+      summary: (result as { summary?: string }).summary || "完成分析",
     };
   } catch (error) {
     console.error("生成反馈失败:", error);
@@ -548,27 +603,32 @@ export async function analyzeExamV2(
     
     // 调用 AI 验证未缓存的题目
     if (uncachedQuestions.length > 0) {
-      const newResults = await verifyUncertainQuestions(
-        uncachedQuestions,
-        request.examLevel
-      );
-      
-      // 缓存新结果
-      for (const r of newResults) {
-        const originalQuestion = questions.find(q => q.number === r.number);
-        if (originalQuestion) {
-          const hash = generateQuestionHash(originalQuestion.content);
-          await cacheAnalysisWithFallback(hash, {
-            isBeyond: r.isBeyond,
-            confidence: r.confidence,
-            reason: r.reason,
-            matchedLevel: r.gespLevel || 0,
-            matchedKeywords: [],
-          });
+      try {
+        const newResults = await verifyUncertainQuestions(
+          uncachedQuestions,
+          request.examLevel
+        );
+        
+        // 缓存新结果
+        for (const r of newResults) {
+          const originalQuestion = questions.find(q => q.number === r.number);
+          if (originalQuestion) {
+            const hash = generateQuestionHash(originalQuestion.content);
+            await cacheAnalysisWithFallback(hash, {
+              isBeyond: r.isBeyond,
+              confidence: r.confidence,
+              reason: r.reason,
+              matchedLevel: r.gespLevel || 0,
+              matchedKeywords: [],
+            });
+          }
         }
+        
+        verifiedResults = [...verifiedResults, ...newResults];
+      } catch (verifyError) {
+        console.error("AI 验证题目失败，使用规则引擎结果:", verifyError);
+        // 验证失败时，继续使用规则引擎的结果
       }
-      
-      verifiedResults = [...verifiedResults, ...newResults];
     }
   }
 
@@ -599,15 +659,36 @@ export async function analyzeExamV2(
 
   // 7. 生成反馈
   const difficultyScore = ruleResult.summary.difficultyEstimate;
-  const { parentFeedback, summary } = await generateFeedback({
-    examLevel: request.examLevel,
-    studentLevel: request.studentLevel,
-    studentLesson: request.studentLesson,
-    difficultyScore,
-    beyondPoints: finalBeyondPoints,
-    teacherName: request.teacherName,
-    studentName: request.studentName,
-  });
+  let parentFeedback: string;
+  let summary: string;
+  
+  try {
+    const feedbackResult = await generateFeedback({
+      examLevel: request.examLevel,
+      studentLevel: request.studentLevel,
+      studentLesson: request.studentLesson,
+      difficultyScore,
+      beyondPoints: finalBeyondPoints,
+      teacherName: request.teacherName,
+      studentName: request.studentName,
+    });
+    parentFeedback = feedbackResult.parentFeedback;
+    summary = feedbackResult.summary;
+  } catch (feedbackError) {
+    console.error("生成反馈失败:", feedbackError);
+    // 使用降级反馈
+    const hasBeyond = finalBeyondPoints.length > 0;
+    parentFeedback = generateFallbackFeedback({
+      examLevel: request.examLevel,
+      studentLevel: request.studentLevel,
+      studentLesson: request.studentLesson,
+      difficultyScore,
+      beyondPoints: finalBeyondPoints,
+      teacherName: request.teacherName,
+      studentName: request.studentName,
+    });
+    summary = `试卷难度 ${difficultyScore}/10，${hasBeyond ? "存在超纲内容" : "内容适中"}`;
+  }
 
   // 8. 计算置信度
   const confidence = ruleResult.summary.certainRate * 0.99 + 

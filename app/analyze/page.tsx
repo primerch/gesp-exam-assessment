@@ -89,15 +89,40 @@ export default function AnalyzePage() {
         }),
       });
 
-      const data = await response.json();
+      // 检查响应内容类型
+      const contentType = response.headers.get("content-type");
+      
+      // 如果不是 JSON 响应，可能是服务器错误页面
+      if (!contentType || !contentType.includes("application/json")) {
+        const text = await response.text();
+        console.error("非 JSON 响应:", text.slice(0, 500));
+        throw new Error("服务器返回格式错误，请稍后重试");
+      }
+
+      let data;
+      try {
+        data = await response.json();
+      } catch (jsonError) {
+        console.error("JSON 解析错误:", jsonError);
+        throw new Error("服务器返回数据解析失败，请稍后重试");
+      }
 
       if (!response.ok || !data.success) {
-        throw new Error(data.error || "分析失败");
+        // 根据状态码提供更具体的错误信息
+        let errorMsg = data.error || "分析失败";
+        if (response.status === 504 || response.status === 408) {
+          errorMsg = "⏱️ 分析超时\n\n可能原因：\n• PDF 文件较大，请尝试压缩后上传\n• 网络连接较慢，请稍后重试\n• AI 服务繁忙，请等待几分钟后再次尝试";
+        } else if (response.status === 502 || response.status === 503) {
+          errorMsg = "🔧 AI 服务暂时不可用\n\n请稍后重试，或联系管理员";
+        }
+        throw new Error(errorMsg);
       }
 
       setAnalysisResult(data.data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "分析过程中发生错误");
+      console.error("分析错误:", err);
+      const errorMsg = err instanceof Error ? err.message : "分析过程中发生错误";
+      setError(errorMsg);
     } finally {
       setIsAnalyzing(false);
     }
@@ -248,9 +273,9 @@ export default function AnalyzePage() {
           {error && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3">
               <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-              <div>
+              <div className="flex-1 min-w-0">
                 <p className="font-medium text-red-900">分析失败</p>
-                <p className="text-red-700 text-sm mt-1">{error}</p>
+                <p className="text-red-700 text-sm mt-1 whitespace-pre-line">{error}</p>
               </div>
             </div>
           )}
