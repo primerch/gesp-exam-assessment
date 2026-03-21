@@ -82,7 +82,7 @@ export async function masterAgent(request: MasterAgentRequest): Promise<MasterAg
         batch.map(async (q) => {
           try {
             // Agent 3: 类型识别
-            const typeResult = agent3TypeClassifier(q.rawText, q.hasCode);
+            const typeResult = agent3TypeClassifier(q.rawText, q.hasCode, q.title);
             
             // Agent 4: 知识点提取 (DeepSeek)
             const knowledgePoints = await agent4KnowledgeExtractor(q.rawText, q.codeBlocks);
