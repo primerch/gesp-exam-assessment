@@ -17,7 +17,7 @@ import PdfUploader from "@/app/components/PdfUploader";
 import ExamAnalysisResult from "@/app/components/ExamAnalysisResult";
 import { courseInfo } from "@/app/data/curriculum-data";
 import { getLevelName } from "@/app/data/gesp-outline";
-import type { ExamAnalysisResult as AnalysisResult } from "@/app/lib/deepseek";
+import type { AnalysisResult } from "@/app/types/analysis";
 
 // GESP 级别选项
 const gespLevels = [
@@ -307,9 +307,14 @@ export default function AnalyzePage() {
           </button>
 
           {isAnalyzing && (
-            <p className="mt-3 text-center text-sm text-slate-500">
-              正在分析试卷，约需 2-5 秒...
-            </p>
+            <div className="mt-3 text-center">
+              <p className="text-sm text-slate-500">
+                正在使用 10-Agent 深度分析，约需 10-30 秒...
+              </p>
+              <p className="text-xs text-slate-400 mt-1">
+                DeepSeek AI 正在逐题提取知识点并判定超纲
+              </p>
+            </div>
           )}
         </div>
 

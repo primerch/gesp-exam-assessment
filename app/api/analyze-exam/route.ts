@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { analyzeExamAccurate, AccurateAnalysisResult } from "@/app/lib/exam-analyzer-accurate";
+import { masterAgent } from "@/app/lib/agents/master-agent";
+import type { MasterAgentResult } from "@/app/lib/agents/master-agent";
 
 // 配置 API 路由
 export const runtime = "nodejs";
-export const maxDuration = 30; // 30秒足够，纯本地分析很快
+export const maxDuration = 300; // 最多 300 秒（10个子代理需要时间）
 
 // 请求类型
 interface AnalyzeRequestBody {
@@ -18,15 +19,29 @@ interface AnalyzeRequestBody {
 // 响应类型
 interface AnalyzeResponse {
   success: boolean;
-  data?: AccurateAnalysisResult;
+  data?: MasterAgentResult["data"];
   error?: string;
+  metadata?: MasterAgentResult["metadata"];
 }
 
 export async function POST(
   request: NextRequest
 ): Promise<NextResponse<AnalyzeResponse>> {
+  const startTime = Date.now();
+  
   try {
-    // 1. 解析请求体
+    // 1. 验证 API Key 配置
+    if (!process.env.DEEPSEEK_API_KEY) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: "DEEPSEEK_API_KEY 未配置，请在 .env.local 文件中设置" 
+        },
+        { status: 500 }
+      );
+    }
+
+    // 2. 解析请求体
     let body: AnalyzeRequestBody;
     try {
       body = await request.json();
@@ -44,10 +59,10 @@ export async function POST(
       studentLevel, 
       studentLesson, 
       teacherName = "", 
-      studentName = "cc" 
+      studentName = "" 
     } = body;
 
-    // 2. 验证必填字段
+    // 3. 验证必填字段
     if (!pdfBase64) {
       return NextResponse.json(
         { success: false, error: "请上传 PDF 试卷" },
@@ -76,7 +91,7 @@ export async function POST(
       );
     }
 
-    // 3. 验证 base64 数据并转换为 Buffer
+    // 4. 验证 base64 数据并转换为 Buffer
     let pdfBuffer: Buffer;
     try {
       pdfBuffer = Buffer.from(pdfBase64, "base64");
@@ -87,18 +102,18 @@ export async function POST(
       );
     }
 
-    // 4. 检查文件大小（限制 10MB）
-    if (pdfBuffer.length > 10 * 1024 * 1024) {
+    // 5. 检查文件大小（限制 15MB）
+    if (pdfBuffer.length > 15 * 1024 * 1024) {
       return NextResponse.json(
-        { success: false, error: "PDF 文件大小超过 10MB 限制" },
+        { success: false, error: "PDF 文件大小超过 15MB 限制" },
         { status: 400 }
       );
     }
 
-    // 5. 调用高精度本地分析引擎（无需 AI，<5秒）
-    console.log(`[API] 开始分析试卷: Level ${examLevel}, 学生进度: Level ${studentLevel} - 第 ${studentLesson}课, 老师: ${teacherName || "未填写"}`);
+    // 6. 调用 Master Agent (10个子代理)
+    console.log(`[API] 开始分析试卷: Level ${examLevel}, 学生: Level ${studentLevel}-${studentLesson}, 老师: ${teacherName || "未填写"}`);
     
-    const result = await analyzeExamAccurate({
+    const result = await masterAgent({
       pdfBuffer,
       examLevel,
       studentLevel,
@@ -107,14 +122,32 @@ export async function POST(
       studentName,
     });
 
-    // 6. 返回结果
+    // 7. 返回结果
+    if (!result.success) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: result.error || "分析失败",
+          metadata: result.metadata,
+        },
+        { status: 500 }
+      );
+    }
+
+    const totalTime = Date.now() - startTime;
+    console.log(`[API] 分析完成，总耗时: ${totalTime}ms`);
+
     return NextResponse.json({
       success: true,
-      data: result,
+      data: result.data,
+      metadata: {
+        ...result.metadata,
+        apiTime: totalTime,
+      },
     });
 
   } catch (error) {
-    console.error("API 错误:", error);
+    console.error("[API] 错误:", error);
     
     let errorMessage = "分析过程中发生错误";
     let statusCode = 500;
@@ -122,15 +155,13 @@ export async function POST(
     if (error instanceof Error) {
       const msg = error.message;
       
-      // 分类错误类型
       if (msg.includes("timeout") || msg.includes("超时")) {
-        errorMessage = "⏱️ 分析超时，PDF 文件可能太大或格式有问题\n请尝试压缩后上传，或联系管理员";
+        errorMessage = "⏱️ 分析超时，可能是试卷页数较多或网络较慢\n请稍后重试，或联系管理员";
         statusCode = 504;
       } else if (msg.includes("PDF") || msg.includes("pdf")) {
         errorMessage = "📄 " + msg;
         statusCode = 400;
       } else {
-        // 其他错误，使用原始消息
         errorMessage = msg;
       }
     }
@@ -146,7 +177,13 @@ export async function POST(
 export async function GET(): Promise<NextResponse> {
   return NextResponse.json({
     status: "ok",
-    message: "高性能本地分析服务正常",
-    version: "2.0-fast",
+    version: "3.0-10-agents",
+    message: "世界领先的 10-Agent 试卷分析系统",
+    features: [
+      "DeepSeek 驱动的知识点提取",
+      "逐题精确超纲判定",
+      "Markdown 格式教学建议",
+      "质量验证与置信度评估",
+    ],
   });
 }
