@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { TrendingUp, Target, Award, Zap, CheckCircle2 } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import { Target, TrendingUp } from "lucide-react";
 import { gespLevels } from "../data/curriculum-data";
 import { AnimatedNumber } from "./animations";
 
@@ -11,190 +11,83 @@ interface ExamPredictionProps {
   currentLevel: number;
 }
 
-export default function ExamPrediction({
-  probabilities,
-  recommendedExam,
-}: ExamPredictionProps) {
-  const getProbabilityColor = (prob: number) => {
-    if (prob >= 90) return "text-emerald-600";
-    if (prob >= 70) return "text-blue-600";
-    if (prob >= 50) return "text-amber-600";
-    return "text-slate-500";
-  };
+function statusFor(probability: number) {
+  if (probability >= 90) return "掌握较充分";
+  if (probability >= 70) return "建议巩固";
+  if (probability >= 50) return "可冲刺";
+  return "准备中";
+}
 
-  const getProgressColor = (prob: number) => {
-    if (prob >= 90) return "bg-emerald-500";
-    if (prob >= 70) return "bg-blue-500";
-    if (prob >= 50) return "bg-amber-500";
-    return "bg-slate-400";
-  };
+function explanationFor(probability: number) {
+  if (probability >= 95) return "知识点覆盖较全面";
+  if (probability >= 85) return "掌握大部分知识点";
+  if (probability >= 70) return "掌握主要知识点，建议巩固";
+  if (probability >= 50) return "基础有缺口，需针对性复习";
+  return "知识点不足，建议继续学习";
+}
 
-  const getBgColor = (prob: number) => {
-    if (prob >= 90) return "bg-emerald-50/70 border-emerald-200";
-    if (prob >= 70) return "bg-blue-50/70 border-blue-200";
-    if (prob >= 50) return "bg-amber-50/70 border-amber-200";
-    return "bg-slate-50 border-slate-200";
-  };
-
-  const getRecommendationBadge = (prob: number) => {
-    if (prob >= 90) return { text: "稳过", class: "bg-emerald-600" };
-    if (prob >= 70) return { text: "推荐", class: "bg-blue-600" };
-    if (prob >= 50) return { text: "冲刺", class: "bg-amber-500" };
-    return { text: "准备中", class: "bg-slate-500" };
-  };
-
-  const getExplanation = (prob: number) => {
-    if (prob >= 95) return "知识点全面掌握，稳过考试";
-    if (prob >= 85) return "掌握大部分知识点，通过率高";
-    if (prob >= 70) return "掌握主要知识点，建议巩固";
-    if (prob >= 50) return "基础有缺口，需针对性复习";
-    return "知识点不足，建议继续学习";
-  };
+export default function ExamPrediction({ probabilities, recommendedExam }: ExamPredictionProps) {
+  const reduceMotion = useReducedMotion();
 
   return (
-    <div className="h-full flex flex-col gap-5">
-      {/* Header */}
-      <div className="flex items-center gap-2.5">
-        <div className="p-1.5 bg-blue-100 rounded-lg">
-          <TrendingUp className="w-4 h-4 text-blue-600" />
+    <div>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <TrendingUp size={19} strokeWidth={1.5} className="text-brand" aria-hidden />
+          <h2 className="text-lg font-medium text-ink">GESP 准备程度估算</h2>
         </div>
-        <div>
-          <h2 className="text-base font-semibold text-slate-900">GESP 考级通过率预测</h2>
-        </div>
+        <span className="text-xs text-muted">基于课程覆盖，不代表实际考试结果</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 flex-1">
-        {/* Recommended Exam Card */}
-        <div className="lg:col-span-1">
-          <div className="h-full bg-blue-600 rounded-xl p-5 text-white relative overflow-hidden">
-            {/* Subtle background pattern */}
-            <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-2xl" />
-            
-            <div className="relative">
-              <div className="flex items-center gap-1.5 mb-4">
-                <Target className="w-4 h-4 text-blue-200" />
-                <span className="text-sm font-medium text-blue-100">推荐报考</span>
+      <div className="mt-6 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+        <aside className="rounded-xl bg-wash p-5">
+          <div className="flex items-center gap-2 text-sm text-brand"><Target size={16} aria-hidden />建议报考</div>
+          {recommendedExam ? (
+            <motion.div
+              key={recommendedExam.level}
+              initial={{ opacity: 0, transform: "translateY(8px)" }}
+              animate={{ opacity: 1, transform: "translateY(0px)" }}
+              transition={{ duration: reduceMotion ? 0 : 0.22, ease: [0.23, 1, 0.32, 1] }}
+              className="mt-5"
+            >
+              <p className="text-3xl font-medium tracking-[-0.03em] text-ink">GESP {recommendedExam.level} 级</p>
+              <p className="mt-2 text-sm text-muted">{gespLevels[recommendedExam.level - 1]?.description}</p>
+              <div className="mt-6 flex items-baseline gap-2">
+                <AnimatedNumber value={recommendedExam.probability} suffix="%" className="font-mono text-4xl text-brand tabular-nums" />
+                <span className="text-xs text-muted">课程覆盖估算</span>
               </div>
-              
-              {recommendedExam ? (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <div className="flex items-baseline gap-1 mb-1">
-                    <span className="text-5xl font-bold tabular-nums">
-                      {recommendedExam.level}
-                    </span>
-                    <span className="text-lg text-blue-200">级</span>
-                  </div>
-                  <div className="text-sm text-blue-200 mb-4">
-                    {gespLevels[recommendedExam.level - 1]?.description}
-                  </div>
-                  
-                  <div className="flex items-baseline gap-2 mb-3">
-                    <AnimatedNumber 
-                      value={recommendedExam.probability}
-                      suffix="%"
-                      className="text-3xl font-bold tabular-nums"
-                    />
-                    <span className="text-sm text-blue-200">预估通过率</span>
-                  </div>
-                  
-                  <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium text-white ${getRecommendationBadge(recommendedExam.probability).class}`}>
-                    <CheckCircle2 className="w-3.5 h-3.5" />
-                    {getRecommendationBadge(recommendedExam.probability).text}
-                  </span>
-                  
-                  <div className="mt-4 pt-4 border-t border-white/20">
-                    <p className="text-sm text-blue-100">
-                      {getExplanation(recommendedExam.probability)}
-                    </p>
-                  </div>
-                </motion.div>
-              ) : (
+              <p className="mt-5 border-t border-line pt-4 text-sm leading-6 text-muted">{explanationFor(recommendedExam.probability)}</p>
+            </motion.div>
+          ) : (
+            <div className="mt-5">
+              <p className="text-xl font-medium text-ink">暂不建议报考</p>
+              <p className="mt-3 text-sm leading-6 text-muted">当前进度对应的各级估算均不足 70%，建议先继续学习并独立练习。</p>
+            </div>
+          )}
+        </aside>
+
+        <div className="flex flex-col gap-1">
+          {gespLevels.map((level) => {
+            const probability = probabilities[level.level] || 0;
+            const recommended = recommendedExam?.level === level.level;
+            return (
+              <div key={level.level} className={`grid grid-cols-[64px_1fr_48px] items-center gap-3 rounded-lg border px-3 py-2.5 ${recommended ? "border-current bg-wash" : "border-transparent"}`}>
                 <div>
-                  <div className="text-2xl font-bold mb-2">暂不建议报考</div>
-                  <p className="text-sm text-blue-200">
-                    当前课程进度对应的所有GESP级别通过率均不足70%，建议继续学习
-                  </p>
+                  <span className="block text-sm font-medium text-ink">GESP {level.level}</span>
+                  <span className="mt-0.5 block text-[11px] text-muted">{statusFor(probability)}</span>
                 </div>
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* All Levels */}
-        <div className="lg:col-span-2 bg-white border border-slate-200 rounded-xl p-5">
-          {/* Legend */}
-          <div className="flex flex-wrap items-center gap-4 mb-4 pb-3 border-b border-slate-100">
-            <div className="flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-slate-400" />
-              <span className="text-xs text-slate-500">通过率分析</span>
-            </div>
-            <div className="flex gap-3 text-xs">
-              <span className="flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span className="text-slate-500">稳过</span>
-              </span>
-              <span className="flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                <span className="text-slate-500">推荐</span>
-              </span>
-              <span className="flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                <span className="text-slate-500">冲刺</span>
-              </span>
-            </div>
-          </div>
-
-          {/* Level List */}
-          <div className="space-y-2">
-            {gespLevels.map((level) => {
-              const prob = probabilities[level.level] || 0;
-              const badge = getRecommendationBadge(prob);
-              
-              return (
-                <motion.div 
-                  key={level.level}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: level.level * 0.03 }}
-                  className={`group p-3 rounded-lg border transition-all hover:shadow-sm ${getBgColor(prob)}`}
-                >
-                  <div className="flex items-center gap-3">
-                    {/* Level Info */}
-                    <div className="w-16 flex-shrink-0">
-                      <div className="text-sm font-semibold text-slate-900">{level.name}</div>
-                    </div>
-                    
-                    {/* Progress Bar */}
-                    <div className="flex-1 min-w-0">
-                      <div className="h-2 bg-slate-200/70 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={{ width: `${Math.min(prob, 100)}%` }}
-                          transition={{ duration: 0.6, delay: level.level * 0.05 }}
-                          className={`h-full rounded-full ${getProgressColor(prob)}`}
-                        />
-                      </div>
-                    </div>
-                    
-                    {/* Probability */}
-                    <div className="w-20 flex-shrink-0 text-right">
-                      <div className={`text-lg font-bold tabular-nums ${getProbabilityColor(prob)}`}>
-                        {prob}%
-                      </div>
-                      <div className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-xs text-white ${badge.class}`}>
-                        <Zap className="w-3 h-3" />
-                        {badge.text}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                <div className="h-1.5 overflow-hidden rounded-full bg-quiet" role="progressbar" aria-label={`GESP ${level.level} 准备程度`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={probability}>
+                  <motion.div
+                    className={`h-full w-full origin-left ${probability >= 50 ? "bg-brand" : "bg-line"}`}
+                    initial={{ transform: "scaleX(0)" }}
+                    animate={{ transform: `scaleX(${Math.min(probability, 100) / 100})` }}
+                    transition={{ duration: reduceMotion ? 0 : 0.25, ease: [0.23, 1, 0.32, 1] }}
+                  />
+                </div>
+                <span className={`text-right font-mono text-sm tabular-nums ${probability >= 70 ? "text-brand" : "text-muted"}`}>{probability}%</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
