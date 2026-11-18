@@ -4,7 +4,38 @@ import { buildIndex, linesOf, locateBoundaries } from "../app/lib/review/documen
 import { gradeReading } from "../app/lib/review/judgment";
 import { printedPartial } from "../app/lib/review/scoring";
 import { textLines, resolveLine } from "../app/lib/review/page-layout";
+import { ServiceError, transcribePage } from "../app/lib/review/model";
 import type { TextItem } from "pdfjs-dist/types/src/display/api";
+
+test("PDF transcriptions retry a malformed model reply and preserve the original text", async () => {
+  const native = "第 1 题 根据下列文字和示意图编写程序。".repeat(5);
+  const prompts: string[] = [];
+  const result = await transcribePage(
+    "data:image/jpeg;base64,YQ==",
+    native,
+    new AbortController().signal,
+    async (_, prompt) => {
+      prompts.push(prompt);
+      return prompts.length === 1 ? { additions: "" } : { additions: [], gaps: [] };
+    },
+  );
+  assert.equal(prompts.length, 2);
+  assert(prompts[1].startsWith(prompts[0]));
+  assert.equal(result.text, native);
+  assert.deepEqual("gaps" in result ? result.gaps : undefined, []);
+});
+
+test("two malformed scanned page replies return a retryable error", async () => {
+  let calls = 0;
+  await assert.rejects(
+    () => transcribePage("data:image/jpeg;base64,YQ==", "", new AbortController().signal, async () => {
+      calls++;
+      return { text: [] };
+    }),
+    (error) => error instanceof ServiceError && error.status === 502 && error.retryable,
+  );
+  assert.equal(calls, 2);
+});
 
 test("official section scoring, question overrides, reset at a new unscored section", () => {
   const pages = [

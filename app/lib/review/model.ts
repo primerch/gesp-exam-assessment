@@ -125,30 +125,48 @@ export async function indexPaper(
   return buildIndex(pages, lines, boundaries);
 }
 
-export async function transcribePage(image: string, native: string, signal: AbortSignal) {
+async function readStructuredPage<T>(
+  schema: z.ZodType<T>,
+  prompt: string,
+  input: ChatCompletionContentPart[],
+  signal: AbortSignal,
+  message: string,
+  ask: ModelCall,
+) {
+  for (const correction of [
+    "",
+    "\n刚才的返回格式无效。严格按指定 JSON 字段和类型输出，无匹配项的数组填 []。",
+  ]) {
+    signal.throwIfAborted();
+    const result = schema.safeParse(await ask(models.reader, prompt + correction, input, signal, "none"));
+    if (result.success) return result.data;
+  }
+  throw new ServiceError(message, 502, true);
+}
+
+export async function transcribePage(image: string, native: string, signal: AbortSignal, ask = callModel) {
   const mixed = native.replace(/\s/g, "").length >= 70 && !native.includes("\uFFFD");
   const lines = native.split("\n");
   const prompt = mixed
     ? '你将收到同一页试卷的图像和已经按版面排序并编号的文本行。文字层是权威文本，必须原样保留。只补充在图片中实际可见、原文字层遗漏且解题必需的图形、积木、公式、代码或输出示意。不要复述原文，不把其他题的内容移过来。对每项找到最近的前置原文行 after 和其中逐字锚点 anchor，再给出添加的 text。确实影响作答且看不清的图示用同样方式定位到题目并填写 note。只在图和原文两者均未提供必要信息时报告缺失。不要评价答案表、页眉、装饰。页尾的代码、题干或样例常在下页接续，不能仅凭本页结束就报告缺失。遇到文字层只有“答案”但图片内含有选项字母或对错符号的答案表，将图片中可见的所有答案按题号从左到右逐格转录到 answerRows；每个 values 只填 A-H、√ 或 ×。整行都能看清时才转录，不解题，不再放入 additions 或 gaps。返回 {"additions":[{"after":0,"anchor":"原文","text":"实见的图示或公式"}],"gaps":[{"after":0,"anchor":"原文","note":"缺失信息"}],"answerRows":[{"line":0,"header":"含题号的完整原文行","values":["√","×"]}]}。无相应内容就返回空数组。'
     : '逐行忠实转录这张试卷，保留题号、选项、数字、代码缩进与图形积木的嵌套和连线。只转写已看清的内容，不解题。返回 {"text":"按版面顺序转录的题面","issue":""}。空白页两个字段留空；确有看不清且影响作答的内容，在 issue 写具体缺失。';
-  const raw = await callModel(
-    models.reader,
-    prompt,
-    [
-      { type: "text", text: JSON.stringify(mixed ? lines.map((s, i) => [i, s]) : native) },
-      { type: "image_url", image_url: { url: image } },
-    ],
-    signal,
-    "none",
-  );
+  const input: ChatCompletionContentPart[] = [
+    { type: "text", text: JSON.stringify(mixed ? lines.map((s, i) => [i, s]) : native) },
+    { type: "image_url", image_url: { url: image } },
+  ];
   if (!mixed) {
-    const read = z.object({ text: z.string().max(40000), issue: z.string().max(300) }).safeParse(raw);
-    if (!read.success) throw new ServiceError("未能还原扫描页内容。", 502);
-    return read.data;
+    return readStructuredPage(
+      z.object({ text: z.string().max(40000), issue: z.string().max(300) }),
+      prompt,
+      input,
+      signal,
+      "未能还原扫描页内容。",
+      ask,
+    );
   }
   const pin = z.object({ after: z.number().int().min(0), anchor: z.string().trim().min(1).max(300) });
-  const extra = z
-    .object({
+  const extra = await readStructuredPage(
+    z.object({
       additions: z.array(pin.extend({ text: z.string().min(1).max(8000) })).max(40),
       answerRows: z
         .array(
@@ -161,14 +179,18 @@ export async function transcribePage(image: string, native: string, signal: Abor
         .max(10)
         .optional(),
       gaps: z.array(pin.extend({ note: z.string().max(300) })).max(30),
-    })
-    .safeParse(raw);
-  if (!extra.success) throw new ServiceError("图文定位未能完成。", 502);
+    }),
+    prompt,
+    input,
+    signal,
+    "图文定位未能完成。",
+    ask,
+  );
   const anchors = new Map<number, string[]>();
   const gaps: { anchor: string; note: string }[] = [];
   let notice = "";
   const misplaced: number[] = [];
-  for (const item of [...extra.data.additions, ...extra.data.gaps]) {
+  for (const item of [...extra.additions, ...extra.gaps]) {
     const at = resolveLine(lines, item.after, item.anchor);
     if (at < 0) {
       const nearest = lines[item.after]?.trim();
@@ -184,7 +206,7 @@ export async function transcribePage(image: string, native: string, signal: Abor
   if (misplaced.length || notice || missingFormulas.length) {
     // Math glyphs can be images embedded between two pieces of a sentence. Ask for the whole
     // native line with the symbols inserted rather than guessing where an isolated glyph belongs.
-    const recovered = await callModel(
+    const recovered = await ask(
       models.reader,
       '这页试卷有夹在原文中间的图像字符或图示。按下面原文字行逐行对照图片。返回 {"lines":[{"line":0,"original":"整行原文","restored":"补齐后的同一行"}],"complete":true,"missing":[{"line":0,"note":"具体缺少什么"}]}。逐字复制 original，restored 只插入在图里看清的必要公式、数字、运算符或图示描述；保留所有原字符和换行边界。只列确实补全的行，不重复已有文字，不解题。检查整页，尤其是题干、输入输出和范围。如果影响作答的信息仍看不清，标为 missing 并置 complete=false；仅背景或页眉无需报告。页尾未写完的题干、代码、样例默认为跨页接续，不记入 missing。编号从0开始。',
       [
@@ -246,10 +268,10 @@ export async function transcribePage(image: string, native: string, signal: Abor
         gaps.push({ anchor: lines[at].trim(), note: "该行附近的图文无法完整定位。" });
     }
   }
-  for (const row of extra.data.answerRows ?? []) restoreAnswerRow(lines, row);
+  for (const row of extra.answerRows ?? []) restoreAnswerRow(lines, row);
   const tables = emptyAnswerTables(lines);
   if (tables.length) {
-    const result = await callModel(
+    const result = await ask(
       models.reader,
       '只转录试卷图片中的答案表。按所给表头的列号，从左到右逐格读取印刷符号，包括红色勾叉。返回 {"tables":[{"line":表头原索引,"values":["√","×"]}]}。values 只可为 A-H、√ 或 ×。不可解题猜答案；如果任一列不清楚，省略整行。',
       [
