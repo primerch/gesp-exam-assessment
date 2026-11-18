@@ -6,7 +6,7 @@ import SiteFooter from "./components/SiteFooter";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "GESP 考纲研判 · Reacher", template: "%s · GESP 考纲研判 · Reacher" },
+  title: { default: "GESP 考级宝 · Reacher", template: "%s · GESP 考级宝 · Reacher" },
   description: "对照中国计算机学会认证标准，查询各级考点，逐题分析试卷与超纲依据，并规划学习路径。Reacher 独立作品。",
   authors: [{ name: "Reacher" }],
 };

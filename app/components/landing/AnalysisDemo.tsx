@@ -8,21 +8,21 @@ import { syllabusSources } from "../../data/official-syllabus";
 const stages = [
   {
     name: "读取题目",
-    label: "识别题目要求",
-    title: "先理解程序实际要求",
-    description: "读取题目文字、代码与答案结构，保留题号和原始内容，再进入考点对照。",
+    label: "看清题目要求",
+    title: "先读懂这道题要做什么",
+    description: "保留题目文字、代码、题号和答案，再对照这一级的考点。",
   },
   {
     name: "对照考点",
-    label: "关联一级第 12 条",
-    title: "单层循环是本题的直接要求",
-    description: "解题需要跟踪 for 循环的初始值、边界和每次输出，对应 GESP 一级“单层循环”考点。",
+    label: "对应一级第 12 条",
+    title: "这道题直接考到单层循环",
+    description: "解题需要跟踪 for 循环从几开始、到几结束，以及每次输出什么，对应 GESP 一级“单层循环”。",
   },
   {
-    name: "形成判断",
-    label: "回到 CCF 原文",
-    title: "每个结论都保留出处",
-    description: "报告同时呈现考点、得分要点与原文页码；可选解法和干扰项不会混淆最低知识要求。",
+    name: "写出结论",
+    label: "附上 CCF 原文",
+    title: "结论旁边就有出处",
+    description: "报告列出考点、得分点和原文页码。可选解法与干扰项另外说明，不影响对基本要求的判断。",
   },
 ];
 
@@ -35,12 +35,12 @@ export default function AnalysisDemo() {
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4 sm:px-6">
         <div className="flex items-center gap-2 text-sm text-muted">
           <ScanSearch size={17} strokeWidth={1.5} aria-hidden />
-          逐题研判界面演示
+          逐题分析演示
         </div>
         <span className="text-xs text-muted">示例内容，非用户成绩</span>
       </div>
 
-      <div className="relative grid grid-cols-3 border-b border-line" role="group" aria-label="研判步骤">
+      <div className="relative grid grid-cols-3 border-b border-line" role="group" aria-label="分析步骤">
         <span className="absolute inset-x-0 bottom-0 h-0.5 bg-wash" aria-hidden />
         <motion.span
           className="absolute bottom-0 left-0 h-0.5 w-full origin-left bg-brand"

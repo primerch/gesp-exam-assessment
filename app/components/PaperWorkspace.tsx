@@ -123,8 +123,8 @@ export default function PaperWorkspace({ initial }: { initial: Selection }) {
             const step = index + 1;
             const reached = currentStep >= step;
             return (
-              <li key={name} className="flex items-center gap-2 px-1 sm:px-3">
-                <span className={`grid size-7 shrink-0 place-items-center rounded-full border font-mono text-[11px] ${reached ? "border-brand bg-brand text-white" : "border-line text-muted"}`}>
+              <li key={name} aria-current={currentStep === step ? "step" : undefined} className="flex items-center gap-2 px-1 sm:px-3">
+                <span className={`grid size-7 shrink-0 place-items-center rounded-full border font-mono text-[11px] ${reached ? "border-brand bg-brand text-on-brand" : "border-line text-muted"}`}>
                   {currentStep > step ? <Check size={13} aria-hidden /> : step}
                 </span>
                 <span className={`text-xs sm:text-sm ${reached ? "font-medium text-ink" : "text-muted"}`}>{name}</span>

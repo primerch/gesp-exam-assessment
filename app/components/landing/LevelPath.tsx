@@ -55,7 +55,7 @@ export default function LevelPath({ initialLevel = 1 }: { initialLevel?: number 
               className="absolute flex w-[24%] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2 rounded-lg text-center"
               style={{ left: `${positions[index][0]}%`, top: `${positions[index][1]}%` }}
             >
-              <span className={`relative grid size-10 place-items-center rounded-full border font-mono text-xs transition-[border-color,background-color,color] duration-200 ${active ? "border-[var(--workspace-current)] bg-[var(--workspace-current)] text-white" : "border-line bg-surface text-muted hover:border-brand hover:text-brand"}`}>
+              <span className={`relative grid size-10 place-items-center rounded-full border font-mono text-xs transition-[border-color,background-color,color] duration-200 ${active ? "border-[var(--workspace-current)] bg-[var(--workspace-current)] text-on-current" : "border-line bg-surface text-muted hover:border-brand hover:text-brand"}`}>
                 {String(level).padStart(2, "0")}
                 {active && <motion.span layoutId="level-current" className="absolute -inset-1.5 rounded-full border border-[var(--workspace-current)]" transition={{ duration: reduceMotion ? 0 : 0.25, ease: [0.23, 1, 0.32, 1] }} />}
               </span>

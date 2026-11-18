@@ -15,6 +15,9 @@ test("legacy home links redirect only for one valid level", () => {
   assert.equal(legacySyllabusDestination({ level: "0" }), null);
   assert.equal(legacySyllabusDestination({ level: "9" }), null);
   assert.equal(legacySyllabusDestination({ level: "advanced" }), null);
+  for (const level of ["1.0", "1e0", "+1", "0x1", " 1 ", "01"]) {
+    assert.equal(legacySyllabusDestination({ level }), null);
+  }
   assert.equal(legacySyllabusDestination({ level: ["3"] }), null);
   assert.equal(legacySyllabusDestination({ level: ["3", "4"] }), null);
   assert.equal(legacySyllabusDestination({}), null);

@@ -18,7 +18,7 @@ export interface ReportContext {
 }
 const colors: Record<Verdict, string> = {
   within: "text-brand",
-  beyond: "text-current",
+  beyond: "text-current-text",
   invalid: "text-destructive",
   insufficient: "text-muted",
 };
@@ -81,7 +81,7 @@ function Row({
                 答案表第 {row.answerKey.page} 页 ↗
               </a>
               {row.answer && row.answer !== row.answerKey.answer && (
-                <span className="ml-2 font-medium text-amber-800 dark:text-amber-300">
+                <span className="ml-2 font-medium text-current-text">
                   模型解得 {row.answer}，与卷面答案有出入。
                 </span>
               )}

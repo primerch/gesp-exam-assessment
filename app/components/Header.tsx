@@ -38,15 +38,15 @@ export default function Header() {
       <div className="mx-auto flex min-h-20 max-w-[1440px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-12">
         <Link
           href="/"
-          aria-label="GESP 考纲研判首页，Reacher 作品"
+          aria-label="GESP 考级宝首页，Reacher 作品"
           className="flex min-h-12 items-center gap-3 whitespace-nowrap text-ink"
         >
           <span className="grid size-9 place-items-center rounded-lg bg-wash text-brand">
             <Waypoints size={19} strokeWidth={1.5} aria-hidden />
           </span>
           <span>
-            <span className="block text-base font-medium tracking-[-0.02em]">GESP 考纲研判</span>
-            <span className="block text-[11px] text-muted">Reacher 独立作品</span>
+            <span className="block text-base font-medium tracking-[-0.02em]">GESP 考级宝</span>
+            <span className="block text-[11px] text-muted">C++ 考级分析工具</span>
           </span>
         </Link>
 

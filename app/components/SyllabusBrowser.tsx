@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, BookOpen, Check, FileSearch } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BookOpen, FileSearch } from "lucide-react";
+import SyllabusLevelNav from "./SyllabusLevelNav";
 import {
   catalogFor,
   clauseLabel,
@@ -12,7 +13,6 @@ import {
   syllabusSources,
   type Language,
 } from "../data/official-syllabus";
-import { syllabusHref } from "../lib/syllabus-links";
 import { heading, lead, primary, shell, sourceStyle } from "./review-styles";
 
 export const unitTitles = {
@@ -49,39 +49,14 @@ export default function SyllabusBrowser({ language, level }: { language: Languag
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div>
           <h1 className={heading}>等级考纲</h1>
-          <p className={lead}>沿着 GESP C++ 一至八级路径，查看每个考点的要求、适用边界和 CCF 原文条款。</p>
+          <p className={lead}>查看 GESP C++ 一至八级的考点、适用边界和 CCF 原文，选择等级即可直接阅读。</p>
         </div>
         <Link className={primary} href={`/analyze?language=${language}&level=${level}`}>
           <FileSearch size={17} aria-hidden /> 分析一份试卷 <ArrowRight size={16} aria-hidden />
         </Link>
       </div>
 
-      <nav aria-label="考试等级" className="mt-10 overflow-x-auto border-y border-line py-5">
-        <ol className="relative flex min-w-[760px] justify-between gap-2 px-1">
-          <span className="absolute left-6 right-6 top-5 h-px bg-line" aria-hidden />
-          {levels.map((n) => {
-            const active = level === n;
-            return (
-              <li key={n} className="relative flex-1 text-center">
-                <Link
-                  scroll={false}
-                  href={syllabusHref(n, language)}
-                  aria-current={active ? "page" : undefined}
-                  className="group flex min-h-16 flex-col items-center gap-2 rounded-lg"
-                >
-                  <span className={`relative z-10 grid size-10 place-items-center rounded-full border font-mono text-xs transition-[background-color,border-color,color] ${active ? "border-brand bg-brand text-white" : "border-line bg-paper text-muted group-hover:border-brand group-hover:text-brand"}`}>
-                    {String(n).padStart(2, "0")}
-                  </span>
-                  <span className={`flex items-center gap-1 text-xs ${active ? "font-medium text-brand" : "text-muted"}`}>
-                    {levelNames[n]}
-                    {active && <Check size={12} aria-label="当前等级" />}
-                  </span>
-                </Link>
-              </li>
-            );
-          })}
-        </ol>
-      </nav>
+      <SyllabusLevelNav language={language} level={level} />
 
       <article className="mt-8 overflow-hidden rounded-2xl border border-line bg-surface">
         <header className="grid gap-6 border-b border-line px-5 py-7 sm:px-8 md:grid-cols-[1fr_auto] md:items-end">

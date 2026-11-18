@@ -9,10 +9,10 @@ export default function SiteFooter() {
         <div className="max-w-md">
           <div className="flex items-center gap-2 font-medium text-ink">
             <Waypoints size={18} strokeWidth={1.5} aria-hidden />
-            GESP 考纲研判
+            GESP 考级宝
           </div>
           <p className="mt-3 leading-6 text-muted">
-            将官方考纲、试卷研判与课程进度放在同一条可追溯的备考路径中。
+            查 GESP 考纲、分析 PDF 试卷，也可以按课程进度安排下一步学习。
           </p>
           <p className="mt-3 text-xs text-muted">Reacher 独立作品，不代表 CCF 官方立场</p>
         </div>

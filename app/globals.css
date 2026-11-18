@@ -29,6 +29,9 @@
   --workspace-wash: #e7eee9;
   --workspace-quiet: #edf0eb;
   --workspace-current: #a9762a;
+  --workspace-current-text: #7b531d;
+  --workspace-on-brand: #ffffff;
+  --workspace-on-current: #101713;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -60,6 +63,9 @@
   --color-wash: var(--workspace-wash);
   --color-quiet: var(--workspace-quiet);
   --color-current: var(--workspace-current);
+  --color-current-text: var(--workspace-current-text);
+  --color-on-brand: var(--workspace-on-brand);
+  --color-on-current: var(--workspace-on-current);
   --font-sans: var(--font-geist-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
@@ -189,6 +195,11 @@ input[type="range"]::-moz-range-thumb {
     --workspace-wash: #22372c;
     --workspace-quiet: #1e2b24;
     --workspace-current: #d4ad66;
+    --workspace-current-text: #d4ad66;
+    --workspace-on-brand: #14231c;
+    --workspace-on-current: #14231c;
+    --destructive: #f0a39a;
+    --destructive-foreground: #2a1210;
   }
 
   ::selection {
@@ -208,6 +219,13 @@ input[type="range"]::-moz-range-thumb {
     --workspace-muted: #405048;
     --workspace-line: #bac5bd;
     --workspace-brand: #244f41;
+    --workspace-action: #244f41;
+    --workspace-current: #a9762a;
+    --workspace-current-text: #7b531d;
+    --workspace-on-brand: #ffffff;
+    --workspace-on-current: #101713;
+    --destructive: #a34235;
+    --destructive-foreground: #ffffff;
     --workspace-wash: #f0f3f0;
     --workspace-quiet: #ffffff;
   }

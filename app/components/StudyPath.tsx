@@ -19,20 +19,22 @@ export default function StudyPath() {
       </div>
       <p className="mt-2 text-sm leading-6 text-muted">课程循序渐进，从编程基础进入算法与综合应用。</p>
 
-      <ol className="relative mt-8 grid gap-0 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="relative mt-8">
         <span className="absolute left-0 right-0 top-4 hidden h-px bg-line lg:block" aria-hidden />
-        {courseInfo.levels.map((level, index) => (
-          <li key={level.id} className={`relative py-6 sm:px-5 ${index > 0 ? "border-t border-line sm:border-t-0 sm:border-l" : ""}`}>
-            <span className="relative z-10 grid size-8 place-items-center rounded-full border border-brand bg-surface font-mono text-[11px] text-brand">0{level.id}</span>
-            <h3 className="mt-5 text-lg font-medium text-ink">{level.name} · {level.description}</h3>
-            <p className="mt-2 text-sm text-brand">目标 GESP {level.targetGesp}</p>
-            <p className="mt-2 text-xs text-muted tabular-nums">{level.totalLessons} 课次</p>
-            <ul className="mt-5 flex flex-col gap-2">
-              {topics[index].map((topic) => <li key={topic} className="flex items-center gap-2 text-xs text-muted"><Check size={13} className="shrink-0 text-brand" aria-hidden />{topic}</li>)}
-            </ul>
-          </li>
-        ))}
-      </ol>
+        <ol className="grid gap-0 sm:grid-cols-2 lg:grid-cols-4">
+          {courseInfo.levels.map((level, index) => (
+            <li key={level.id} className={`relative py-6 sm:px-5 ${index > 0 ? "border-t border-line sm:border-t-0 sm:border-l" : ""}`}>
+              <span className="relative z-10 grid size-8 place-items-center rounded-full border border-brand bg-surface font-mono text-[11px] text-brand">0{level.id}</span>
+              <h3 className="mt-5 text-lg font-medium text-ink">{level.name} · {level.description}</h3>
+              <p className="mt-2 text-sm text-brand">目标 GESP {level.targetGesp}</p>
+              <p className="mt-2 text-xs text-muted tabular-nums">{level.totalLessons} 课次</p>
+              <ul className="mt-5 flex flex-col gap-2">
+                {topics[index].map((topic) => <li key={topic} className="flex items-center gap-2 text-xs text-muted"><Check size={13} className="shrink-0 text-brand" aria-hidden />{topic}</li>)}
+              </ul>
+            </li>
+          ))}
+        </ol>
+      </div>
       <p className="mt-4 border-t border-line pt-5 text-xs leading-6 text-muted">Level 1–2 侧重编程基础和算法思维，对应 GESP 1–4 级；Level 3–4 深入高级算法与数据结构，对应 GESP 5–8 级。</p>
     </div>
   );

@@ -18,7 +18,7 @@ export default function PlanPage() {
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div>
           <h1 className={heading}>学习规划</h1>
-          <p className={lead}>把现有 C++ 课程进度放到 GESP 路径上，查看知识覆盖与建议报考等级。估算结果仍需结合独立作答表现。</p>
+          <p className={lead}>选择已完成的课程和课次，查看哪些内容学过、哪些还没学，以及参考报考等级。估算结果仍需结合独立作答表现。</p>
         </div>
         <p className="text-sm text-muted">4 个课程阶段 · 95 个课次 · GESP 一至八级</p>
       </div>

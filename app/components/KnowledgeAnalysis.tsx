@@ -68,7 +68,7 @@ export default function KnowledgeAnalysis({ currentLevel, currentLesson, probabi
 
   function selectTab(id: TabId, element?: HTMLButtonElement) {
     setActiveTab(id);
-    element?.scrollIntoView({ block: "nearest", inline: "nearest", container: "nearest" });
+    element?.scrollIntoView({ block: "nearest", inline: "nearest", container: "nearest" } as ScrollIntoViewOptions);
   }
 
   function onTabKeyDown(event: React.KeyboardEvent<HTMLButtonElement>, index: number) {
@@ -83,7 +83,7 @@ export default function KnowledgeAnalysis({ currentLevel, currentLesson, probabi
     setActiveTab(id);
     const element = document.getElementById(`knowledge-tab-${id}`);
     element?.focus();
-    element?.scrollIntoView({ block: "nearest", inline: "nearest", container: "nearest" });
+    element?.scrollIntoView({ block: "nearest", inline: "nearest", container: "nearest" } as ScrollIntoViewOptions);
   }
 
   function getLevelMastery(level: number) {

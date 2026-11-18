@@ -7,7 +7,7 @@ export function syllabusHref(level: number, language: Language = "cpp") {
 export function legacySyllabusDestination(params: {
   level?: string | string[];
 }) {
-  if (typeof params.level !== "string") return null;
+  if (typeof params.level !== "string" || !/^[1-8]$/.test(params.level)) return null;
   const level = Number(params.level);
   return levels.includes(level) ? syllabusHref(level) : null;
 }

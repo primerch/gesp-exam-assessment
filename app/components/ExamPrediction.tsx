@@ -65,6 +65,9 @@ export default function ExamPrediction({ probabilities, recommendedExam }: ExamP
             </div>
           )}
         </aside>
+        <p className="sr-only" aria-live="polite" aria-atomic="true">
+          {recommendedExam ? `建议报考 GESP ${recommendedExam.level} 级，准备程度估算 ${recommendedExam.probability}%` : "当前进度暂不建议报考"}
+        </p>
 
         <div className="flex flex-col gap-1">
           {gespLevels.map((level) => {
