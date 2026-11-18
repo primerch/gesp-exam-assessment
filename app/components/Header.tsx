@@ -97,10 +97,10 @@ export default function Header() {
             id="mobile-navigation"
             aria-label="移动端导航"
             className="absolute inset-x-4 top-[76px] rounded-xl border border-line bg-surface p-2 shadow-[0_16px_40px_rgb(20_35_28/14%)] md:hidden"
-            initial={reduceMotion ? { opacity: 0 } : { opacity: 0, transform: "translateY(-8px)" }}
+            initial={{ opacity: 0, transform: "translateY(-8px)" }}
             animate={{ opacity: 1, transform: "translateY(0px)" }}
-            exit={reduceMotion ? { opacity: 0 } : { opacity: 0, transform: "translateY(-8px)" }}
-            transition={{ duration: 0.18, ease: [0.23, 1, 0.32, 1] }}
+            exit={{ opacity: 0, transform: "translateY(-8px)" }}
+            transition={{ duration: reduceMotion ? 0 : 0.18, ease: [0.23, 1, 0.32, 1] }}
           >
             {navigation.map(([href, name], index) => (
               <Link
