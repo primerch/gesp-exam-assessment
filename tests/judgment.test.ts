@@ -3,7 +3,7 @@ import test from "node:test";
 import { gradeReading, reconcile } from "../app/lib/review/judgment";
 import { assessBatch, indexPaper } from "../app/lib/review/model";
 import { linesOf, locateBoundaries, buildIndex } from "../app/lib/review/document";
-import { assessmentBatches } from "../app/lib/review/pdf-client";
+import { assessmentBatches, recoverBatch, ReviewRequestError } from "../app/lib/review/pdf-client";
 
 const paper = {
   id: 1,
@@ -156,7 +156,6 @@ test("a mismatch with the printed key is automatically checked without disclosin
 });
 
 test("temporary batch failures preserve independent answers; configuration and abort errors propagate", async () => {
-  const { recoverBatch, ReviewRequestError } = await import("../app/lib/review/pdf-client");
   const questions = [1, 2, 3, 4].map((id) => ({ ...paper, id }));
   const failed = new Set<number>();
   const result = await recoverBatch(
@@ -188,6 +187,25 @@ test("temporary batch failures preserve independent answers; configuration and a
     recoverBatch(questions, async () => [], AbortSignal.abort(), new Set()),
     { name: "AbortError" },
   );
+});
+
+test("a disconnected single-question request is retried before recording a failure", async () => {
+  const failed = new Set<number>();
+  const row = gradeReading(paper, target, answer(f("cpp-1.3", "cout << n")));
+  let calls = 0;
+  const result = await recoverBatch(
+    [paper],
+    async () => {
+      calls++;
+      if (calls === 1) throw new TypeError("connection closed");
+      return [row];
+    },
+    new AbortController().signal,
+    failed,
+  );
+  assert.deepEqual(result, [row]);
+  assert.equal(calls, 2);
+  assert.equal(failed.size, 0);
 });
 
 test("a local image gap needs a literal whole-question source to establish that it does not affect the solution", () => {

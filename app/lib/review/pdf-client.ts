@@ -43,22 +43,25 @@ export async function recoverBatch(
   signal: AbortSignal,
   failed: Set<number>,
 ): Promise<QuestionJudgment[]> {
-  signal.throwIfAborted();
-  try {
-    return await assess(batch);
-  } catch (error) {
+  const attempts = batch.length === 1 ? 2 : 1;
+  for (let attempt = 0; attempt < attempts; attempt++) {
     signal.throwIfAborted();
-    if (!(error instanceof ReviewRequestError && error.retryable) && !(error instanceof TypeError))
-      throw error;
-    if (batch.length === 1) {
-      failed.add(batch[0].id);
-      return [unresolved(batch[0], "模型服务未能完成本题分析。")];
+    try {
+      return await assess(batch);
+    } catch (error) {
+      signal.throwIfAborted();
+      if (!(error instanceof ReviewRequestError && error.retryable) && !(error instanceof TypeError))
+        throw error;
     }
-    const mid = Math.ceil(batch.length / 2);
-    const first = await recoverBatch(batch.slice(0, mid), assess, signal, failed);
-    const second = await recoverBatch(batch.slice(mid), assess, signal, failed);
-    return [...first, ...second];
   }
+  if (batch.length === 1) {
+    failed.add(batch[0].id);
+    return [unresolved(batch[0], "模型服务未能完成本题分析。")];
+  }
+  const mid = Math.ceil(batch.length / 2);
+  const first = await recoverBatch(batch.slice(0, mid), assess, signal, failed);
+  const second = await recoverBatch(batch.slice(mid), assess, signal, failed);
+  return [...first, ...second];
 }
 async function readPaper(
   file: File,
