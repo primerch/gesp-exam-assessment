@@ -18,6 +18,7 @@ Reacher's independent C++ GESP syllabus and paper assessment tool covers levels 
 | React | 19.3.x | UI library |
 | TypeScript | 5.x | Type safety |
 | Tailwind CSS | 4.x | Utility-first styling |
+| ReUI / shadcn | registry sources | Landing Tabs, Stepper, Timeline, Card, Accordion and status primitives |
 | Lucide React | 0.577.0 | Icon library |
 | Geist | - | Vercel's font family |
 
@@ -33,7 +34,8 @@ app/
 │   ├── KnowledgeAnalysis.tsx # Knowledge point mastery analysis
 │   ├── LevelSelector.tsx    # Course level/lesson selection UI
 │   ├── StudyPath.tsx        # 4-level study path visualization
-│   └── landing/             # Landing page, level path and analysis demo
+│   ├── landing/             # ReUI landing sections, level path and analysis demo
+│   └── ui/                  # Reviewed shadcn primitives used by the landing page
 ├── data/
 │   ├── cpp-lessons.ts       # Original courseware lessons, sources and CCF mappings
 │   └── curriculum-data.ts   # Legacy course/knowledge data
@@ -45,6 +47,9 @@ app/
 ├── globals.css              # Tailwind v4 imports + theme variables
 ├── layout.tsx               # Root layout with Geist font
 └── page.tsx                 # Landing page and legacy syllabus redirect
+
+components/
+└── reui/                    # Reviewed ReUI Stepper, Timeline, Alert and Badge sources
 
 public/                      # Static assets
 └── *.svg                    # Next.js/Vercel default icons

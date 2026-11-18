@@ -12,12 +12,14 @@ import {
   TimelineTitle,
 } from "@/components/reui/timeline";
 import { courseInfo } from "../../data/curriculum-data";
+import { getCourseSummary } from "../../lib/course-summary";
 
 export default function CourseTimeline() {
   const [activeStep, setActiveStep] = useState(1);
+  const summary = getCourseSummary();
 
   return (
-    <div data-course-timeline>
+    <div data-course-timeline className="min-w-0 w-full">
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-muted">课程阶段演示 · 点击查看对应 GESP 目标</p>
         <span className="font-mono text-xs text-muted tabular-nums">LEVEL {activeStep}</span>
@@ -45,7 +47,7 @@ export default function CourseTimeline() {
                   className={`mt-3 flex min-h-20 w-full flex-col items-start rounded-lg p-3 text-left transition-[background-color,border-color] ${activeStep === index + 1 ? "bg-wash text-ink" : "text-muted hover:bg-quiet"}`}
                 >
                   <span className="text-sm text-brand">GESP {course.targetGesp}</span>
-                  <span className="mt-2 text-xs text-muted tabular-nums">{course.totalLessons} 课次</span>
+                  <span className="mt-2 text-xs text-muted tabular-nums">{summary.perLevel[course.id]} 课次</span>
                 </button>
               </TimelineContent>
             </TimelineItem>

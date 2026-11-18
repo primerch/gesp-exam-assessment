@@ -11,6 +11,7 @@ colors:
   wash: "#e7eee9"
   quiet: "#edf0eb"
   selection: "#c9ddd2"
+  selection-ink: "#172a24"
   brand: "#2e6e5e"
   action: "#285f51"
   on-brand: "#ffffff"
@@ -21,15 +22,21 @@ colors:
 typography:
   display:
     fontFamily: "var(--font-geist-sans), 'PingFang SC', 'Microsoft YaHei', sans-serif"
-    fontSize: "68px"
+    fontSize: "76px"
     fontWeight: 500
-    lineHeight: 1.12
+    lineHeight: 1.08
     letterSpacing: "-0.045em"
   headline:
     fontFamily: "var(--font-geist-sans), 'PingFang SC', 'Microsoft YaHei', sans-serif"
     fontSize: "36px"
     fontWeight: 500
     lineHeight: 1.25
+    letterSpacing: "-0.03em"
+  workspace-heading:
+    fontFamily: "var(--font-geist-sans), 'PingFang SC', 'Microsoft YaHei', sans-serif"
+    fontSize: "44px"
+    fontWeight: 500
+    lineHeight: 1.2
     letterSpacing: "-0.03em"
   title:
     fontFamily: "var(--font-geist-sans), 'PingFang SC', 'Microsoft YaHei', sans-serif"
@@ -56,7 +63,15 @@ typography:
     lineHeight: 1.5
     letterSpacing: "0em"
     fontFeature: "'tnum' 1"
+  micro:
+    fontFamily: "var(--font-geist-sans), 'PingFang SC', 'Microsoft YaHei', sans-serif"
+    fontSize: "11px"
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: "0em"
 rounded:
+  radius-2: "2px"
+  radius-4: "4px"
   sm: "8px"
   md: "12px"
   lg: "16px"
@@ -164,12 +179,14 @@ The palette is botanical and archival: green supplies direction, amber supplies 
 **Character:** Straightforward Chinese reading with editorial headline spacing. The contrast comes from scale and alignment, not heavy weights or decorative type.
 
 ### Hierarchy
-- **Display** (500, 42px mobile / 60px small / 68px large, 1.12): the left-aligned landing promise, tightly tracked and balanced.
-- **Headline** (500, 30px mobile / 36px small, 1.25): section headings and workspace titles.
+- **Display** (500, 44px mobile / 64px small / 76px large, 1.08): the left-aligned landing promise, tightly tracked and balanced.
+- **Headline** (500, 30px mobile / 36px small, 1.25): section headings.
+- **Workspace Heading** (500, 32px mobile / 44px large, 1.2): task workspace titles and report headings.
 - **Title** (500, 18–24px): tool names, panel headings and selected-level evidence.
 - **Body** (400, 14–18px, 1.75–2): explanations, sources and controls; long prose remains width-constrained.
 - **Label** (500, 14px): buttons, navigation and form labels.
 - **Data** (400, 11–48px by context): mono level numbers, counts and percentages with tabular figures.
+- **Micro** (400, 11px): brand bylines, compact status text and secondary metadata.
 
 **The Medium-Weight Rule.** Headings and controls use weight 500; body copy stays at 400. Use size, spacing and ink contrast—not heavier display type—to establish hierarchy.
 
@@ -236,6 +253,13 @@ The signature silhouette is a routed line with rounded turns connecting eight nu
 ### Study Path Stages
 - **Structure:** four stages aligned to a fine horizontal route on large screens, with circular green-outlined numbers and concise topic checklists.
 - **Responsive:** stages become two columns on small screens and stack with dividers on narrow screens; the decorative route disappears below 1024px.
+
+### ReUI Landing System
+- **Sources:** reviewed registry code lives in `components/reui/` and `app/components/ui/`; product composition stays in `app/components/landing/`.
+- **Workspace:** the hero uses a deep-ink interactive preview with light foreground, muted sage supporting copy, fine green borders and amber current-level markers. `selection-ink` (`#172a24`) is reserved for text on Selection Mint.
+- **Navigation and disclosure:** Tabs switch real syllabus, analysis and planning previews; Accordion presents frequently asked questions; Stepper and Timeline are visitor-controlled demonstrations, never saved learner progress.
+- **Content containers:** Card, Alert, Badge, Progress and ButtonGroup organize real tool capabilities, source notes, course-coverage estimates and route actions. Small ReUI details may use the documented 2px or 4px radius; primary controls keep 8px and content cards keep 16px.
+- **Responsive:** Stepper stays vertical, dense timelines scroll inside their own region, and every grid child has a bounded minimum width. Mobile must not introduce document-level horizontal overflow.
 
 ## Do's and Don'ts
 

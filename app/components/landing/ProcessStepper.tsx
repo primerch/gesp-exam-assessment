@@ -54,7 +54,7 @@ export default function ProcessStepper() {
         <p className="text-sm text-[#b8c9bf]">演示流程 · 点击步骤查看说明</p>
         <span className="font-mono text-xs text-[#d4ad66]">{String(currentStep).padStart(2, "0")} / 04</span>
       </div>
-      <Stepper value={currentStep} onValueChange={setCurrentStep} className="space-y-8">
+      <Stepper value={currentStep} onValueChange={setCurrentStep} orientation="vertical" className="space-y-8" aria-label="备考步骤">
         <StepperNav className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-3">
           {steps.map((step, index) => (
             <StepperItem key={step.title} step={index + 1} className="relative sm:flex-1">
@@ -72,23 +72,21 @@ export default function ProcessStepper() {
 
         <StepperPanel className="rounded-xl border border-[#466054] bg-[#233b33] p-5 sm:p-6">
           <AnimatePresence mode="wait" initial={false}>
-            {steps.map((step, index) => (
-              <StepperContent key={step.title} value={index + 1}>
-                <motion.div
-                  initial={{ opacity: 0, transform: "translateY(8px)" }}
-                  animate={{ opacity: 1, transform: "translateY(0px)" }}
-                  exit={{ opacity: 0, transform: "translateY(-8px)" }}
-                  transition={{ duration: reduceMotion ? 0 : 0.22, ease: [0.23, 1, 0.32, 1] }}
-                >
-                  <p className="text-sm text-[#b8c9bf]">第 {index + 1} 步</p>
-                  <h3 className="mt-2 text-xl font-medium text-[#edf3ef]">{step.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[#b8c9bf]">{step.description}</p>
-                  <Link href={step.href} className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-lg border border-[#6f8c7d] px-4 text-sm font-medium text-[#edf3ef] transition-colors hover:bg-[#2d473d]">
-                    {step.action} <ArrowRight size={15} aria-hidden />
-                  </Link>
-                </motion.div>
-              </StepperContent>
-            ))}
+            <StepperContent key={currentStep} value={currentStep}>
+              <motion.div
+                initial={{ opacity: 0, transform: "translateY(8px)" }}
+                animate={{ opacity: 1, transform: "translateY(0px)" }}
+                exit={{ opacity: 0, transform: "translateY(-8px)" }}
+                transition={{ duration: reduceMotion ? 0 : 0.22, ease: [0.23, 1, 0.32, 1] }}
+              >
+                <p className="text-sm text-[#b8c9bf]">第 {currentStep} 步</p>
+                <h3 className="mt-2 text-xl font-medium text-[#edf3ef]">{steps[currentStep - 1].title}</h3>
+                <p className="mt-3 text-sm leading-7 text-[#b8c9bf]">{steps[currentStep - 1].description}</p>
+                <Link href={steps[currentStep - 1].href} className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-lg border border-[#6f8c7d] px-4 text-sm font-medium text-[#edf3ef] transition-colors hover:bg-[#2d473d]">
+                  {steps[currentStep - 1].action} <ArrowRight size={15} aria-hidden />
+                </Link>
+              </motion.div>
+            </StepperContent>
           </AnimatePresence>
         </StepperPanel>
       </Stepper>

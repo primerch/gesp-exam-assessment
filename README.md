@@ -10,6 +10,10 @@ Use Node.js 22.13 or later and run `npm ci`. Start the Next.js app with `npm run
 
 Run `bun test tests` for assessment regressions and `npm run lint` for source checks.
 
+## Landing UI
+
+The home page composes reviewed ReUI/shadcn sources from `components/reui/` and `app/components/ui/` with the focused sections in `app/components/landing/`. Tabs, Stepper, Timeline, Cards, Accordion, Alert, Badge, Progress and ButtonGroup present real product previews and course data; no learner scores or testimonials are invented. Course totals come from `app/lib/course-summary.ts`.
+
 ## Cloudflare Workers
 
 The production Worker is named `gesp` and uses the vinext adapter. Set `DEEPSEEK_API_KEY` as a Worker secret. The build copies the PDF reader and its supporting files from the locked package to a versioned static path.

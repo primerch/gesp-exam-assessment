@@ -27,7 +27,7 @@ export default function SyllabusTabs() {
               <CardHeader>
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <CardTitle className="text-2xl font-medium tracking-[-0.02em]">{unitTitles.cpp[level]}</CardTitle>
+                    <CardTitle as="h3" className="text-2xl font-medium tracking-[-0.02em]">{unitTitles.cpp[level]}</CardTitle>
                     <CardDescription className="mt-2">GESP {levelNames[level]} · {entries.length} 项考点</CardDescription>
                   </div>
                   <Badge variant="primary-light" size="lg">当前查看</Badge>

@@ -35,7 +35,7 @@ const tools = [
     icon: Gauge,
     title: "学习规划",
     description: "选择课程和已完成的课次，看看哪些内容学过、哪些还没学，以及目前更适合报哪一级。",
-    details: ["96 个课次", "已学与未学", "参考报考等级"],
+    details: ["courseCount", "已学与未学", "参考报考等级"],
     action: "查看学习进度",
   },
 ] as const;
@@ -47,16 +47,16 @@ export default function ToolPanels() {
     <div className="grid gap-5 lg:grid-cols-3">
       {tools.map((tool) => (
         <Card key={tool.href} className="border-line bg-surface shadow-none">
-          <CardHeader>
+          <CardHeader className="flex flex-col">
             <div className="flex size-11 items-center justify-center rounded-lg bg-wash text-brand">
               <tool.icon size={21} strokeWidth={1.5} aria-hidden />
             </div>
-            <CardTitle className="text-2xl font-medium tracking-[-0.02em]">{tool.title}</CardTitle>
+            <CardTitle as="h3" className="text-2xl font-medium tracking-[-0.02em]">{tool.title}</CardTitle>
             <CardDescription className="leading-7">{tool.description}</CardDescription>
             <CardAction className="flex flex-wrap gap-2">
               {tool.details.map((detail) => (
                 <Badge key={detail} variant="secondary" size="lg">
-                  <Check size={12} aria-hidden />{detail}
+                  <Check size={12} aria-hidden />{detail === "courseCount" ? `${summary.total} 个课次` : detail}
                 </Badge>
               ))}
             </CardAction>

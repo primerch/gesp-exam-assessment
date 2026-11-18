@@ -7,6 +7,7 @@ import {
   isValidElement,
   useCallback,
   useContext,
+  useId,
   useMemo,
   useState,
 } from "react"
@@ -30,6 +31,7 @@ interface StepperContextValue {
   setActiveStep: (step: number) => void
   stepsCount: number
   orientation: StepperOrientation
+  idPrefix: string
   registerTrigger: (node: HTMLButtonElement | null) => void
   triggerNodes: HTMLButtonElement[]
   focusNext: (currentIdx: number) => void
@@ -79,10 +81,12 @@ function Stepper({
   className,
   children,
   indicators = {},
+  "aria-label": ariaLabel = "Steps",
   ...props
 }: StepperProps) {
   const [activeStep, setActiveStep] = useState(defaultValue)
   const [triggerNodes, setTriggerNodes] = useState<HTMLButtonElement[]>([])
+  const idPrefix = useId()
 
   // Register/unregister triggers
   const registerTrigger = useCallback((node: HTMLButtonElement | null) => {
@@ -138,6 +142,7 @@ function Stepper({
           (child.type as { displayName?: string }).displayName === "StepperItem"
       ).length,
       orientation,
+      idPrefix,
       registerTrigger,
       focusNext,
       focusPrev,
@@ -151,6 +156,7 @@ function Stepper({
       handleSetActiveStep,
       children,
       orientation,
+      idPrefix,
       registerTrigger,
       focusNext,
       focusPrev,
@@ -165,6 +171,7 @@ function Stepper({
     <StepperContext.Provider value={contextValue}>
       <div
         role="tablist"
+        aria-label={ariaLabel}
         aria-orientation={orientation}
         data-slot="stepper"
         className={cn("w-full", className)}
@@ -238,6 +245,7 @@ function StepperTrigger({
   const {
     setActiveStep,
     activeStep,
+    idPrefix,
     registerTrigger,
     triggerNodes,
     focusNext,
@@ -247,8 +255,8 @@ function StepperTrigger({
   } = stepperCtx
   const { step, isDisabled } = useStepItem()
   const isSelected = activeStep === step
-  const id = `stepper-tab-${step}`
-  const panelId = `stepper-panel-${step}`
+  const id = `${idPrefix}-tab-${step}`
+  const panelId = `${idPrefix}-panel-${step}`
 
   // Register this trigger for keyboard navigation
   const [triggerElement, setTriggerElement] = useState<HTMLButtonElement | null>(null)
@@ -439,7 +447,7 @@ function StepperContent({
   children,
   className,
 }: StepperContentProps) {
-  const { activeStep } = useStepper()
+  const { activeStep, idPrefix } = useStepper()
   const isActive = value === activeStep
 
   if (!forceMount && !isActive) {
@@ -448,6 +456,9 @@ function StepperContent({
 
   return (
     <div
+      id={`${idPrefix}-panel-${value}`}
+      role="tabpanel"
+      aria-labelledby={`${idPrefix}-tab-${value}`}
       data-slot="stepper-content"
       data-state={activeStep}
       className={cn("w-full", className, !isActive && forceMount && "hidden")}

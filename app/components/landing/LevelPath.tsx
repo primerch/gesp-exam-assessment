@@ -77,7 +77,7 @@ export default function LevelPath({ initialLevel = 1, showHeader = true }: { ini
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-sm text-brand">GESP {levelNames[selected]}</p>
-                <h3 className="mt-1 text-xl font-medium tracking-[-0.02em] text-ink">{unitTitles.cpp[selected]}</h3>
+                {showHeader ? <h3 className="mt-1 text-xl font-medium tracking-[-0.02em] text-ink">{unitTitles.cpp[selected]}</h3> : <h2 className="mt-1 text-xl font-medium tracking-[-0.02em] text-ink">{unitTitles.cpp[selected]}</h2>}
               </div>
               <span className="whitespace-nowrap font-mono text-xs text-muted tabular-nums">{topics.length} 项考点</span>
             </div>

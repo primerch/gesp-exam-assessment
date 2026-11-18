@@ -48,7 +48,7 @@ export default function LandingPage() {
                 GESP 备考，先把标准看清楚
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-[#b8c9bf]">
-                考纲能查，试卷能析，学习进度能排。每一项判断都附 CCF 原文和页码，给教师、教育管理者和家长使用。
+                可以查考纲、分析试卷，也能按课程进度安排学习。每一项判断都附 CCF 原文和页码，给教师、教育管理者和家长使用。
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg" className="min-h-11 bg-[#edf3ef] text-[#1d302b] hover:bg-white">
@@ -125,12 +125,12 @@ export default function LandingPage() {
           <Reveal>
             <SectionHeading title="根据已完成的课次安排下一步" description={`${courseSummary.total} 节真实课程分为四个阶段。选课程和课次后，会看到已学内容、未学内容和参考报考等级。`} />
           </Reveal>
-          <div className="mt-12 grid gap-10 lg:grid-cols-[1.3fr_0.7fr]">
-            <Reveal>
+          <div className="mt-12 grid min-w-0 gap-10 lg:grid-cols-[1.3fr_0.7fr]">
+            <Reveal className="min-w-0">
               <CourseTimeline />
             </Reveal>
-            <Reveal delay={0.08}>
-              <aside className="rounded-xl border border-line bg-surface p-6">
+            <Reveal className="min-w-0" delay={0.08}>
+              <aside className="min-w-0 w-full rounded-xl border border-line bg-surface p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <p className="text-sm text-muted">示例：Level 1 学到第 12 课</p>
                   <Badge variant="primary-light">准备程度估算</Badge>

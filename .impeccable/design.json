@@ -58,6 +58,12 @@
         "canonical": "#c9ddd2",
         "tonalRamp": ["oklch(15% 0.025 155)", "oklch(25% 0.04 155)", "oklch(35% 0.05 155)", "oklch(45% 0.055 155)", "oklch(60% 0.045 155)", "oklch(72% 0.035 155)", "oklch(84% 0.025 155)", "oklch(95% 0.01 155)"]
       },
+      "selection-ink": {
+        "role": "neutral",
+        "displayName": "Selection Ink",
+        "canonical": "#172a24",
+        "tonalRamp": ["oklch(15% 0.025 160)", "oklch(25% 0.035 160)", "oklch(35% 0.04 160)", "oklch(45% 0.035 160)", "oklch(60% 0.025 160)", "oklch(72% 0.018 160)", "oklch(84% 0.01 160)", "oklch(95% 0.004 160)"]
+      },
       "brand": {
         "role": "primary",
         "displayName": "Path Green",
@@ -102,13 +108,22 @@
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "The balanced landing-page promise; responsive from 42px to 68px." },
-      "headline": { "displayName": "Headline", "purpose": "Section and workspace headings." },
+      "display": { "displayName": "Display", "purpose": "The balanced landing-page promise; responsive from 44px through 64px to 76px." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings." },
+      "workspace-heading": { "displayName": "Workspace Heading", "purpose": "Task workspace and report headings; responsive from 32px to 44px." },
       "title": { "displayName": "Title", "purpose": "Tool, panel and selected-level titles." },
       "body": { "displayName": "Body", "purpose": "Chinese explanations, sources and form values." },
       "label": { "displayName": "Label", "purpose": "Buttons, navigation and field labels." },
-      "mono": { "displayName": "Data", "purpose": "Tabular levels, counts, lessons and estimates." }
+      "mono": { "displayName": "Data", "purpose": "Tabular levels, counts, lessons and estimates." },
+      "micro": { "displayName": "Micro", "purpose": "Brand bylines, compact status and secondary metadata at 11px." }
     },
+    "radii": [
+      { "name": "radius-2", "value": "2px", "purpose": "Small ReUI indicators and inline status details." },
+      { "name": "radius-4", "value": "4px", "purpose": "Compact ReUI badges, tabs and progress details." },
+      { "name": "sm", "value": "8px", "purpose": "Buttons and fields." },
+      { "name": "md", "value": "12px", "purpose": "Selectable options and floating navigation." },
+      { "name": "lg", "value": "16px", "purpose": "Workspace cards and the level path." }
+    ],
     "shadows": [
       { "name": "primary-rest", "value": "0 1px 2px rgb(20 42 34 / 12%)", "purpose": "Subtle contact beneath enabled primary buttons." },
       { "name": "path-card", "value": "0 20px 60px rgb(27 48 41 / 8%)", "purpose": "Broad, faint lift under the interactive level path." },
@@ -199,6 +214,13 @@
       "description": "One numbered stage in the four-stage course path with its actual topic checklist.",
       "html": "<section class=\"ds-study-stage\"><span class=\"ds-study-number\">01</span><h3>Level 1 · 编程基础</h3><p>目标 GESP 1-2级</p><small>24 课次</small><ul><li>变量与输入输出</li><li>运算符与条件</li><li>循环结构</li><li>数组基础</li><li>函数入门</li></ul></section>",
       "css": ".ds-study-stage{position:relative;padding:24px 20px;border-top:1px solid var(--workspace-line);background:var(--workspace-paper);color:var(--workspace-ink);font-family:var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif}.ds-study-number{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--workspace-brand);border-radius:50%;background:var(--workspace-surface);color:var(--workspace-brand);font:11px var(--font-geist-mono),monospace}.ds-study-stage h3{margin:20px 0 0;font-size:18px;font-weight:500}.ds-study-stage p{margin:8px 0 0;color:var(--workspace-brand);font-size:14px}.ds-study-stage>small{display:block;margin-top:8px;color:var(--workspace-muted);font-size:12px;font-variant-numeric:tabular-nums}.ds-study-stage ul{display:flex;flex-direction:column;gap:8px;margin:20px 0 0;padding:0;list-style:none}.ds-study-stage li{color:var(--workspace-muted);font-size:12px}@media(min-width:1024px){.ds-study-stage{border-top:0;border-left:1px solid var(--workspace-line)}}"
+    },
+    {
+      "name": "ReUI Landing System",
+      "kind": "custom",
+      "description": "Reviewed ReUI Tabs, Stepper, Timeline, Card, Accordion, Alert, Badge, Progress and ButtonGroup compose real product previews inside a deep-ink hero workspace. Demonstrations are visitor-controlled and course totals come from the sourced catalog.",
+      "html": "<section class=\"ds-reui-workspace\"><div role=\"tablist\" aria-label=\"功能预览\"><button role=\"tab\" aria-selected=\"true\">考纲查询</button><button role=\"tab\" aria-selected=\"false\">试卷分析</button><button role=\"tab\" aria-selected=\"false\">学习规划</button></div><div class=\"ds-reui-preview\">真实功能预览</div></section>",
+      "css": ".ds-reui-workspace{padding:16px;border:1px solid #466054;border-radius:16px;background:#1d302b;color:#edf3ef}.ds-reui-workspace [role='tablist']{display:flex;gap:4px}.ds-reui-workspace [role='tab']{min-height:44px;padding:8px 16px;border-radius:4px;color:#b8c9bf}.ds-reui-workspace [role='tab'][aria-selected='true']{background:#e7eee9;color:#172a24}.ds-reui-preview{margin-top:16px;padding:24px;border:1px solid #466054;border-radius:12px;background:#14231d}@media(prefers-reduced-motion:reduce){.ds-reui-workspace *{animation:none;transition:none}}"
     }
   ],
   "narrative": {
