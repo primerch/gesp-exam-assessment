@@ -1,7 +1,15 @@
 import { textLines } from "./page-layout";
-import { limits, type PaperPage, type Selection, type PaperIndex } from "./document";
-import type { QuestionJudgment } from "./judgment";
+import { limits, type PaperPage, type Selection, type PaperIndex, type PaperQuestion } from "./document";
+import { unresolved, type QuestionJudgment } from "./judgment";
 
+export class ReviewRequestError extends Error {
+  constructor(
+    message: string,
+    readonly retryable: boolean,
+  ) {
+    super(message);
+  }
+}
 export async function reviewRequest<T>(body: unknown, signal: AbortSignal): Promise<T> {
   const response = await fetch("/api/analyze-exam", {
     method: "POST",
@@ -10,13 +18,38 @@ export async function reviewRequest<T>(body: unknown, signal: AbortSignal): Prom
     signal,
   });
   if (!response.headers.get("content-type")?.includes("application/json")) {
-    throw new Error(
+    throw new ReviewRequestError(
       response.status === 413 ? "页面数据过大，请拆分试卷后重试。" : "连接分析服务失败，请稍后重试。",
+      [502, 503, 504].includes(response.status),
     );
   }
   const payload = await response.json();
-  if (!response.ok || !payload.success) throw new Error(payload.error || "分析未能完成，请重试。");
+  if (!response.ok || !payload.success)
+    throw new ReviewRequestError(payload.error || "分析未能完成，请重试。", payload.retryable === true);
   return payload.data as T;
+}
+export async function recoverBatch(
+  batch: PaperQuestion[],
+  assess: (qs: PaperQuestion[]) => Promise<QuestionJudgment[]>,
+  signal: AbortSignal,
+  failed: Set<number>,
+): Promise<QuestionJudgment[]> {
+  signal.throwIfAborted();
+  try {
+    return await assess(batch);
+  } catch (error) {
+    signal.throwIfAborted();
+    if (!(error instanceof ReviewRequestError && error.retryable) && !(error instanceof TypeError))
+      throw error;
+    if (batch.length === 1) {
+      failed.add(batch[0].id);
+      return [unresolved(batch[0], "模型服务未能完成本题分析。")];
+    }
+    const mid = Math.ceil(batch.length / 2);
+    const first = await recoverBatch(batch.slice(0, mid), assess, signal, failed);
+    const second = await recoverBatch(batch.slice(mid), assess, signal, failed);
+    return [...first, ...second];
+  }
 }
 async function readPaper(
   file: File,
@@ -122,13 +155,16 @@ export async function reviewFile(
   let cursor = 0,
     finished = 0;
   const rows: QuestionJudgment[] = [];
+  const failed = new Set<number>();
   const worker = async () => {
     while (cursor < questions.length) {
       const batch = questions.slice(cursor, cursor + limits.batch);
       cursor += batch.length;
-      const result = await reviewRequest<QuestionJudgment[]>(
-        { phase: "assess", selection, questions: batch },
+      const result = await recoverBatch(
+        batch,
+        (qs) => reviewRequest<QuestionJudgment[]>({ phase: "assess", selection, questions: qs }, signal),
         signal,
+        failed,
       );
       rows.push(...result);
       finished += batch.length;
@@ -137,8 +173,18 @@ export async function reviewFile(
   };
   status(`正在逐题分析，共 ${questions.length} 题`);
   await Promise.all(
-    Array.from({ length: Math.min(3, Math.ceil(questions.length / limits.batch)) }, worker),
+    Array.from({ length: Math.min(2, Math.ceil(questions.length / limits.batch)) }, worker),
   );
+  if (failed.size === questions.length) throw new Error("模型服务暂时无法完成这份试卷，请稍后重试。");
+  if (failed.size)
+    notes.push(
+      "模型服务未完成的题目：" +
+        questions
+          .filter((q) => failed.has(q.id))
+          .map((q) => q.label)
+          .join("、") +
+        "。其余题目的分析已保留。",
+    );
   return {
     selection,
     fileName: file.name,

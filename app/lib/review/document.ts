@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { marksByStart, marksSchema } from "./scoring";
+import { answerKeysByStart, answerKeySchema, marksByStart, marksSchema } from "./scoring";
 import { levels, type Language } from "../../data/official-syllabus";
 
 export const limits = { bytes: 10 * 1024 * 1024, pages: 64, characters: 240000, questions: 100, batch: 4 };
@@ -26,6 +26,7 @@ export const questionSchema = z.object({
   id: z.number().int().min(1).max(limits.questions),
   label: z.string().min(1).max(100),
   marks: marksSchema.optional(),
+  answerKey: answerKeySchema.optional(),
   parts: z.array(pageSchema).min(1).max(limits.pages),
   issue: z.string().max(300).optional(),
 });
@@ -83,6 +84,7 @@ export function buildIndex(
   if (starts.length > limits.questions) throw new Error(`单份支持 ${limits.questions} 道题，请分卷上传。`);
   const byPage = new Map(pages.map((page) => [page.page, page]));
   const marks = marksByStart(lines, starts, (line) => sectionHeading.test(line.normalize("NFKC").trim()));
+  const keys = answerKeysByStart(lines, starts, (line) => line.match(sectionHeading)?.[1]);
   const questions = starts.map((start, index) => {
     const end = starts[index + 1]?.line ?? lines.length;
     const parts: PaperPage[] = [];
@@ -97,7 +99,7 @@ export function buildIndex(
       if (gap) part.issue = gap.note;
       delete part.gaps;
     }
-    return { id: index + 1, label: start.label, parts, marks: marks[index] };
+    return { id: index + 1, label: start.label, parts, marks: marks[index], answerKey: keys[index] };
   });
   // Only report missing questions when printed numbering supports the gap.
   const previous = new Map<string, number>();

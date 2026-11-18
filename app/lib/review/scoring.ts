@@ -65,3 +65,65 @@ export function printedPartial(quote: string, candidate: number | null | undefin
   const values = [...text.matchAll(/(\d+(?:\.\d+)?)\s*分/g)].map((m) => Number(m[1]));
   return values.length === 1 && values[0] === candidate ? candidate : null;
 }
+
+export const answerKeySchema = z.object({
+  answer: z.string().min(1).max(8),
+  page: z.number().int().positive(),
+  quote: z.string().min(1).max(1000),
+});
+export type PrintedAnswer = z.infer<typeof answerKeySchema>;
+
+const objectiveGroup = (name: string) =>
+  /^(单选题|单项选择题|选择题)$/.test(name) ? "单选" : name === "判断题" ? "判断" : "";
+export function objectiveAnswer(value: string | null | undefined) {
+  const s = value?.normalize("NFKC").trim().toUpperCase() ?? "";
+  if (/^[A-H]$/.test(s)) return s;
+  if (/^(?:正确|对|是|√|✓|✔|TRUE)$/.test(s)) return "正确";
+  if (/^(?:错误|错|否|×|✗|✘|FALSE)$/.test(s)) return "错误";
+  return "";
+}
+/** Only join explicit question-number / answer rows in an identifiable objective section. */
+export function answerKeysByStart(
+  lines: PaperLine[],
+  starts: Boundary[],
+  sectionOf: (s: string) => string | undefined,
+) {
+  const keys = new Map<string, PrintedAnswer | null>();
+  let group = "";
+  for (let i = 0; i + 1 < lines.length; i++) {
+    const line = lines[i].text.normalize("NFKC").trim();
+    const heading = sectionOf(line);
+    if (heading !== undefined) group = objectiveGroup(heading);
+    if (!group) continue;
+    const header = line.match(/^题号\s*[:：]?\s*(\d+(?:[\s、,]+\d+)*)$/);
+    const next = lines[i + 1];
+    const row = next.text
+      .normalize("NFKC")
+      .trim()
+      .match(/^(?:参考)?答案\s*[:：]?\s*(.+)$/);
+    if (!header || !row || lines[i].page !== next.page) continue;
+    const numbers = header[1].match(/\d+/g)!.map(Number);
+    const compact = row[1].replace(/[\s、,]/g, "");
+    const entries = compact.match(group === "单选" ? /[A-H]/gi : /正确|错误|[对错√✓✔×✗✘]/g) ?? [];
+    if (
+      entries.join("") !== compact ||
+      entries.length !== numbers.length ||
+      new Set(numbers).size !== numbers.length
+    )
+      continue;
+    for (const [j, n] of numbers.entries()) {
+      const id = group + n,
+        answer = objectiveAnswer(entries[j]);
+      const key = {
+        answer,
+        page: next.page,
+        quote: (lines[i].text.trim() + "\n" + next.text.trim()).slice(0, 1000),
+      };
+      keys.set(id, keys.has(id) && keys.get(id)?.answer !== answer ? null : key);
+    }
+  }
+  return starts.map((s) => {
+    const m = s.label.match(/^(.+?)\s*·\s*第\s*(\d+)\s*题$/);
+    return m ? (keys.get(objectiveGroup(m[1].trim()) + Number(m[2])) ?? undefined) : undefined;
+  });
+}

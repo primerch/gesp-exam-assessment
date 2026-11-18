@@ -73,6 +73,7 @@ export async function POST(request: Request) {
     return Response.json(
       {
         success: false,
+        retryable: timedOut || (known && err.retryable),
         error: known ? err.message : timedOut ? "本次分析超时，请重试。" : "未能完成试卷分析，请稍后重试。",
       },
       { status: known ? err.status : timedOut ? 504 : 500, headers },

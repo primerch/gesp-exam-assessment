@@ -1,5 +1,11 @@
 import { z } from "zod";
-import { printedPartial, type PrintedMarks, type ScoringPoint } from "./scoring";
+import {
+  objectiveAnswer,
+  printedPartial,
+  type PrintedAnswer,
+  type PrintedMarks,
+  type ScoringPoint,
+} from "./scoring";
 import { catalogFor, clauseLabel, type SyllabusEntry } from "../../data/official-syllabus";
 import type { PaperQuestion, Selection } from "./document";
 
@@ -15,6 +21,7 @@ export const readingSchema = z.object({
   complete: z.boolean(),
   reason: z.string().trim().min(1).max(500),
   difficulty: z.enum(["基础", "综合", "挑战"]),
+  answer: z.string().trim().max(12).nullish(),
   scoring: z
     .array(
       z.object({
@@ -58,6 +65,8 @@ export interface QuestionJudgment {
   reason: string;
   difficulty: Reading["difficulty"] | null;
   evidence: Evidence[];
+  answer?: string;
+  answerKey?: PrintedAnswer;
   marks?: PrintedMarks;
   scoring: ScoringPoint[];
 }
@@ -71,6 +80,7 @@ export function unresolved(q: PaperQuestion, reason: string): QuestionJudgment {
     difficulty: null,
     evidence: [],
     marks: q.marks,
+    answerKey: q.answerKey,
     scoring: [],
   };
 }
@@ -142,6 +152,10 @@ export function gradeReading(q: PaperQuestion, selection: Selection, raw: unknow
           : "题面未提供能定位到大纲的必要考点。");
     return { ...unresolved(q, reason), evidence, scoring };
   }
+  // A solved explanation and its verified question excerpt still describe the scoring point when a
+  // model omitted the separate step or supplied a nonliteral citation for it.
+  if (!scoring.length)
+    scoring.push({ text: prose(r.reason), page: required[0].page, quote: required[0].quote, points: null });
   let verdict: Verdict = defect ? "invalid" : "within";
   if (
     required.some(
@@ -158,8 +172,10 @@ export function gradeReading(q: PaperQuestion, selection: Selection, raw: unknow
     verdict,
     reason: prose(r.reason),
     difficulty: r.difficulty,
+    answer: objectiveAnswer(r.answer) || undefined,
     evidence,
     marks: q.marks,
+    answerKey: q.answerKey,
     scoring,
   };
 }
@@ -203,11 +219,31 @@ export function reconcile(
   second: QuestionJudgment,
   last?: QuestionJudgment,
 ) {
-  if (agree(first, second, selection.level)) return second;
-  if (last && (agree(first, last, selection.level) || agree(second, last, selection.level))) return last;
+  const rows = [last, second, first].filter((j): j is QuestionJudgment => !!j);
+  const confirmed = rows.filter((j) =>
+    rows.some((other) => other !== j && agree(j, other, selection.level)),
+  );
+  if (confirmed.length) {
+    if (q.answerKey) {
+      const matchesKey = confirmed.find((j) => j.answer === q.answerKey?.answer);
+      if (matchesKey) return matchesKey;
+    }
+    return (
+      confirmed.find(
+        (j) => j.answer && confirmed.some((other) => other !== j && other.answer === j.answer),
+      ) ?? confirmed[0]
+    );
+  }
   const limitation = [last, second, first].find((j) => j?.verdict === "insufficient");
-  return unresolved(
+  const result = unresolved(
     q,
     limitation?.reason || "模型对必要解法的判断不一致，现有题面与条款无法支持唯一结论。",
   );
+  const solution = rows.find(
+    (j) =>
+      j.scoring.length &&
+      j.answer &&
+      (j.answer === q.answerKey?.answer || rows.some((other) => other !== j && other.answer === j.answer)),
+  );
+  return solution ? { ...result, answer: solution.answer, scoring: solution.scoring } : result;
 }

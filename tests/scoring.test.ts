@@ -76,3 +76,40 @@ test("visual supplements resolve against native page text and affect only their 
   assert.equal(idx.questions[0].parts[0].issue, "图形模糊");
   assert.equal(idx.questions[1].parts[0].issue, undefined);
 });
+
+test("printed answer tables match question numbers within the correct section and reject incomplete rows", () => {
+  const pages = [
+    {
+      page: 1,
+      text: "1 单选题（每题 2 分）\n题号 1 2\n答案 B D\n第 1 题 谁？\n第 2 题 哪个？\n2 判断题\n题号 1 2\n答案 √ ×\n第 1 题 对吗？\n第 2 题 是吗？\n3 编程题\n3.1 编程题 1\n求和。",
+    },
+  ];
+  const lines = linesOf(pages);
+  const { questions } = buildIndex(pages, lines, locateBoundaries(lines));
+  assert.deepEqual(
+    questions.map((q) => q.answerKey?.answer),
+    ["B", "D", "正确", "错误", undefined],
+  );
+  const broken = [{ page: 1, text: pages[0].text.replace("答案 B D", "答案 B") }];
+  const bl = linesOf(broken);
+  assert.equal(buildIndex(broken, bl, locateBoundaries(bl)).questions[0].answerKey, undefined);
+  const q = questions[0];
+  const row = gradeReading(
+    q,
+    { language: "cpp", level: 1 },
+    {
+      id: q.id,
+      complete: true,
+      reason: "应选 B。",
+      answer: "B",
+      difficulty: "基础",
+      findings: [{ role: "required", topic: "cpp-1.1", page: 1, quote: "谁？", why: "考查计算机。" }],
+    },
+  );
+  assert.equal(row.answer, "B");
+  assert.equal(row.answerKey?.answer, "B");
+  assert.deepEqual(
+    row.scoring.map((s) => [s.text, s.points]),
+    [["应选 B。", null]],
+  );
+});

@@ -69,6 +69,24 @@ function Row({
               　{row.marks.quote}
             </p>
           )}
+          {row.answerKey && (
+            <p className="mb-2 text-sm">
+              卷面答案 <strong>{row.answerKey.answer}</strong>{" "}
+              <a
+                className={sourceStyle}
+                href={fileUrl + "#page=" + row.answerKey.page}
+                target="_blank"
+                rel="noreferrer"
+              >
+                答案表第 {row.answerKey.page} 页 ↗
+              </a>
+              {row.answer && row.answer !== row.answerKey.answer && (
+                <span className="ml-2 font-medium text-amber-800 dark:text-amber-300">
+                  模型解得 {row.answer}，与卷面答案有出入。
+                </span>
+              )}
+            </p>
+          )}
           {row.scoring.length ? (
             <ul className="list-disc space-y-2 pl-5 text-sm leading-6">
               {row.scoring.map((s, i) => (

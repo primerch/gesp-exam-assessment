@@ -20,6 +20,7 @@ export class ServiceError extends Error {
   constructor(
     message: string,
     readonly status: number,
+    readonly retryable = false,
   ) {
     super(message);
   }
@@ -45,7 +46,7 @@ export const callModel: ModelCall = async (model, instructions, input, signal, r
         {
           model,
           reasoning_effort: reasoning,
-          max_tokens: reasoning === "high" ? 12000 : 8000,
+          max_tokens: reasoning === "high" ? 16000 : 10000,
           response_format: { type: "json_object" },
           messages: [
             {
@@ -80,7 +81,7 @@ export const callModel: ModelCall = async (model, instructions, input, signal, r
       }
     }
   }
-  throw new ServiceError("模型服务未能返回完整结果。请稍后重试。", 503);
+  throw new ServiceError("模型服务未能返回完整结果。请稍后重试。", 503, true);
 };
 
 const inventorySchema = z.object({
@@ -179,14 +180,20 @@ const rubric = `你是 GESP 命题审校人员。独立解题，结合题型、�
 仅评实际考查，不把每道题都附上变量、表达式或普通输入输出等顺带知识。只有阅读它正是解题关键时才列。核实运算对象：流中的 << / >> 不是按位移位；逻辑与不同于按位与；一维搜索和图遍历、递推和动态规划分别看题目所需。出现关键字绝非依据。
 C++ 无特别说明按 C++11，有明确版本或条件时以题干为准。未定义行为需指出触发它的执行路径，不能将未指定、实现定义与未定义混淆。若题目在问识别错误选项而非依赖错误前提，请根据真正被考查内容判断。排除项只在目录列出的等级和语言生效。
 只要题面可读且能判定题设问题，complete=true 并列出对应 validity 条款；只有实际缺少题面或大纲依据才设为 false。每个返回的 topic 是目录里的完整 id，每个 quote 必须是该题指定页的连续原文（保留运算符）。why 说明为何是所选角色，涉及超纲说明基础解法为何不可行。如果题目明文要求特定方法，排除目录内所有可行替代，且在一到八级目录中均未收录，topic 填 "unlisted"，outsideTitle 逐字复制该方法名称，nearest 填最接近的本级或前级正向条款作边界对照，why 对比二者，complete 为 true。不知道属于哪级绝不是超纲依据；其余无法对应的必要知识填 "unlisted" 且 complete 为 false。图或代码缺失、无法唯一答题时说明实质，不杜撰页码或证据。
-另外为每道题给出 scoring 得分要点：客观题写应判断的关键条件和正确输出、选项或正误（题面充分时）；编程题写能在边界、数据范围以及输入输出要求下通过的可观察步骤。每条 text 应具体到本题，quote 必须逐字引用本题对应页。题目未给部分分细则时 points=null，包括大纲的通用分布；只在题面明确给某个子任务或步骤分值时才填数字并引用计分原句。题设错误时写出错误会如何影响得分，不虚构标准答案，不变更整题分值。
-按输入 id 逐题返回 {"questions":[{"id":1,"complete":true,"reason":"一句具体的解法或缺失说明","difficulty":"基础|综合|挑战","scoring":[{"text":"具体拿分要点","page":1,"quote":"原文","points":null}],"findings":[{"topic":"目录ID","role":"required|optional|mention","page":1,"quote":"题面原文","why":"理由"}]}]}。每题优先列 1 到 3 个最有区分力的考点。quote 直接逐字复制原文；不得换词、变更标点或添加省略号。reason 同时说明解法与范围。除 topic、nearest 字段外，面向教师的文字只写考点中文名称，不写内部 ID。`;
+另外为每道题给出 scoring 得分要点。客观题在 answer 字段返回选项字母或“正确”“错误”，编程题和题设不充分时填 null。答题要点只写可验证的答案或行为；严禁推测酌情扣分、给满分或其他阅卷做法。客观题写应判断的关键条件和正确输出、选项或正误（题面充分时）；编程题写能在边界、数据范围以及输入输出要求下通过的可观察步骤。每条 text 应具体到本题，quote 必须逐字引用本题对应页。题目未给部分分细则时 points=null，包括大纲的通用分布；只在题面明确给某个子任务或步骤分值时才填数字并引用计分原句。题设错误时写出错误会如何影响得分，不虚构标准答案，不变更整题分值。
+按输入 id 逐题返回 {"questions":[{"id":1,"complete":true,"reason":"一句具体的解法或缺失说明","difficulty":"基础|综合|挑战","answer":null,"scoring":[{"text":"具体拿分要点","page":1,"quote":"原文","points":null}],"findings":[{"topic":"目录ID","role":"required|optional|mention","page":1,"quote":"题面原文","why":"理由"}]}]}。每题优先列 1 到 3 个最有区分力的考点。quote 直接逐字复制原文；不得换词、变更标点或添加省略号。reason 同时说明解法与范围。除 topic、nearest 字段外，面向教师的文字只写考点中文名称，不写内部 ID。`;
 function assessmentInput(questions: PaperQuestion[], selection: Selection) {
   return JSON.stringify({
     language: languageNames[selection.language],
     level: selection.level,
     catalog: catalogFor(selection.level).map((e) => [e.id, e.kind, e.level, e.title, e.detail]),
-    questions,
+    questions: questions.map((q) => ({
+      id: q.id,
+      label: q.label,
+      parts: q.parts,
+      marks: q.marks,
+      issue: q.issue,
+    })),
   });
 }
 function ground(raw: unknown, qs: PaperQuestion[], s: Selection) {
@@ -214,7 +221,12 @@ export async function assessBatch(
   const first = ground(a, qs, s),
     second = ground(b, qs, s);
   const disputed = qs.filter(
-    (q, i) => !agree(first[i], second[i], s.level) && !q.parts.some((p) => p.issue),
+    (q, i) =>
+      !q.parts.some((p) => p.issue) &&
+      (!agree(first[i], second[i], s.level) ||
+        (q.answerKey &&
+          (first[i].answer !== q.answerKey.answer || second[i].answer !== q.answerKey.answer)) ||
+        (first[i].answer && second[i].answer && first[i].answer !== second[i].answer)),
   );
   const final = new Map<number, QuestionJudgment>();
   if (disputed.length) {
@@ -224,6 +236,7 @@ export async function assessBatch(
         id: q.id,
         assessments: [first[i], second[i]].map((j) => ({
           verdict: j.verdict,
+          answer: j.answer,
           reason: j.reason,
           evidence: j.evidence.map((e) => [e.entry.id, e.role, e.quote]),
         })),

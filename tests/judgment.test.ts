@@ -123,3 +123,52 @@ test("explicitly compulsory unlisted methods require agreement on their name and
   assert.equal(result.evidence[0].outsideTitle, "后缀自动机");
   assert.equal(gradeReading(q, { language: "cpp", level: 1 }, raw).verdict, "insufficient");
 });
+
+test("a mismatch with the printed key is automatically checked without disclosing it to the solvers", async () => {
+  const q = { ...paper, answerKey: { page: 1, quote: "答案 A", answer: "A" } };
+  const attempts: string[] = [];
+  const choices = ["B", "B", "A"];
+  const [row] = await assessBatch([q], target, new AbortController().signal, async (_m, _p, input) => {
+    attempts.push(String(input));
+    return { questions: [{ ...answer(f("cpp-1.3", "cout << n")), answer: choices.shift() }] };
+  });
+  assert.equal(attempts.length, 3);
+  assert(attempts.every((s) => !s.includes("答案 A")));
+  assert.equal(row.answer, "A");
+  assert.equal(row.verdict, "within");
+});
+
+test("temporary batch failures preserve independent answers; configuration and abort errors propagate", async () => {
+  const { recoverBatch, ReviewRequestError } = await import("../app/lib/review/pdf-client");
+  const questions = [1, 2, 3, 4].map((id) => ({ ...paper, id }));
+  const failed = new Set<number>();
+  const result = await recoverBatch(
+    questions,
+    async (qs) => {
+      if (qs.some((q) => q.id === 3)) throw new ReviewRequestError("timeout", true);
+      return qs.map((q) => gradeReading(q, target, { ...answer(f("cpp-1.3", "cout << n")), id: q.id }));
+    },
+    new AbortController().signal,
+    failed,
+  );
+  assert.deepEqual(
+    result.map((r) => r.verdict),
+    ["within", "within", "insufficient", "within"],
+  );
+  assert.deepEqual([...failed], [3]);
+  await assert.rejects(
+    recoverBatch(
+      questions,
+      async () => {
+        throw new ReviewRequestError("配置", false);
+      },
+      new AbortController().signal,
+      new Set(),
+    ),
+    /配置/,
+  );
+  await assert.rejects(
+    recoverBatch(questions, async () => [], AbortSignal.abort(), new Set()),
+    { name: "AbortError" },
+  );
+});
