@@ -95,9 +95,10 @@ export function buildIndex(
       else parts.push({ ...byPage.get(line.page)!, text: line.text });
     }
     for (const part of parts) {
-      const gap = part.gaps?.find((g) => part.text.includes(g.anchor));
-      if (gap) part.issue = gap.note;
-      delete part.gaps;
+      // A local gap can be resolved by another page of the same question.
+      const relevant = part.gaps?.filter((g) => part.text.includes(g.anchor));
+      if (relevant?.length) part.gaps = relevant;
+      else delete part.gaps;
     }
     return { id: index + 1, label: start.label, parts, marks: marks[index], answerKey: keys[index] };
   });

@@ -172,3 +172,21 @@ test("temporary batch failures preserve independent answers; configuration and a
     { name: "AbortError" },
   );
 });
+
+test("a local image gap needs a literal whole-question source to establish that it does not affect the solution", () => {
+  const q = {
+    ...paper,
+    parts: [
+      { ...paper.parts[0], gaps: [{ anchor: "给定", note: "本页样例未完" }] },
+      { page: 3, text: "输出样例 2：17" },
+    ],
+  };
+  const base = answer(f("cpp-1.3", "cout << n"));
+  assert.equal(gradeReading(q, target, base).verdict, "insufficient");
+  const resolved = { gapPage: 2, page: 3, quote: "输出样例 2：17", why: "下一页给出了本页未结束的样例。" };
+  assert.equal(gradeReading(q, target, { ...base, resolvedGaps: [resolved] }).verdict, "within");
+  assert.equal(
+    gradeReading(q, target, { ...base, resolvedGaps: [{ ...resolved, quote: "不存在的样例" }] }).verdict,
+    "insufficient",
+  );
+});

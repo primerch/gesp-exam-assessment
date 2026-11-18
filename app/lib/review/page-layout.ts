@@ -59,3 +59,32 @@ export function resolveLine(lines: string[], index: number, anchor: string) {
   const matches = lines.flatMap((s, i) => (normalize(s).includes(pin) ? [i] : []));
   return matches.length === 1 ? matches[0] : -1;
 }
+
+/** A corrected native line may gain image-only symbols, while keeping its complete original text in order. */
+export function restoresNativeLine(original: string, restored: string) {
+  const clean = (s: string) => s.normalize("NFKC").replace(/\s+/gu, "");
+  const source = clean(original),
+    candidate = clean(restored);
+  if (!source || candidate.length <= source.length || candidate.length > source.length + 180) return false;
+  let next = 0;
+  for (const c of candidate) if (source[next] === c) next++;
+  return next === source.length;
+}
+
+export function restoreAnswerRow(lines: string[], row: { line: number; header: string; values: string[] }) {
+  const at = resolveLine(lines, row.line, row.header);
+  if (at < 0 || !/^\s*(?:参考)?答案\s*[:：]?\s*$/.test(lines[at + 1] ?? "")) return;
+  const header = lines[at]
+    .normalize("NFKC")
+    .trim()
+    .match(/^题号\s*[:：]?\s*(\d+(?:[\s、,]+\d+)*)$/);
+  const numbers = header?.[1].match(/\d+/g);
+  if (
+    !numbers?.length ||
+    new Set(numbers).size !== numbers.length ||
+    numbers.length !== row.values.length ||
+    !row.values.every((v) => /^(?:[A-H]|√|×|✓|✗|✔|✘|正确|错误)$/.test(v))
+  )
+    return;
+  lines[at + 1] += " " + row.values.join(" ");
+}

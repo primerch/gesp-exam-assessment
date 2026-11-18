@@ -22,6 +22,17 @@ export const readingSchema = z.object({
   reason: z.string().trim().min(1).max(500),
   difficulty: z.enum(["基础", "综合", "挑战"]),
   answer: z.string().trim().max(12).nullish(),
+  resolvedGaps: z
+    .array(
+      z.object({
+        gapPage: z.number().int(),
+        page: z.number().int(),
+        quote: z.string().trim().min(2).max(400),
+        why: z.string().trim().min(2).max(350),
+      }),
+    )
+    .max(64)
+    .optional(),
   scoring: z
     .array(
       z.object({
@@ -140,7 +151,16 @@ export function gradeReading(q: PaperQuestion, selection: Selection, raw: unknow
   if (q.marks && scoring.reduce((sum, s) => sum + (s.points ?? 0), 0) > q.marks.points)
     for (const step of scoring) step.points = null;
   const required = evidence.filter((e) => e.role === "required");
-  const missing = q.issue ?? q.parts.find((p) => p.issue)?.issue;
+  const unverifiedGap = q.parts.find(
+    (p) =>
+      p.gaps?.length &&
+      !r.resolvedGaps?.some(
+        (g) =>
+          g.gapPage === p.page &&
+          q.parts.some((part) => part.page === g.page && compact(part.text).includes(compact(g.quote))),
+      ),
+  );
+  const missing = q.issue ?? q.parts.find((p) => p.issue)?.issue ?? unverifiedGap?.gaps?.[0].note;
   const defect = required.some(({ entry }) => entry.kind === "validity");
   if (missing || (!defect && (!r.complete || ungrounded)) || !required.length) {
     const reason =

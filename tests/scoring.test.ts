@@ -73,8 +73,8 @@ test("visual supplements resolve against native page text and affect only their 
   ];
   const lines = linesOf(pages),
     idx = buildIndex(pages, lines, locateBoundaries(lines));
-  assert.equal(idx.questions[0].parts[0].issue, "图形模糊");
-  assert.equal(idx.questions[1].parts[0].issue, undefined);
+  assert.equal(idx.questions[0].parts[0].gaps?.[0].note, "图形模糊");
+  assert.equal(idx.questions[1].parts[0].gaps, undefined);
 });
 
 test("printed answer tables match question numbers within the correct section and reject incomplete rows", () => {
@@ -112,4 +112,22 @@ test("printed answer tables match question numbers within the correct section an
     row.scoring.map((s) => [s.text, s.points]),
     [["应选 B。", null]],
   );
+});
+
+test("image-only inline math can be restored without replacing original numbers and operators", async () => {
+  const { restoresNativeLine } = await import("../app/lib/review/page-layout");
+  assert(restoresNativeLine("输入为一个整数，满足  ≤ n ≤  。", "输入为一个整数，满足 1 ≤ n ≤ 30 。"));
+  assert(!restoresNativeLine("if (n < 25)", "if (n > 25)"));
+  assert(!restoresNativeLine("x << 1", "x < 1"));
+});
+
+test("graphic answer rows fill only blank native tables with a complete numbered header", async () => {
+  const { restoreAnswerRow } = await import("../app/lib/review/page-layout");
+  const lines = ["判断题", "题号  1  2", "答案"];
+  restoreAnswerRow(lines, { line: 1, header: "题号1 2", values: ["√"] });
+  assert.equal(lines[2], "答案");
+  restoreAnswerRow(lines, { line: 0, header: "题号1 2", values: ["√", "×"] });
+  assert.equal(lines[2], "答案 √ ×");
+  restoreAnswerRow(lines, { line: 1, header: "题号1 2", values: ["×", "√"] });
+  assert.equal(lines[2], "答案 √ ×");
 });
