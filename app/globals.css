@@ -33,6 +33,14 @@
   --workspace-on-brand: #ffffff;
   --workspace-on-current: #101713;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --success: #2e6e5e;
+  --success-foreground: #1d302b;
+  --info: #2e6e5e;
+  --info-foreground: #1d302b;
+  --warning: #a9762a;
+  --warning-foreground: #101713;
+  --invert: #1d302b;
+  --invert-foreground: #fcfdfb;
 }
 
 @theme inline {
@@ -68,6 +76,32 @@
   --color-on-current: var(--workspace-on-current);
   --font-sans: var(--font-geist-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
+  --color-invert-foreground: var(--invert-foreground);
+  --color-invert: var(--invert);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning: var(--warning);
+  --color-info-foreground: var(--info-foreground);
+  --color-info: var(--info);
+  --color-success-foreground: var(--success-foreground);
+  --color-success: var(--success);
+  --animate-accordion-down: accordion-down 180ms var(--ease-out);
+  --animate-accordion-up: accordion-up 160ms var(--ease-out);
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-slot="accordion-content"] {
+    animation: none;
+  }
 }
 
 html {
@@ -200,6 +234,14 @@ input[type="range"]::-moz-range-thumb {
     --workspace-on-current: #14231c;
     --destructive: #f0a39a;
     --destructive-foreground: #2a1210;
+    --success: #8fc5ad;
+    --success-foreground: #14231c;
+    --info: #8fc5ad;
+    --info-foreground: #14231c;
+    --warning: #d4ad66;
+    --warning-foreground: #14231c;
+    --invert: #e8eee9;
+    --invert-foreground: #14231c;
   }
 
   ::selection {
