@@ -1,24 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --card: #ffffff;
-  --card-foreground: #0f172a;
-  --primary: #2563eb;
+  --background: #f4f5f1;
+  --foreground: #1d302b;
+  --card: #fcfdfb;
+  --card-foreground: #1d302b;
+  --primary: #2e6e5e;
   --primary-foreground: #ffffff;
-  --secondary: #f8fafc;
-  --secondary-foreground: #1e293b;
-  --muted: #f8fafc;
-  --muted-foreground: #64748b;
-  --accent: #4f46e5;
+  --secondary: #e9eeea;
+  --secondary-foreground: #29463d;
+  --muted: #e9eeea;
+  --muted-foreground: #55665f;
+  --accent: #a9762a;
   --accent-foreground: #ffffff;
-  --destructive: #ef4444;
+  --destructive: #a34235;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #2563eb;
+  --border: #d5ddd7;
+  --input: #c3cec7;
+  --ring: #2e6e5e;
   --radius: 0.75rem;
+  --workspace-paper: #f4f5f1;
+  --workspace-surface: #fcfdfb;
+  --workspace-ink: #1d302b;
+  --workspace-muted: #55665f;
+  --workspace-line: #d5ddd7;
+  --workspace-brand: #2e6e5e;
+  --workspace-action: #285f51;
+  --workspace-wash: #e7eee9;
+  --workspace-quiet: #edf0eb;
+  --workspace-current: #a9762a;
+  --workspace-current-text: #7b531d;
+  --workspace-on-brand: #ffffff;
+  --workspace-on-current: #101713;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @theme inline {
@@ -39,63 +53,53 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--workspace-paper);
+  --color-surface: var(--workspace-surface);
+  --color-ink: var(--workspace-ink);
+  --color-muted: var(--workspace-muted);
+  --color-line: var(--workspace-line);
+  --color-brand: var(--workspace-brand);
+  --color-action: var(--workspace-action);
+  --color-wash: var(--workspace-wash);
+  --color-quiet: var(--workspace-quiet);
+  --color-current: var(--workspace-current);
+  --color-current-text: var(--workspace-current-text);
+  --color-on-brand: var(--workspace-on-brand);
+  --color-on-current: var(--workspace-on-current);
+  --font-sans: var(--font-geist-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+html {
+  scroll-padding-top: 96px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
   background: var(--workspace-paper);
   color: var(--workspace-ink);
   font-feature-settings: "rlig" 1, "calt" 1;
+  caret-color: var(--workspace-brand);
 }
-
-/* ==============================================
-   FOCUS VISIBLE - Accessibility
-   ============================================== */
 
 *:focus-visible {
   outline: 2px solid var(--ring);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
-button:focus-visible,
-a:focus-visible,
-[role="button"]:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
-  border-radius: var(--radius);
-}
-
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
-}
-
-/* Remove focus outline for mouse users, keep for keyboard */
 *:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* ==============================================
-   REDUCED MOTION
-   ============================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+::selection {
+  background: #c9ddd2;
+  color: #172a24;
 }
-
-/* ==============================================
-   CUSTOM SCROLLBAR
-   ============================================== */
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -107,17 +111,13 @@ textarea:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--workspace-line);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: var(--workspace-muted);
 }
-
-/* ==============================================
-   CUSTOM SLIDER
-   ============================================== */
 
 input[type="range"] {
   -webkit-appearance: none;
@@ -127,109 +127,110 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  height: 6px;
-  background: #e2e8f0;
-  border-radius: 3px;
+  height: 4px;
+  background: var(--workspace-line);
+  border-radius: 2px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  margin-top: -5px;
+  margin-top: -6px;
   width: 16px;
   height: 16px;
-  background: var(--primary);
+  background: var(--workspace-brand);
   border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-  transition: transform 0.15s ease;
-}
-
-input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
+  border: 2px solid var(--workspace-surface);
+  box-shadow: 0 1px 4px rgb(20 42 34 / 20%);
+  transition: transform 160ms var(--ease-out);
 }
 
 input[type="range"]::-moz-range-track {
-  height: 6px;
-  background: #e2e8f0;
-  border-radius: 3px;
+  height: 4px;
+  background: var(--workspace-line);
+  border-radius: 2px;
 }
 
 input[type="range"]::-moz-range-thumb {
   width: 16px;
   height: 16px;
-  background: var(--primary);
+  background: var(--workspace-brand);
   border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  border: 2px solid var(--workspace-surface);
 }
 
-/* ==============================================
-   TABULAR NUMBERS
-   ============================================== */
+@media (hover: hover) and (pointer: fine) {
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.12);
+  }
+}
 
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
 
-/* ==============================================
-   CARD HOVER LIFT
-   ============================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #131b17;
+    --foreground: #e8eee9;
+    --card: #19231e;
+    --card-foreground: #e8eee9;
+    --primary: #8fc5ad;
+    --primary-foreground: #14231c;
+    --secondary: #22332b;
+    --secondary-foreground: #d4e3d9;
+    --muted: #22332b;
+    --muted-foreground: #aab9b0;
+    --accent: #d4ad66;
+    --border: #34443b;
+    --input: #4a5c51;
+    --ring: #8fc5ad;
+    --workspace-paper: #131b17;
+    --workspace-surface: #19231e;
+    --workspace-ink: #e8eee9;
+    --workspace-muted: #aab9b0;
+    --workspace-line: #34443b;
+    --workspace-brand: #8fc5ad;
+    --workspace-action: #315f4e;
+    --workspace-wash: #22372c;
+    --workspace-quiet: #1e2b24;
+    --workspace-current: #d4ad66;
+    --workspace-current-text: #d4ad66;
+    --workspace-on-brand: #14231c;
+    --workspace-on-current: #14231c;
+    --destructive: #f0a39a;
+    --destructive-foreground: #2a1210;
+  }
 
-.card-lift {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  ::selection {
+    background: #365c49;
+    color: #f2f7f3;
+  }
 }
-
-.card-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
-}
-
-/* ==============================================
-   SMOOTH TRANSITIONS
-   ============================================== */
-
-.transition-smooth {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ==============================================
-   PRINT STYLES
-   ============================================== */
 
 @media print {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --card: #ffffff;
+    --workspace-paper: #ffffff;
+    --workspace-surface: #ffffff;
+    --workspace-ink: #000000;
+    --workspace-muted: #405048;
+    --workspace-line: #bac5bd;
+    --workspace-brand: #244f41;
+    --workspace-action: #244f41;
+    --workspace-current: #a9762a;
+    --workspace-current-text: #7b531d;
+    --workspace-on-brand: #ffffff;
+    --workspace-on-current: #101713;
+    --destructive: #a34235;
+    --destructive-foreground: #ffffff;
+    --workspace-wash: #f0f3f0;
+    --workspace-quiet: #ffffff;
+  }
+
   .no-print {
     display: none !important;
   }
-}
-
-@theme inline {
-  --color-paper: var(--workspace-paper);
-  --color-surface: var(--workspace-surface);
-  --color-ink: var(--workspace-ink);
-  --color-muted: var(--workspace-muted);
-  --color-line: var(--workspace-line);
-  --color-brand: var(--workspace-brand);
-  --color-action: var(--workspace-action);
-  --color-wash: var(--workspace-wash);
-  --color-quiet: var(--workspace-quiet);
-  --font-sans: var(--font-geist-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
-}
-:root {
-  --workspace-paper: #f7f8fa; --workspace-surface: #fff; --workspace-ink: #19242f;
-  --workspace-muted: #526171; --workspace-line: #d3dae1; --workspace-brand: #224c81;
-  --workspace-action: #234977; --workspace-wash: #eaf0f7; --workspace-quiet: #f4f6f8;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --workspace-paper: #161d25; --workspace-surface: #1d2631; --workspace-ink: #ecf1f6;
-    --workspace-muted: #b1bdca; --workspace-line: #3d4a58; --workspace-brand: #a6c9fa;
-    --workspace-action: #315a8b; --workspace-wash: #27384c; --workspace-quiet: #222d39;
-    --ring: #a6c9fa;
-  }
-}
-::selection { background: #c8dcf2; color: #162236; }
-@media print {
-  :root { --workspace-paper: white; --workspace-surface: white; --workspace-ink: black; --workspace-muted: #405060; --workspace-line: #bac2ca; --workspace-brand: #183659; --workspace-wash: #f0f2f5; --workspace-quiet: white; }
 }

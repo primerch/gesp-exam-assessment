@@ -22,11 +22,16 @@ export default function PlanPage() {
 
   return (
     <main id="main-content" className={shell}>
-      <h1 className={heading}>学习规划</h1>
-      <p className={lead}>查阅新版 C++ 的 {cppLessons.length} 节课，对照原课件讲点和 CCF 考纲。</p>
+      <div className="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <h1 className={heading}>学习规划</h1>
+          <p className={lead}>查阅新版 C++ 的 {cppLessons.length} 节课，对照原课件讲点和 CCF 考纲。</p>
+        </div>
+        <p className="text-sm text-muted">按课程与课次查看 · 原文出处可核对</p>
+      </div>
 
-      <div className="mt-8 overflow-hidden rounded-lg border border-line bg-surface">
-        <div className="grid gap-4 border-b border-line bg-quiet p-5 sm:grid-cols-[minmax(9rem,1fr)_minmax(0,3fr)] sm:px-6">
+      <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-surface">
+        <div className="grid gap-4 border-b border-line bg-wash p-5 sm:grid-cols-[minmax(9rem,1fr)_minmax(0,3fr)] sm:px-6">
           <label className="min-w-0 text-sm font-medium">
             课程级别
             <select className={field} value={level} onChange={(event) => {
@@ -46,8 +51,8 @@ export default function PlanPage() {
           </label>
         </div>
 
-        <section className="p-5 sm:px-6" aria-labelledby="lesson-title">
-          <h2 id="lesson-title" className="text-xl font-semibold text-ink">{lesson.title}</h2>
+        <section className="p-5 sm:p-6" aria-labelledby="lesson-title">
+          <h2 id="lesson-title" className="text-2xl font-medium tracking-[-0.02em] text-ink">{lesson.title}</h2>
           <p className="mt-2 text-sm text-muted">
             Level {lesson.level} · 第 {lesson.number} 课
             {lesson.status === "partial" && " · 部分课件已核实"}
@@ -61,15 +66,15 @@ export default function PlanPage() {
               const points = lesson.points.filter((point) => point.kind === kind);
               if (!points.length) return null;
               return (
-                <section key={kind} className="mt-6">
-                  <h3 className="text-sm font-semibold text-ink">{label}</h3>
-                  <ul className="mt-2 divide-y divide-line border-y border-line">
+                <section key={kind} className="mt-7">
+                  <h3 className="text-sm font-medium text-ink">{label}</h3>
+                  <ul className="mt-3 divide-y divide-line border-y border-line">
                     {points.map((point) => (
-                      <li key={point.title} className="py-3">
+                      <li key={point.title} className="py-4">
                         <div className="max-w-3xl text-base leading-6 text-ink">{point.title}</div>
                         <p className="mt-1 break-words text-sm leading-6 text-muted">{point.sources.join("、")}</p>
                         {point.clauses.length > 0 && (
-                          <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
+                          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                             {lessonClauses(point).map((entry) => (
                               <a className={sourceStyle} key={entry.id} href={sourceLink(entry)} target="_blank" rel="noreferrer">
                                 {entry.kind === "topic" ? `GESP ${levelNames[entry.level]} · ${entry.title}` : entry.title}
@@ -88,8 +93,8 @@ export default function PlanPage() {
         </section>
       </div>
 
-      <details className="mt-6 rounded-lg border border-line bg-surface">
-        <summary className="min-h-11 cursor-pointer px-5 py-3 text-sm font-semibold sm:px-6">
+      <details className="group mt-6 rounded-2xl border border-line bg-surface">
+        <summary className="min-h-14 cursor-pointer list-none px-5 py-4 text-sm font-medium sm:px-6">
           截至本课已涉及的 GESP 考纲条款 · {covered.length} 项
         </summary>
         <div className="border-t border-line px-5 pb-5 pt-4 sm:px-6">
@@ -99,7 +104,7 @@ export default function PlanPage() {
               {covered.map((entry) => (
                 <li key={entry.id}>
                   <a className={sourceStyle} href={sourceLink(entry)} target="_blank" rel="noreferrer">
-                    GESP {levelNames[entry.level]} · {entry.title}
+                    GESP {entry.level} 级 · {entry.title}
                     <span className="sr-only"> · {clauseLabel(entry)}（新窗口）</span>
                   </a>
                 </li>

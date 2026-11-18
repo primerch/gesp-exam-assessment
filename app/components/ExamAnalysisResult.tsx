@@ -17,9 +17,9 @@ export interface ReportContext {
   course: string;
 }
 const colors: Record<Verdict, string> = {
-  within: "text-emerald-800 dark:text-emerald-300",
-  beyond: "text-amber-900 dark:text-amber-300",
-  invalid: "text-red-800 dark:text-red-300",
+  within: "text-brand",
+  beyond: "text-current-text",
+  invalid: "text-destructive",
   insufficient: "text-muted",
 };
 const roles = { required: "必要考点", optional: "可选解法", mention: "题面提及" };
@@ -81,7 +81,7 @@ function Row({
                 答案表第 {row.answerKey.page} 页 ↗
               </a>
               {row.answer && row.answer !== row.answerKey.answer && (
-                <span className="ml-2 font-medium text-amber-800 dark:text-amber-300">
+                <span className="ml-2 font-medium text-current-text">
                   模型解得 {row.answer}，与卷面答案有出入。
                 </span>
               )}
@@ -231,7 +231,7 @@ export default function ExamAnalysisResult({
       id="paper-report"
       aria-labelledby="report-title"
       tabIndex={-1}
-      className="scroll-mt-5 rounded-lg border border-line bg-surface px-5 py-6 sm:px-8"
+      className="scroll-mt-5 rounded-2xl border border-line bg-surface px-5 py-7 sm:px-8"
     >
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>

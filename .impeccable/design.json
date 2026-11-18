@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T18:44:55+08:00",
+  "title": "Design System: GESP 考级宝",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#f4f5f1",
+        "tonalRamp": ["oklch(15% 0.01 120)", "oklch(25% 0.012 120)", "oklch(35% 0.014 120)", "oklch(45% 0.016 120)", "oklch(60% 0.014 120)", "oklch(72% 0.012 120)", "oklch(84% 0.008 120)", "oklch(95% 0.004 120)"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Paper Surface",
+        "canonical": "#fcfdfb",
+        "tonalRamp": ["oklch(15% 0.008 140)", "oklch(25% 0.01 140)", "oklch(35% 0.012 140)", "oklch(45% 0.014 140)", "oklch(60% 0.012 140)", "oklch(72% 0.01 140)", "oklch(84% 0.006 140)", "oklch(98% 0.003 140)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep Ink",
+        "canonical": "#1d302b",
+        "tonalRamp": ["oklch(15% 0.025 160)", "oklch(25% 0.035 160)", "oklch(35% 0.04 160)", "oklch(45% 0.035 160)", "oklch(60% 0.025 160)", "oklch(72% 0.018 160)", "oklch(84% 0.01 160)", "oklch(95% 0.004 160)"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Graphite",
+        "canonical": "#55665f",
+        "tonalRamp": ["oklch(15% 0.015 155)", "oklch(25% 0.022 155)", "oklch(35% 0.028 155)", "oklch(45% 0.03 155)", "oklch(60% 0.022 155)", "oklch(72% 0.016 155)", "oklch(84% 0.009 155)", "oklch(95% 0.004 155)"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fine Line",
+        "canonical": "#d5ddd7",
+        "tonalRamp": ["oklch(15% 0.012 145)", "oklch(25% 0.016 145)", "oklch(35% 0.02 145)", "oklch(45% 0.022 145)", "oklch(60% 0.018 145)", "oklch(72% 0.014 145)", "oklch(84% 0.01 145)", "oklch(95% 0.005 145)"]
+      },
+      "input": {
+        "role": "neutral",
+        "displayName": "Input Line",
+        "canonical": "#c3cec7",
+        "tonalRamp": ["oklch(15% 0.014 145)", "oklch(25% 0.02 145)", "oklch(35% 0.024 145)", "oklch(45% 0.026 145)", "oklch(60% 0.022 145)", "oklch(72% 0.018 145)", "oklch(84% 0.012 145)", "oklch(95% 0.005 145)"]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Path Wash",
+        "canonical": "#e7eee9",
+        "tonalRamp": ["oklch(15% 0.018 150)", "oklch(25% 0.025 150)", "oklch(35% 0.03 150)", "oklch(45% 0.03 150)", "oklch(60% 0.025 150)", "oklch(72% 0.02 150)", "oklch(84% 0.014 150)", "oklch(95% 0.008 150)"]
+      },
+      "quiet": {
+        "role": "neutral",
+        "displayName": "Quiet Ground",
+        "canonical": "#edf0eb",
+        "tonalRamp": ["oklch(15% 0.012 130)", "oklch(25% 0.016 130)", "oklch(35% 0.02 130)", "oklch(45% 0.02 130)", "oklch(60% 0.016 130)", "oklch(72% 0.012 130)", "oklch(84% 0.008 130)", "oklch(95% 0.005 130)"]
+      },
+      "selection": {
+        "role": "neutral",
+        "displayName": "Selection Mint",
+        "canonical": "#c9ddd2",
+        "tonalRamp": ["oklch(15% 0.025 155)", "oklch(25% 0.04 155)", "oklch(35% 0.05 155)", "oklch(45% 0.055 155)", "oklch(60% 0.045 155)", "oklch(72% 0.035 155)", "oklch(84% 0.025 155)", "oklch(95% 0.01 155)"]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Path Green",
+        "canonical": "#2e6e5e",
+        "tonalRamp": ["oklch(15% 0.035 163)", "oklch(25% 0.055 163)", "oklch(35% 0.07 163)", "oklch(45% 0.08 163)", "oklch(55% 0.075 163)", "oklch(68% 0.06 163)", "oklch(82% 0.035 163)", "oklch(95% 0.012 163)"]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Deep Path Green",
+        "canonical": "#285f51",
+        "tonalRamp": ["oklch(15% 0.035 164)", "oklch(25% 0.05 164)", "oklch(35% 0.065 164)", "oklch(43% 0.075 164)", "oklch(55% 0.07 164)", "oklch(68% 0.055 164)", "oklch(82% 0.032 164)", "oklch(95% 0.012 164)"]
+      },
+      "on-brand": {
+        "role": "primary",
+        "displayName": "On-Brand White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["oklch(15% 0.005 150)", "oklch(25% 0.005 150)", "oklch(35% 0.005 150)", "oklch(45% 0.004 150)", "oklch(60% 0.003 150)", "oklch(72% 0.002 150)", "oklch(84% 0.001 150)", "oklch(100% 0 0)"]
+      },
+      "current": {
+        "role": "secondary",
+        "displayName": "Current Amber",
+        "canonical": "#a9762a",
+        "tonalRamp": ["oklch(15% 0.035 75)", "oklch(25% 0.06 75)", "oklch(35% 0.085 75)", "oklch(45% 0.11 75)", "oklch(55% 0.12 75)", "oklch(68% 0.1 75)", "oklch(82% 0.065 75)", "oklch(95% 0.02 75)"]
+      },
+      "current-text": {
+        "role": "secondary",
+        "displayName": "Current Umber",
+        "canonical": "#7b531d",
+        "tonalRamp": ["oklch(15% 0.03 70)", "oklch(25% 0.05 70)", "oklch(35% 0.075 70)", "oklch(42% 0.09 70)", "oklch(55% 0.1 70)", "oklch(68% 0.085 70)", "oklch(82% 0.05 70)", "oklch(95% 0.015 70)"]
+      },
+      "on-current": {
+        "role": "secondary",
+        "displayName": "Current Ink",
+        "canonical": "#101713",
+        "tonalRamp": ["oklch(15% 0.015 150)", "oklch(25% 0.02 150)", "oklch(35% 0.025 150)", "oklch(45% 0.025 150)", "oklch(60% 0.02 150)", "oklch(72% 0.015 150)", "oklch(84% 0.008 150)", "oklch(95% 0.003 150)"]
+      },
+      "destructive": {
+        "role": "tertiary",
+        "displayName": "Error Red",
+        "canonical": "#a34235",
+        "tonalRamp": ["oklch(15% 0.04 30)", "oklch(25% 0.07 30)", "oklch(35% 0.1 30)", "oklch(45% 0.13 30)", "oklch(55% 0.14 30)", "oklch(68% 0.11 30)", "oklch(82% 0.065 30)", "oklch(95% 0.02 30)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The balanced landing-page promise; responsive from 42px to 68px." },
+      "headline": { "displayName": "Headline", "purpose": "Section and workspace headings." },
+      "title": { "displayName": "Title", "purpose": "Tool, panel and selected-level titles." },
+      "body": { "displayName": "Body", "purpose": "Chinese explanations, sources and form values." },
+      "label": { "displayName": "Label", "purpose": "Buttons, navigation and field labels." },
+      "mono": { "displayName": "Data", "purpose": "Tabular levels, counts, lessons and estimates." }
+    },
+    "shadows": [
+      { "name": "primary-rest", "value": "0 1px 2px rgb(20 42 34 / 12%)", "purpose": "Subtle contact beneath enabled primary buttons." },
+      { "name": "path-card", "value": "0 20px 60px rgb(27 48 41 / 8%)", "purpose": "Broad, faint lift under the interactive level path." },
+      { "name": "mobile-menu", "value": "0 16px 40px rgb(20 35 28 / 14%)", "purpose": "Separates the floating mobile navigation panel." },
+      { "name": "range-thumb", "value": "0 1px 4px rgb(20 42 34 / 20%)", "purpose": "Small contact shadow on the lesson range thumb." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Shared easing for route, reveal and state transitions." },
+      { "name": "control-fast", "value": "160ms", "purpose": "Button and range-thumb feedback." },
+      { "name": "mobile-menu", "value": "180ms", "purpose": "Mobile navigation opacity and 8px vertical entrance/exit." },
+      { "name": "state-standard", "value": "200ms", "purpose": "Level-node color, disclosure icon and evidence-panel changes." },
+      { "name": "marker-progress", "value": "250ms", "purpose": "Current marker, report entrance and progress scales." },
+      { "name": "section-reveal", "value": "450ms", "purpose": "One-time section entrance with small optional stagger." },
+      { "name": "route-draw", "value": "1.2s", "purpose": "Single initial drawing of the preparation route; no ambient loop." },
+      { "name": "reduced-motion", "value": "0ms", "purpose": "Immediate state changes when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The decisive workspace or landing action.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">开始分析<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border:0;border-radius:8px;background:var(--workspace-action);color:var(--workspace-on-brand);font:500 14px/1.5 var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif;box-shadow:0 1px 2px rgb(20 42 34 / 12%);transition:background-color 160ms cubic-bezier(0.23,1,0.32,1),transform 160ms cubic-bezier(0.23,1,0.32,1)}.ds-btn-primary:hover{background:var(--workspace-brand)}.ds-btn-primary:active{transform:scale(0.98)}.ds-btn-primary:focus-visible{outline:2px solid var(--ring);outline-offset:3px}.ds-btn-primary:disabled{cursor:not-allowed;background:var(--workspace-quiet);color:var(--workspace-muted);box-shadow:none}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A bordered alternative action with equal 44px target height.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">看看判断依据</button>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 16px;border:1px solid var(--workspace-line);border-radius:8px;background:var(--workspace-surface);color:var(--workspace-ink);font:500 14px/1.5 var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif;transition:background-color 160ms cubic-bezier(0.23,1,0.32,1),border-color 160ms cubic-bezier(0.23,1,0.32,1),transform 160ms cubic-bezier(0.23,1,0.32,1)}.ds-btn-secondary:hover{border-color:var(--workspace-brand);background:var(--workspace-wash)}.ds-btn-secondary:active{transform:scale(0.98)}.ds-btn-secondary:focus-visible{outline:2px solid var(--ring);outline-offset:3px}"
+    },
+    {
+      "name": "Target Level Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "The implemented select treatment used for analysis targets and report context.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-target-level\">目标等级<select class=\"ds-field\" id=\"ds-target-level\"><option>GESP 一级</option><option>GESP 二级</option><option>GESP 三级</option></select></label>",
+      "css": ".ds-field-label{display:block;color:var(--workspace-ink);font:500 14px/1.5 var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif}.ds-field{display:block;width:100%;min-height:44px;margin-top:8px;padding:0 12px;border:1px solid var(--input);border-radius:8px;background:var(--workspace-surface);color:var(--workspace-ink);font:400 16px/1.5 var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif;transition:border-color 160ms cubic-bezier(0.23,1,0.32,1),box-shadow 160ms cubic-bezier(0.23,1,0.32,1)}.ds-field:hover{border-color:var(--workspace-brand)}.ds-field:focus-visible{outline:2px solid var(--ring);outline-offset:3px}"
+    },
+    {
+      "name": "Main Navigation",
+      "kind": "nav",
+      "description": "The shared product header with active route wash and underline.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"/\"><span class=\"ds-nav-mark\"><svg viewBox=\"0 0 24 24\" width=\"19\" height=\"19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"4.5\" r=\"2.5\"/><circle cx=\"5\" cy=\"12\" r=\"2.5\"/><circle cx=\"12\" cy=\"19.5\" r=\"2.5\"/><circle cx=\"19\" cy=\"12\" r=\"2.5\"/><path d=\"m10 6-3 4m0 4 3 4m4-12 3 4m0 4-3 4\"/></svg></span><span><strong>GESP 考级宝</strong><small>C++ 考级分析工具</small></span></a><nav class=\"ds-nav-links\" aria-label=\"主导航\"><a href=\"/syllabus\" aria-current=\"page\">等级考纲</a><a href=\"/analyze\">试卷分析</a><a href=\"/plan\">学习规划</a></nav><button class=\"ds-nav-menu\" type=\"button\" aria-label=\"菜单\">菜单</button></header>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:80px;padding:0 48px;border-bottom:1px solid var(--workspace-line);background:var(--workspace-surface);color:var(--workspace-ink);font-family:var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif}.ds-nav-brand{display:flex;align-items:center;gap:12px;min-height:48px;color:inherit;text-decoration:none}.ds-nav-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:8px;background:var(--workspace-wash);color:var(--workspace-brand)}.ds-nav-brand strong{display:block;font-size:16px;font-weight:500;letter-spacing:-0.02em}.ds-nav-brand small{display:block;margin-top:2px;color:var(--workspace-muted);font-size:11px}.ds-nav-links{display:flex;align-items:center;gap:4px}.ds-nav-links a{position:relative;display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:8px;color:var(--workspace-muted);font-size:14px;text-decoration:none;transition:background-color 160ms,color 160ms}.ds-nav-links a:hover{background:var(--workspace-quiet);color:var(--workspace-ink)}.ds-nav-links a[aria-current='page']{background:var(--workspace-wash);color:var(--workspace-brand);font-weight:500}.ds-nav-links a[aria-current='page']::after{content:'';position:absolute;left:16px;right:16px;bottom:-20px;height:2px;background:var(--workspace-brand)}.ds-nav a:focus-visible,.ds-nav-menu:focus-visible{outline:2px solid var(--ring);outline-offset:3px}.ds-nav-menu{display:none;min-height:44px;padding:0 12px;border:1px solid var(--workspace-line);border-radius:8px;background:var(--workspace-surface);color:var(--workspace-ink)}@media(max-width:767px){.ds-nav{padding:0 20px}.ds-nav-links{display:none}.ds-nav-menu{display:block}}"
+    },
+    {
+      "name": "Workspace Card",
+      "kind": "card",
+      "refersTo": "workspace-card",
+      "description": "A flat bordered container for the paper-analysis form or evidence aside.",
+      "html": "<section class=\"ds-workspace-card\"><h2>试卷文件</h2><p>文件只在当前分析流程中使用；选择后可随时移除。</p><div class=\"ds-workspace-meta\"><span>考试语言</span><strong>C++</strong></div></section>",
+      "css": ".ds-workspace-card{padding:32px;border:1px solid var(--workspace-line);border-radius:16px;background:var(--workspace-surface);color:var(--workspace-ink);font-family:var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif}.ds-workspace-card h2{margin:0;font-size:20px;font-weight:500;letter-spacing:-0.02em}.ds-workspace-card p{margin:8px 0 20px;color:var(--workspace-muted);font-size:14px;line-height:1.75}.ds-workspace-meta{display:flex;justify-content:space-between;padding-top:20px;border-top:1px solid var(--workspace-line);font-size:14px}.ds-workspace-meta strong{font-weight:500}@media(max-width:639px){.ds-workspace-card{padding:20px}}"
+    },
+    {
+      "name": "Eight-Level Preparation Path",
+      "kind": "custom",
+      "description": "The signature route of eight selectable GESP levels and a real evidence panel.",
+      "html": "<section class=\"ds-level-path\" aria-label=\"GESP 八级互动路径\"><header><div><h2>GESP C++ 备考路径</h2><p>选择等级，查看对应学习阶段</p></div><data>01—08</data></header><div class=\"ds-path-map\"><svg viewBox=\"0 0 100 100\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path class=\"ds-path-base\" d=\"M10 25 H90 Q94 25 94 29 V68 Q94 72 90 72 H10\"/><path class=\"ds-path-draw\" pathLength=\"1\" d=\"M10 25 H90 Q94 25 94 29 V68 Q94 72 90 72 H10\"/></svg><button style=\"left:10%;top:25%\" aria-pressed=\"true\">01<small>一级</small></button><button style=\"left:36.7%;top:25%\">02<small>二级</small></button><button style=\"left:63.3%;top:25%\">03<small>三级</small></button><button style=\"left:90%;top:25%\">04<small>四级</small></button><button style=\"left:90%;top:72%\">05<small>五级</small></button><button style=\"left:63.3%;top:72%\">06<small>六级</small></button><button style=\"left:36.7%;top:72%\">07<small>七级</small></button><button style=\"left:10%;top:72%\">08<small>八级</small></button></div><div class=\"ds-path-evidence\"><p>GESP 一级</p><h3>程序设计基础</h3><span>13 项考点</span><a href=\"/syllabus?level=1\">查看本级完整考纲 →</a></div></section>",
+      "css": ".ds-level-path{overflow:hidden;border:1px solid var(--workspace-line);border-radius:16px;background:var(--workspace-surface);color:var(--workspace-ink);box-shadow:0 20px 60px rgb(27 48 41 / 8%);font-family:var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif}.ds-level-path>header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--workspace-line)}.ds-level-path h2{margin:0;font-size:14px;font-weight:500}.ds-level-path header p{margin:4px 0 0;color:var(--workspace-muted);font-size:12px}.ds-level-path data{color:var(--workspace-muted);font:12px var(--font-geist-mono),monospace}.ds-path-map{position:relative;height:260px;margin:0 24px}.ds-path-map>svg{position:absolute;inset:0;width:100%;height:100%}.ds-path-base,.ds-path-draw{fill:none;stroke-width:1.5;vector-effect:non-scaling-stroke}.ds-path-base{stroke:var(--workspace-line)}.ds-path-draw{stroke:var(--workspace-brand);stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:ds-route-draw 1.2s cubic-bezier(0.23,1,0.32,1)}.ds-path-map button{position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;width:40px;height:40px;transform:translate(-50%,-50%);border:1px solid var(--workspace-line);border-radius:50%;background:var(--workspace-surface);color:var(--workspace-muted);font:12px var(--font-geist-mono),monospace;transition:border-color 200ms,color 200ms,background-color 200ms}.ds-path-map button small{position:absolute;top:48px;width:40px;font:12px var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif}.ds-path-map button:hover{border-color:var(--workspace-brand);color:var(--workspace-brand)}.ds-path-map button[aria-pressed='true']{border-color:var(--workspace-current);background:var(--workspace-current);color:var(--workspace-on-current);outline:1px solid var(--workspace-current);outline-offset:5px}.ds-path-map button:focus-visible{outline:2px solid var(--ring);outline-offset:3px}.ds-path-evidence{position:relative;padding:20px 24px;border-top:1px solid var(--workspace-line);background:var(--workspace-quiet);animation:ds-evidence-in 200ms cubic-bezier(0.23,1,0.32,1)}.ds-path-evidence p{margin:0;color:var(--workspace-brand);font-size:14px}.ds-path-evidence h3{margin:4px 0 0;font-size:20px;font-weight:500;letter-spacing:-0.02em}.ds-path-evidence>span{position:absolute;right:24px;top:24px;color:var(--workspace-muted);font:12px var(--font-geist-mono),monospace}.ds-path-evidence a{display:inline-block;margin-top:16px;color:var(--workspace-brand);font-size:14px;font-weight:500;text-decoration:none}.ds-path-evidence a:hover{text-decoration:underline;text-underline-offset:4px}.ds-path-evidence a:focus-visible{outline:2px solid var(--ring);outline-offset:3px}@keyframes ds-route-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}@keyframes ds-evidence-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){.ds-path-draw,.ds-path-evidence{animation:none}}@media(max-width:639px){.ds-path-map{height:260px;margin:0 12px}.ds-level-path>header,.ds-path-evidence{padding-left:20px;padding-right:20px}}"
+    },
+    {
+      "name": "Selected Course Level",
+      "kind": "chip",
+      "refersTo": "level-option-selected",
+      "description": "A selectable course-stage option with the implemented green position dot.",
+      "html": "<button class=\"ds-level-option\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-level-dot\" aria-hidden=\"true\"></span><strong>Level 1</strong><span>编程基础</span><small>目标 GESP 1-2级</small></button>",
+      "css": ".ds-level-option{position:relative;display:block;min-height:112px;padding:16px;border:1px solid var(--workspace-brand);border-radius:12px;background:var(--workspace-wash);color:var(--workspace-ink);text-align:left;font-family:var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif;transition:border-color 200ms,background-color 200ms}.ds-level-option strong{display:block;font-size:14px;font-weight:500}.ds-level-option>span:not(.ds-level-dot){display:block;margin-top:4px;color:var(--workspace-muted);font-size:12px}.ds-level-option small{display:block;margin-top:12px;color:var(--workspace-brand);font-size:12px}.ds-level-dot{position:absolute;right:12px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--workspace-brand)}.ds-level-option:hover{border-color:var(--workspace-action)}.ds-level-option:active{transform:scale(0.99)}.ds-level-option:focus-visible{outline:2px solid var(--ring);outline-offset:3px}"
+    },
+    {
+      "name": "Readiness Row",
+      "kind": "custom",
+      "description": "One GESP readiness estimate with status, progress and tabular percentage.",
+      "html": "<div class=\"ds-readiness-row\"><div><strong>GESP 1</strong><span>建议巩固</span></div><div class=\"ds-readiness-track\" role=\"progressbar\" aria-label=\"GESP 1 准备程度\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"70\"><span></span></div><data>70%</data></div>",
+      "css": ".ds-readiness-row{display:grid;grid-template-columns:64px 1fr 48px;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--workspace-current);border-radius:8px;background:var(--workspace-wash);color:var(--workspace-ink);font-family:var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif}.ds-readiness-row strong{display:block;font-size:14px;font-weight:500}.ds-readiness-row>div:first-child>span{display:block;margin-top:2px;color:var(--workspace-muted);font-size:11px}.ds-readiness-track{height:6px;overflow:hidden;border-radius:9999px;background:var(--workspace-quiet)}.ds-readiness-track>span{display:block;width:70%;height:100%;border-radius:inherit;background:var(--workspace-brand);transform-origin:left;animation:ds-progress-in 250ms cubic-bezier(0.23,1,0.32,1)}.ds-readiness-row data{text-align:right;color:var(--workspace-brand);font:14px var(--font-geist-mono),monospace;font-variant-numeric:tabular-nums}@keyframes ds-progress-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}@media(prefers-reduced-motion:reduce){.ds-readiness-track>span{animation:none}}"
+    },
+    {
+      "name": "Study Path Stage",
+      "kind": "custom",
+      "description": "One numbered stage in the four-stage course path with its actual topic checklist.",
+      "html": "<section class=\"ds-study-stage\"><span class=\"ds-study-number\">01</span><h3>Level 1 · 编程基础</h3><p>目标 GESP 1-2级</p><small>24 课次</small><ul><li>变量与输入输出</li><li>运算符与条件</li><li>循环结构</li><li>数组基础</li><li>函数入门</li></ul></section>",
+      "css": ".ds-study-stage{position:relative;padding:24px 20px;border-top:1px solid var(--workspace-line);background:var(--workspace-paper);color:var(--workspace-ink);font-family:var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif}.ds-study-number{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--workspace-brand);border-radius:50%;background:var(--workspace-surface);color:var(--workspace-brand);font:11px var(--font-geist-mono),monospace}.ds-study-stage h3{margin:20px 0 0;font-size:18px;font-weight:500}.ds-study-stage p{margin:8px 0 0;color:var(--workspace-brand);font-size:14px}.ds-study-stage>small{display:block;margin-top:8px;color:var(--workspace-muted);font-size:12px;font-variant-numeric:tabular-nums}.ds-study-stage ul{display:flex;flex-direction:column;gap:8px;margin:20px 0 0;padding:0;list-style:none}.ds-study-stage li{color:var(--workspace-muted);font-size:12px}@media(min-width:1024px){.ds-study-stage{border-top:0;border-left:1px solid var(--workspace-line)}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "备考路径图",
+    "overview": "GESP 考级宝 is a quiet, traceable preparation map rather than a generic education dashboard. A warm-neutral paper ground, deep ink type, path-green actions and restrained amber current-stage markers connect syllabus lookup, paper analysis and course-progress estimates into one evidence chain. Fine rules, route segments, level ticks and tabular figures make the interface feel measured and inspectable.\n\nLanding pages explain and route; workspaces prioritize the current task. Both use the same material language. Motion is brief and purposeful: selection moves a marker or crossfades evidence, sections reveal once, and the route draws once on entry. Reduced-motion preferences remove these transitions.",
+    "keyCharacteristics": [
+      "Warm paper and quiet tonal surfaces instead of a glossy SaaS canvas.",
+      "Path-green actions and links; amber reserved for current-stage or numbered progress cues.",
+      "Medium-weight Chinese typography with compact, tabular level and progress figures.",
+      "Fine 1px dividers and route geometry provide structure before shadows.",
+      "Short transform/opacity transitions with explicit reduced-motion behavior."
+    ],
+    "rules": [
+      {
+        "name": "The Path-Green Rule",
+        "body": "Path green carries actions, active navigation, evidence links and progress. Amber marks the current stage or numbered progress cue; it is not a general decorative accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Medium-Weight Rule",
+        "body": "Headings and controls use weight 500; body copy stays at 400. Use size, spacing and ink contrast—not heavier display type—to establish hierarchy.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Most surfaces are separated by 1px lines and tonal washes. Reserve shadows for primary-button rest, the floating mobile menu and the interactive path card.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep actions, evidence links and active progress in Path Green, with amber reserved for current or numbered progress cues.",
+      "Do use mono tabular figures for level numbers, topic counts, lesson counts and estimates.",
+      "Do keep real sources, scope and estimation limits beside the conclusions they qualify.",
+      "Do preserve the 2px offset focus outline and reduced-motion alternatives on every interactive pattern.",
+      "Do let fine dividers and tonal regions carry structure before adding a shadow."
+    ],
+    "donts": [
+      "Don't replace the warm paper, ink and path-green palette with generic saturated SaaS colors.",
+      "Don't use heavy headline weights, decorative serif type or non-tabular progress figures.",
+      "Don't add ambient animation loops; the route draws once and state transitions stay short.",
+      "Don't present a course-coverage estimate as an actual exam score or guaranteed pass rate.",
+      "Don't invent testimonials, performance claims, customer counts or CCF endorsement in visual content."
+    ]
+  }
+}

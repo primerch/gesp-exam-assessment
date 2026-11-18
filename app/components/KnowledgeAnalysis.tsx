@@ -1,16 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { Brain, CheckCircle2, XCircle, BookOpen, ChevronDown, ChevronUp, Lightbulb, AlertTriangle, GraduationCap } from "lucide-react";
-import { 
-  getMasteredKnowledgeDetails, 
-  getRemainingKnowledge, 
-  groupKnowledgeByCategory,
-  gespKnowledgePoints,
-  gespSyllabus,
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import {
+  AlertTriangle,
+  BookOpen,
+  Brain,
+  Check,
+  CheckCircle2,
+  ChevronDown,
+  ChevronUp,
+  Circle,
+  GraduationCap,
+  Lightbulb,
+} from "lucide-react";
+import {
   calculateGespCoverage,
+  gespKnowledgePoints,
+  getMasteredKnowledgeDetails,
+  getRemainingKnowledge,
   getTeachingRecommendations,
-  getUncoveredKnowledgeByGespLevel,
+  groupKnowledgeByCategory,
 } from "../data/curriculum-data";
 
 interface KnowledgeAnalysisProps {
@@ -19,15 +29,21 @@ interface KnowledgeAnalysisProps {
   probabilities: Record<number, number>;
 }
 
-export default function KnowledgeAnalysis({
-  currentLevel,
-  currentLesson,
-  probabilities,
-}: KnowledgeAnalysisProps) {
-  const [activeTab, setActiveTab] = useState<"mastered" | "remaining" | "byLevel" | "coverage" | "teaching">("mastered");
+const tabs = [
+  { id: "mastered", label: "已掌握", icon: CheckCircle2 },
+  { id: "remaining", label: "待学习", icon: Circle },
+  { id: "byLevel", label: "按等级", icon: BookOpen },
+  { id: "coverage", label: "覆盖情况", icon: AlertTriangle },
+  { id: "teaching", label: "教学建议", icon: GraduationCap },
+] as const;
+type TabId = (typeof tabs)[number]["id"];
+
+export default function KnowledgeAnalysis({ currentLevel, currentLesson, probabilities }: KnowledgeAnalysisProps) {
+  const [activeTab, setActiveTab] = useState<TabId>("mastered");
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
-  const [selectedGespLevel, setSelectedGespLevel] = useState<number>(1);
+  const [selectedGespLevel, setSelectedGespLevel] = useState(1);
   const [expandedMissing, setExpandedMissing] = useState<Set<number>>(new Set());
+  const reduceMotion = useReducedMotion();
 
   const mastered = getMasteredKnowledgeDetails(currentLevel, currentLesson);
   const remaining = getRemainingKnowledge(currentLevel, currentLesson);
@@ -36,315 +52,243 @@ export default function KnowledgeAnalysis({
   const coverage = calculateGespCoverage(currentLevel, currentLesson);
   const teachingRecommendations = getTeachingRecommendations(currentLevel, currentLesson);
 
-  const toggleCategory = (category: string) => {
-    const newSet = new Set(expandedCategories);
-    if (newSet.has(category)) {
-      newSet.delete(category);
-    } else {
-      newSet.add(category);
-    }
-    setExpandedCategories(newSet);
-  };
+  function toggleCategory(category: string) {
+    const next = new Set(expandedCategories);
+    if (next.has(category)) next.delete(category);
+    else next.add(category);
+    setExpandedCategories(next);
+  }
 
-  const toggleMissing = (level: number) => {
-    const newSet = new Set(expandedMissing);
-    if (newSet.has(level)) {
-      newSet.delete(level);
-    } else {
-      newSet.add(level);
-    }
-    setExpandedMissing(newSet);
-  };
+  function toggleMissing(level: number) {
+    const next = new Set(expandedMissing);
+    if (next.has(level)) next.delete(level);
+    else next.add(level);
+    setExpandedMissing(next);
+  }
 
-  const getLevelMastery = (level: number) => {
+  function selectTab(id: TabId, element?: HTMLButtonElement) {
+    setActiveTab(id);
+    element?.scrollIntoView({ block: "nearest", inline: "nearest", container: "nearest" } as ScrollIntoViewOptions);
+  }
+
+  function onTabKeyDown(event: React.KeyboardEvent<HTMLButtonElement>, index: number) {
+    let next = index;
+    if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+    else if (event.key === "ArrowLeft") next = (index - 1 + tabs.length) % tabs.length;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = tabs.length - 1;
+    else return;
+    event.preventDefault();
+    const id = tabs[next].id;
+    setActiveTab(id);
+    const element = document.getElementById(`knowledge-tab-${id}`);
+    element?.focus();
+    element?.scrollIntoView({ block: "nearest", inline: "nearest", container: "nearest" } as ScrollIntoViewOptions);
+  }
+
+  function getLevelMastery(level: number) {
     const points = gespKnowledgePoints[level] || [];
-    const masteredIds = new Set(mastered.map((p) => p.id));
-    const masteredInLevel = points.filter((p) => masteredIds.has(p.id));
-    const totalWeight = points.reduce((sum, p) => sum + p.weight, 0);
-    const masteredWeight = masteredInLevel.reduce((sum, p) => sum + p.weight, 0);
+    const masteredIds = new Set(mastered.map((point) => point.id));
+    const masteredInLevel = points.filter((point) => masteredIds.has(point.id));
+    const totalWeight = points.reduce((sum, point) => sum + point.weight, 0);
+    const masteredWeight = masteredInLevel.reduce((sum, point) => sum + point.weight, 0);
     return {
       total: points.length,
       mastered: masteredInLevel.length,
       percentage: totalWeight > 0 ? Math.round((masteredWeight / totalWeight) * 100) : 0,
     };
-  };
+  }
 
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'high': return 'bg-red-50 text-red-700 border-red-200';
-      case 'medium': return 'bg-amber-50 text-amber-700 border-amber-200';
-      case 'low': return 'bg-blue-50 text-blue-700 border-blue-200';
-      default: return 'bg-slate-50 text-slate-700 border-slate-200';
+  function categoryList(groups: ReturnType<typeof groupKnowledgeByCategory>, kind: "mastered" | "remaining") {
+    if (!Object.entries(groups).length) {
+      return (
+        <div className="py-10 text-center text-muted">
+          <Brain size={28} className="mx-auto mb-3 opacity-50" aria-hidden />
+          <p className="text-sm">{kind === "mastered" ? "当前课次还没有已覆盖知识点" : "当前课次已覆盖全部知识点"}</p>
+        </div>
+      );
     }
-  };
-
-  const getPriorityText = (priority: string) => {
-    switch (priority) {
-      case 'high': return '高优先级';
-      case 'medium': return '中优先级';
-      case 'low': return '低优先级';
-      default: return '';
-    }
-  };
+    return Object.entries(groups).map(([category, points]) => {
+      const expanded = expandedCategories.has(category);
+      const contentId = `${kind}-${category}`;
+      return (
+        <div key={category} className="border-b border-line last:border-b-0">
+          <button
+            type="button"
+            aria-expanded={expanded}
+            aria-controls={contentId}
+            onClick={() => toggleCategory(category)}
+            className="flex min-h-14 w-full items-center justify-between gap-4 py-3 text-left hover:bg-quiet"
+          >
+            <span className="font-medium text-ink">{category}<span className="ml-2 font-mono text-xs text-muted">{points.length}</span></span>
+            {expanded ? <ChevronUp size={16} className="text-muted" aria-hidden /> : <ChevronDown size={16} className="text-muted" aria-hidden />}
+          </button>
+          {expanded && (
+            <motion.div
+              id={contentId}
+              initial={{ opacity: 0, transform: "translateY(-4px)" }}
+              animate={{ opacity: 1, transform: "translateY(0px)" }}
+              transition={{ duration: reduceMotion ? 0 : 0.18, ease: [0.23, 1, 0.32, 1] }}
+              className="flex flex-col gap-2 pb-4"
+            >
+              {points.map((point) => (
+                <div key={point.id} className="rounded-lg bg-quiet p-4">
+                  <div className="flex items-start gap-3">
+                    {kind === "mastered" ? <Check size={16} className="mt-0.5 shrink-0 text-brand" aria-hidden /> : <Circle size={16} className="mt-0.5 shrink-0 text-current" aria-hidden />}
+                    <div className="min-w-0 flex-1">
+                      <h4 className="text-sm font-medium text-ink">{point.name}</h4>
+                      <p className="mt-1 text-xs leading-5 text-muted">{point.description}</p>
+                      {kind === "mastered" && <p className="mt-2 flex items-start gap-1.5 text-xs leading-5 text-muted"><Lightbulb size={13} className="mt-0.5 shrink-0 text-current" aria-hidden />{point.parentExplanation}</p>}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </div>
+      );
+    });
+  }
 
   return (
-    <div className="bg-white border border-slate-200 rounded-xl p-5">
-      <div className="flex items-center gap-2 mb-5">
-        <div className="p-1.5 bg-blue-100 rounded-lg">
-          <Brain className="w-4 h-4 text-blue-600" />
+    <div>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <Brain size={19} strokeWidth={1.5} className="text-brand" aria-hidden />
+          <h2 className="text-lg font-medium text-ink">知识点掌握分析</h2>
         </div>
-        <h2 className="text-base font-semibold text-slate-900">知识点掌握分析</h2>
+        <p className="text-xs text-muted">已覆盖 {mastered.length} 项 · 待学习 {remaining.length} 项</p>
       </div>
 
-      {/* Tabs */}
-      <div className="flex flex-wrap gap-1.5 mb-5">
-        {([
-          { id: "mastered", label: "已掌握", count: mastered.length, icon: CheckCircle2, color: "blue" },
-          { id: "remaining", label: "待学习", count: remaining.length, icon: XCircle, color: "amber" },
-          { id: "byLevel", label: "按等级", icon: BookOpen, color: "emerald" },
-          { id: "coverage", label: "覆盖情况", icon: AlertTriangle, color: "purple" },
-          { id: "teaching", label: "教学建议", icon: GraduationCap, color: "indigo" },
-        ] as const).map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-              activeTab === tab.id
-                ? `bg-${tab.color}-100 text-${tab.color}-700`
-                : "text-slate-600 hover:bg-slate-100"
-            }`}
+      <div role="tablist" aria-label="知识点分析视图" className="mt-6 flex overflow-x-auto border-b border-line">
+        {tabs.map((tab, index) => {
+          const active = activeTab === tab.id;
+          const count = tab.id === "mastered" ? mastered.length : tab.id === "remaining" ? remaining.length : null;
+          return (
+            <button
+              type="button"
+              role="tab"
+              id={`knowledge-tab-${tab.id}`}
+              key={tab.id}
+              aria-selected={active}
+              tabIndex={active ? 0 : -1}
+              onClick={(event) => selectTab(tab.id, event.currentTarget)}
+              onKeyDown={(event) => onTabKeyDown(event, index)}
+              className={`relative flex min-h-12 shrink-0 items-center gap-2 px-4 text-sm transition-colors ${active ? "text-brand after:absolute after:inset-x-4 after:bottom-0 after:border-b-2 after:border-brand" : "text-muted hover:text-ink"}`}
+            >
+              <tab.icon size={15} strokeWidth={1.5} aria-hidden />
+              {tab.label}
+              {count !== null && <span className="font-mono text-xs tabular-nums">{count}</span>}
+            </button>
+          );
+        })}
+      </div>
+
+      <div role="tabpanel" id="knowledge-panel" aria-labelledby={`knowledge-tab-${activeTab}`} className="mt-5">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, transform: "translateY(6px)" }}
+            animate={{ opacity: 1, transform: "translateY(0px)" }}
+            exit={{ opacity: 0, transform: "translateY(-6px)" }}
+            transition={{ duration: reduceMotion ? 0 : 0.18, ease: [0.23, 1, 0.32, 1] }}
           >
-            <tab.icon className="w-3.5 h-3.5" />
-            {tab.label}
-            {"count" in tab && (
-              <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeTab === tab.id ? "bg-white/60" : "bg-slate-200"}`}>
-                {tab.count}
-              </span>
-            )}
-          </button>
-        ))}
-      </div>
+            {activeTab === "mastered" && <div className="border-t border-line">{categoryList(masteredByCategory, "mastered")}</div>}
+            {activeTab === "remaining" && <div className="border-t border-line">{categoryList(remainingByCategory, "remaining")}</div>}
 
-      {/* Tab Content */}
-      <div className="space-y-3">
-        {/* Mastered Tab */}
-        {activeTab === "mastered" && (
-          <>
-            {Object.entries(masteredByCategory).length === 0 ? (
-              <div className="text-center py-10 text-slate-500">
-                <Brain className="w-10 h-10 mx-auto mb-3 opacity-30" />
-                <p className="text-sm">还没有掌握的知识点，继续学习吧！</p>
-              </div>
-            ) : (
-              Object.entries(masteredByCategory).map(([category, points]) => (
-                <div key={category} className="border border-slate-200 rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => toggleCategory(category)}
-                    className="w-full flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium text-slate-900 text-sm">{category}</span>
-                      <span className="text-xs text-slate-500">({points.length})</span>
-                    </div>
-                    {expandedCategories.has(category) ? (
-                      <ChevronUp className="w-4 h-4 text-slate-400" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 text-slate-400" />
-                    )}
-                  </button>
-                  {expandedCategories.has(category) && (
-                    <div className="p-3 space-y-2 border-t border-slate-200">
-                      {points.map((point) => (
-                        <div key={point.id} className="p-3 bg-emerald-50/60 rounded-lg">
-                          <div className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                            <div className="flex-1 min-w-0">
-                              <div className="font-medium text-slate-900 text-sm">{point.name}</div>
-                              <div className="text-xs text-slate-600 mt-0.5">{point.description}</div>
-                              <div className="mt-1.5 flex items-center gap-1">
-                                <Lightbulb className="w-3 h-3 text-amber-500" />
-                                <span className="text-xs text-slate-600">{point.parentExplanation}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+            {activeTab === "byLevel" && (
+              <div>
+                <div className="flex gap-2 overflow-x-auto pb-3" role="group" aria-label="选择 GESP 等级">
+                  {[1, 2, 3, 4, 5, 6, 7, 8].map((level) => {
+                    const mastery = getLevelMastery(level);
+                    const active = selectedGespLevel === level;
+                    return (
+                      <button
+                        type="button"
+                        key={level}
+                        aria-pressed={active}
+                        onClick={() => setSelectedGespLevel(level)}
+                        className={`min-w-20 shrink-0 rounded-lg border px-3 py-2 text-center transition-colors ${active ? "border-brand bg-wash text-brand" : "border-line text-muted hover:border-brand"}`}
+                      >
+                        <span className="block font-medium">GESP {level}</span>
+                        <span className="mt-1 block font-mono text-xs tabular-nums">{mastery.percentage}%</span>
+                      </button>
+                    );
+                  })}
                 </div>
-              ))
-            )}
-          </>
-        )}
-
-        {/* Remaining Tab */}
-        {activeTab === "remaining" && (
-          <>
-            {Object.entries(remainingByCategory).length === 0 ? (
-              <div className="text-center py-10 text-slate-500">
-                <CheckCircle2 className="w-10 h-10 mx-auto mb-3 opacity-30" />
-                <p className="text-sm">太棒了！已经掌握了所有知识点！</p>
+                <section className="mt-3 rounded-xl border border-line p-4">
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="font-medium text-ink">GESP {selectedGespLevel} 级知识点</h3>
+                    <span className="font-mono text-xl text-brand tabular-nums">{probabilities[selectedGespLevel]}%</span>
+                  </div>
+                  <ul className="mt-4 flex max-h-80 flex-col gap-1 overflow-y-auto">
+                    {gespKnowledgePoints[selectedGespLevel]?.map((point) => {
+                      const isMastered = mastered.some((item) => item.id === point.id);
+                      return (
+                        <li key={point.id} className={`flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm ${isMastered ? "bg-wash text-ink" : "text-muted"}`}>
+                          {isMastered ? <CheckCircle2 size={15} className="shrink-0 text-brand" aria-hidden /> : <Circle size={15} className="shrink-0" aria-hidden />}
+                          {point.name}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
               </div>
-            ) : (
-              Object.entries(remainingByCategory).map(([category, points]) => (
-                <div key={category} className="border border-slate-200 rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => toggleCategory(category)}
-                    className="w-full flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium text-slate-900 text-sm">{category}</span>
-                      <span className="text-xs text-slate-500">({points.length})</span>
-                    </div>
-                    {expandedCategories.has(category) ? (
-                      <ChevronUp className="w-4 h-4 text-slate-400" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 text-slate-400" />
-                    )}
-                  </button>
-                  {expandedCategories.has(category) && (
-                    <div className="p-3 space-y-2 border-t border-slate-200">
-                      {points.map((point) => (
-                        <div key={point.id} className="p-3 bg-amber-50/60 rounded-lg">
-                          <div className="flex items-start gap-2">
-                            <XCircle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                            <div className="flex-1 min-w-0">
-                              <div className="font-medium text-slate-900 text-sm">{point.name}</div>
-                              <div className="text-xs text-slate-600 mt-0.5">{point.description}</div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))
             )}
-          </>
-        )}
 
-        {/* By Level Tab */}
-        {activeTab === "byLevel" && (
-          <div className="space-y-4">
-            <div className="flex gap-1.5 overflow-x-auto pb-2">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((level) => {
-                const mastery = getLevelMastery(level);
-                return (
-                  <button
-                    key={level}
-                    onClick={() => setSelectedGespLevel(level)}
-                    className={`flex-shrink-0 px-3 py-2 rounded-lg border-2 text-center transition-colors ${
-                      selectedGespLevel === level
-                        ? "border-blue-500 bg-blue-50"
-                        : "border-slate-200 hover:border-slate-300"
-                    }`}
-                  >
-                    <div className="font-bold text-slate-900">{level}</div>
-                    <div className="text-xs text-slate-500">{mastery.percentage}%</div>
-                  </button>
-                );
-              })}
-            </div>
-
-            <div className="border border-slate-200 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-medium text-slate-900">GESP {selectedGespLevel}级知识点</h3>
-                <div className="text-right">
-                  <div className="text-xl font-bold text-blue-600">{probabilities[selectedGespLevel]}%</div>
-                </div>
-              </div>
-
-              <div className="space-y-2 max-h-80 overflow-y-auto">
-                {gespKnowledgePoints[selectedGespLevel]?.map((point) => {
-                  const isMastered = mastered.some((m) => m.id === point.id);
+            {activeTab === "coverage" && (
+              <div className="border-t border-line">
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((level) => {
+                  const item = coverage[level];
+                  const percentage = parseFloat(item.percentage);
+                  const expanded = expandedMissing.has(level);
                   return (
-                    <div
-                      key={point.id}
-                      className={`p-2.5 rounded-lg border text-sm ${
-                        isMastered
-                          ? "bg-emerald-50/50 border-emerald-200"
-                          : "bg-slate-50 border-slate-200"
-                      }`}
-                    >
-                      <div className="flex items-center gap-2">
-                        {isMastered ? (
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                        ) : (
-                          <XCircle className="w-4 h-4 text-slate-400" />
-                        )}
-                        <span className="font-medium text-slate-900">{point.name}</span>
-                      </div>
+                    <div key={level} className="border-b border-line">
+                      <button
+                        type="button"
+                        aria-expanded={expanded}
+                        onClick={() => toggleMissing(level)}
+                        className="flex min-h-14 w-full items-center justify-between gap-4 py-3 text-left"
+                      >
+                        <span className="text-sm font-medium text-ink">GESP {level} 级</span>
+                        <span className="flex items-center gap-3">
+                          <span className="h-1.5 w-20 overflow-hidden rounded-full bg-quiet" role="progressbar" aria-label={`GESP ${level} 覆盖率`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={percentage}>
+                            <motion.span
+                              className="block h-full w-full origin-left bg-brand"
+                              initial={{ transform: "scaleX(0)" }}
+                              animate={{ transform: `scaleX(${percentage / 100})` }}
+                              transition={{ duration: reduceMotion ? 0 : 0.25, ease: [0.23, 1, 0.32, 1] }}
+                            />
+                          </span>
+                          <span className="w-14 text-right font-mono text-xs text-muted tabular-nums">{item.percentage}</span>
+                          {expanded ? <ChevronUp size={15} className="text-muted" aria-hidden /> : <ChevronDown size={15} className="text-muted" aria-hidden />}
+                        </span>
+                      </button>
                     </div>
                   );
                 })}
               </div>
-            </div>
-          </div>
-        )}
-
-        {/* Coverage Tab */}
-        {activeTab === "coverage" && (
-          <div className="space-y-2">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((level) => {
-              const cov = coverage[level];
-              const percentage = parseFloat(cov.percentage);
-              
-              return (
-                <div key={level} className="border border-slate-200 rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => toggleMissing(level)}
-                    className="w-full flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 transition-colors"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="font-medium text-slate-900 text-sm">GESP {level}级</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-20 h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                          <div 
-                            className={`h-full rounded-full ${percentage >= 80 ? 'bg-emerald-500' : percentage >= 50 ? 'bg-amber-500' : 'bg-red-500'}`}
-                            style={{ width: `${percentage}%` }}
-                          />
-                        </div>
-                        <span className="text-xs text-slate-600">{cov.percentage}</span>
-                      </div>
-                    </div>
-                    {expandedMissing.has(level) ? (
-                      <ChevronUp className="w-4 h-4 text-slate-400" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 text-slate-400" />
-                    )}
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Teaching Tab */}
-        {activeTab === "teaching" && (
-          <>
-            {teachingRecommendations.length === 0 ? (
-              <div className="text-center py-10 text-slate-500">
-                <CheckCircle2 className="w-10 h-10 mx-auto mb-3 opacity-30" />
-                <p className="text-sm">该学生各 GESP 等级覆盖率良好，暂无特别建议</p>
-              </div>
-            ) : (
-              teachingRecommendations.map((rec) => (
-                <div key={rec.gespLevel} className={`border rounded-lg overflow-hidden mb-3 ${getPriorityColor(rec.priority).replace(/bg-[^\s]+/, '').replace(/text-[^\s]+/, '').trim()}`}>
-                  <div className={`p-3 ${getPriorityColor(rec.priority)}`}>
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="flex items-center gap-2">
-                        <span className="font-medium text-sm">GESP {rec.gespLevel}级</span>
-                        <span className="text-xs px-1.5 py-0.5 bg-white/50 rounded">{getPriorityText(rec.priority)}</span>
-                      </div>
-                      <span className="text-sm font-bold">{probabilities[rec.gespLevel]}%</span>
-                    </div>
-                    <p className="text-xs opacity-90">{rec.suggestion}</p>
-                  </div>
-                </div>
-              ))
             )}
-          </>
-        )}
+
+            {activeTab === "teaching" && (
+              <div className="flex flex-col gap-3">
+                {teachingRecommendations.length === 0 ? (
+                  <div className="py-10 text-center text-muted"><CheckCircle2 size={28} className="mx-auto mb-3 text-brand" aria-hidden /><p className="text-sm">各 GESP 等级覆盖情况良好，暂无额外建议</p></div>
+                ) : (
+                  teachingRecommendations.map((recommendation) => (
+                    <article key={recommendation.gespLevel} className="rounded-xl border border-line bg-quiet p-4">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <h3 className="text-sm font-medium text-ink">GESP {recommendation.gespLevel} 级</h3>
+                        <span className="font-mono text-sm text-brand tabular-nums">{probabilities[recommendation.gespLevel]}%</span>
+                      </div>
+                      <p className="mt-2 text-sm leading-6 text-muted">{recommendation.suggestion}</p>
+                    </article>
+                  ))
+                )}
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

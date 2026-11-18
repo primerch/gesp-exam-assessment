@@ -4,11 +4,11 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
-# GESP 考纲研判 - Project Guide
+# GESP 考级宝 - Project Guide
 
 ## Project Overview
 
-Reacher's independent C++ GESP syllabus and paper assessment tool covers levels 1–8. The public authorship is Reacher. The home page browses CCF clauses, `/analyze` reviews exams, and `/plan` provides the existing course progress estimates.
+Reacher's independent C++ GESP syllabus and paper assessment tool covers levels 1–8. The public authorship is Reacher. The home page is a detailed landing page, `/syllabus` browses CCF clauses, `/analyze` reviews exams, and `/plan` maps original course lessons to CCF clauses.
 
 ## Technology Stack
 
@@ -28,19 +28,23 @@ Reacher's independent C++ GESP syllabus and paper assessment tool covers levels 
 ```
 app/
 ├── components/              # React components (all Client Components)
-│   ├── ExamPrediction.tsx   # GESP pass probability visualization
-│   ├── Header.tsx           # Product navigation and Reacher byline
+│   ├── ExamPrediction.tsx   # GESP readiness visualization
+│   ├── Header.tsx           # Product navigation
 │   ├── KnowledgeAnalysis.tsx # Knowledge point mastery analysis
 │   ├── LevelSelector.tsx    # Course level/lesson selection UI
-│   └── StudyPath.tsx        # 4-level study path visualization
+│   ├── StudyPath.tsx        # 4-level study path visualization
+│   └── landing/             # Landing page, level path and analysis demo
 ├── data/
-│   └── curriculum-data.ts   # Core data: 95 lessons, 100+ knowledge points
+│   ├── cpp-lessons.ts       # Original courseware lessons, sources and CCF mappings
+│   └── curriculum-data.ts   # Legacy course/knowledge data
 ├── types/
 │   └── index.ts             # TypeScript interface definitions
+├── syllabus/
+│   └── page.tsx             # Official C++ syllabus browser
 ├── favicon.ico
 ├── globals.css              # Tailwind v4 imports + theme variables
 ├── layout.tsx               # Root layout with Geist font
-└── page.tsx                 # Official C++ syllabus browser
+└── page.tsx                 # Landing page and legacy syllabus redirect
 
 public/                      # Static assets
 └── *.svg                    # Next.js/Vercel default icons
