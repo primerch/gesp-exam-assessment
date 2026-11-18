@@ -3,6 +3,7 @@ import test from "node:test";
 import { gradeReading, reconcile } from "../app/lib/review/judgment";
 import { assessBatch, indexPaper } from "../app/lib/review/model";
 import { linesOf, locateBoundaries, buildIndex } from "../app/lib/review/document";
+import { assessmentBatches } from "../app/lib/review/pdf-client";
 
 const paper = {
   id: 1,
@@ -10,6 +11,22 @@ const paper = {
   parts: [{ page: 2, text: "给定 int n = 3，求 n << 1；再用 cout << n 输出结果。也可用二分。" }],
 };
 const target = { language: "cpp" as const, level: 1 };
+
+test("programming and long questions start independently of short questions", () => {
+  const questions = [
+    paper,
+    { ...paper, id: 2, parts: [{ page: 2, text: "题".repeat(1101) }] },
+    { ...paper, id: 3 },
+    { ...paper, id: 4, label: "编程题 · 第 1 题" },
+    { ...paper, id: 5, parts: [...paper.parts, { page: 3, text: "续页" }] },
+    ...[6, 7, 8].map((id) => ({ ...paper, id })),
+  ];
+  assert.deepEqual(
+    assessmentBatches(questions).map((batch) => batch.map((question) => question.id)),
+    [[2], [4], [5], [1, 3, 6, 7], [8]],
+  );
+});
+
 const f = (topic: string, quote: string, role = "required", page = 2) => ({
   topic,
   role,

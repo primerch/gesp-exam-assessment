@@ -152,6 +152,24 @@ export interface PaperReport {
   notes: string[];
   rows: QuestionJudgment[];
 }
+export function assessmentBatches(questions: PaperQuestion[]) {
+  const individual: PaperQuestion[][] = [];
+  const groups: PaperQuestion[][] = [];
+  const short: PaperQuestion[] = [];
+  for (const question of questions) {
+    const length = question.parts.reduce((total, part) => total + part.text.length, 0);
+    if (question.label.startsWith("编程题") || question.parts.length > 1 || length > 1100) {
+      individual.push([question]);
+    } else {
+      short.push(question);
+    }
+  }
+  for (let start = 0; start < short.length; start += limits.batch) {
+    groups.push(short.slice(start, start + limits.batch));
+  }
+  return [...individual, ...groups];
+}
+
 export async function reviewFile(
   file: File,
   selection: Selection,
@@ -164,14 +182,14 @@ export async function reviewFile(
     { phase: "index", selection, pages },
     signal,
   );
+  const batches = assessmentBatches(questions);
   let cursor = 0,
     finished = 0;
   const rows: QuestionJudgment[] = [];
   const failed = new Set<number>();
   const worker = async () => {
-    while (cursor < questions.length) {
-      const batch = questions.slice(cursor, cursor + limits.batch);
-      cursor += batch.length;
+    while (cursor < batches.length) {
+      const batch = batches[cursor++];
       const result = await recoverBatch(
         batch,
         (qs) => reviewRequest<QuestionJudgment[]>({ phase: "assess", selection, questions: qs }, signal),
@@ -185,7 +203,7 @@ export async function reviewFile(
   };
   status(`正在逐题分析，共 ${questions.length} 题`);
   await Promise.all(
-    Array.from({ length: Math.min(2, Math.ceil(questions.length / limits.batch)) }, worker),
+    Array.from({ length: Math.min(3, batches.length) }, worker),
   );
   if (failed.size === questions.length) throw new Error("模型服务暂时无法完成这份试卷，请稍后重试。");
   if (failed.size)
