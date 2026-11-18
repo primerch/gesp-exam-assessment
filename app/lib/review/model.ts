@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { resolveLine, restoresNativeLine, restoreAnswerRow } from "./page-layout";
+import { resolveLine, restoresNativeLine, restoreAnswerRow, hasEmptyFormula } from "./page-layout";
 import type { ChatCompletionContentPart } from "openai/resources/chat/completions";
 import { z } from "zod";
 import { catalogFor, languageNames, type Language } from "../../data/official-syllabus";
@@ -183,7 +183,8 @@ export async function transcribePage(image: string, native: string, signal: Abor
       anchors.set(at, list);
     } else gaps.push({ anchor: lines[at].trim(), note: item.note });
   }
-  if (misplaced.length || notice) {
+  const missingFormulas = lines.flatMap((line, i) => (hasEmptyFormula(line) && !anchors.has(i) ? [i] : []));
+  if (misplaced.length || notice || missingFormulas.length) {
     // Math glyphs can be images embedded between two pieces of a sentence. Ask for the whole
     // native line with the symbols inserted rather than guessing where an isolated glyph belongs.
     const recovered = await callModel(
@@ -215,12 +216,14 @@ export async function transcribePage(image: string, native: string, signal: Abor
       })
       .safeParse(recovered);
     let restoredCount = 0;
+    const restoredLines = new Set<number>();
     if (checked.success) {
       for (const item of checked.data.lines) {
         const at = resolveLine(lines, item.line, item.original);
         if (at < 0 || !restoresNativeLine(lines[at], item.restored)) continue;
         lines[at] = item.restored;
         anchors.delete(at);
+        restoredLines.add(at);
         restoredCount++;
       }
       for (const missing of checked.data.missing) {
@@ -228,6 +231,10 @@ export async function transcribePage(image: string, native: string, signal: Abor
           gaps.push({ anchor: lines[missing.line].trim(), note: missing.note });
         else notice = "本页有无法定位的图文，部分题面可能缺少信息。";
       }
+    }
+    for (const at of missingFormulas) {
+      if (!restoredLines.has(at))
+        gaps.push({ anchor: lines[at].trim(), note: "题面该行的公式或数据范围没有完整辨认。" });
     }
     if (
       checked.success &&

@@ -2,6 +2,7 @@ import { z } from "zod";
 import {
   objectiveAnswer,
   printedPartial,
+  printedOutputRequirements,
   type PrintedAnswer,
   type PrintedMarks,
   type ScoringPoint,
@@ -92,7 +93,7 @@ export function unresolved(q: PaperQuestion, reason: string): QuestionJudgment {
     evidence: [],
     marks: q.marks,
     answerKey: q.answerKey,
-    scoring: [],
+    scoring: printedOutputRequirements(q.parts),
   };
 }
 const compact = (text: string) =>
@@ -170,7 +171,8 @@ export function gradeReading(q: PaperQuestion, selection: Selection, raw: unknow
         : ungrounded
           ? "必要考点没有可定位的题面或大纲依据。"
           : "题面未提供能定位到大纲的必要考点。");
-    return { ...unresolved(q, reason), evidence, scoring };
+    const row = unresolved(q, reason);
+    return { ...row, evidence, scoring: scoring.length ? scoring : row.scoring };
   }
   // A solved explanation and its verified question excerpt still describe the scoring point when a
   // model omitted the separate step or supplied a nonliteral citation for it.

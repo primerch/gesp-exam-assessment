@@ -88,3 +88,11 @@ export function restoreAnswerRow(lines: string[], row: { line: number; header: s
     return;
   lines[at + 1] += " " + row.values.join(" ");
 }
+
+export function hasEmptyFormula(line: string) {
+  const t = line.trim();
+  return (
+    /保证|满足|测试点|测试数据|距离固定为|前\s+格/.test(t) &&
+    /[\p{Script=Han}≤≥=]\s{2,}(?=[\p{Script=Han}，。、；≤≥=])/u.test(t)
+  );
+}

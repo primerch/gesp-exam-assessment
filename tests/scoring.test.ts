@@ -131,3 +131,33 @@ test("graphic answer rows fill only blank native tables with a complete numbered
   restoreAnswerRow(lines, { line: 1, header: "题号1 2", values: ["×", "√"] });
   assert.equal(lines[2], "答案 √ ×");
 });
+
+test("an inconclusive scope still reports readable output requirements across pages without awarding invented marks", async () => {
+  const { unresolved } = await import("../app/lib/review/judgment");
+  const row = unresolved(
+    {
+      id: 1,
+      label: "编程题 · 第 1 题",
+      parts: [
+        { page: 1, text: "3.1.3 输出格式\n第一行输出获胜者。\n1 / 2" },
+        { page: 2, text: "第二行保留两位小数。\n3.1.4 样例\n计算结果 3.14。" },
+      ],
+    },
+    "必要解法缺少依据。",
+  );
+  assert.equal(row.verdict, "insufficient");
+  assert.deepEqual(
+    row.scoring.map((s) => [s.page, s.quote, s.points]),
+    [
+      [1, "第一行输出获胜者。", null],
+      [2, "第二行保留两位小数。", null],
+    ],
+  );
+});
+
+test("seemingly complete mixed PDF pages still trigger vision for missing numeric constraints", async () => {
+  const { hasEmptyFormula } = await import("../app/lib/review/page-layout");
+  assert(hasEmptyFormula("对于所有测试点，保证           。"));
+  assert(!hasEmptyFormula("  对于所有测试点，保证 1 ≤ n ≤ 30。"));
+  assert(!hasEmptyFormula("下列描述正确的是（    ）。"));
+});

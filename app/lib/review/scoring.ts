@@ -127,3 +127,34 @@ export function answerKeysByStart(
     return m ? (keys.get(objectiveGroup(m[1].trim()) + Number(m[2])) ?? undefined) : undefined;
   });
 }
+
+/** Printed output requirements remain usable even when the problem's syllabus classification is inconclusive. */
+export function printedOutputRequirements(
+  parts: { page: number; text: string; issue?: string }[],
+): ScoringPoint[] {
+  const rows: ScoringPoint[] = [];
+  let inOutput = false;
+  for (const part of parts) {
+    const lines = part.text.split(/\r?\n/);
+    for (const line of lines) {
+      const t = line.trim(),
+        heading = t.normalize("NFKC").replace(/^(?:\d+\.)*\d+\s+/, "");
+      if (/^(?:输出格式|输出要求|输出描述)\s*[:：]?$/.test(heading)) {
+        inOutput = true;
+        continue;
+      }
+      if (!inOutput) continue;
+      if (
+        /^(?:输入|输出)?样例|^(?:输入格式|题目描述|参考程序|数据范围|评分标准|测试说明|子任务|提示)(?:\s|[:：]|$)/.test(
+          heading,
+        )
+      ) {
+        inOutput = false;
+        continue;
+      }
+      if (part.issue || !t || /^\d+\s*\/\s*\d+$/.test(t) || t.length > 400 || rows.length >= 6) continue;
+      rows.push({ text: "卷面输出要求 · " + t, page: part.page, quote: t, points: null });
+    }
+  }
+  return rows;
+}
