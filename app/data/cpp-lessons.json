@@ -1,0 +1,3477 @@
+[
+  {
+    "level": 1,
+    "number": 1,
+    "title": "变量和数据的输入输出",
+    "status": "verified",
+    "points": [
+      {
+        "title": "认识小熊猫 C++ 的编辑区，建立和保存 .cpp 文件，编译并运行第一个程序",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-1 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.2"
+        ]
+      },
+      {
+        "title": "用 cout 输出文字与数值，连接多项输出，用 endl 换行",
+        "kind": "teach",
+        "sources": [
+          "06_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.3"
+        ]
+      },
+      {
+        "title": "定义 int 变量，区分初始化、赋值和复制，遵守变量命名和同名限制",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-3 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.4",
+          "cpp-1.5",
+          "cpp-1.9"
+        ]
+      },
+      {
+        "title": "用 cin 将数据存入变量，按顺序连续读入多项",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-4 · 第 1–2 页"
+        ],
+        "clauses": [
+          "cpp-1.3"
+        ]
+      },
+      {
+        "title": "借助临时变量交换两个值，按行输出长方形",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.3",
+          "cpp-1.5"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 2,
+    "title": "算数运算符和字符型",
+    "status": "verified",
+    "points": [
+      {
+        "title": "理解操作数和表达式求值，按优先级使用四则运算与括号，做整数除法、取余和复合赋值",
+        "kind": "teach",
+        "sources": [
+          "08_码上总结-1 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.4",
+          "cpp-1.6",
+          "cpp-1.3"
+        ]
+      },
+      {
+        "title": "认识带符号整数和 char，查 ASCII 表并在码值和字符间转换，进行字符与整数运算",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-2 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.9",
+          "cpp-2.5",
+          "cpp-2.6"
+        ]
+      },
+      {
+        "title": "理解关键字和代码注释，认识单行及多行注释",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.4",
+          "cpp-1.13"
+        ]
+      },
+      {
+        "title": "用整数除法与取余拆分数位，用字符编码完成大小写转换",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.6",
+          "cpp-2.5"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 3,
+    "title": "比较运算符和 if 语句",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用关系运算比较数值和字符，保存 bool 结果，理解零与非零的真假和布尔值参与计算",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-1 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.8",
+          "cpp-1.9",
+          "cpp-2.6"
+        ]
+      },
+      {
+        "title": "比较算术、比较和赋值的优先级，区分顺序执行和根据条件选择执行",
+        "kind": "teach",
+        "sources": [
+          "07_码上总结-2 · 第 1 页",
+          "02_码上总结-3 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.6",
+          "cpp-1.8",
+          "cpp-1.10",
+          "cpp-1.11"
+        ]
+      },
+      {
+        "title": "使用 if、if-else 和花括号包住多条语句，跟踪嵌套 if，辨认流程图符号",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.11",
+          "cpp-2.4",
+          "cpp-2.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 4,
+    "title": "逻辑运算符和多分支语句",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用 &&、||、! 组合或反转条件，判断逻辑运算在表达式中的优先级",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1 · 第 1–2 页"
+        ],
+        "clauses": [
+          "cpp-1.7"
+        ]
+      },
+      {
+        "title": "按顺序匹配 if-else if 分支，使用 switch 的 case、default 和 break，理解无 break 时的继续执行",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-2 · 第 1 页",
+          "03_码上总结-3 · 第 1–2 页"
+        ],
+        "clauses": [
+          "cpp-1.11",
+          "cpp-2.7"
+        ]
+      },
+      {
+        "title": "用逻辑条件判闰年，用多分支分成绩等级，做按操作符选择的计算器",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.7",
+          "cpp-1.11",
+          "cpp-2.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 5,
+    "title": "阶段复习与练习一",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习逻辑与、或、非和运算优先级，跟踪 if-else if 的分支选择",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾-1 · 第 1–3 页"
+        ],
+        "clauses": [
+          "cpp-1.7",
+          "cpp-1.11",
+          "cpp-2.7"
+        ]
+      },
+      {
+        "title": "学习条件运算符 ?:，按条件结果选择表达式值",
+        "kind": "teach",
+        "sources": [
+          "02_码上得知-2-条件运算符 · 第 3–4 页"
+        ],
+        "clauses": [
+          "cpp-1.11"
+        ]
+      },
+      {
+        "title": "用除法和余数处理吃苹果与页码计数，组合三角形和等腰条件，练习分档计费",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-1-虫子吃苹果 · 第 3–4 页",
+          "03_解码时刻-2-纸的张数 · 第 2–3 页",
+          "04_解码时刻-3-三角形的人工湖 · 第 2–3 页",
+          "05_亲自出码-1-花果山会员 · 第 3 页"
+        ],
+        "clauses": [
+          "cpp-1.6",
+          "cpp-1.7",
+          "cpp-2.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 6,
+    "title": "for 循环",
+    "status": "verified",
+    "points": [
+      {
+        "title": "拆解 for 的初始化、条件、步长和循环体，跟踪执行顺序与循环次数",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.12"
+        ]
+      },
+      {
+        "title": "区分前置与后置 ++、-- 的表达式值以及变量变化",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-2 · 第 1–2 页"
+        ],
+        "clauses": [
+          "cpp-1.5"
+        ]
+      },
+      {
+        "title": "用循环输出区间、筛选奇偶、累加和更新最大值",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.6",
+          "cpp-1.8",
+          "cpp-1.12"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 7,
+    "title": "for 循环进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用 break 提前结束循环，用 continue 跳过本轮",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-1 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.12"
+        ]
+      },
+      {
+        "title": "用独立计数变量统计满足条件的数据，循环生成等差和斐波那契数列",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-2 · 第 1–2 页",
+          "04_码上总结-3 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.12",
+          "code-4.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 8,
+    "title": "数组",
+    "status": "verified",
+    "points": [
+      {
+        "title": "定义和初始化一维数组，用下标读写元素，理解下标范围与未初始化、越界和整数组赋值的限制",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-1 · 第 1–2 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-3.5"
+        ]
+      },
+      {
+        "title": "用 for 正序和倒序遍历，按相同下标组织并查找相关数据",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-2 · 第 1–2 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-3.5",
+          "cpp-1.12"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 9,
+    "title": "数组进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "扫描数组找最大值、最小值及其下标，统计满足条件的元素",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1-查找最大最小值 · 第 1–2 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-3.5"
+        ]
+      },
+      {
+        "title": "通过右移和左移在指定下标插入或删除，区分容量与当前元素数",
+        "kind": "teach",
+        "sources": [
+          "05_码上总结-2-数组插入和删除元素 · 第 1–2 页"
+        ],
+        "clauses": [
+          "cpp-3.5"
+        ]
+      },
+      {
+        "title": "用 const 定义常量并为数组指定固定容量",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-3-const关键字 · 第 1 页"
+        ],
+        "clauses": [
+          "cpp-1.5",
+          "cpp-3.5"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 10,
+    "title": "阶段复习与练习二",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习数组的极值下标、按位置插入与删除",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾-1 · 第 1–3 页"
+        ],
+        "clauses": [
+          "cpp-3.5"
+        ]
+      },
+      {
+        "title": "用 bool 数组标记出现情况、洞穴或出局状态，以值减去起点得到下标",
+        "kind": "teach",
+        "sources": [
+          "08_码上总结-1 · 第 1–2 页",
+          "03_解码时刻-3-找出没出现过的数字 · 第 2–3 页"
+        ],
+        "clauses": [
+          "cpp-3.5",
+          "code-3.8"
+        ]
+      },
+      {
+        "title": "用字符数组匹配大小写和查缺，用标记做数字去重，模拟循环找洞和报数淘汰",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-1-字母配对 · 第 3–4 页",
+          "04_亲自出码-1-数字去重输出 · 第 2–3 页",
+          "07_快码加鞭-1-选拔猴王 · 第 2、10 页"
+        ],
+        "clauses": [
+          "cpp-2.5",
+          "cpp-3.5",
+          "code-3.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 11,
+    "title": "while 循环",
+    "status": "verified",
+    "points": [
+      {
+        "title": "比较 for、while、do while 的语法和适用场景，区分先判断与至少执行一次",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-1 · 第 1 页",
+          "04_码上总结-3 · 第 1–2 页",
+          "08_码上总结-2 · 第 1 页"
+        ],
+        "clauses": [
+          "cpp-1.12"
+        ]
+      },
+      {
+        "title": "在位数未知时不断对 10 取余并整除，分离数位、统计位数或累加",
+        "kind": "teach",
+        "sources": [
+          "08_码上总结-2 · 第 2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.6",
+          "cpp-1.12"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 12,
+    "title": "格式化输入输出和浮点数",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用 setw 和 setfill 控制输出宽度及填充，用 scanf、printf 的格式串读写数据",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-1 · 第 1–2 页",
+          "04_码上总结-2 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.3"
+        ]
+      },
+      {
+        "title": "定义 float 浮点数，用 fixed 与 setprecision 或 printf 的格式符控制输出精度",
+        "kind": "teach",
+        "sources": [
+          "05_码上总结-3 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.9",
+          "cpp-1.3"
+        ]
+      },
+      {
+        "title": "了解万能头文件及使用方式",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": []
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 13,
+    "title": "浮点数和数据类型转换",
+    "status": "verified",
+    "points": [
+      {
+        "title": "区分 float 和 double 的精度与有效数字，使用 double 的格式化输入输出",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-1 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.9",
+          "cpp-1.3"
+        ]
+      },
+      {
+        "title": "认识不同类型的字面常量，区分自动转换和强制转换，检查转换结果",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.5",
+          "cpp-2.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 14,
+    "title": "字符串和字符数组",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用以空字符结尾的字符数组保存字符串，处理输入中的空格与终止符",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-3.5",
+          "code-3.6"
+        ]
+      },
+      {
+        "title": "用 strlen 遍历并求长度，用 strcpy、strcmp、strcat 复制、比较和拼接",
+        "kind": "teach",
+        "sources": [
+          "08_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 15,
+    "title": "string 类型的字符串",
+    "status": "verified",
+    "points": [
+      {
+        "title": "定义初始化 string，区分 cin 与 getline 的读入行为，按下标访问和遍历",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-1 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.6"
+        ]
+      },
+      {
+        "title": "获取长度、重新赋值、拼接和追加，按字典序比较并用 find 查询",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 16,
+    "title": "阶段复习与练习三",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用循环筛选偶数并计算均值，按递增分母累加浮点级数",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-1-偶数均值 · 第 2 页",
+          "02_解码时刻-2-子序列的和 · 第 2 页"
+        ],
+        "clauses": [
+          "cpp-1.6",
+          "cpp-1.9",
+          "cpp-1.12"
+        ]
+      },
+      {
+        "title": "对字符串分段计数和编码，复原字符串，找最长最短单词，用字母循环位移加密",
+        "kind": "practice",
+        "sources": [
+          "03_解码时刻-3-字符串p型编码 · 第 1 页",
+          "04_解码时刻-4-复原字符串 · 第 1 页",
+          "05_解码时刻-5-最长最短单词 · 第 1 页",
+          "06_快码加鞭-1-凯撒加密术 · 第 1 页"
+        ],
+        "clauses": [
+          "code-3.6",
+          "cpp-2.5"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 17,
+    "title": "函数基础",
+    "status": "verified",
+    "points": [
+      {
+        "title": "编写和调用具名函数，认识形参、实参和参数个数，跟踪函数调用的执行顺序",
+        "kind": "teach",
+        "sources": [
+          "06_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.3"
+        ]
+      },
+      {
+        "title": "为函数选择返回类型，理解 void、return 和返回值在调用处的用途",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-3 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 18,
+    "title": "函数进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "识别局部、全局及语句块作用域，理解全局常量和数组的使用范围",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.4"
+        ]
+      },
+      {
+        "title": "在调用之前声明函数，理解函数声明和头文件的作用",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.3"
+        ]
+      },
+      {
+        "title": "调用 max、min、swap、sort 完成取极值、交换和数组排序",
+        "kind": "teach",
+        "sources": [
+          "06_码上总结3 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-2.9"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 19,
+    "title": "结构体",
+    "status": "verified",
+    "points": [
+      {
+        "title": "定义、初始化和访问结构体变量及结构体数组，读写成员",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-4.2a"
+        ]
+      },
+      {
+        "title": "为结构体数组编写单关键字或多关键字比较规则，并调用 sort",
+        "kind": "teach",
+        "sources": [
+          "07_码上总结-3 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-4.2a",
+          "code-4.3"
+        ]
+      },
+      {
+        "title": "认识 union 联合体的定义和使用",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": []
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 20,
+    "title": "循环的嵌套",
+    "status": "verified",
+    "points": [
+      {
+        "title": "跟踪双层 for 的内外层执行顺序、次数和循环变量的关系",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1 · 第 1 页",
+          "06_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-2.8"
+        ]
+      },
+      {
+        "title": "用行列控制输出矩形和空心图案，运用嵌套循环遍历组合",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-2.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "number": 21,
+    "title": "简单排序（一）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习双层 for 的循环次序及变量关系",
+        "kind": "review",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-2.8"
+        ]
+      },
+      {
+        "title": "用数组按值计数做桶排序，比较升序、降序、适用值域和空间限制",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-3.5"
+        ]
+      },
+      {
+        "title": "每轮从未排序区域选极值并交换，实现升序和降序选择排序",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.8"
+        ]
+      }
+    ],
+    "catalogTitle": "双层 for 循环"
+  },
+  {
+    "level": 1,
+    "number": 22,
+    "title": "简单排序（二）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习桶排序及选择排序的步骤和用途",
+        "kind": "review",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.8"
+        ]
+      },
+      {
+        "title": "以相邻元素交换实现冒泡排序，把待排元素移入有序前缀实现插入排序",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1 · 第 1 页",
+          "03_码上总结-2 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.8"
+        ]
+      },
+      {
+        "title": "比较桶、选择、冒泡、插入四种排序的工作方式、效率、稳定性和适用条件",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-3 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.7"
+        ]
+      }
+    ],
+    "catalogTitle": "桶排序"
+  },
+  {
+    "level": 1,
+    "number": 23,
+    "title": "二维数组",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾冒泡和插入排序的思想，比较各种排序算法",
+        "kind": "review",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.7",
+          "code-4.8"
+        ]
+      },
+      {
+        "title": "按行列定义、初始化和访问二维数组，理解行列索引和嵌套遍历",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-1 · 第 1 页",
+          "04_码上总结-2 · 第 1 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-4.2b",
+          "cpp-2.8"
+        ]
+      },
+      {
+        "title": "按行或列找最值，同时保存和处理多张二维表",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-4.2b"
+        ]
+      }
+    ],
+    "catalogTitle": "冒泡排序思想与插入排序思想"
+  },
+  {
+    "level": 1,
+    "number": 24,
+    "title": "阶段复习与练习（四）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习二维数组定义、初始化与按行按列遍历",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾-1 · 第 1–3 页"
+        ],
+        "clauses": [
+          "cpp-4.2b"
+        ]
+      },
+      {
+        "title": "用行列下标推导水平、垂直及两条对角线的方阵对称对应关系",
+        "kind": "teach",
+        "sources": [
+          "02_码上得知-1-方阵的对称性(一) · 第 3–4 页",
+          "04_码上得知-2-方阵的对称性(二) · 第 2 页",
+          "07_码上总结-1 · 第 1 页"
+        ],
+        "clauses": [
+          "cpp-4.2b"
+        ]
+      },
+      {
+        "title": "构造回形与拐角方阵，按对角线输出，遍历字符矩阵和八邻域模拟扫雷",
+        "kind": "practice",
+        "sources": [
+          "03_解码时刻-1-回形方阵 · 第 1 页",
+          "05_解码时刻-2-左拐角方阵 · 第 1 页",
+          "06_解码时刻-3-按对角线输出二维数组 · 第 1 页",
+          "08_解码时刻-4-最小体力值 · 第 10 页",
+          "09_解码时刻-5-扫雷游戏 · 第 1 页"
+        ],
+        "clauses": [
+          "cpp-4.2b",
+          "code-3.8"
+        ]
+      }
+    ],
+    "catalogTitle": "二维数组"
+  },
+  {
+    "level": 2,
+    "number": 1,
+    "title": "枚举算法",
+    "status": "verified",
+    "points": [
+      {
+        "title": "确定候选范围，逐个枚举、判断条件和输出答案",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.7"
+        ]
+      },
+      {
+        "title": "用已知等式减少一层循环，缩小循环上下界，避免重复枚举",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.7"
+        ]
+      },
+      {
+        "title": "用数位分解验证水仙花数，枚举地雷位置，用百钱买百鸡比较优化前后",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.7",
+          "cpp-1.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 2,
+    "title": "递推算法",
+    "status": "verified",
+    "points": [
+      {
+        "title": "找出初始条件和相邻状态关系，比较从起点顺推与从终点逆推",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.6"
+        ]
+      },
+      {
+        "title": "从前两项建立斐波那契递推，识别兔子繁殖、台阶和铺砖的相同状态关系",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 3,
+    "title": "前缀和与差分",
+    "status": "verified",
+    "points": [
+      {
+        "title": "建立一维前缀和，用两个前缀的差求闭区间和，处理左端之前的前缀",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-3.5",
+          "code-4.6"
+        ]
+      },
+      {
+        "title": "由相邻元素之差建立差分数组，对差分求前缀和恢复原序列",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-3.5"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 4,
+    "title": "二分算法",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾前缀和的递推实现和差分的定义",
+        "kind": "review",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.6"
+        ]
+      },
+      {
+        "title": "在有序范围内取中点、比较并舍去一半候选，按结果更新左右边界",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.6"
+        ]
+      },
+      {
+        "title": "比较两种中点取法和 while(true)、L≤R 的循环写法，整理二分查找模板",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.6"
+        ]
+      },
+      {
+        "title": "用二分完成猜数和有序字典查找",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 5,
+    "title": "贪心算法",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾二分查找的缩小范围和模板",
+        "kind": "review",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.6"
+        ]
+      },
+      {
+        "title": "从每一步的局部最优出发，选择能达成整体目标的贪心策略",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.8"
+        ]
+      },
+      {
+        "title": "按题意选择排序和决策规则，练习最优装载、排队等待和购物选取",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 6,
+    "title": "阶段复习与测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习枚举范围与剪掉循环、顺推逆推及斐波那契、前缀和与差分",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2–9 页"
+        ],
+        "clauses": [
+          "code-3.7",
+          "code-4.6"
+        ]
+      },
+      {
+        "title": "复习二分中点、边界与循环模板，归纳贪心选取、装载和排队策略",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 10–15 页"
+        ],
+        "clauses": [
+          "code-5.6",
+          "code-5.8"
+        ]
+      },
+      {
+        "title": "枚举三数最接近上限的和，统计二分比较次数，用前缀和做区间查询，按最早结束贪心选活动",
+        "kind": "practice",
+        "sources": [
+          "01_题目1-寻找最大和 · 第 3–4 页",
+          "02_题目2-图书管理员 · 第 4 页",
+          "03_题目3-连环询问 · 第 4 页",
+          "04_题目4-丰富的周日生活 · 第 4 页"
+        ],
+        "clauses": [
+          "code-3.7",
+          "code-5.6",
+          "code-5.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 7,
+    "title": "大整数加法",
+    "status": "verified",
+    "points": [
+      {
+        "title": "将大整数按字符串读入，转为倒序存储的数字数组，从低位对齐逐位相加",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-5.2"
+        ]
+      },
+      {
+        "title": "处理不同位数、逐位进位和最高位，反向输出高精度和",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-5.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 8,
+    "title": "大整数减法",
+    "status": "verified",
+    "points": [
+      {
+        "title": "大整数倒序对齐后逐位相减，遇到不够减时向高位借位",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-5.2"
+        ]
+      },
+      {
+        "title": "处理相减结果的前导零、结果为零和被减数较小的情形",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-5.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 9,
+    "title": "大整数乘法",
+    "status": "verified",
+    "points": [
+      {
+        "title": "个位对齐后用双层循环按位乘积错位累加，推导结果长度和逆序输出",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-5.2"
+        ]
+      },
+      {
+        "title": "处理累加后的逐位进位和最高位进位，整理多位乘多位与大整数乘小整数的做法",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-5.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 10,
+    "title": "栈",
+    "status": "verified",
+    "points": [
+      {
+        "title": "理解栈的后进先出规则，跟踪栈顶、入栈与出栈",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "用代码实现栈的创建、进出、取栈顶与清空，处理空栈",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "用栈处理括号匹配和按逆序取出数据",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 11,
+    "title": "队列",
+    "status": "verified",
+    "points": [
+      {
+        "title": "理解队列的先进先出规则、队首与队尾，用数组模拟队列并获取长度",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "用入队、出队和重新入队模拟排队、密码和舞会",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7",
+          "code-3.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 12,
+    "title": "阶段复习与测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾倒序数字表示及高精度加减乘，复习数组实现栈和队列",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2–6 页"
+        ],
+        "clauses": [
+          "cpp-5.2",
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "修补减数并作高精度减法，统计高精度和中的数字，用栈分组倒序、用队列循环删除",
+        "kind": "practice",
+        "sources": [
+          "01_题目1-修补计算 · 第 3–4 页",
+          "02_题目2-数字出现的次数 · 第 3–4 页",
+          "03_题目3-草船借箭 · 第 3–4 页",
+          "04_题目4-字母排排站 · 第 3–4 页"
+        ],
+        "clauses": [
+          "cpp-5.2",
+          "code-6.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 13,
+    "title": "指针",
+    "status": "verified",
+    "points": [
+      {
+        "title": "理解变量地址、取地址、指针赋值和解引用，辨认空指针",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-4.1"
+        ]
+      },
+      {
+        "title": "通过结构体指针访问或修改成员，对比按值传递和通过指针传参，交换调用者的变量",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-4.2a",
+          "cpp-4.5"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 14,
+    "title": "链表",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用数据成员与后继指针构造单链表，依次遍历结点",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.3"
+        ]
+      },
+      {
+        "title": "在链表头部、中部和末尾插入或删除，更新连接指针",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 15,
+    "title": "递归",
+    "status": "verified",
+    "points": [
+      {
+        "title": "设计递归转换关系与终止条件，跟踪调用和返回过程，理解重复调用的开销",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.7"
+        ]
+      },
+      {
+        "title": "递归求累加、阶乘、兔子数量和台阶方案",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 16,
+    "title": "深度优先搜索（一）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "理解 DFS 的深入与回退，用递归实现搜索模板",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4"
+        ]
+      },
+      {
+        "title": "在迷宫中维护可走状态和方向，用四向、八向或象棋马的移动规则搜索并统计线路",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 17,
+    "title": "深度优先搜索（二）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "识别网格连通块，用深搜标记已访问格子，遍历单个连通块或统计多个块",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4"
+        ]
+      },
+      {
+        "title": "通过红与黑、传播系统和水洼练习连通性、扩大搜索区域与计数",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 18,
+    "title": "阶段复习与测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾指针、单链表结点、递归退出条件及网格 DFS 模板",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2–7 页"
+        ],
+        "clauses": [
+          "cpp-4.1",
+          "code-5.3",
+          "code-5.7",
+          "code-6.4"
+        ]
+      },
+      {
+        "title": "读指针传参并跟踪变量，用递归求奇数和，用深搜模拟四方向除草和送快递",
+        "kind": "practice",
+        "sources": [
+          "01_题目1,2 · 第 3–4 页",
+          "02_题目3-奇数求和 · 第 3–4 页",
+          "03_题目4-机器人除草 · 第 3–4 页",
+          "04_题目5-送快递 · 第 3–4 页"
+        ],
+        "clauses": [
+          "cpp-4.5",
+          "code-5.7",
+          "code-6.4"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 19,
+    "title": "认识树",
+    "status": "verified",
+    "points": [
+      {
+        "title": "定义树、根和子树，区分结点度、深度、满二叉树和完全二叉树",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.1",
+          "code-6.2"
+        ]
+      },
+      {
+        "title": "分别跟踪先序、中序、后序和层序遍历，根据中序和另一种遍历序列重建二叉树",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.1"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 20,
+    "title": "认识图",
+    "status": "verified",
+    "points": [
+      {
+        "title": "区分有向图、无向图、简单图和完全图，计算度、入度、出度，区分权、网、路径、回路与子图",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.3"
+        ]
+      },
+      {
+        "title": "辨认连通、强连通和强连通分量的概念",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": []
+      },
+      {
+        "title": "用邻接矩阵表示有向、无向及带权图，区分没有边与边的权值",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 21,
+    "title": "STL 模板",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用 STL stack 和 queue 创建容器，调用进出、查询端点和检查空容器的操作",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "创建 vector，按下标访问，动态添加或删除元素",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": []
+      },
+      {
+        "title": "用容器写括号匹配和排队，处理去重及出栈序列",
+        "kind": "practice",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 22,
+    "title": "广度优先搜索（一）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "比较 DFS 与 BFS 的访问次序，用队列逐层搜索，记录访问状态",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4",
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "用 BFS 搜索迷宫并处理连通块",
+        "kind": "practice",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 23,
+    "title": "广度优先搜索（二）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "推导等步长网格的最短路径性质，按层扩展并记录到达步数，第一次到达目标时得到最少步数",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "number": 24,
+    "title": "阶段复习与测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习树、满与完全二叉树、遍历顺序、图与邻接矩阵",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2–12 页"
+        ],
+        "clauses": [
+          "code-6.1",
+          "code-6.2",
+          "code-7.3"
+        ]
+      },
+      {
+        "title": "回顾 STL 的栈、队列、动态数组，以及 BFS 和网格最短步数",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 13–16 页"
+        ],
+        "clauses": [
+          "code-6.7",
+          "code-6.4"
+        ]
+      },
+      {
+        "title": "推演树的形状与出入度，识别强连通分量，排序后统计最大值，用 BFS 找可到达的目标",
+        "kind": "practice",
+        "sources": [
+          "01_题目1-5 · 第 3–4 页",
+          "02_题目6-10 · 第 4、10 页",
+          "03_题目11-最大元素的个数 · 第 3–4 页",
+          "04_题目12-寻找长生药 · 第 3–4 页"
+        ],
+        "clauses": [
+          "code-6.1",
+          "code-7.3",
+          "code-6.4"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 1,
+    "title": "数制转换与位运算",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用位权展开和除基取余在二、八、十、十六进制间转换整数，认识程序中的进制写法",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.2"
+        ]
+      },
+      {
+        "title": "按负指数位权求小数值，用乘基取整转换小数部分",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.2"
+        ]
+      },
+      {
+        "title": "逐位做与、或、异或、取反及左右移，判断位运算优先级",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 2,
+    "title": "枚举进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾进制换算与按位运算",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 4、6、8、10、12 页"
+        ],
+        "clauses": [
+          "code-3.2",
+          "code-3.3"
+        ]
+      },
+      {
+        "title": "围绕候选范围、枚举顺序和判断条件设计复杂枚举",
+        "kind": "teach",
+        "sources": [
+          "01_码上得知-1-枚举算法 · 第 3 页",
+          "01_解码时刻-1-珠心算测验 · 第 7 页",
+          "02_解码时刻-2-铺地毯 · 第 8 页"
+        ],
+        "clauses": [
+          "code-3.7"
+        ]
+      },
+      {
+        "title": "枚举并去重两数之和，逆序检查覆盖测点的地毯，计算日期并统计符合条件的月份",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-1-珠心算测验 · 第 7 页",
+          "02_解码时刻-2-铺地毯 · 第 8 页",
+          "04_解码时刻-4-黑色星期五 · 第 8 页"
+        ],
+        "clauses": [
+          "code-3.7",
+          "code-3.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 3,
+    "title": "递推进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾从初始条件沿递推关系顺推",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.6"
+        ]
+      },
+      {
+        "title": "给二维格子或三角形设初始值和边界，从相邻状态递推路径数或特定项",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节",
+          "01_解码时刻-1-移动路线 · 第 11 页",
+          "02_解码时刻-2-路径计数 · 第 15 页",
+          "03_解码时刻-3-数字金字塔 · 第 17 页"
+        ],
+        "clauses": [
+          "code-4.6",
+          "cpp-4.2b"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 4,
+    "title": "二分进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "区分查找给定值和查找最优可行值，建立单调判定、二分边界及答案更新",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-1 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.6"
+        ]
+      },
+      {
+        "title": "把切割木材、布网和饲养斗牛转化为可行性判定",
+        "kind": "practice",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节",
+          "02_解码时刻-1-新校区布网 · 第 9 页",
+          "03_解码时刻-2-饲养斗牛 · 第 15 页"
+        ],
+        "clauses": [
+          "code-5.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 5,
+    "title": "贪心进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习贪心的局部决策以及已有的六类题型",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.8"
+        ]
+      },
+      {
+        "title": "按任务长度安排多服务者的排队顺序，按区间端点顺序利用重叠选点，贪心分配拦截系统",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节",
+          "01_解码时刻-1-节省时间2 · 第 9 页",
+          "03_解码时刻-2-区间选点 · 第 16 页",
+          "05_码上总结-1 · 第 2 页"
+        ],
+        "clauses": [
+          "code-5.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 6,
+    "title": "阶段复习与测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习复杂枚举、二维递推、单调二分以及应用于排队和区间的贪心",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2–6 页"
+        ],
+        "clauses": [
+          "code-3.7",
+          "code-4.6",
+          "code-5.6",
+          "code-5.8"
+        ]
+      },
+      {
+        "title": "检查矩形包含条件，递推棋盘路径，多窗口分配等候时间，二分可切正方形边长",
+        "kind": "practice",
+        "sources": [
+          "01_题目1-投沙包 · 第 10 页",
+          "02_题目2-老鼠吃奶酪 · 第 10、12 页",
+          "03_题目3-增加饮水机 · 第 10 页",
+          "04_题目4-分巧克力 · 第 10 页"
+        ],
+        "clauses": [
+          "code-3.7",
+          "code-4.6",
+          "code-5.6",
+          "code-5.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 7,
+    "title": "递归进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "把问题拆成规模逐步缩小的子问题，确定基例并跟踪递归树",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.7"
+        ]
+      },
+      {
+        "title": "递归统计数的分解、枚举因数分解并推演黑白棋移动",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-1-数的个数 · 第 6 页",
+          "03_解码时刻-2-因数分解 · 第 10 页",
+          "04_解码时刻-3-黑白棋的移动过程 · 第 11 页"
+        ],
+        "clauses": [
+          "code-5.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 8,
+    "title": "快速排序",
+    "status": "verified",
+    "points": [
+      {
+        "title": "选取基准值，用两个方向分区并固定基准位置，递归排序两部分",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.9"
+        ]
+      },
+      {
+        "title": "实现快排的升序、降序模板，并比较相等元素的先后顺序与排序稳定性",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.9",
+          "code-4.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 9,
+    "title": "归并排序",
+    "status": "verified",
+    "points": [
+      {
+        "title": "递归拆分为单元素区间，用双指针合并已排序序列，说明归并的稳定性",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.9",
+          "code-4.7"
+        ]
+      },
+      {
+        "title": "在合并时统计跨左右分段的逆序对",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.9"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 10,
+    "title": "栈进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习栈操作，并用入栈顺序验证候选出栈序列",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "认识前缀与逆波兰表达式，转换中缀表达式并用栈按操作数顺序计算后缀表达式",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 11,
+    "title": "队列进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用取模更新循环队列的 front 和 rear，区分空与满并实现进出队",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "理解双端队列的两端访问与增删操作，调用 STL deque 的常用函数",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": []
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 12,
+    "title": "阶段复习与测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾递归分解、快排、归并、后缀表达式求值和循环队列",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2、4、6、8、10、12、14 页"
+        ],
+        "clauses": [
+          "code-5.7",
+          "code-5.9",
+          "code-6.7"
+        ]
+      },
+      {
+        "title": "练习输出前 k 个较大元素，用归并做数据统计，用队列模拟约瑟夫过程，用栈按运算次序求值",
+        "kind": "practice",
+        "sources": [
+          "01_输出前k大的数 · 第 2 页",
+          "02_数据统计 · 第 10 页",
+          "03_约瑟夫问题2 · 第 2 页",
+          "04_表达式求值2 · 第 10 页"
+        ],
+        "clauses": [
+          "code-5.9",
+          "code-6.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 13,
+    "title": "链表进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习单链表的表示与操作",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.3"
+        ]
+      },
+      {
+        "title": "用前驱、后继指针表示双向链表，在头、中、尾插入或删除结点",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.3"
+        ]
+      },
+      {
+        "title": "用 new 动态创建结点，维护头结点、尾结点与新结点指针",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-4.1",
+          "code-5.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 14,
+    "title": "二叉树应用",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾双向链表和动态创建结点",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 4 页"
+        ],
+        "clauses": [
+          "code-5.3"
+        ]
+      },
+      {
+        "title": "掌握完全二叉树的编号与顺序存储，用结构体数组及左右子结点下标存放普通二叉树",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1 · 第 3 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.1",
+          "code-6.2",
+          "cpp-4.2a"
+        ]
+      },
+      {
+        "title": "以递归代码实现先序、中序、后序遍历，应用于新树和树高计算",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-2 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.1"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 15,
+    "title": "二叉树进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "在遍历序列中定位根并划分左右子树，用先序或后序配合中序重建二叉树",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.1"
+        ]
+      },
+      {
+        "title": "用空孩子标记表示扩展二叉树，从扩展先序或后序序列反推结构",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.1"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 16,
+    "title": "深搜进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用访问标记记录已经选入的元素，放置、撤销并递归生成全排列",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4",
+          "code-8.2"
+        ]
+      },
+      {
+        "title": "将终止条件从填满 n 位改为填满 k 位，生成从 n 个数选 k 个的排列",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4",
+          "code-8.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 17,
+    "title": "广搜进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习 BFS 的队列、访问标记和连通、连通块、最短步数问题模板",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.4"
+        ]
+      },
+      {
+        "title": "从种子点进行泛洪填充，修改同一连通区域的状态",
+        "kind": "teach",
+        "sources": [
+          "01_解码时刻-1-图像填充 · 第 11 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.3"
+        ]
+      },
+      {
+        "title": "按相邻格高度判断同高连通区域属于山峰还是山谷",
+        "kind": "practice",
+        "sources": [
+          "02_解码时刻-2-山峰和山谷 · 第 18 页"
+        ],
+        "clauses": [
+          "code-6.4",
+          "code-7.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 18,
+    "title": "阶段复习与测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习双向链表、新建结点、二叉树的存储重建和遍历",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2、4、6、8、10、12、14 页"
+        ],
+        "clauses": [
+          "code-5.3",
+          "code-6.1"
+        ]
+      },
+      {
+        "title": "复习全排列回溯与广搜进阶模板",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 16、18 页"
+        ],
+        "clauses": [
+          "code-6.4",
+          "code-7.3",
+          "code-8.2"
+        ]
+      },
+      {
+        "title": "用深搜生成密码排列，八方向广搜修补相同字母的区域，由遍历序列复原二叉树",
+        "kind": "practice",
+        "sources": [
+          "02_破解密码 · 第 4、6 页",
+          "03_林地修补 · 第 4、9 页",
+          "04_复原二叉树 · 第 2 页"
+        ],
+        "clauses": [
+          "code-6.4",
+          "code-6.1",
+          "code-8.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 19,
+    "title": "动态规划基础",
+    "status": "verified",
+    "points": [
+      {
+        "title": "认识阶段、状态与转移，理解最优子结构、无后效性和重复子问题",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-1 · 第 2 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.5"
+        ]
+      },
+      {
+        "title": "由图表建立初值和状态转移，求二维网格最大路径和与凑金额的最少硬币数",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.5",
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 20,
+    "title": "动态规划-子序列问题",
+    "status": "verified",
+    "points": [
+      {
+        "title": "区分连续子段和不连续子序列，建立最大子段和与最长上升子序列的状态和转移",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "为最长公共子序列建立二维状态，分别处理相等字符和不同字符",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 21,
+    "title": "动态规划-背包问题",
+    "status": "verified",
+    "points": [
+      {
+        "title": "区分每件能选一次的 0/1 背包与可重复选取的完全背包，用二维表推导不同转移",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.5",
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "压缩为一维容量数组，解释 0/1 倒序与完全背包正序的区别",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 22,
+    "title": "动态规划-背包进阶",
+    "status": "verified",
+    "points": [
+      {
+        "title": "按每种物品的数量限制建立多重背包，比较逐件展开、枚举份数及二进制拆包",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1-多重背包 · 第 2 页",
+          "04_码上总结-2-二进制优化 · 第 2 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "用布尔状态处理可购买的金额，用不同转移处理混合背包和方案数",
+        "kind": "practice",
+        "sources": [
+          "03_解码时刻-1-买表 · 第 15 页",
+          "05_解码时刻-2-混合背包 · 第 9 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 23,
+    "title": "图的基本应用",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾有向、无向和带权图的存储",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.3"
+        ]
+      },
+      {
+        "title": "区分遍历整图和搜索到达目标，用 DFS 和 BFS 实现两种过程",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.3"
+        ]
+      },
+      {
+        "title": "认识欧拉路径及相关判定概念",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": []
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "number": 24,
+    "title": "阶段复习与测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾动态规划、最大子段和、LIS、LCS、背包以及图遍历与搜索",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2、4、6、8、10、12、14 页"
+        ],
+        "clauses": [
+          "code-6.5",
+          "code-7.2",
+          "code-7.3"
+        ]
+      },
+      {
+        "title": "在内存限制下用一维数组做运输装载的 0/1 背包，用多重背包购买奖品",
+        "kind": "practice",
+        "sources": [
+          "01_快递物流 · 第 4、6–7 页",
+          "02_测试（购买奖品） · 第 4、8 页"
+        ],
+        "clauses": [
+          "code-6.5",
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "用 BFS 搜图求最少步数，分别计算上升和下降子序列并按分隔点合并",
+        "kind": "practice",
+        "sources": [
+          "02_测试（追踪妖怪） · 第 6、9 页",
+          "02_测试（景点观光） · 第 6–7 页"
+        ],
+        "clauses": [
+          "code-7.3",
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 1,
+    "title": "排列组合1",
+    "status": "verified",
+    "points": [
+      {
+        "title": "区分分情况相加和分步骤相乘，计算多个选择阶段的方案数",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-8.1"
+        ]
+      },
+      {
+        "title": "理解有顺序的选取和排列数，处理相邻捆绑、不相邻插空、逆向计数及环形排列",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-8.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 2,
+    "title": "排列组合2",
+    "status": "verified",
+    "points": [
+      {
+        "title": "理解无顺序的选取和组合数，区分元素与对象是否相同的分配方式",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-8.2"
+        ]
+      },
+      {
+        "title": "在杨辉三角中找相应的数，处理小球或苹果的分配计数",
+        "kind": "practice",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-8.3",
+          "code-8.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 3,
+    "title": "质数筛法",
+    "status": "verified",
+    "points": [
+      {
+        "title": "判定质数，用试除分解质因数",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.1",
+          "code-5.4"
+        ]
+      },
+      {
+        "title": "用埃氏筛标记质数倍数，用欧拉筛避免重复标记，比较两种循环写法",
+        "kind": "teach",
+        "sources": [
+          "05_码上总结-2 · 第 1–3 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.4"
+        ]
+      },
+      {
+        "title": "课末整理向上、向下和向零取整、四舍五入、绝对值、平方根与幂，辨认 int 的取值边界",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-3 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-2.9",
+          "cpp-1.9"
+        ]
+      },
+      {
+        "title": "用例辨认立方根、直角三角形斜边、以 2 为底的对数和浮点余数函数",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-3 · 第 1 页"
+        ],
+        "clauses": [
+          "code-7.1"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 4,
+    "title": "区间动态规划1",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用左右端点表示区间状态，设置起始区间，枚举长度和切分点合并子区间",
+        "kind": "teach",
+        "sources": [
+          "03_码上总结-1 · 第 2 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "通过石子合并、抽卡片推导区间代价，辨认线形与环形区间",
+        "kind": "practice",
+        "sources": [
+          "03_码上总结-1 · 第 2 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 5,
+    "title": "区间动态规划2",
+    "status": "verified",
+    "points": [
+      {
+        "title": "区分连续回文子串和不连续回文子序列，比较暴力和区间状态做法",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "从短区间扩展，按两端字符相等与否确定布尔回文状态或最长回文长度",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 6,
+    "title": "阶段测试",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾加乘原理、排列组合、质数筛法和区间动态规划",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 2–6 页"
+        ],
+        "clauses": [
+          "code-8.1",
+          "code-8.2",
+          "code-5.4",
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "按小球分配情况递归计数，用深搜构造超级素数，做区间合并与回文子串计数",
+        "kind": "practice",
+        "sources": [
+          "01_题目1-放小球 · 第 9–10 页",
+          "02_题目2-超级素数 · 第 10 页",
+          "03_题目3-外星微生物 · 第 8、10 页",
+          "04_题目4-回文子串的个数 · 第 7 页"
+        ],
+        "clauses": [
+          "code-5.7",
+          "code-6.4",
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 7,
+    "title": "参赛相关",
+    "status": "verified",
+    "points": [
+      {
+        "title": "了解 NOI 和 CSP-J 的竞赛环境与提交规范，课件标为选讲",
+        "kind": "optional",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.2"
+        ]
+      },
+      {
+        "title": "用文件读写或重定向处理指定输入输出文件，理解 .in、.out 文件的使用流程",
+        "kind": "teach",
+        "sources": [
+          "02_码上总结-1 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.10"
+        ]
+      },
+      {
+        "title": "掌握用取余反复缩小问题的辗转相除法，求两个数的最大公约数",
+        "kind": "teach",
+        "sources": [
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.4"
+        ]
+      },
+      {
+        "title": "用大 O 去掉常数和低阶项，分析循环与嵌套，比较常量、对数、线性及更高阶开销",
+        "kind": "teach",
+        "sources": [
+          "01_码上总结-2 · 第 1–2 页",
+          "教案.docx · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.9",
+          "code-5.5"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 8,
+    "title": "枚举算法应用",
+    "status": "verified",
+    "points": [
+      {
+        "title": "用数学关系压缩枚举范围、调整步长或更换枚举对象。利用单调用二分替代逐项枚举",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-1-枚举的优化 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.7",
+          "code-5.6"
+        ]
+      },
+      {
+        "title": "枚举或成对求约数，计算阶乘末尾零对应的因子 5 个数，按位枚举矩阵的候选并检查",
+        "kind": "practice",
+        "sources": [
+          "02_解码时刻-1-关于约数强化版 · 第 5、7 页",
+          "03_解码时刻-2-符合条件的自然数加强版 · 第 10–11 页",
+          "01_解码时刻-3-偶数矩阵 · 第 9–10 页"
+        ],
+        "clauses": [
+          "code-5.1",
+          "code-5.6",
+          "code-3.7",
+          "code-3.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 9,
+    "title": "贪心算法应用（复赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习局部贪心决策与区间不交、选点、覆盖等问题的不同排序策略",
+        "kind": "review",
+        "sources": [
+          "06_码上总结 · 第 1–2 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.8"
+        ]
+      },
+      {
+        "title": "用高低搭配减少组数，排序匹配气球高度，按收益与时限安排游戏，从相邻冲突计数选通道",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-1-纪念品分组 · 第 4–5 页",
+          "02_解码时刻-2-摘到多少气球 · 第 5–6 页",
+          "03_解码时刻-3-巧夺大奖 · 第 5、7 页",
+          "04_解码时刻-4-排座椅 · 第 8–9 页"
+        ],
+        "clauses": [
+          "code-5.8"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 10,
+    "title": "模拟算法应用（复赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "从题意找状态、事件顺序与分支，分解长流程并按规则模拟",
+        "kind": "teach",
+        "sources": [
+          "06_码上总结-1 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.8"
+        ]
+      },
+      {
+        "title": "模拟接水任务分配、按指令操作灯、隔位拿苹果和按条件展开字符串",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-1-接水问题 · 第 6 页",
+          "02_解码时刻-2-校门外的灯 · 第 5、9 页",
+          "03_解码时刻-3-小苹果 · 第 10–11 页",
+          "04_解码时刻-4-字符串的展开 · 第 8–9 页"
+        ],
+        "clauses": [
+          "code-3.8",
+          "code-3.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 11,
+    "title": "搜索算法应用（复赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "识别重复搜索状态，用记忆化保存已求的答案，按可行性条件剪枝",
+        "kind": "teach",
+        "sources": [
+          "04_码上总结-1-记忆化搜索 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.7",
+          "code-6.4"
+        ]
+      },
+      {
+        "title": "搜索受转弯次数限制的路径，搜索工作分配方案并维护收益",
+        "kind": "practice",
+        "sources": [
+          "05_解码时刻-1-走路回家 · 第 3–4 页",
+          "02_解码时刻-2-工作分配问题 · 第 4–5 页"
+        ],
+        "clauses": [
+          "code-6.4"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 12,
+    "title": "复赛模拟比赛",
+    "status": "verified",
+    "points": [
+      {
+        "title": "回顾大 O 的推导及常用算法的时间复杂度",
+        "kind": "review",
+        "sources": [
+          "01_码上回顾 · 第 1–2 页"
+        ],
+        "clauses": [
+          "code-4.9",
+          "code-5.5"
+        ]
+      },
+      {
+        "title": "按最少增加次数维持数列递增，按车牌规则模拟限号分类",
+        "kind": "practice",
+        "sources": [
+          "01_题目1-递增数列 · 第 5 页",
+          "02_题目2-限号 · 第 5–6 页"
+        ],
+        "clauses": [
+          "code-5.8",
+          "code-3.8"
+        ]
+      },
+      {
+        "title": "沿高度降低方向做搜索，用区间动态规划求最长回文子序列",
+        "kind": "practice",
+        "sources": [
+          "03_题目3-冬季运动 · 第 4、8、10 页",
+          "04_题目4-古老王国的幸运数 · 第 8–9 页"
+        ],
+        "clauses": [
+          "code-6.4",
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 13,
+    "title": "计算机基础知识",
+    "status": "verified",
+    "points": [
+      {
+        "title": "认识计算机发展、CPU 和存储器组成，区分系统软件与应用软件及存储单位",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.1",
+          "cpp-2.1"
+        ]
+      },
+      {
+        "title": "用原码、反码、补码表示有符号数，了解非数值编码以及格雷码转换",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-3.1",
+          "code-6.3"
+        ]
+      },
+      {
+        "title": "区分网络范围、传输方式与拓扑，认识 OSI、TCP/IP、协议及域名",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-2.2"
+        ]
+      },
+      {
+        "title": "认识计算机史相关人物、奖项及软件著作权",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": []
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 14,
+    "title": "数据结构1（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习栈与队列操作、逆波兰表示，以及单向和双向链表",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7",
+          "code-5.3"
+        ]
+      },
+      {
+        "title": "做栈、队列与链表相关选择、代码阅读和补全",
+        "kind": "practice",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.7",
+          "code-5.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 15,
+    "title": "数据结构2（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习树、二叉树的先中后序与按序列构树，回顾图及其邻接表示",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.1",
+          "code-7.3"
+        ]
+      },
+      {
+        "title": "从权值合并结点构建哈夫曼树，并为符号确定哈夫曼编码",
+        "kind": "teach",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.2",
+          "code-6.3"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 16,
+    "title": "数学专题1（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习分类计数、分步计数、排列组合数，以及二、八、十、十六进制之间的转换",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-8.1",
+          "code-8.2",
+          "code-3.2"
+        ]
+      },
+      {
+        "title": "以历年题训练数学题的程序阅读、计算和代码补全",
+        "kind": "practice",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-8.2",
+          "code-3.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 17,
+    "title": "数学专题2（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习前后缀表达式转换与求值，以及按位运算规则和优先级",
+        "kind": "review",
+        "sources": [
+          "04_码上总结-1 · 第 1–2 页",
+          "02_码上得知-2-位运算 · 第 2 页"
+        ],
+        "clauses": [
+          "code-6.7",
+          "code-3.3"
+        ]
+      },
+      {
+        "title": "认识整除、约数、质数和质因数，用质因数分解和辗转相除求公约数或公倍数",
+        "kind": "teach",
+        "sources": [
+          "03_码上得知-3-初等数论 · 第 2 页",
+          "03_码上总结-2 · 第 1–2 页"
+        ],
+        "clauses": [
+          "code-5.1",
+          "code-5.4"
+        ]
+      },
+      {
+        "title": "跟踪质数判定与统计代码，用反复试除补全质因数分解",
+        "kind": "practice",
+        "sources": [
+          "02_解码时刻-2-阅读程序 · 第 1–2 页",
+          "02_快码加鞭-1-完善程序 · 第 1–2 页"
+        ],
+        "clauses": [
+          "code-5.4"
+        ]
+      },
+      {
+        "title": "按指数奇偶分解幂次，补全取模快速幂程序",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-4-完善程序 · 第 2 页"
+        ],
+        "clauses": []
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 18,
+    "title": "字符串专题（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习 ASCII 码、字符数组、空字符及 string 的常用操作",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-2.5",
+          "code-3.6"
+        ]
+      },
+      {
+        "title": "跟踪 getline 类读入、字符到数组下标的转换和边界，分析并补全字符串程序",
+        "kind": "practice",
+        "sources": [
+          "02_阅读程序-2 · 第 2 页",
+          "03_阅读程序-3 · 第 2 页",
+          "04_码上总结-1 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "cpp-1.3",
+          "code-3.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 19,
+    "title": "二分算法专题（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "对比二分查找与二分答案，跟踪中点、边界更新、单调判定和退出方式",
+        "kind": "review",
+        "sources": [
+          "03_码上总结-1 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.6"
+        ]
+      },
+      {
+        "title": "通过二分寻找有序序列中被移除的元素，分析程序复杂度并练习补全边界",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-3-完善程序 · 第 2 页",
+          "02_解码时刻-2-阅读程序 · 第 10 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.5",
+          "code-5.6"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 20,
+    "title": "排序专题（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习冒泡、选择、插入、快速、归并及计数类排序，比较实现过程和时空开销",
+        "kind": "review",
+        "sources": [
+          "03_码上总结-1 · 第 1 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-4.7",
+          "code-4.8",
+          "code-5.9"
+        ]
+      },
+      {
+        "title": "回顾埃氏筛与欧拉筛，做质数筛法真题练习",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-5.4"
+        ]
+      },
+      {
+        "title": "阅读排序和排列代码，补全按双关键字计数排序的程序",
+        "kind": "practice",
+        "sources": [
+          "01_解码时刻-3-完善程序 · 第 2 页",
+          "02_解码时刻-2-阅读程序 · 第 2 页"
+        ],
+        "clauses": [
+          "code-8.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 21,
+    "title": "递归专题（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "根据递进和回退跟踪递归，辨认相似子问题、停止条件和返回值",
+        "kind": "review",
+        "sources": [
+          "01_码上得知-1 · 第 1–3、6 页"
+        ],
+        "clauses": [
+          "code-5.7"
+        ]
+      },
+      {
+        "title": "用样例手推递归函数的调用与返回，跟踪多数组状态，补全枚举约数并求最大公约数和的程序",
+        "kind": "practice",
+        "sources": [
+          "01_阅读程序-1 · 第 6 页",
+          "02_阅读程序-2 · 第 6 页",
+          "03_阅读程序-3 · 第 6 页",
+          "04_阅读程序-4 · 第 6 页",
+          "01_完善程序-1 · 第 1–2 页"
+        ],
+        "clauses": [
+          "code-5.7",
+          "code-5.4"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 22,
+    "title": "动态规划（初赛）",
+    "status": "verified",
+    "points": [
+      {
+        "title": "复习动态规划的要素与求解步骤，整理最大子段和、LIS、LCS、背包和区间动规模板",
+        "kind": "review",
+        "sources": [
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.5",
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "沿表格跟踪状态变化，分辨公共子串与子序列，比较背包内层循环方向并补全代码",
+        "kind": "practice",
+        "sources": [
+          "02_解码时刻-2-阅读程序 · 第 2 页",
+          "03_解码时刻-3-阅读程序 · 第 2 页",
+          "01_解码时刻-4-完善程序 · 第 4 页",
+          "教案.pdf · 教学目标与课堂环节"
+        ],
+        "clauses": [
+          "code-6.5",
+          "code-7.2"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 23,
+    "title": "初赛模拟比赛",
+    "status": "verified",
+    "points": [
+      {
+        "title": "做 CPU、顺序与链式存储、图的边数、二叉树遍历、循环队列与受限出栈次序、链表相邻结点交换的选择题",
+        "kind": "practice",
+        "sources": [
+          "01_单选题 · 第 3–4、6–7、9、15、19 页"
+        ],
+        "clauses": [
+          "cpp-1.1",
+          "code-7.3",
+          "code-6.1",
+          "code-6.7",
+          "code-5.3"
+        ]
+      },
+      {
+        "title": "练习不同进制、负数补码按位或、格雷码、数位处理、图像存储空间、前缀表达式及反面计数",
+        "kind": "practice",
+        "sources": [
+          "01_单选题 · 第 8、11–12、14、17、20、22 页"
+        ],
+        "clauses": [
+          "code-3.2",
+          "code-3.1",
+          "code-3.3",
+          "code-6.3",
+          "code-8.1"
+        ]
+      },
+      {
+        "title": "阅读浮点处理、排列组合计算和回文区间动态规划代码",
+        "kind": "practice",
+        "sources": [
+          "02_阅读程序1 · 第 4 页",
+          "03_阅读程序2 · 第 1–2 页",
+          "04_阅读程序3 · 第 2–3、8 页"
+        ],
+        "clauses": [
+          "cpp-1.9",
+          "code-8.2",
+          "code-7.2"
+        ]
+      },
+      {
+        "title": "补全十六进制经二进制分组转八进制的代码，以及保证可找零的购票排队计数",
+        "kind": "practice",
+        "sources": [
+          "05_完善程序1 · 第 2 页",
+          "06_完善程序2 · 第 1、3 页"
+        ],
+        "clauses": [
+          "code-3.2",
+          "code-5.7"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "number": 24,
+    "title": "初赛模拟比赛",
+    "status": "verified",
+    "points": [
+      {
+        "title": "做 if 条件、指针传参、交集与组合计数、计算机部件和图像存储量的选择题",
+        "kind": "practice",
+        "sources": [
+          "01_单选题 · 第 3–8 页"
+        ],
+        "clauses": [
+          "cpp-1.11",
+          "cpp-4.5",
+          "code-8.2",
+          "cpp-1.1"
+        ]
+      },
+      {
+        "title": "手推二分比较顺序与复杂度，辨认欧拉路径，推算哈夫曼树空指针、双链表、循环队列、前后缀表达式和二叉树遍历",
+        "kind": "practice",
+        "sources": [
+          "01_单选题 · 第 9–18 页"
+        ],
+        "clauses": [
+          "code-5.5",
+          "code-5.6",
+          "code-6.2",
+          "code-5.3",
+          "code-6.7",
+          "code-6.1",
+          "code-7.3"
+        ]
+      },
+      {
+        "title": "读程序追踪转二进制、前后置自增和递归筛选产生的数，观察以行列重排字符串",
+        "kind": "practice",
+        "sources": [
+          "02_阅读程序1 · 第 4、12 页",
+          "03_阅读程序2 · 第 2、6、8 页",
+          "04_阅读程序3 · 第 4、10 页"
+        ],
+        "clauses": [
+          "code-3.2",
+          "cpp-1.5",
+          "code-5.7",
+          "code-3.6"
+        ]
+      },
+      {
+        "title": "识别字符串重排例程中的变长内建数组，该写法在 CCF 三、四级数组条款中明确排除",
+        "kind": "practice",
+        "sources": [
+          "03_阅读程序2 · 第 1 页"
+        ],
+        "clauses": [
+          "cpp-vla3",
+          "cpp-vla4"
+        ]
+      },
+      {
+        "title": "补全有序数组的二分插入位置，枚举因子并用二维动态规划求合法序列的长度和个数",
+        "kind": "practice",
+        "sources": [
+          "05_完善程序1 · 第 2、4 页",
+          "06_完善程序2 · 第 1、4、7 页"
+        ],
+        "clauses": [
+          "code-5.6",
+          "code-5.1",
+          "code-7.2"
+        ]
+      }
+    ]
+  }
+]

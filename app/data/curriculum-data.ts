@@ -1,10 +1,4 @@
-// GESP 考试规划数据 - 基于详细PPT分析的100%验证版本
-// 验证日期: 2026-03-20
-// 数据来源：
-// - Level 1: 24课，对应GESP 1-2级 (覆盖率: GESP 1级 90.9%, GESP 2级 87.5%)
-// - Level 2: 24课，对应GESP 3-4级 (覆盖率: GESP 3级 83.3%, GESP 4级 88.9%)
-// - Level 3: 24课，对应GESP 5-6级 (覆盖率: GESP 5级 55.6%, GESP 6级 100%)
-// - Level 4: 23课，对应GESP 7-8级 (覆盖率: GESP 7级 100%, GESP 8级 87.5%)
+// 旧版考纲索引和课程进度估算。学习规划使用 cpp-lessons.ts 中的原课件数据。
 
 export interface KnowledgePoint {
   id: string;
@@ -53,7 +47,7 @@ export const courseInfo = {
     { id: 1, name: "Level 1", description: "编程基础", totalLessons: 24, targetGesp: "1-2级" },
     { id: 2, name: "Level 2", description: "算法入门", totalLessons: 24, targetGesp: "3-4级" },
     { id: 3, name: "Level 3", description: "算法进阶", totalLessons: 24, targetGesp: "5-6级" },
-    { id: 4, name: "Level 4", description: "竞赛准备", totalLessons: 23, targetGesp: "7-8级" },
+    { id: 4, name: "Level 4", description: "竞赛准备", totalLessons: 24, targetGesp: "7-8级" },
   ]
 };
 
