@@ -115,13 +115,13 @@ The core data lives in `app/data/curriculum-data.ts`:
 ### Key Data Structures
 
 ```typescript
-// 4 course levels, 95 lessons total
+// 4 course levels, 96 lessons total
 const courseInfo = {
   levels: [
     { id: 1, name: "Level 1", totalLessons: 24, targetGesp: "1-2级" },
     { id: 2, name: "Level 2", totalLessons: 24, targetGesp: "3-4级" },
     { id: 3, name: "Level 3", totalLessons: 24, targetGesp: "5-6级" },
-    { id: 4, name: "Level 4", totalLessons: 23, targetGesp: "7-8级" },
+    { id: 4, name: "Level 4", totalLessons: 24, targetGesp: "7-8级" },
   ]
 };
 
