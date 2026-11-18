@@ -13,20 +13,20 @@ const positions = [
   [90, 72], [63.3, 72], [36.7, 72], [10, 72],
 ];
 
-export default function LevelPath({ initialLevel = 1 }: { initialLevel?: number }) {
+export default function LevelPath({ initialLevel = 1, showHeader = true }: { initialLevel?: number; showHeader?: boolean }) {
   const [selected, setSelected] = useState(initialLevel);
   const reduceMotion = useReducedMotion();
   const topics = catalogFor(selected).filter((entry) => entry.kind === "topic" && entry.level === selected);
 
   return (
-    <section className="overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_20px_60px_rgb(27_48_41/8%)]" aria-label="GESP 八级互动路径">
-      <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-6">
+    <section className={showHeader ? "overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_20px_60px_rgb(27_48_41/8%)]" : "bg-surface"} aria-label="GESP 八级互动路径">
+      {showHeader && <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-6">
         <div>
           <h2 className="text-sm font-medium text-ink">GESP C++ 备考路径</h2>
           <p className="mt-1 text-xs text-muted">选择等级，查看对应学习阶段</p>
         </div>
         <span className="font-mono text-xs text-muted tabular-nums">01—08</span>
-      </div>
+      </div>}
 
       <div data-level-path className="relative mx-3 h-[260px] sm:mx-6 sm:h-[280px]">
         <svg className="absolute inset-0 size-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>
