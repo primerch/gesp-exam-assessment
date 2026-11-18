@@ -14,8 +14,8 @@ Reacher's independent C++ GESP syllabus and paper assessment tool covers levels 
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| Next.js | 16.2.0 | React framework with App Router |
-| React | 19.2.4 | UI library |
+| Next.js | 16.4.x | React framework with App Router |
+| React | 19.3.x | UI library |
 | TypeScript | 5.x | Type safety |
 | Tailwind CSS | 4.x | Utility-first styling |
 | Lucide React | 0.577.0 | Icon library |
@@ -143,12 +143,7 @@ Run `bun test tests` for the C++ catalog, paper layout, scoring and verdict regr
 
 ## Deployment
 
-The project is designed for deployment on **Vercel** (creators of Next.js):
-
-1. Connect GitHub repo to Vercel
-2. Build command: `next build`
-3. Output directory: `.next`
-4. Environment: Node.js 22.13+
+Cloudflare Workers hosts production. The `gesp` Worker uses `cloudflare.config.ts` and the vinext adapter. Build with `npm run build:vinext`, preview the output with `npm run start:vinext`, and deploy with `npm run deploy:vinext`. Store `DEEPSEEK_API_KEY` as a Worker secret. The build scripts prepare versioned PDF assets for static delivery.
 
 ## Security Considerations
 

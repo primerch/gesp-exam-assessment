@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/dist/
+.vinext/
+.cloudflare/
+
+# Generated from the locked pdfjs-dist package
+/public/pdf-assets/
+.dev.vars*
+/.pdf-assets-*/

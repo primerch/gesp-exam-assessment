@@ -23,9 +23,16 @@ export async function reviewRequest<T>(body: unknown, signal: AbortSignal): Prom
       [502, 503, 504].includes(response.status),
     );
   }
-  const payload = await response.json();
-  if (!response.ok || !payload.success)
-    throw new ReviewRequestError(payload.error || "分析未能完成，请重试。", payload.retryable === true);
+  const payload: unknown = await response.json().catch(() => null);
+  if (!payload || typeof payload !== "object")
+    throw new ReviewRequestError("分析服务返回了无法读取的结果，请稍后重试。", true);
+  if (!response.ok || !("success" in payload) || payload.success !== true || !("data" in payload)) {
+    const message = "error" in payload && typeof payload.error === "string" && payload.error;
+    throw new ReviewRequestError(
+      message || "分析未能完成，请重试。",
+      "retryable" in payload && payload.retryable === true,
+    );
+  }
   return payload.data as T;
 }
 export async function recoverBatch(
@@ -58,8 +65,8 @@ async function readPaper(
   status: (s: string) => void,
 ) {
   const pdfjs = await import("pdfjs-dist");
-  const asset = "/api/pdf-assets/";
-  pdfjs.GlobalWorkerOptions.workerSrc = asset + "build/pdf.worker.min.mjs?v=" + pdfjs.version;
+  const asset = `/pdf-assets/${pdfjs.version}/`;
+  pdfjs.GlobalWorkerOptions.workerSrc = asset + "build/pdf.worker.min.mjs";
   const task = pdfjs.getDocument({
     data: await file.arrayBuffer(),
     cMapUrl: asset + "cmaps/",
