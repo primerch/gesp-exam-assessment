@@ -15,6 +15,7 @@ import type { Selection } from "../lib/review/document";
 import { reviewFile, type PaperReport } from "../lib/review/pdf-client";
 import PdfUploader from "./PdfUploader";
 import ExamAnalysisResult, { type ReportContext } from "./ExamAnalysisResult";
+import { syllabusHref } from "../lib/syllabus-links";
 import { field, heading, lead, primary, shell, sourceStyle } from "./review-styles";
 
 export default function PaperWorkspace({ initial }: { initial: Selection }) {
@@ -260,7 +261,7 @@ export default function PaperWorkspace({ initial }: { initial: Selection }) {
             </div>
             <Link
               className={sourceStyle}
-              href={`/?language=${selection.language}&level=${selection.level}`}
+              href={syllabusHref(selection.level, selection.language)}
             >
               展开本级条款 <ArrowRight size={14} />
             </Link>

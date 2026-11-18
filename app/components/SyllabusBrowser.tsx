@@ -12,6 +12,7 @@ import {
   syllabusSources,
   type Language,
 } from "../data/official-syllabus";
+import { syllabusHref } from "../lib/syllabus-links";
 import { heading, lead, primary, shell, sourceStyle } from "./review-styles";
 export const unitTitles = {
   cpp: [
@@ -31,7 +32,7 @@ export function getSelection(n?: string | string[], defaultLevel = 1) {
   const level = typeof n === "string" && levels.includes(Number(n)) ? Number(n) : defaultLevel;
   return { language, level };
 }
-const urlFor = (lang: Language, n: number) => `/?language=${lang}&level=${n}`;
+const urlFor = (lang: Language, n: number) => syllabusHref(n, lang);
 export default function SyllabusBrowser({ language, level }: { language: Language; level: number }) {
   const catalog = catalogFor(level);
   const entries = catalog
