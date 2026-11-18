@@ -3,6 +3,7 @@ import { limits, pageSchema, questionSchema, selectionSchema } from "@/app/lib/r
 import { assessBatch, indexPaper, models, ServiceError, transcribePage } from "@/app/lib/review/model";
 import { revisionDate } from "@/app/data/official-syllabus";
 import { legacyReport } from "@/app/lib/review/legacy";
+import { streamJSON, streamingJSONType } from "@/app/lib/review/streaming-json";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -54,31 +55,43 @@ const bodySchema = z.union([
     studentName: z.string().max(80).default(""),
   }),
 ]);
-export async function POST(request: Request) {
-  const headers = { "Cache-Control": "no-store" };
+async function analyze(v: z.infer<typeof bodySchema>, signal: AbortSignal) {
   try {
-    const body = bodySchema.safeParse(await request.json().catch(() => null));
-    if (!body.success) throw new ServiceError("试卷数据、大小或语言等级无效，请检查后重试。", 400);
-    const v = body.data;
-    const signal = AbortSignal.any([request.signal, AbortSignal.timeout(285000)]);
     let data;
     if (v.phase === "read") data = await transcribePage(v.image, v.native, signal);
     else if (v.phase === "index") data = await indexPaper(v.pages, v.selection.language, signal);
     else if (v.phase === "assess") data = await assessBatch(v.questions, v.selection, signal);
     else data = await legacyReport(v.pdfBase64, v.examLevel, v.teacherName, v.studentName, signal);
-    return Response.json({ success: true, data }, { headers });
+    return { body: { success: true, data }, status: 200 };
   } catch (err) {
     const known = err instanceof ServiceError;
     const timedOut = err instanceof Error && ["TimeoutError", "AbortError"].includes(err.name);
-    return Response.json(
-      {
+    return {
+      body: {
         success: false,
         retryable: timedOut || (known && err.retryable),
         error: known ? err.message : timedOut ? "本次分析超时，请重试。" : "未能完成试卷分析，请稍后重试。",
       },
-      { status: known ? err.status : timedOut ? 504 : 500, headers },
+      status: known ? err.status : timedOut ? 504 : 500,
+    };
+  }
+}
+export async function POST(request: Request) {
+  const headers = { "Cache-Control": "no-store" };
+  const parsed = bodySchema.safeParse(await request.json().catch(() => null));
+  if (!parsed.success) {
+    return Response.json(
+      { success: false, retryable: false, error: "试卷数据、大小或语言等级无效，请检查后重试。" },
+      { status: 400, headers },
     );
   }
+  const input = parsed.data;
+  const signal = AbortSignal.any([request.signal, AbortSignal.timeout(285000)]);
+  if (input.phase && request.headers.get("Accept") === streamingJSONType) {
+    return streamJSON(async (streamSignal) => (await analyze(input, streamSignal)).body, signal);
+  }
+  const result = await analyze(input, signal);
+  return Response.json(result.body, { status: result.status, headers });
 }
 export function GET() {
   return Response.json({ status: "ok", models, codeSyllabusRevision: revisionDate });

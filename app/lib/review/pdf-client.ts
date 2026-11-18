@@ -1,6 +1,7 @@
 import { emptyAnswerTables, hasEmptyFormula, textLines } from "./page-layout";
 import { limits, type PaperPage, type Selection, type PaperIndex, type PaperQuestion } from "./document";
 import { unresolved, type QuestionJudgment } from "./judgment";
+import { streamingJSONType } from "./streaming-json";
 
 export class ReviewRequestError extends Error {
   constructor(
@@ -13,11 +14,12 @@ export class ReviewRequestError extends Error {
 export async function reviewRequest<T>(body: unknown, signal: AbortSignal): Promise<T> {
   const response = await fetch("/api/analyze-exam", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", Accept: streamingJSONType },
     body: JSON.stringify(body),
     signal,
   });
-  if (!response.headers.get("content-type")?.includes("application/json")) {
+  const contentType = response.headers.get("content-type") || "";
+  if (!contentType.includes("application/json") && !contentType.includes(streamingJSONType)) {
     throw new ReviewRequestError(
       response.status === 413 ? "页面数据过大，请拆分试卷后重试。" : "连接分析服务失败，请稍后重试。",
       [502, 503, 504].includes(response.status),
