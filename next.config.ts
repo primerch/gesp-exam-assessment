@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  outputFileTracingIncludes: {
+    "/api/pdf-assets/*": [
+      "./node_modules/pdfjs-dist/build/pdf.worker.min.mjs",
+      "./node_modules/pdfjs-dist/{cmaps,standard_fonts,wasm,iccs}/**/*",
+    ],
+  },
 };
-
 export default nextConfig;
