@@ -98,16 +98,16 @@ export default function KnowledgeAnalysis({
 
       {/* Tabs */}
       <div className="flex flex-wrap gap-1.5 mb-5">
-        {[
+        {([
           { id: "mastered", label: "已掌握", count: mastered.length, icon: CheckCircle2, color: "blue" },
           { id: "remaining", label: "待学习", count: remaining.length, icon: XCircle, color: "amber" },
           { id: "byLevel", label: "按等级", icon: BookOpen, color: "emerald" },
           { id: "coverage", label: "覆盖情况", icon: AlertTriangle, color: "purple" },
           { id: "teaching", label: "教学建议", icon: GraduationCap, color: "indigo" },
-        ].map((tab) => (
+        ] as const).map((tab) => (
           <button
             key={tab.id}
-            onClick={() => setActiveTab(tab.id as any)}
+            onClick={() => setActiveTab(tab.id)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
               activeTab === tab.id
                 ? `bg-${tab.color}-100 text-${tab.color}-700`
@@ -116,7 +116,7 @@ export default function KnowledgeAnalysis({
           >
             <tab.icon className="w-3.5 h-3.5" />
             {tab.label}
-            {tab.count !== undefined && (
+            {"count" in tab && (
               <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeTab === tab.id ? "bg-white/60" : "bg-slate-200"}`}>
                 {tab.count}
               </span>

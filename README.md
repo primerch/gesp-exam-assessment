@@ -1,8 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GESP 考纲研判
+
+Reacher 的 C++ 试卷分析工具。首页可查一级至八级考点，`/analyze` 对照 CCF 条款给出逐题范围、卷面分值和作答要点。
+
+考试标准以 [CCF 认证大纲](https://gesp.ccf.org.cn/101/1008/10012.html)及其 [2026 年 1 月修订说明](https://gesp.ccf.org.cn/101/1002/10255.html) 为准。题目证据与条款分别定位到 PDF 页码。题目未注明分值时只统计题数。
 
 ## Getting Started
 
-First, run the development server:
+Use Node.js 22.13+ and run `npm ci`. Set the server-side `DEEPSEEK_API_KEY` in `.env.local` to enable analysis. The syllabus browser works without a key. Run `bun test tests` for the assessment regressions.
+
+Start the development server:
 
 ```bash
 npm run dev

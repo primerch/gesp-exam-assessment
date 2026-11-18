@@ -1,474 +1,361 @@
 "use client";
-
-import { useState, useMemo } from "react";
-import { 
-  AlertTriangle, 
-  CheckCircle, 
-  Copy, 
-  Check,
-  BookOpen,
-  BarChart3,
-  MessageSquare,
-  Baby,
-  ChevronDown,
-  ChevronUp,
-  FileQuestion,
-  AlertCircle,
-} from "lucide-react";
-import type { AnalysisResult } from "@/app/types/analysis";
-
-interface ExamAnalysisResultProps {
-  result: AnalysisResult;
-  examLevel: number;
+import { useState } from "react";
+import { ArrowUpRight, ChevronDown, Copy, FileText, Printer } from "lucide-react";
+import {
+  clauseLabel,
+  languageNames,
+  levelNames,
+  revisionDate,
+  sourceLink,
+} from "../data/official-syllabus";
+import { hasDefect, reportStates, type QuestionJudgment, type Verdict } from "../lib/review/judgment";
+import type { PaperReport } from "../lib/review/pdf-client";
+import { secondary, sourceStyle } from "./review-styles";
+export interface ReportContext {
+  teacher: string;
+  student: string;
+  course: string;
 }
-
-// 英文术语到中文的映射
-const KNOWLEDGE_POINT_NAMES: Record<string, string> = {
-  pointer: "指针",
-  array: "数组",
-  "2d_array": "二维数组",
-  linked_list: "链表",
-  binary_search: "二分查找",
-  dp: "动态规划",
-  advanced_dp: "复杂动态规划",
-  recurrence: "递推",
-  recursion: "递归",
-  divide_conquer: "分治算法",
-  tree: "树与二叉树",
-  graph: "图论",
-  sorting: "基础排序",
-  advanced_sorting: "高级排序",
-  base_conversion: "进制转换",
-  bit_operation: "位运算",
-  data_encoding: "数据编码",
-  function: "函数",
-  struct: "结构体",
-  file_operation: "文件操作",
-  high_precision: "高精度运算",
-  prime_sieve: "素数筛",
-  search: "搜索算法",
-  stack_queue: "栈和队列",
-  oop: "面向对象",
-  hash_table: "哈希表",
-  greedy: "贪心算法",
-  combinatorics: "排列组合",
-  shortest_path: "最短路径",
-  mst: "最小生成树",
-  binary_lifting: "倍增法",
-  math_lib: "数学库函数",
-  enumeration_simulation: "枚举模拟",
-  string: "字符串操作",
-  basic_concepts: "基础概念",
-  图: "图论",
-  阶乘: "阶乘",
-  排列: "排列",
-  组合: "组合",
+const colors: Record<Verdict, string> = {
+  within: "text-emerald-800 dark:text-emerald-300",
+  beyond: "text-amber-900 dark:text-amber-300",
+  invalid: "text-red-800 dark:text-red-300",
+  insufficient: "text-muted",
 };
-
-function getKnowledgePointName(name: string): string {
-  return KNOWLEDGE_POINT_NAMES[name] || name;
-}
-
-function getQuestionTypeLabel(type: string): string {
-  const labels: Record<string, string> = {
-    choice: "选择题",
-    fill: "填空题",
-    programming: "编程题",
-    reading: "阅读题",
-    unknown: "未知",
-  };
-  return labels[type] || type;
-}
-
-function getQuestionTypeColor(type: string): string {
-  const colors: Record<string, string> = {
-    choice: "bg-blue-100 text-blue-700",
-    fill: "bg-amber-100 text-amber-700",
-    programming: "bg-emerald-100 text-emerald-700",
-    reading: "bg-purple-100 text-purple-700",
-    unknown: "bg-slate-100 text-slate-700",
-  };
-  return colors[type] || colors.unknown;
-}
-
-export default function ExamAnalysisResult({ result, examLevel }: ExamAnalysisResultProps) {
-  const [copied, setCopied] = useState(false);
-  const [realStudentName, setRealStudentName] = useState<string>("");
-  const [expandedQuestions, setExpandedQuestions] = useState<Set<number>>(new Set());
-  const [showAllQuestions, setShowAllQuestions] = useState(false);
-
-  const displayFeedback = useMemo(() => {
-    if (!realStudentName.trim()) {
-      return result.parentFeedback;
-    }
-    const placeholder = result.studentName || "cc";
-    if (!placeholder) return result.parentFeedback;
-    const regex = new RegExp(placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-    return result.parentFeedback.replace(regex, realStudentName.trim());
-  }, [result.parentFeedback, result.studentName, realStudentName]);
-
-  const handleCopyFeedback = async () => {
-    try {
-      await navigator.clipboard.writeText(displayFeedback);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {}
-  };
-
-  const toggleQuestion = (num: number) => {
-    const newSet = new Set(expandedQuestions);
-    if (newSet.has(num)) {
-      newSet.delete(num);
-    } else {
-      newSet.add(num);
-    }
-    setExpandedQuestions(newSet);
-  };
-
-  const getDifficultyColor = (score: number) => {
-    if (score <= 3) return "text-emerald-600 bg-emerald-50 border-emerald-200";
-    if (score <= 6) return "text-amber-600 bg-amber-50 border-amber-200";
-    return "text-red-600 bg-red-50 border-red-200";
-  };
-
-  const getDifficultyLabel = (score: number) => {
-    if (score <= 3) return "适中";
-    if (score <= 6) return "偏难";
-    return "很难";
-  };
-
-  const displayQuestions = showAllQuestions 
-    ? result.questions 
-    : result.questions.slice(0, 10);
-
+const roles = { required: "必要考点", optional: "可选解法", mention: "题面提及" };
+const states = ["within", "beyond", "invalid", "insufficient"] as const;
+function Row({
+  row,
+  initiallyOpen,
+  fileUrl,
+}: {
+  row: QuestionJudgment;
+  initiallyOpen: boolean;
+  fileUrl: string;
+}) {
   return (
-    <div className="space-y-6">
-      {/* 总体评估卡片 */}
-      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-        <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-          <BarChart3 className="w-5 h-5 text-blue-600" />
-          试卷分析结果
-          {result.quality && (
-            <span className={`text-xs px-2 py-1 rounded-full ${
-              result.quality.isReliable 
-                ? "bg-emerald-100 text-emerald-700" 
-                : "bg-amber-100 text-amber-700"
-            }`}>
-              质量评分: {result.quality.score}/100
-            </span>
-          )}
-        </h3>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* 难度评分 */}
-          <div className={`rounded-xl p-4 border ${getDifficultyColor(result.difficultyScore)}`}>
-            <p className="text-sm opacity-80 mb-1">难度系数</p>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold">{result.difficultyScore}</span>
-              <span className="text-sm">/ 10</span>
-            </div>
-            <p className="text-sm mt-1 font-medium">{getDifficultyLabel(result.difficultyScore)}</p>
-          </div>
-
-          {/* 超纲判断 */}
-          <div className={`rounded-xl p-4 border ${
-            result.isBeyondSyllabus 
-              ? "bg-amber-50 border-amber-200 text-amber-700" 
-              : "bg-emerald-50 border-emerald-200 text-emerald-700"
-          }`}>
-            <p className="text-sm opacity-80 mb-1">超纲判断</p>
-            <div className="flex items-center gap-2">
-              {result.isBeyondSyllabus ? (
-                <>
-                  <AlertTriangle className="w-6 h-6" />
-                  <span className="text-xl font-bold">存在超纲</span>
-                </>
-              ) : (
-                <>
-                  <CheckCircle className="w-6 h-6" />
-                  <span className="text-xl font-bold">未超纲</span>
-                </>
-              )}
-            </div>
-            <p className="text-sm mt-1">
-              {result.isBeyondSyllabus 
-                ? `发现 ${result.beyondPoints.length} 个超纲知识点` 
-                : "符合 GESP " + examLevel + " 级大纲要求"}
+    <details open={initiallyOpen} className="group border-b border-line last:border-b-0">
+      <summary className="flex min-h-14 cursor-pointer list-none flex-wrap items-center gap-x-3 gap-y-1 py-3 hover:bg-quiet">
+        <span className="min-w-28 font-medium">{row.label}</span>
+        <span className="min-w-0 flex-1 text-sm text-muted">
+          {row.evidence.find((e) => e.role === "required")?.outsideTitle ??
+            row.evidence.find((e) => e.role === "required")?.entry.title ??
+            "判定依据"}
+        </span>
+        <span className="text-xs tabular-nums text-muted">
+          {row.marks ? row.marks.points + " 分" : "分值未注明"}
+        </span>
+        <span className={`text-sm font-semibold ${colors[row.verdict]}`}>
+          {reportStates[row.verdict]}
+          {row.verdict === "beyond" && hasDefect(row) ? " · 题设问题" : ""}
+        </span>
+        <ChevronDown className="text-muted group-open:rotate-180" size={15} aria-hidden />
+      </summary>
+      <div className="space-y-4 pb-6">
+        <p className="max-w-4xl text-sm leading-7">{row.reason}</p>
+        <div>
+          <h4 className="mb-2 font-semibold">得分要点</h4>
+          {row.marks && (
+            <p className="mb-2 text-sm text-muted">
+              本题 {row.marks.points} 分 · {row.marks.source === "section" ? "分节说明" : "题面标注"}{" "}
+              <a
+                className={sourceStyle}
+                href={fileUrl + "#page=" + row.marks.page}
+                target="_blank"
+                rel="noreferrer"
+              >
+                第 {row.marks.page} 页 ↗
+              </a>
+              　{row.marks.quote}
             </p>
-          </div>
-
-          {/* 置信度 */}
-          <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-            <p className="text-sm text-slate-500 mb-1">分析置信度</p>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-slate-700">
-                {Math.round(result.confidence * 100)}%
+          )}
+          {row.scoring.length ? (
+            <ul className="list-disc space-y-2 pl-5 text-sm leading-6">
+              {row.scoring.map((s, i) => (
+                <li key={i}>
+                  {s.text}
+                  {s.points != null && <strong>（卷面注明 {s.points} 分）</strong>}{" "}
+                  <a
+                    className="text-brand hover:underline"
+                    href={fileUrl + "#page=" + s.page}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    第 {s.page} 页 ↗
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-sm text-muted">
+              {row.verdict === "insufficient"
+                ? "现有题面不足以还原具体作答要求。"
+                : row.evidence
+                    .filter((e) => e.role === "required")
+                    .map((e) => e.why)
+                    .join(" ")}
+            </p>
+          )}
+        </div>
+        {row.evidence.map((e, i) => (
+          <div key={i} className="rounded-md bg-quiet px-4 py-3 text-sm">
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <strong className="font-semibold">{e.outsideTitle ?? e.entry.title}</strong>
+              <span className="text-xs text-muted">
+                {roles[e.role]}
+                {e.outsideTitle
+                  ? " · 一至八级未列"
+                  : e.entry.level > 0 && " · " + levelNames[e.entry.level]}
               </span>
             </div>
-            <p className="text-sm text-slate-500 mt-1">
-              {result.confidence > 0.8 ? "高置信度" : result.confidence > 0.6 ? "中等置信度" : "建议人工复核"}
-            </p>
+            <blockquote className="mt-2 whitespace-pre-wrap break-words leading-6">“{e.quote}”</blockquote>
+            <p className="mt-1.5 leading-6 text-muted">{e.why}</p>
+            <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1">
+              <a
+                className={sourceStyle}
+                href={fileUrl + "#page=" + e.page}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {e.visual ? "图文识别页" : "试卷原文"} · 第 {e.page} 页 <ArrowUpRight size={13} />
+              </a>
+              <a className={sourceStyle} href={sourceLink(e.entry)} target="_blank" rel="noreferrer">
+                {e.outsideTitle ? "对照条款" : "大纲"}第 {e.entry.page} 页 · {clauseLabel(e.entry)}{" "}
+                <ArrowUpRight size={13} />
+              </a>
+            </div>
           </div>
-        </div>
-
-        {/* 总体评价 */}
-        {result.summary && (
-          <div className="mt-4 p-4 bg-slate-50 rounded-xl">
-            <p className="text-slate-700 leading-relaxed">{result.summary}</p>
-          </div>
+        ))}
+        {!row.evidence.length && (
+          <a className={sourceStyle} href={fileUrl + "#page=" + row.page} target="_blank" rel="noreferrer">
+            打开试卷第 {row.page} 页 <ArrowUpRight size={14} />
+          </a>
         )}
       </div>
-
-      {/* 质量警告 */}
-      {result.quality?.issues && result.quality.issues.length > 0 && (
-        <div className="bg-amber-50 rounded-2xl border border-amber-200 p-4">
-          <div className="flex items-center gap-2 text-amber-800 font-medium mb-2">
-            <AlertCircle className="w-5 h-5" />
-            质量提醒
-          </div>
-          <ul className="space-y-1 text-sm text-amber-700">
-            {result.quality.issues.map((issue, i) => (
-              <li key={i}>• {issue.message}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* 超纲知识点详情 */}
-      {result.isBeyondSyllabus && result.beyondPoints.length > 0 && (
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-          <h3 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-amber-600" />
-            超纲知识点详情
-          </h3>
-
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-slate-200">
-                  <th className="text-left py-3 px-4 font-semibold text-slate-700">知识点</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-700">实际级别</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-700">涉及题号</th>
-                  <th className="text-left py-3 px-4 font-semibold text-slate-700">说明</th>
-                </tr>
-              </thead>
-              <tbody>
-                {result.beyondPoints.map((point, index) => (
-                  <tr key={index} className="border-b border-slate-100 last:border-b-0">
-                    <td className="py-3 px-4">
-                      <span className="font-medium text-slate-900">{getKnowledgePointName(point.name)}</span>
-                    </td>
-                    <td className="py-3 px-4">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
-                        GESP {point.gespLevel} 级
-                      </span>
-                    </td>
-                    <td className="py-3 px-4">
-                      <span className="text-sm text-slate-600">
-                        第 {point.questionNumbers.slice(0, 5).join(", ")}
-                        {point.questionNumbers.length > 5 && "..."} 题
-                      </span>
-                    </td>
-                    <td className="py-3 px-4 text-slate-600">{point.reason}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {/* 逐题分析 */}
-      {result.questions && result.questions.length > 0 && (
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
-              <FileQuestion className="w-5 h-5 text-blue-600" />
-              逐题分析
-            </h3>
-            <span className="text-sm text-slate-500">
-              共 {result.questions.length} 题
-            </span>
-          </div>
-
-          <div className="space-y-2">
-            {displayQuestions.map((q) => (
-              <div 
-                key={q.number} 
-                className={`border rounded-xl overflow-hidden ${
-                  q.isBeyond ? "border-amber-200 bg-amber-50/30" : "border-slate-200"
-                }`}
-              >
-                <button
-                  onClick={() => toggleQuestion(q.number)}
-                  className="w-full px-4 py-3 flex items-center justify-between hover:bg-slate-50 transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-medium flex items-center justify-center text-sm">
-                      {q.number}
-                    </span>
-                    <span className={`text-xs px-2 py-1 rounded-full ${getQuestionTypeColor(q.type)}`}>
-                      {getQuestionTypeLabel(q.type)}
-                    </span>
-                    {q.isBeyond && (
-                      <span className="text-xs px-2 py-1 rounded-full bg-amber-100 text-amber-700 flex items-center gap-1">
-                        <AlertTriangle className="w-3 h-3" />
-                        超纲
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {q.knowledgePoints.length > 0 && (
-                      <span className="text-xs text-slate-500">
-                        {q.knowledgePoints.length} 个知识点
-                      </span>
-                    )}
-                    {expandedQuestions.has(q.number) ? (
-                      <ChevronUp className="w-4 h-4 text-slate-400" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 text-slate-400" />
-                    )}
-                  </div>
-                </button>
-
-                {expandedQuestions.has(q.number) && (
-                  <div className="px-4 pb-4 border-t border-slate-100">
-                    {/* 题目内容 */}
-                    <div className="py-3 text-sm text-slate-600 line-clamp-3">
-                      {q.content}
-                    </div>
-
-                    {/* 知识点 */}
-                    {q.knowledgePoints.length > 0 && (
-                      <div className="mb-3">
-                        <p className="text-xs text-slate-500 mb-2">涉及知识点：</p>
-                        <div className="flex flex-wrap gap-2">
-                          {q.knowledgePoints.map((kp, i) => (
-                            <span 
-                              key={i}
-                              className={`text-xs px-2 py-1 rounded-full ${
-                                kp.estimatedLevel > examLevel
-                                  ? "bg-amber-100 text-amber-700"
-                                  : "bg-slate-100 text-slate-600"
-                              }`}
-                            >
-                              {kp.name} (L{kp.estimatedLevel})
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* 超纲详情 */}
-                    {q.isBeyond && q.beyondPoints.length > 0 && (
-                      <div className="bg-amber-50 rounded-lg p-3">
-                        <p className="text-xs text-amber-700 font-medium mb-1">超纲内容：</p>
-                        <ul className="text-xs text-amber-600 space-y-1">
-                          {q.beyondPoints.map((bp, i) => (
-                            <li key={i}>
-                              • {bp.name} (实际 GESP {bp.actualLevel} 级)
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* 显示更多 */}
-          {result.questions.length > 10 && (
-            <button
-              onClick={() => setShowAllQuestions(!showAllQuestions)}
-              className="w-full mt-4 py-2 text-sm text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              {showAllQuestions 
-                ? "收起部分题目" 
-                : `显示全部 ${result.questions.length} 道题目`
-              }
-            </button>
-          )}
-        </div>
-      )}
-
-      {/* 学管反馈建议 */}
-      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
-            <MessageSquare className="w-5 h-5 text-blue-600" />
-            学管反馈建议
-          </h3>
-          <button
-            onClick={handleCopyFeedback}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          >
-            {copied ? (
-              <>
-                <Check className="w-4 h-4" />
-                已复制
-              </>
-            ) : (
-              <>
-                <Copy className="w-4 h-4" />
-                一键复制
-              </>
-            )}
-          </button>
-        </div>
-
-        {/* 学生真实姓名输入 */}
-        <div className="mb-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
-          <label className="block text-sm font-medium text-amber-800 mb-2 flex items-center gap-2">
-            <Baby className="w-4 h-4" />
-            学生姓名（可选）
-          </label>
-          <div className="flex gap-3">
-            <input
-              type="text"
-              value={realStudentName}
-              onChange={(e) => setRealStudentName(e.target.value)}
-              placeholder="输入学生姓名，反馈中会自动显示"
-              className="flex-1 p-3 bg-white border border-amber-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500"
-            />
-            {realStudentName && (
-              <button
-                onClick={() => setRealStudentName("")}
-                className="px-4 py-2 text-amber-600 bg-white border border-amber-200 rounded-xl hover:bg-amber-100 transition-colors text-sm"
-              >
-                重置
-              </button>
-            )}
-          </div>
-          <p className="text-xs text-amber-600 mt-2">
-            {realStudentName.trim() 
-              ? `反馈中将显示"${realStudentName.trim()}"，复制时会自动替换` 
-              : "输入学生姓名后，分析报告中会自动添加个性化称呼"}
-          </p>
-        </div>
-
-        <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-          <div 
-            className="prose prose-slate max-w-none prose-sm"
-            dangerouslySetInnerHTML={{ __html: formatMarkdown(displayFeedback) }}
-          />
-        </div>
-
-        <p className="mt-3 text-sm text-slate-500">
-          💡 提示：点击"一键复制"可复制上述内容，建议根据实际情况微调后再发给家长
-        </p>
-      </div>
-    </div>
+    </details>
   );
 }
+export default function ExamAnalysisResult({
+  report,
+  context,
+  fileUrl,
+}: {
+  report: PaperReport;
+  context: ReportContext;
+  fileUrl: string;
+}) {
+  const [filter, setFilter] = useState<Verdict | "all">("all");
+  const [copyStatus, setCopyStatus] = useState("");
+  const counts = Object.fromEntries(
+    states.map((v) => [
+      v,
+      report.rows.filter((q) => (v === "invalid" ? hasDefect(q) : q.verdict === v)).length,
+    ]),
+  ) as Record<Verdict, number>;
+  const { language, level } = report.selection;
+  const scored = report.rows.filter((r) => r.marks != null);
+  const total = scored.reduce((sum, r) => sum + r.marks!.points, 0);
+  const scoredBeyond = scored
+    .filter((r) => r.verdict === "beyond")
+    .reduce((sum, r) => sum + r.marks!.points, 0);
+  const bySection = new Map<string, { count: number; marked: number; sum: number }>();
+  const topics = new Map<string, number>();
+  for (const row of report.rows) {
+    const label = row.label.split(" · ")[0],
+      group = bySection.get(label) ?? { count: 0, marked: 0, sum: 0 };
+    group.count++;
+    if (row.marks) {
+      group.marked++;
+      group.sum += row.marks.points;
+    }
+    bySection.set(label, group);
+    for (const name of new Set(
+      row.evidence
+        .filter((e) => e.role === "required" && e.entry.kind === "topic")
+        .map((e) => e.outsideTitle ?? e.entry.title),
+    ))
+      topics.set(name, (topics.get(name) ?? 0) + 1);
+  }
+  const targets = [
+    ...new Set(
+      report.rows.flatMap((r) =>
+        r.evidence
+          .filter((e) => e.role === "required" && e.entry.kind === "topic")
+          .map((e) => e.outsideTitle ?? e.entry.title),
+      ),
+    ),
+  ];
+  const summary = states
+    .filter((s) => counts[s] > 0)
+    .map((s) => `${counts[s]} 题${reportStates[s]}`)
+    .join("，");
+  const advice =
+    counts.invalid || counts.beyond
+      ? "练习时可优先选用纲内试题，把超出范围或存在题设问题的题目单独处理。"
+      : targets.length
+        ? "复习时可以先独立完成相应题目，再回到下面的条款核对解题方法。"
+        : "现有材料不足以推荐练习题。";
+  const feedback = [
+    context.teacher && `你好，我是${context.teacher}老师。`,
+    `${context.student ? context.student + "的练习卷" : "这份试卷"}按 ${languageNames[language]} ${levelNames[level]}分析，共 ${report.rows.length} 题，${summary}。`,
+    context.course && "当前课程进度为" + context.course + "。",
+    targets.length && "主要考点包括" + targets.slice(0, 6).join("、") + "。",
+    advice,
+  ]
+    .filter(Boolean)
+    .join("");
+  const firstFlag = report.rows.find((q) => q.verdict !== "within")?.id ?? report.rows[0]?.id;
+  const visible = report.rows.filter(
+    (r) => filter === "all" || (filter === "invalid" ? hasDefect(r) : r.verdict === filter),
+  );
+  return (
+    <section
+      id="paper-report"
+      aria-labelledby="report-title"
+      tabIndex={-1}
+      className="scroll-mt-5 rounded-lg border border-line bg-surface px-5 py-6 sm:px-8"
+    >
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h2 id="report-title" className="text-2xl font-semibold">
+            试卷分析报告
+          </h2>
+          <p className="mt-2 flex items-center gap-2 break-all text-sm text-muted">
+            <FileText size={15} className="shrink-0" />
+            {report.fileName}
+          </p>
+        </div>
+        <button className={secondary + " print:hidden"} onClick={() => window.print()}>
+          <Printer size={16} />
+          打印报告
+        </button>
+      </div>
+      <p className="mt-5 text-sm text-muted">
+        {languageNames[language]} {levelNames[level]} · {report.pages} 页 · 已识别 {report.rows.length} 题 ·
+        大纲修订 {revisionDate}
+      </p>
+      <div className="mt-3 grid grid-cols-2 divide-x divide-line border-y border-line sm:grid-cols-4">
+        {states.map((v) => (
+          <div className="px-3 py-4 first:pl-0" key={v}>
+            <div className={`font-mono text-3xl font-medium tabular-nums ${colors[v]}`}>{counts[v]}</div>
+            <div className="mt-1 text-sm text-muted">{reportStates[v]}</div>
+          </div>
+        ))}
+      </div>
+      {report.notes.length > 0 && (
+        <div className="mt-4 rounded-md bg-quiet p-4">
+          <h3 className="text-sm font-semibold">卷面说明</h3>
+          {report.notes.map((n) => (
+            <p key={n} className="mt-1 text-sm text-muted">
+              {n}
+            </p>
+          ))}
+        </div>
+      )}
+      <section className="mt-6 border-b border-line pb-5">
+        {report.rows.some((r) => r.verdict === "beyond" && hasDefect(r)) && (
+          <p className="mb-2 text-sm text-muted">同一道题可以同时超纲并存在题设问题。</p>
+        )}
+        <h3 className="text-lg font-semibold">分值与考点分布</h3>
+        <p className="mt-2 text-sm leading-7">
+          {scored.length === report.rows.length
+            ? `卷面总分 ${total} 分，已判定超纲 ${scoredBeyond} 分。`
+            : scored.length
+              ? `已识别 ${scored.length} 题的分值，合计 ${total} 分，另有 ${report.rows.length - scored.length} 题未注明分值。`
+              : "卷面未注明分值。以下按题数统计，各题的作答要点可在下方展开。"}
+        </p>
+        {counts.insufficient > 0 && (
+          <p className="mt-1 text-sm text-muted">
+            另有 {counts.insufficient} 题的范围依据不足，已注明的分值合计{" "}
+            {scored
+              .filter((r) => r.verdict === "insufficient")
+              .reduce((sum, r) => sum + r.marks!.points, 0)}{" "}
+            分。
+          </p>
+        )}
+        <p className="mt-1 text-sm text-muted">
+          分值取自卷面，作答要点由模型结合题意提炼。分步给分仅在试卷有明确说明时显示。
+        </p>
 
-// 简单的 markdown 格式化
-function formatMarkdown(text: string): string {
-  return text
-    .replace(/^### (.*$)/gim, '<h3 class="text-lg font-semibold mt-4 mb-2">$1</h3>')
-    .replace(/^## (.*$)/gim, '<h2 class="text-xl font-bold mt-5 mb-3">$1</h2>')
-    .replace(/^\*\*(.*)\*\*/gim, '<strong>$1</strong>')
-    .replace(/^\* (.*$)/gim, '<li class="ml-4">$1</li>')
-    .replace(/\n/gim, '<br/>');
+        <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted">
+          {[...bySection].map(([name, g]) => (
+            <li key={name}>
+              {name} {g.count} 题
+              {g.marked === g.count ? ` · ${g.sum} 分` : g.marked ? ` · 已知 ${g.sum} 分` : ""}
+            </li>
+          ))}
+        </ul>
+        {topics.size > 0 && (
+          <details className="mt-3 text-sm">
+            <summary className="inline-flex min-h-10 cursor-pointer items-center gap-2 font-medium text-brand">
+              查看 {topics.size} 个必要考点 <ChevronDown size={14} />
+            </summary>
+            <ul className="mt-2 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+              {[...topics]
+                .sort((a, b) => b[1] - a[1])
+                .map(([name, n]) => (
+                  <li key={name} className="flex justify-between border-b border-line pb-1">
+                    <span>{name}</span>
+                    <span className="text-muted">{n} 题</span>
+                  </li>
+                ))}
+            </ul>
+          </details>
+        )}
+      </section>
+      <h3 className="mt-7 mb-3 text-lg font-semibold">逐题依据</h3>
+      <div className="mb-2 flex flex-wrap gap-1 print:hidden">
+        {(["all", ...states] as const).map((s) => (
+          <button
+            key={s}
+            aria-pressed={filter === s}
+            className={`min-h-10 rounded px-3 text-sm ${filter === s ? "bg-wash font-semibold text-brand" : "text-muted hover:bg-quiet"}`}
+            onClick={() => setFilter(s)}
+          >
+            {s === "all" ? "全部" : reportStates[s]}
+          </button>
+        ))}
+      </div>
+      <div className="print:hidden">
+        {visible.length ? (
+          visible.map((r) => (
+            <Row key={r.id} row={r} fileUrl={fileUrl} initiallyOpen={r.id === firstFlag} />
+          ))
+        ) : (
+          <p className="py-6 text-sm text-muted">本卷没有这一类判定。</p>
+        )}
+      </div>
+      <div className="hidden print:block">
+        {report.rows.map((r) => (
+          <Row key={r.id} row={r} fileUrl={fileUrl} initiallyOpen />
+        ))}
+      </div>
+      <section className="mt-7 border-t border-line pt-5">
+        <h3 className="text-lg font-semibold">
+          教学反馈
+          {context.teacher && (
+            <span className="ml-3 text-sm font-normal text-muted">署名 {context.teacher}</span>
+          )}
+        </h3>
+        <p className="mt-2 max-w-4xl text-sm leading-7">{feedback}</p>
+        <button
+          className={secondary + " mt-3 print:hidden"}
+          onClick={async () => {
+            try {
+              await navigator.clipboard.writeText(feedback);
+              setCopyStatus("已复制教学反馈");
+            } catch {
+              setCopyStatus("浏览器未开放剪贴板，可选中反馈文字复制。");
+            }
+          }}
+        >
+          <Copy size={15} />
+          复制反馈
+        </button>
+        <span role="status" className="ml-3 text-sm text-muted">
+          {copyStatus}
+        </span>
+      </section>
+    </section>
+  );
 }

@@ -44,8 +44,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--workspace-paper);
+  color: var(--workspace-ink);
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
@@ -201,4 +201,35 @@ input[type="range"]::-moz-range-thumb {
   .no-print {
     display: none !important;
   }
+}
+
+@theme inline {
+  --color-paper: var(--workspace-paper);
+  --color-surface: var(--workspace-surface);
+  --color-ink: var(--workspace-ink);
+  --color-muted: var(--workspace-muted);
+  --color-line: var(--workspace-line);
+  --color-brand: var(--workspace-brand);
+  --color-action: var(--workspace-action);
+  --color-wash: var(--workspace-wash);
+  --color-quiet: var(--workspace-quiet);
+  --font-sans: var(--font-geist-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+:root {
+  --workspace-paper: #f7f8fa; --workspace-surface: #fff; --workspace-ink: #19242f;
+  --workspace-muted: #526171; --workspace-line: #d3dae1; --workspace-brand: #224c81;
+  --workspace-action: #234977; --workspace-wash: #eaf0f7; --workspace-quiet: #f4f6f8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --workspace-paper: #161d25; --workspace-surface: #1d2631; --workspace-ink: #ecf1f6;
+    --workspace-muted: #b1bdca; --workspace-line: #3d4a58; --workspace-brand: #a6c9fa;
+    --workspace-action: #315a8b; --workspace-wash: #27384c; --workspace-quiet: #222d39;
+    --ring: #a6c9fa;
+  }
+}
+::selection { background: #c8dcf2; color: #162236; }
+@media print {
+  :root { --workspace-paper: white; --workspace-surface: white; --workspace-ink: black; --workspace-muted: #405060; --workspace-line: #bac2ca; --workspace-brand: #183659; --workspace-wash: #f0f2f5; --workspace-quiet: white; }
 }

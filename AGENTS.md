@@ -4,16 +4,11 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
-# GESP 考试规划助手 - Project Guide
+# GESP 考纲研判 - Project Guide
 
 ## Project Overview
 
-This is a Next.js web application for **五个奶爸少儿编程** (Five Dads Kids Programming), a programming education platform. The app serves as a **GESP Exam Planning Assistant** that helps educational managers evaluate which GESP (Grade Examination of Software Programming) level students are ready for based on their course progress.
-
-**Application Purpose:**
-- Input: Student's current course level (Level 1-4) and lesson progress
-- Output: Pass probability predictions for all 8 GESP exam levels
-- Features: Knowledge point analysis, study path visualization, exam recommendations
+Reacher's independent C++ GESP syllabus and paper assessment tool covers levels 1–8. The public authorship is Reacher. The home page browses CCF clauses, `/analyze` reviews exams, and `/plan` provides the existing course progress estimates.
 
 ## Technology Stack
 
@@ -34,7 +29,7 @@ This is a Next.js web application for **五个奶爸少儿编程** (Five Dads Ki
 app/
 ├── components/              # React components (all Client Components)
 │   ├── ExamPrediction.tsx   # GESP pass probability visualization
-│   ├── Header.tsx           # Navigation header with logo
+│   ├── Header.tsx           # Product navigation and Reacher byline
 │   ├── KnowledgeAnalysis.tsx # Knowledge point mastery analysis
 │   ├── LevelSelector.tsx    # Course level/lesson selection UI
 │   └── StudyPath.tsx        # 4-level study path visualization
@@ -45,10 +40,9 @@ app/
 ├── favicon.ico
 ├── globals.css              # Tailwind v4 imports + theme variables
 ├── layout.tsx               # Root layout with Geist font
-└── page.tsx                 # Main page (Client Component)
+└── page.tsx                 # Official C++ syllabus browser
 
 public/                      # Static assets
-├── logo.png                 # Five Dads brand logo
 └── *.svg                    # Next.js/Vercel default icons
 ```
 
@@ -139,7 +133,7 @@ const gespKnowledgePoints: Record<number, KnowledgePoint[]> = {
 
 ## Testing Strategy
 
-Currently, this project has no automated tests configured. To add testing:
+Run `bun test tests` for the C++ catalog, paper layout, scoring and verdict regressions. Additional testing ideas:
 
 1. Install testing dependencies (Jest, React Testing Library, or Playwright)
 2. Test key functions in `curriculum-data.ts`:
@@ -154,14 +148,14 @@ The project is designed for deployment on **Vercel** (creators of Next.js):
 1. Connect GitHub repo to Vercel
 2. Build command: `next build`
 3. Output directory: `.next`
-4. Environment: Node.js 18+
+4. Environment: Node.js 22.13+
 
 ## Security Considerations
 
 - No sensitive data in client-side code (all curriculum data is public)
-- No API routes or server-side data handling
+- Only the server calls the model provider using DEEPSEEK_API_KEY
 - No authentication required (public tool)
-- Static export compatible (`output: 'export'` can be added to `next.config.ts`)
+- Run the Next.js server for PDF assets and paper analysis.
 
 ## Development Notes
 

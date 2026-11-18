@@ -48,7 +48,7 @@ export const gespLevels = [
 
 // 课程信息
 export const courseInfo = {
-  name: "五个奶爸少儿编程",
+  name: "C++ 学习进度",
   levels: [
     { id: 1, name: "Level 1", description: "编程基础", totalLessons: 24, targetGesp: "1-2级" },
     { id: 2, name: "Level 2", description: "算法入门", totalLessons: 24, targetGesp: "3-4级" },
