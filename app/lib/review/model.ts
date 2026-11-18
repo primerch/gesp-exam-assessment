@@ -1,5 +1,11 @@
 import OpenAI from "openai";
-import { resolveLine, restoresNativeLine, restoreAnswerRow, hasEmptyFormula } from "./page-layout";
+import {
+  emptyAnswerTables,
+  resolveLine,
+  restoresNativeLine,
+  restoreAnswerRow,
+  hasEmptyFormula,
+} from "./page-layout";
 import type { ChatCompletionContentPart } from "openai/resources/chat/completions";
 import { z } from "zod";
 import { catalogFor, languageNames, type Language } from "../../data/official-syllabus";
@@ -241,6 +247,36 @@ export async function transcribePage(image: string, native: string, signal: Abor
     }
   }
   for (const row of extra.data.answerRows ?? []) restoreAnswerRow(lines, row);
+  const tables = emptyAnswerTables(lines);
+  if (tables.length) {
+    const result = await callModel(
+      models.reader,
+      '只转录试卷图片中的答案表。按所给表头的列号，从左到右逐格读取印刷符号，包括红色勾叉。返回 {"tables":[{"line":表头原索引,"values":["√","×"]}]}。values 只可为 A-H、√ 或 ×。不可解题猜答案；如果任一列不清楚，省略整行。',
+      [
+        { type: "text", text: JSON.stringify(tables) },
+        { type: "image_url", image_url: { url: image } },
+      ],
+      signal,
+      "none",
+    ).catch((error) => {
+      if (!signal.aborted && error instanceof ServiceError) return null;
+      throw error;
+    });
+    const read = z
+      .object({
+        tables: z
+          .array(
+            z.object({ line: z.number().int(), values: z.array(z.string().max(5)).max(limits.questions) }),
+          )
+          .max(10),
+      })
+      .safeParse(result);
+    if (read.success)
+      for (const table of read.data.tables) {
+        const original = tables.find((t) => t.line === table.line);
+        if (original) restoreAnswerRow(lines, { ...original, values: table.values });
+      }
+  }
   return { text: lines.flatMap((line, i) => [line, ...(anchors.get(i) || [])]).join("\n"), notice, gaps };
 }
 

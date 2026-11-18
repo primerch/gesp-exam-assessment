@@ -161,3 +161,34 @@ test("seemingly complete mixed PDF pages still trigger vision for missing numeri
   assert(!hasEmptyFormula("  对于所有测试点，保证 1 ≤ n ≤ 30。"));
   assert(!hasEmptyFormula("下列描述正确的是（    ）。"));
 });
+
+test("spaced CCF answer-table labels preserve printed letters and image-only checkmarks", async () => {
+  const { emptyAnswerTables, restoreAnswerRow, hasEmptyFormula } =
+    await import("../app/lib/review/page-layout");
+  const text = [
+    "单选题",
+    "题 号 1 2",
+    "答 案 C D",
+    "第 1 题 选哪个？",
+    "第 2 题 选哪个？",
+    "判断题",
+    "题 号 1 2",
+    "答 案",
+    "第 1 题 对吗？",
+    "第 2 题 对吗？",
+  ];
+  assert.deepEqual(
+    emptyAnswerTables(text).map((t) => t.numbers),
+    [[1, 2]],
+  );
+  restoreAnswerRow(text, { line: 6, header: "题号 1 2", values: ["√", "×"] });
+  const pages = [{ page: 1, text: text.join("\n") }],
+    lines = linesOf(pages);
+  const { questions } = buildIndex(pages, lines, locateBoundaries(lines));
+  assert.deepEqual(
+    questions.map((q) => q.answerKey?.answer),
+    ["C", "D", "正确", "错误"],
+  );
+  assert(hasEmptyFormula("如果 n 为大于    的整数，则求余结果相同。"));
+  assert(!hasEmptyFormula("如果 n 为大于 100 的整数，则求余结果相同。"));
+});

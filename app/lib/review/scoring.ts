@@ -82,6 +82,16 @@ export function objectiveAnswer(value: string | null | undefined) {
   if (/^(?:错误|错|否|×|✗|✘|FALSE)$/.test(s)) return "错误";
   return "";
 }
+export const blankAnswerRow = /^\s*(?:参\s*考\s*)?答\s*案\s*[:：]?\s*$/;
+export function printedQuestionNumbers(line: string) {
+  const header = line
+    .normalize("NFKC")
+    .trim()
+    .match(/^题\s*号\s*[:：]?\s*(\d+(?:[\s、,]+\d+)*)$/);
+  if (!header) return undefined;
+  const numbers = header[1].match(/\d+/g)!.map(Number);
+  return new Set(numbers).size === numbers.length ? numbers : undefined;
+}
 /** Only join explicit question-number / answer rows in an identifiable objective section. */
 export function answerKeysByStart(
   lines: PaperLine[],
@@ -95,22 +105,16 @@ export function answerKeysByStart(
     const heading = sectionOf(line);
     if (heading !== undefined) group = objectiveGroup(heading);
     if (!group) continue;
-    const header = line.match(/^题号\s*[:：]?\s*(\d+(?:[\s、,]+\d+)*)$/);
+    const numbers = printedQuestionNumbers(line);
     const next = lines[i + 1];
     const row = next.text
       .normalize("NFKC")
       .trim()
-      .match(/^(?:参考)?答案\s*[:：]?\s*(.+)$/);
-    if (!header || !row || lines[i].page !== next.page) continue;
-    const numbers = header[1].match(/\d+/g)!.map(Number);
+      .match(/^(?:参\s*考\s*)?答\s*案\s*[:：]?\s*(.+)$/);
+    if (!numbers || !row || lines[i].page !== next.page) continue;
     const compact = row[1].replace(/[\s、,]/g, "");
     const entries = compact.match(group === "单选" ? /[A-H]/gi : /正确|错误|[对错√✓✔×✗✘]/g) ?? [];
-    if (
-      entries.join("") !== compact ||
-      entries.length !== numbers.length ||
-      new Set(numbers).size !== numbers.length
-    )
-      continue;
+    if (entries.join("") !== compact || entries.length !== numbers.length) continue;
     for (const [j, n] of numbers.entries()) {
       const id = group + n,
         answer = objectiveAnswer(entries[j]);

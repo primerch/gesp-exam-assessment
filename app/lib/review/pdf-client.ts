@@ -1,4 +1,4 @@
-import { hasEmptyFormula, textLines } from "./page-layout";
+import { emptyAnswerTables, hasEmptyFormula, textLines } from "./page-layout";
 import { limits, type PaperPage, type Selection, type PaperIndex, type PaperQuestion } from "./document";
 import { unresolved, type QuestionJudgment } from "./judgment";
 
@@ -96,9 +96,11 @@ async function readPaper(
         const [, width, height] = ops.argsArray[i];
         return width * height >= 2500;
       });
+      const nativeLines = native.split("\n");
       const visual =
         native.replace(/\s/g, "").length < 40 ||
-        native.split("\n").some(hasEmptyFormula) ||
+        nativeLines.some(hasEmptyFormula) ||
+        emptyAnswerTables(nativeLines).length > 0 ||
         /如下图|如图|下图|图中|如.{0,16}图所示|积木|见图/.test(native) ||
         images;
       if (visual) {

@@ -51,7 +51,7 @@ export const sectionHeading =
   /^(?:[一二三四五六七八九十\d]+\s*[、.)]?\s*)?(单项选择题|单选题|选择题|判断题|填空题|程序阅读题|编程题)(?:\s*[（(].*|\s*)$/;
 export function isFrontMatter(line: string) {
   const t = line.normalize("NFKC").trim();
-  return sectionHeading.test(t) || /^(?:题号|答案表|答案)(?:\s|$)/.test(t);
+  return sectionHeading.test(t) || /^(?:题\s*号|(?:参\s*考\s*)?答\s*案(?:\s*表)?)(?:\s|$)/.test(t);
 }
 export function locateBoundaries(lines: PaperLine[], suggestions?: Boundary[]) {
   const found: Boundary[] = [];

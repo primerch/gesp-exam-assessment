@@ -1,3 +1,4 @@
+import { blankAnswerRow, printedQuestionNumbers } from "./scoring";
 import type { TextItem, TextMarkedContent } from "pdfjs-dist/types/src/display/api";
 
 // PDF text can be painted in separate passes (all question headings, then all code).
@@ -71,17 +72,19 @@ export function restoresNativeLine(original: string, restored: string) {
   return next === source.length;
 }
 
+export function emptyAnswerTables(lines: string[]) {
+  return lines.flatMap((header, line) => {
+    if (!blankAnswerRow.test(lines[line + 1] ?? "")) return [];
+    const numbers = printedQuestionNumbers(header);
+    return numbers ? [{ line, header: header.trim(), numbers }] : [];
+  });
+}
 export function restoreAnswerRow(lines: string[], row: { line: number; header: string; values: string[] }) {
   const at = resolveLine(lines, row.line, row.header);
-  if (at < 0 || !/^\s*(?:参考)?答案\s*[:：]?\s*$/.test(lines[at + 1] ?? "")) return;
-  const header = lines[at]
-    .normalize("NFKC")
-    .trim()
-    .match(/^题号\s*[:：]?\s*(\d+(?:[\s、,]+\d+)*)$/);
-  const numbers = header?.[1].match(/\d+/g);
+  if (at < 0 || !blankAnswerRow.test(lines[at + 1] ?? "")) return;
+  const numbers = printedQuestionNumbers(lines[at]);
   if (
-    !numbers?.length ||
-    new Set(numbers).size !== numbers.length ||
+    !numbers ||
     numbers.length !== row.values.length ||
     !row.values.every((v) => /^(?:[A-H]|√|×|✓|✗|✔|✘|正确|错误)$/.test(v))
   )
@@ -92,7 +95,8 @@ export function restoreAnswerRow(lines: string[], row: { line: number; header: s
 export function hasEmptyFormula(line: string) {
   const t = line.trim();
   return (
-    /保证|满足|测试点|测试数据|距离固定为|前\s+格/.test(t) &&
-    /[\p{Script=Han}≤≥=]\s{2,}(?=[\p{Script=Han}，。、；≤≥=])/u.test(t)
+    /保证|满足|测试点|测试数据|距离固定为|前\s+格|(?:大于|小于|等于|超过|至少|至多|低于)\s{2,}(?:的|且|[，。、；])/.test(
+      t,
+    ) && /[\p{Script=Han}≤≥=]\s{2,}(?=[\p{Script=Han}，。、；≤≥=])/u.test(t)
   );
 }
