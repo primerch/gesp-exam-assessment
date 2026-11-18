@@ -53,23 +53,40 @@ export function isFrontMatter(line: string) {
   const t = line.normalize("NFKC").trim();
   return sectionHeading.test(t) || /^(?:题号|答案表|答案)(?:\s|$)/.test(t);
 }
-export function locateBoundaries(lines: PaperLine[]) {
+export function locateBoundaries(lines: PaperLine[], suggestions?: Boundary[]) {
   const found: Boundary[] = [];
-  let section = "";
+  const proposed = new Map(suggestions?.map((b) => [b.line, b]));
+  let section = "",
+    insideProgram = false,
+    lastMarker = -2;
   for (const [i, line] of lines.entries()) {
     const t = line.text.normalize("NFKC").trim();
     const sectionTitle = t.match(sectionHeading);
     if (sectionTitle) {
       section = sectionTitle[1];
+      insideProgram = false;
       continue;
     }
+    if (isFrontMatter(t)) continue;
     const program = t.match(/^(?:\d+\.\d+\s*)?编程题\s*([一二三四五六七八九十\d]+)(?:\s|[：:、.]|$)/);
     const numbered = t.match(/^(?:第\s*(\d{1,3})\s*题|(?:Q(?:uestion)?\s*)(\d{1,3})(?=\s|[.:、]))/i);
-    // Dotted section numbers (3.1.2), line numbers in code and decimal literals are not questions.
+    const number = program?.[1] ?? numbered?.[1] ?? numbered?.[2];
+    if (number) {
+      insideProgram = Boolean(program) || section === "编程题";
+      found.push({ line: i, label: `${insideProgram ? "编程题" : section || "试题"} · 第 ${number} 题` });
+      lastMarker = i;
+      continue;
+    }
     const simple = t.match(/^(\d{1,3})\s*[.、)](?![\d.])\s*(?=\S)/);
-    const number = program?.[1] ?? numbered?.[1] ?? numbered?.[2] ?? simple?.[1];
-    if (number)
-      found.push({ line: i, label: `${program ? "编程题" : section || "试题"} · 第 ${number} 题` });
+    // Numbered rules, methods and sample calculations belong to the enclosing programming problem.
+    if (insideProgram && (simple || /^(?:\d+\.\d+\.\d+(?:\s|$)|试题名称[：:]|【图示】)/.test(t))) continue;
+    const hint = proposed.get(i);
+    if (simple && (!suggestions || hint)) {
+      found.push({ line: i, label: `${section || "试题"} · 第 ${simple[1]} 题` });
+      lastMarker = i;
+    } else if (hint && !(lastMarker === i - 1 && lines[lastMarker].text.trim().length < 20)) {
+      found.push(hint);
+    }
   }
   return found;
 }

@@ -190,3 +190,44 @@ test("a local image gap needs a literal whole-question source to establish that 
     "insufficient",
   );
 });
+
+test("numbered routes, tax rules and twelve sample months stay inside their programming problems", async () => {
+  const pages = [
+    {
+      page: 1,
+      text: "1 单选题（每题 2 分）\n第 1 题 输出什么？\n3 编程题（每题 25 分）\n3.1 编程题 1\n3.1.1 题目描述\n1. 乘飞机。\n2. 乘高铁。\n3. 转车。\n3.2 编程题 2\n3.2.1 题目描述\n1. 低于起征点。\n2. 高于起征点。",
+    },
+    {
+      page: 2,
+      text:
+        "3.2.7 样例解释\n" +
+        Array.from({ length: 12 }, (_, i) => `${i + 1}. 月份计算。`).join("\n") +
+        "\n3.2.8 数据范围\n3.2.9 参考程序",
+    },
+  ];
+  const lines = linesOf(pages);
+  const hints = lines.flatMap((l, line) =>
+    /^(?:第|3\.[12] |\d+\.|【图示】)/.test(l.text) ? [{ line, label: "编程题 · 第 1 题" }] : [],
+  );
+  const idx = await indexPaper(pages, "cpp", new AbortController().signal, async () => ({
+    language: "cpp",
+    starts: hints,
+    notes: [],
+  }));
+  assert.deepEqual(
+    idx.questions.map((q) => [q.label, q.marks?.points]),
+    [
+      ["单选题 · 第 1 题", 2],
+      ["编程题 · 第 1 题", 25],
+      ["编程题 · 第 2 题", 25],
+    ],
+  );
+  assert(idx.questions[1].parts[0].text.includes("3. 转车。"));
+  assert(idx.questions[2].parts[1].text.includes("12. 月份计算。"));
+  const plain = [{ page: 1, text: "编程题\n1. 输出两个数的和。\n2. 输出三个数的积。" }],
+    choice = [
+      { line: 1, label: "第一题" },
+      { line: 2, label: "第二题" },
+    ];
+  assert.equal(locateBoundaries(linesOf(plain), choice).length, 2);
+});

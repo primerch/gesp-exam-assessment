@@ -5,7 +5,6 @@ import { z } from "zod";
 import { catalogFor, languageNames, type Language } from "../../data/official-syllabus";
 import {
   buildIndex,
-  isFrontMatter,
   limits,
   linesOf,
   locateBoundaries,
@@ -99,10 +98,9 @@ export async function indexPaper(
 ) {
   const lines = linesOf(pages);
   if (!lines.length) throw new ServiceError("整份试卷都未能辨认出题干。", 422);
-  const markers = locateBoundaries(lines);
   const raw = await ask(
     models.reader,
-    '为整份试卷建立题目目录。返回 {"language":"cpp|python|blocks|unknown","starts":[{"line":0,"label":"单选题 · 第 1 题"}],"notes":[]}。line 是给定的全卷行索引。每道独立作答的题只列一次，包括跨页题、每一节重新编号的题、编程题、无编号题。取题号或标题首次出现的行；样例、参考解、代码行号、答案表和小节标题不能成为新题。完整输入即使只有一道题也应识别；纯目录、封面、大纲、无试题的材料返回空。试卷可以没有答案；答案、答案表和参考程序的完整性一律不评价。notes 只可报告题号或页码明确断档，并给出具体缺号。不要评价题意、选项或答案。语言只采信试卷标题、明确说明或主要编程语言，不按零星关键词猜。',
+    '为整份试卷建立题目目录。返回 {"language":"cpp|python|blocks|unknown","starts":[{"line":0,"label":"单选题 · 第 1 题"}],"notes":[]}。line 是给定的全卷行索引。每道独立作答的题只列一次，包括跨页题、每一节重新编号的题、编程题、无编号题。取题号或标题首次出现的行；同一编程题中的多种出行方案、分档规则、分步计算、输入输出、样例及解释属于该题。样例、参考解、代码行号、答案表和小节标题不能成为新题。完整输入即使只有一道题也应识别；纯目录、封面、大纲、无试题的材料返回空。试卷可以没有答案；答案、答案表和参考程序的完整性一律不评价。notes 只可报告题号或页码明确断档，并给出具体缺号。不要评价题意、选项或答案。语言只采信试卷标题、明确说明或主要编程语言，不按零星关键词猜。',
     JSON.stringify(lines.map((l, i) => [i, l.page, l.text])),
     signal,
     "none",
@@ -113,16 +111,9 @@ export async function indexPaper(
   if (detected !== "unknown" && detected !== language)
     throw new ServiceError("这份试卷的主要语言不是 C++。请上传 C++ 试卷。", 422);
   if (!starts.length) throw new ServiceError("上传文件中没有辨认出独立试题。", 422);
-  const sorted = new Map(markers.map((m) => [m.line, m]));
-  for (const b of starts) {
-    if (b.line >= lines.length) throw new ServiceError("试题目录包含无法定位的题目。", 502);
-    if (isFrontMatter(lines[b.line].text)) continue;
-    const nearby = markers.find(
-      (m) => m.line === b.line || (m.line === b.line - 1 && lines[m.line].text.trim().length < 20),
-    );
-    if (!nearby) sorted.set(b.line, b);
-  }
-  const boundaries = [...sorted.values()].sort((a, b) => a.line - b.line);
+  if (starts.some((b) => b.line >= lines.length))
+    throw new ServiceError("试题目录包含无法定位的题目。", 502);
+  const boundaries = locateBoundaries(lines, starts);
   if (boundaries.length > limits.questions)
     throw new ServiceError(`每份支持 ${limits.questions} 题，请分卷上传。`, 422);
   return buildIndex(pages, lines, boundaries);
