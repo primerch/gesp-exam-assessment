@@ -9,9 +9,9 @@ import { Particles } from "@/app/components/ui/particles";
 import { Spotlight, Tilt } from "@/app/components/motion";
 
 const stages = [
-  { name: "读取题目", index: "01", label: "试卷原文", detail: "识别题干、代码与问题", accessible: "程序阅读示例：for (int i = 1; i <= 5; i++) { cout << i; }，输出 12345。" },
-  { name: "对照考点", index: "02", label: "CCF 条款", detail: "单层循环 · GESP 一级", accessible: "CCF 条款：GESP 一级 · 第 5 页，循环结构程序中的单层循环。完成本题必须理解 for 循环。" },
-  { name: "形成结论", index: "03", label: "判断结论", detail: "纲内 · 依据随结论保留", accessible: "判断结论：纲内。必要考点为 GESP 一级单层循环，CCF 原文第 5 页随结论保留。" },
+  { name: "程序阅读", index: "01", label: "题目", detail: "读代码，写输出", accessible: "程序阅读示例。for (int i = 1; i <= 5; i++) { cout << i; } 输出 12345。" },
+  { name: "一级考点", index: "02", label: "考纲依据", detail: "单层循环", accessible: "这题考单层循环。GESP 一级 · 第 5 页。解题需要读懂一层 for 循环。" },
+  { name: "是否超纲", index: "03", label: "分析结果", detail: "未超纲", accessible: "这题在一级考纲内。对应考点是 CCF 考纲第 5 页的单层循环。" },
 ];
 
 export default function OrbitPaperScene({
@@ -61,7 +61,7 @@ export default function OrbitPaperScene({
             aria-hidden
           >
             <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 text-[11px] tracking-[0.16em] text-[#82968b]">
-              <span>CCF / C++</span><span>P.05</span>
+              <span>CCF C++ 考纲</span><span>第 5 页</span>
             </div>
             <div className="space-y-4 p-5 opacity-45">
               {[72, 92, 82, 64, 88, 54].map((width, index) => (
@@ -86,20 +86,20 @@ export default function OrbitPaperScene({
             transition={{ duration: reduceMotion ? 0 : 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
             aria-hidden
           >
-            <div className="flex items-center justify-between border-b border-black/10 px-5 py-4 text-[11px] text-[#55665f] sm:px-7">
-              <span className="inline-flex items-center gap-2"><FileText size={14} /> 一级示例题 · 程序阅读</span>
-              <span className="font-mono">Q.12</span>
+            <div className="flex items-center justify-between border-b border-black/10 px-4 py-3 text-[11px] text-[#55665f] sm:px-7 sm:py-4">
+              <span className="inline-flex items-center gap-2"><FileText size={14} /> 程序阅读示例</span>
+              <span>GESP 一级</span>
             </div>
-            <div className="px-5 py-6 sm:px-7 sm:py-8">
-              <p className="text-xs text-[#55665f]">阅读程序，写出输出结果</p>
-              <pre className="mt-5 font-mono text-[12px] leading-7 sm:text-sm"><code>{`for (int i = 1; i <= 5; i++) {\n  cout << i;\n}`}</code></pre>
+            <div className="px-4 py-4 sm:px-7 sm:py-8">
+              <p className="text-xs text-[#55665f]">这段代码会输出什么？</p>
+              <pre className="mt-3 font-mono text-xs leading-6 whitespace-pre-wrap sm:mt-5 sm:text-sm sm:leading-7"><code>{`for (int i = 1; i <= 5; i++) {\n  cout << i;\n}`}</code></pre>
               <motion.div
-                className="mt-5 inline-block border-l-2 border-[#a9762a] bg-[#e9dfca] px-3 py-2 font-mono text-xs text-[#6c4b19]"
+                className="mt-3 inline-block border-l-2 border-[#a9762a] bg-[#e9dfca] px-3 py-2 text-xs text-[#6c4b19] sm:mt-5"
                 animate={{ opacity: active >= 1 ? 1 : 0.25, x: active >= 1 ? 0 : -8 }}
               >
-                必要考点：单层循环
+                这题考单层循环
               </motion.div>
-              <div className="mt-6 border-t border-black/10 pt-4 font-mono text-xs text-[#55665f]">输出：12345</div>
+              <div className="mt-4 border-t border-black/10 pt-3 text-xs text-[#55665f] sm:mt-6 sm:pt-4">输出结果 <code className="font-mono">12345</code></div>
             </div>
             <motion.div
               className="absolute inset-x-0 h-16 bg-linear-to-b from-transparent via-[#d4ad66]/15 to-transparent"
@@ -116,10 +116,10 @@ export default function OrbitPaperScene({
             animate={{ opacity: active >= 1 ? 1 : 0.45, y: active >= 1 ? 0 : 12 }}
             aria-hidden
           >
-            <p className="font-mono text-[11px] tracking-[0.18em] text-[#d4ad66]">CCF / EVIDENCE</p>
-            <p className="mt-2 text-sm text-[#edf3ef]">循环结构程序</p>
-            <p className="mt-1 text-[11px] leading-5 text-[#9fb2a7]">理解并使用 for 循环完成重复执行</p>
-            <p className="mt-3 border-t border-white/10 pt-2 font-mono text-[11px] text-[#82968b]">GESP 一级 · 第 5 页</p>
+            <p className="text-[11px] text-[#d4ad66]">GESP 一级考点</p>
+            <p className="mt-2 text-sm text-[#edf3ef]">单层循环</p>
+            <p className="mt-1 text-[11px] leading-5 text-[#9fb2a7]">这道题要读懂一层 for 循环</p>
+            <p className="mt-3 border-t border-white/10 pt-2 text-[11px] text-[#82968b]">CCF 考纲第 5 页</p>
           </motion.div>
 
           <motion.div
@@ -135,8 +135,8 @@ export default function OrbitPaperScene({
           >
             <div>
               <Stamp className="mx-auto mb-1" size={18} />
-              <span className="font-display text-2xl">纲内</span>
-              <span className="mt-1 block font-mono text-[11px] tracking-[0.18em]">WITHIN</span>
+              <span className="font-display text-2xl">未超纲</span>
+              <span className="mt-1 block text-[11px]">GESP 一级</span>
             </div>
           </motion.div>
 

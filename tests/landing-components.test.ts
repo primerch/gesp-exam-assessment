@@ -33,13 +33,14 @@ test("motion registry primitives render their server-safe initial state", () => 
 test("Orbit hero exposes both tasks and a readable evidence equivalent", () => {
   const markup = renderToStaticMarkup(createElement(OrbitHero));
 
-  assert.match(markup, /GESP/);
+  assert.match(markup, /GESP C\+\+/);
+  assert.match(markup, /考纲与试卷分析/);
   assert.match(markup, /href="\/plan"/);
   assert.match(markup, /href="\/analyze"/);
-  assert.match(markup, /产品演示/);
-  assert.match(markup, /试卷原文/);
-  assert.match(markup, /CCF 条款/);
-  assert.match(markup, /判断结论/);
+  assert.match(markup, /href="\/syllabus"/);
+  assert.match(markup, /程序阅读示例/);
+  assert.match(markup, /考纲依据/);
+  assert.match(markup, /分析结果/);
 });
 
 test("learning scene uses sourced course totals and the existing example estimate", () => {
@@ -47,7 +48,8 @@ test("learning scene uses sourced course totals and the existing example estimat
 
   assert.match(markup, /96/);
   assert.match(markup, /93%/);
-  assert.match(markup, /不代表考试成绩/);
+  assert.match(markup, /准备程度（估算）/);
+  assert.match(markup, /按课程讲过的考点估算/);
 });
 
 test("landing removes the repeated long-form sections", () => {
@@ -155,7 +157,7 @@ test("Orbit scene exposes the full current evidence as live text", () => {
   assert.match(markup, /id="orbit-evidence-text"/);
   assert.match(markup, /aria-live="polite"/);
   assert.match(markup, /for \(int i = 1; i &lt;= 5; i\+\+\)/);
-  assert.match(markup, /GESP 一级 · 第 5 页/);
+  assert.match(markup, /CCF 考纲第 5 页/);
 });
 
 test("course workspace accepts a shared lesson selection", () => {

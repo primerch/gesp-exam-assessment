@@ -38,7 +38,7 @@
       "question-backing": { "role": "neutral", "displayName": "Question Backing", "canonical": "#e8e3d7", "tonalRamp": ["oklch(15% 0.012 90)", "oklch(25% 0.015 90)", "oklch(35% 0.018 90)", "oklch(45% 0.02 90)", "oklch(60% 0.018 90)", "oklch(72% 0.018 90)", "oklch(84% 0.022 90)", "oklch(94% 0.018 90)"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "The regular-weight Geist/PingFang landing promise; responsive from 44px through 64px to 76px." },
+      "display": { "displayName": "Display", "purpose": "The two-line Geist/PingFang homepage title. It uses 36px on phones, 48px on tablets and fluid sizing up to 64px in the split layout." },
       "headline": { "displayName": "Headline", "purpose": "The course-to-exam scene heading; responsive from 36px to 48px." },
       "workspace-heading": { "displayName": "Workspace Heading", "purpose": "Task workspace and report headings; responsive from 36px to 48px." },
       "title": { "displayName": "Title", "purpose": "Tool, evidence, dialog and selected-level titles." },

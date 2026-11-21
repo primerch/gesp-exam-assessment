@@ -17,7 +17,7 @@ OWN-WORLD: Near-black ink, oversized geometric GESP sans lettering, warm paper l
 
 STORY: Visitors watch a paper open into its question, CCF clause and verdict, then choose course progress or upload a paper. The second viewport maps four real course stages to GESP levels and shows one existing calculation example.
 
-FIRST VIEWPORT: A huge low-contrast GESP word sits behind a left-aligned three-line promise and two actions. On the right, layered CCF and question papers tilt in perspective; pointer or click reveals the question, clause and verdict with animated beams. Mobile stacks the same scene. Reduced motion keeps every stage directly selectable and exposes the full current evidence as live text.
+FIRST VIEWPORT: A large low-contrast GESP word sits behind the two-line “GESP C++ 考纲与试卷分析” heading, the exam advice and PDF upload actions, and a syllabus link. On the right, layered CCF and question papers tilt in perspective. Pointer movement or a click reveals the question, the syllabus reference and the result with animated beams. Mobile keeps the same sequence in a single column. The stages remain selectable with reduced motion, and the current content is announced as live text.
 
 FORM: Pinned “Orbit 证据剧场”, based on the confirmed-free MotionSites Orbit Flora and the user’s “开始，别再收敛”; seed: none (pinned). Signature interaction: pointer/click morph-reveal of the dimensional paper evidence stack, followed by a continuous course-to-exam path.
 

@@ -37,10 +37,10 @@ colors:
 typography:
   display:
     fontFamily: "var(--font-geist-sans), 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif"
-    fontSize: "76px"
+    fontSize: "64px"
     fontWeight: 400
-    lineHeight: 1.08
-    letterSpacing: "-0.045em"
+    lineHeight: 1.12
+    letterSpacing: "-0.035em"
   headline:
     fontFamily: "var(--font-geist-sans), 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif"
     fontSize: "36px"
@@ -221,7 +221,7 @@ The palette splits by job: luminous evidence colors on the dark theater, botanic
 **Character:** Chinese editorial scale without decorative serif lettering. Large headlines use regular-weight display sans and tight tracking; controls use medium weight, while monospace metadata and tabular figures make levels, pages and estimates inspectable.
 
 ### Hierarchy
-- **Display** (400, 44px mobile / 64px small / 76px large, 1.08): the left-aligned three-line landing promise. The decorative GESP backdrop is a separate bold, viewport-sized layer, not the content heading style.
+- **Display** (400, 36px mobile / 48px small / 42–64px split layout, 1.12) sets the two-line homepage title. The GESP backdrop uses separate bold, viewport-sized type.
 - **Headline** (400, 36px mobile / 48px small, 1.12): the course-to-exam scene heading.
 - **Workspace Heading** (400, 36px mobile / 48px small, 1.15): task titles and report context.
 - **Title** (400–500, 20–36px by context): tool panels, evidence cards, dialog titles and selected-level summaries.
