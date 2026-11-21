@@ -8,6 +8,20 @@ import LevelPath from "../app/components/landing/LevelPath";
 import ProcessStepper from "../app/components/landing/ProcessStepper";
 import SyllabusTabs from "../app/components/landing/SyllabusTabs";
 import ToolPanels from "../app/components/landing/ToolPanels";
+import { AnimatedBeam } from "../app/components/ui/animated-beam";
+import { NumberTicker } from "../app/components/ui/number-ticker";
+
+test("motion registry primitives render their server-safe initial state", () => {
+  const beam = renderToStaticMarkup(createElement(AnimatedBeam, {
+    containerRef: { current: null },
+    fromRef: { current: null },
+    toRef: { current: null },
+  }));
+  const number = renderToStaticMarkup(createElement(NumberTicker, { value: 93, startValue: 80 }));
+
+  assert.match(beam, /<svg\b/);
+  assert.match(number, />80</);
+});
 
 function attributes(tag: string) {
   return Object.fromEntries([...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map((match) => [match[1], match[2]]));
