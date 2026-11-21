@@ -13,6 +13,7 @@ import { NumberTicker } from "../app/components/ui/number-ticker";
 import LandingPage from "../app/components/landing/LandingPage";
 import LearningExamScene from "../app/components/landing/LearningExamScene";
 import OrbitHero from "../app/components/landing/OrbitHero";
+import CourseProgressWorkspace from "../app/components/plan/CourseProgressWorkspace";
 
 test("motion registry primitives render their server-safe initial state", () => {
   const beam = renderToStaticMarkup(createElement(AnimatedBeam, {
@@ -115,4 +116,16 @@ test("landing removes the repeated long-form sections", () => {
 
   assert.doesNotMatch(markup, /常见问题/);
   assert.doesNotMatch(markup, /你想先做什么？/);
+});
+
+test("course workspace puts honest exam guidance before lesson detail", () => {
+  const markup = renderToStaticMarkup(createElement(CourseProgressWorkspace));
+
+  assert.match(markup, /暂未形成报考建议/);
+  assert.match(markup, /变量和数据的输入输出/);
+  assert.match(markup, /搜索并选择课次/);
+  assert.match(markup, /aria-label="上一课"/);
+  assert.match(markup, /aria-label="下一课"/);
+  assert.match(markup, /查看本课讲点与出处/);
+  assert.ok(markup.indexOf("暂未形成报考建议") < markup.indexOf("查看本课讲点与出处"));
 });
