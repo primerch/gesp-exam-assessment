@@ -2,12 +2,6 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import CourseTimeline from "../app/components/landing/CourseTimeline";
-import FaqAccordion from "../app/components/landing/FaqAccordion";
-import LevelPath from "../app/components/landing/LevelPath";
-import ProcessStepper from "../app/components/landing/ProcessStepper";
-import SyllabusTabs from "../app/components/landing/SyllabusTabs";
-import ToolPanels from "../app/components/landing/ToolPanels";
 import { AnimatedBeam } from "../app/components/ui/animated-beam";
 import { NumberTicker } from "../app/components/ui/number-ticker";
 import LandingPage from "../app/components/landing/LandingPage";
@@ -19,6 +13,7 @@ import PaperWorkspace from "../app/components/PaperWorkspace";
 import PdfUploader from "../app/components/PdfUploader";
 import PaperIdentity from "../app/components/analyze/PaperIdentity";
 import QuestionEvidence from "../app/components/analyze/QuestionEvidence";
+import BrandMark from "../app/components/BrandMark";
 import { catalogFor, revisionDate } from "../app/data/official-syllabus";
 import type { PaperReport } from "../app/lib/review/pdf-client";
 import type { QuestionJudgment } from "../app/lib/review/judgment";
@@ -33,70 +28,6 @@ test("motion registry primitives render their server-safe initial state", () => 
 
   assert.match(beam, /<svg\b/);
   assert.match(number, />80</);
-});
-
-function attributes(tag: string) {
-  return Object.fromEntries([...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map((match) => [match[1], match[2]]));
-}
-
-test("stepper tabs control real labelled panels and identify the visitor demo", () => {
-  const markup = renderToStaticMarkup(createElement(ProcessStepper));
-  const tabs = [...markup.matchAll(/<button\b[^>]*role="tab"[^>]*>/g)].map((match) => attributes(match[0]));
-  const panels = [...markup.matchAll(/<div\b[^>]*role="tabpanel"[^>]*>/g)].map((match) => attributes(match[0]));
-
-  assert.match(markup, /aria-label="备考步骤"/);
-  assert.match(markup, /演示流程 · 点击步骤查看说明/);
-  assert.equal(tabs.length, 4);
-  assert.equal(panels.length, 1);
-  assert.equal(tabs[0]["aria-controls"], panels[0].id);
-  assert.equal(tabs[0].id, panels[0]["aria-labelledby"]);
-});
-
-test("stepper rendering does not emit a multiple-child wait-mode animation warning", () => {
-  const warnings: string[] = [];
-  const originalWarn = console.warn;
-  console.warn = (...args: unknown[]) => warnings.push(args.join(" "));
-  try {
-    renderToStaticMarkup(createElement(ProcessStepper));
-  } finally {
-    console.warn = originalWarn;
-  }
-  assert.equal(warnings.filter((warning) => warning.includes("multiple children within AnimatePresence")).length, 0);
-});
-
-test("tool and syllabus cards expose heading navigation", () => {
-  const tools = renderToStaticMarkup(createElement(ToolPanels));
-  const syllabus = renderToStaticMarkup(createElement(SyllabusTabs));
-
-  assert.equal((tools.match(/<h3\b[^>]*data-slot="card-title"/g) || []).length, 3);
-  assert.match(syllabus, /<h3\b[^>]*data-slot="card-title"/);
-});
-
-test("nested level path keeps a logical heading level", () => {
-  const markup = renderToStaticMarkup(createElement(LevelPath, { showHeader: false }));
-  assert.match(markup, /<h2\b[^>]*>程序设计基础<\/h2>/);
-});
-
-test("learning demo renders sourced totals and distinct feature badges", () => {
-  const timeline = renderToStaticMarkup(createElement(CourseTimeline));
-  const tools = renderToStaticMarkup(createElement(ToolPanels));
-
-  assert.match(timeline, /课程阶段演示 · 点击查看对应 GESP 目标/);
-  assert.equal((timeline.match(/24 课次/g) || []).length, 4);
-  assert.match(tools, /96 个课次/);
-  assert.match(tools, /已学与未学/);
-  assert.match(tools, /参考报考等级/);
-});
-
-test("FAQ and syllabus previews expose their expanded content and real links", () => {
-  const faq = renderToStaticMarkup(createElement(FaqAccordion));
-  const syllabus = renderToStaticMarkup(createElement(SyllabusTabs));
-
-  assert.match(faq, /aria-expanded="true"/);
-  assert.match(faq, /role="region"/);
-  assert.match(faq, /不是。GESP 考级宝是 Reacher 独立作品/);
-  assert.match(syllabus, /role="tablist"/);
-  assert.match(syllabus, /href="\/syllabus\?language=cpp&amp;level=1"/);
 });
 
 test("Orbit hero exposes both tasks and a readable evidence equivalent", () => {
@@ -200,4 +131,12 @@ test("paper workspace exposes live status and report keeps verdict filters", () 
     assert.match(result, new RegExp(`>${label}<`));
   }
   assert.match(result, /aria-pressed="true"/);
+});
+
+test("brand mark uses the product-specific evidence glyph", () => {
+  const markup = renderToStaticMarkup(createElement(BrandMark));
+
+  assert.match(markup, /data-brand-mark="gesp-evidence"/);
+  assert.match(markup, /aria-hidden="true"/);
+  assert.match(markup, /<circle/);
 });

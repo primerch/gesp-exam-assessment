@@ -12,7 +12,7 @@ export default function PaperIdentity({ report }: { report: PaperReport }) {
           <FileText size={19} strokeWidth={1.5} aria-hidden />
         </span>
         <div className="min-w-0">
-          <p className="font-mono text-[10px] tracking-[0.16em] text-[#d4ad66]">这份试卷</p>
+          <p className="font-mono text-[11px] tracking-[0.16em] text-[#d4ad66]">这份试卷</p>
           <h2 id="report-title" className="mt-2 break-all font-display text-2xl leading-7 sm:text-3xl">{report.fileName}</h2>
         </div>
       </div>

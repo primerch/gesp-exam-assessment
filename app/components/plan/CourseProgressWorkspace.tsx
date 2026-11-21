@@ -47,7 +47,7 @@ export default function CourseProgressWorkspace() {
     <main id="main-content" className={shell}>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="font-mono text-[10px] tracking-[0.16em] text-brand">COURSE → EXAM</p>
+          <p className="font-mono text-[11px] tracking-[0.16em] text-brand">COURSE → EXAM</p>
           <h1 className="mt-3 font-display text-4xl tracking-[-0.035em] text-ink sm:text-5xl">你学到哪了？</h1>
           <p className="mt-3 text-sm leading-6 text-muted">选择课程级别和已完成课次，先查看参考报考等级。</p>
         </div>
@@ -99,7 +99,7 @@ export default function CourseProgressWorkspace() {
           {lessons.map((item) => (
             <div key={item.number} className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
-                <p className="font-mono text-[10px] tracking-[0.16em] text-[#d4ad66]">LEVEL {level} · 第 {lessonNumber} 课</p>
+                <p className="font-mono text-[11px] tracking-[0.16em] text-[#d4ad66]">LEVEL {level} · 第 {lessonNumber} 课</p>
                 <h2 id="exam-result-title" className="mt-3 font-display text-3xl sm:text-4xl">{item.title}</h2>
                 <p className="mt-4 text-sm text-[#a8b5ad]">参考报考等级</p>
                 <p className="mt-2 font-display text-4xl text-[#f2f0e8] sm:text-5xl">

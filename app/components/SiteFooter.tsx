@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowUpRight, Waypoints } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { syllabusSources } from "../data/official-syllabus";
+import BrandMark from "./BrandMark";
 
 export default function SiteFooter() {
   return (
@@ -8,7 +9,7 @@ export default function SiteFooter() {
       <div className="mx-auto grid max-w-[1440px] gap-8 px-5 py-10 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr] lg:px-12">
         <div className="max-w-md">
           <div className="flex items-center gap-2 font-medium text-ink">
-            <Waypoints size={18} strokeWidth={1.5} aria-hidden />
+            <BrandMark className="size-5 text-brand" />
             GESP 考级宝
           </div>
           <p className="mt-3 leading-6 text-muted">

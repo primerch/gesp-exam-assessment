@@ -1,13 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useReducedMotion } from "framer-motion";
+import { useSyncExternalStore } from "react";
+
+function subscribe(callback: () => void) {
+  const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+  query.addEventListener("change", callback);
+  return () => query.removeEventListener("change", callback);
+}
+
+const getSnapshot = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const getServerSnapshot = () => false;
 
 export default function useHydratedReducedMotion() {
-  const reduceMotion = useReducedMotion();
-  const [hydrated, setHydrated] = useState(false);
-
-  useEffect(() => setHydrated(true), []);
-
-  return hydrated && reduceMotion;
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }

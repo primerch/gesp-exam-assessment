@@ -112,7 +112,7 @@ export default function PaperWorkspace({ initial }: { initial: Selection }) {
       <div className="print:hidden">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.16em] text-brand">PAPER → EVIDENCE</p>
+            <p className="font-mono text-[11px] tracking-[0.16em] text-brand">PAPER → EVIDENCE</p>
             <h1 className="mt-3 font-display text-4xl tracking-[-0.035em] text-ink sm:text-5xl">把试卷放进来，逐题看依据</h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">识别题目、对照 CCF 考纲，再查看纲内、超纲与依据不足的结论。</p>
           </div>
@@ -219,7 +219,7 @@ export default function PaperWorkspace({ initial }: { initial: Selection }) {
 
         <aside className="overflow-hidden rounded-2xl bg-[#17231d] text-[#edf3ef] lg:sticky lg:top-6">
           <div className="border-b border-white/10 px-5 py-6 sm:px-6">
-            <h2 className="font-mono text-[10px] tracking-[0.16em] text-[#d4ad66]">本次对照标准</h2>
+            <h2 className="font-mono text-[11px] tracking-[0.16em] text-[#d4ad66]">本次对照标准</h2>
             <p className="mt-3 font-display text-3xl">
               {languageNames[selection.language]} · {levelNames[selection.level]}
             </p>

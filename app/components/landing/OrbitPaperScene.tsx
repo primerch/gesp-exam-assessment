@@ -60,7 +60,7 @@ export default function OrbitPaperScene({
             transition={{ duration: reduceMotion ? 0 : 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             aria-hidden
           >
-            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 text-[10px] tracking-[0.16em] text-[#82968b]">
+            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 text-[11px] tracking-[0.16em] text-[#82968b]">
               <span>CCF / C++</span><span>P.05</span>
             </div>
             <div className="space-y-4 p-5 opacity-45">
@@ -91,7 +91,7 @@ export default function OrbitPaperScene({
               <span className="font-mono">Q.12</span>
             </div>
             <div className="px-5 py-6 sm:px-7 sm:py-8">
-              <p className="text-xs text-[#6b756f]">阅读程序，写出输出结果</p>
+              <p className="text-xs text-[#55665f]">阅读程序，写出输出结果</p>
               <pre className="mt-5 font-mono text-[12px] leading-7 sm:text-sm"><code>{`for (int i = 1; i <= 5; i++) {\n  cout << i;\n}`}</code></pre>
               <motion.div
                 className="mt-5 inline-block border-l-2 border-[#a9762a] bg-[#e9dfca] px-3 py-2 font-mono text-xs text-[#6c4b19]"
@@ -116,10 +116,10 @@ export default function OrbitPaperScene({
             animate={{ opacity: active >= 1 ? 1 : 0.45, y: active >= 1 ? 0 : 12 }}
             aria-hidden
           >
-            <p className="font-mono text-[9px] tracking-[0.18em] text-[#d4ad66]">CCF / EVIDENCE</p>
+            <p className="font-mono text-[11px] tracking-[0.18em] text-[#d4ad66]">CCF / EVIDENCE</p>
             <p className="mt-2 text-sm text-[#edf3ef]">循环结构程序</p>
             <p className="mt-1 text-[11px] leading-5 text-[#9fb2a7]">理解并使用 for 循环完成重复执行</p>
-            <p className="mt-3 border-t border-white/10 pt-2 font-mono text-[10px] text-[#82968b]">GESP 一级 · 第 5 页</p>
+            <p className="mt-3 border-t border-white/10 pt-2 font-mono text-[11px] text-[#82968b]">GESP 一级 · 第 5 页</p>
           </motion.div>
 
           <motion.div
@@ -136,7 +136,7 @@ export default function OrbitPaperScene({
             <div>
               <Stamp className="mx-auto mb-1" size={18} />
               <span className="font-display text-2xl">纲内</span>
-              <span className="mt-1 block font-mono text-[8px] tracking-[0.18em]">WITHIN</span>
+              <span className="mt-1 block font-mono text-[11px] tracking-[0.18em]">WITHIN</span>
             </div>
           </motion.div>
 
@@ -182,8 +182,8 @@ export default function OrbitPaperScene({
             onFocus={() => onActiveChange(index)}
             className={`group min-h-20 border-r border-white/10 px-3 py-3 text-left transition-colors last:border-r-0 sm:px-5 ${active === index ? "bg-white/[0.06] text-[#edf3ef]" : "text-[#82968b] hover:bg-white/[0.03] hover:text-[#c4d2c8]"}`}
           >
-            <span className="flex items-center gap-2 font-mono text-[9px] tracking-[0.14em]">
-              <span className={`grid size-4 place-items-center rounded-full border text-[8px] ${active > index ? "border-[#77b69c] bg-[#77b69c] text-[#101713]" : "border-current"}`}>
+            <span className="flex items-center gap-2 font-mono text-[11px] tracking-[0.14em]">
+              <span className={`grid size-4 place-items-center rounded-full border text-[11px] ${active > index ? "border-[#77b69c] bg-[#77b69c] text-[#101713]" : "border-current"}`}>
                 {active > index ? <Check size={10} /> : stage.index}
               </span>
               {stage.label}

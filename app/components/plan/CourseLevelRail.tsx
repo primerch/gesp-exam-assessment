@@ -34,7 +34,7 @@ export default function CourseLevelRail({
                 onClick={() => onChange(course.id as CppCourseLevel)}
                 className={`group flex min-h-32 w-full flex-col items-start rounded-xl border p-4 text-left transition-[background-color,border-color,color] sm:min-h-36 sm:p-5 ${active ? "border-brand bg-[#17231d] text-[#edf3ef]" : "border-line bg-surface text-ink hover:border-brand/50 hover:bg-wash"}`}
               >
-                <span className={`font-mono text-[10px] tracking-[0.14em] ${active ? "text-[#d4ad66]" : "text-muted"}`}>LEVEL 0{course.id}</span>
+                <span className={`font-mono text-[11px] tracking-[0.14em] ${active ? "text-[#d4ad66]" : "text-muted"}`}>LEVEL 0{course.id}</span>
                 <span className="mt-3 font-display text-2xl">{course.description}</span>
                 <span className={`mt-auto pt-4 text-xs ${active ? "text-[#a8b5ad]" : "text-muted"}`}>GESP {course.targetGesp}</span>
               </button>

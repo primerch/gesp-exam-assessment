@@ -20,7 +20,7 @@ export default function LearningExamScene() {
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.18em] text-[#7b531d]">COURSE → EXAM</p>
+            <p className="font-mono text-[11px] tracking-[0.18em] text-[#7b531d]">COURSE → EXAM</p>
             <h2 className="mt-4 font-display text-4xl leading-[1.12] tracking-[-0.035em] sm:text-5xl"><span className="block">把课程进度，</span><span className="block">放到考试坐标里</span></h2>
           </div>
           <div className="lg:justify-self-end">
@@ -51,8 +51,8 @@ export default function LearningExamScene() {
                 viewport={{ once: true, amount: 0.6 }}
                 transition={{ duration: reduceMotion ? 0 : 0.55, delay: reduceMotion ? 0 : index * 0.1 }}
               >
-                <div className="relative z-10 grid size-7 place-items-center rounded-full border border-[#8b9a90] bg-[#eeeae0] font-mono text-[10px] text-[#285f51]">0{level.id}</div>
-                <p className="mt-5 font-mono text-[10px] tracking-[0.12em] text-[#6b756f]">LEVEL {level.id} / 24 课次</p>
+                <div className="relative z-10 grid size-7 place-items-center rounded-full border border-[#8b9a90] bg-[#eeeae0] font-mono text-[11px] text-[#285f51]">0{level.id}</div>
+                <p className="mt-5 font-mono text-[11px] tracking-[0.12em] text-[#55665f]">LEVEL {level.id} / 24 课次</p>
                 <h3 className="mt-2 font-display text-2xl">{level.description}</h3>
                 <p className="mt-2 text-sm text-[#55665f]">目标 GESP {level.targetGesp}</p>
               </motion.li>
@@ -70,7 +70,7 @@ export default function LearningExamScene() {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="font-mono text-[10px] tracking-[0.16em] text-[#d4ad66]">学习进度示例</p>
+                <p className="font-mono text-[11px] tracking-[0.16em] text-[#d4ad66]">学习进度示例</p>
                 <h3 className="mt-3 font-display text-3xl">Level 1 · 第 12 课</h3>
               </div>
               <BookOpen className="text-[#82968b]" size={22} strokeWidth={1.5} aria-hidden />
@@ -102,24 +102,24 @@ export default function LearningExamScene() {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="font-mono text-[10px] tracking-[0.16em] text-[#7b531d]">试卷报告演示</p>
+                <p className="font-mono text-[11px] tracking-[0.16em] text-[#7b531d]">试卷报告演示</p>
                 <h3 className="mt-3 font-display text-3xl">每道题，都能追到依据</h3>
               </div>
               <ShieldCheck className="text-[#285f51]" size={22} strokeWidth={1.5} aria-hidden />
             </div>
             <div className="mt-7 rounded-lg border border-[#d5d0c3] bg-white/60 p-4">
-              <div className="flex items-center justify-between gap-3 text-xs text-[#6b756f]"><span>程序阅读 · 第 12 题</span><span className="text-[#285f51]">纲内</span></div>
+              <div className="flex items-center justify-between gap-3 text-xs text-[#55665f]"><span>程序阅读 · 第 12 题</span><span className="text-[#285f51]">纲内</span></div>
               <div className="mt-4 flex items-center gap-2 text-[11px] text-[#55665f]"><span>单层循环</span><ArrowRight size={12} /><span>CCF 一级 · 第 5 页</span></div>
               <div className="mt-4 border-t border-[#d5d0c3] pt-3 text-xs leading-6 text-[#55665f]">解题需要跟踪 for 循环的起点、终点与每次输出，对应一级“单层循环”。</div>
             </div>
             <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
               <Link href="/analyze" className="inline-flex items-center gap-2 text-sm font-medium text-[#285f51] underline-offset-4 hover:underline">上传我的试卷 <ArrowRight size={14} /></Link>
-              <a href={syllabusSources.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs text-[#6b756f] hover:text-[#285f51]">CCF 标准原文 <ArrowUpRight size={12} /></a>
+              <a href={syllabusSources.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs text-[#55665f] hover:text-[#285f51]">CCF 标准原文 <ArrowUpRight size={12} /></a>
             </div>
           </motion.article>
         </div>
 
-        <div className="mt-8 flex flex-col gap-2 border-t border-[#c9c7bc] pt-5 text-xs leading-6 text-[#6b756f] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-2 border-t border-[#c9c7bc] pt-5 text-xs leading-6 text-[#55665f] sm:flex-row sm:items-center sm:justify-between">
           <span>结论附 CCF 原文与页码 · 原课件出处可核对</span>
           <span>Reacher 独立作品 · 不代表 CCF 官方立场</span>
         </div>

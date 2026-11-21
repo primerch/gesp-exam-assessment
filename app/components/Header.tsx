@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Menu, Waypoints, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { syllabusSources } from "../data/official-syllabus";
+import BrandMark from "./BrandMark";
 
 const navigation = [
   ["/syllabus", "等级考纲"],
@@ -42,8 +43,8 @@ export default function Header() {
           aria-label="GESP 考级宝首页，Reacher 作品"
           className={`flex min-h-12 items-center gap-3 whitespace-nowrap ${home ? "text-[#edf3ef]" : "text-ink"}`}
         >
-          <span className={`grid size-9 place-items-center rounded-lg ${home ? "bg-white/[0.06] text-[#d4ad66]" : "bg-wash text-brand"}`}>
-            <Waypoints size={19} strokeWidth={1.5} aria-hidden />
+          <span className={`grid size-9 place-items-center ${home ? "text-[#edf3ef]" : "text-brand"}`}>
+            <BrandMark className="size-7" />
           </span>
           <span>
             <span className="block text-base font-medium tracking-[-0.02em]">GESP 考级宝</span>
