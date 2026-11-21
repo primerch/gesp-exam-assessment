@@ -10,6 +10,9 @@ import SyllabusTabs from "../app/components/landing/SyllabusTabs";
 import ToolPanels from "../app/components/landing/ToolPanels";
 import { AnimatedBeam } from "../app/components/ui/animated-beam";
 import { NumberTicker } from "../app/components/ui/number-ticker";
+import LandingPage from "../app/components/landing/LandingPage";
+import LearningExamScene from "../app/components/landing/LearningExamScene";
+import OrbitHero from "../app/components/landing/OrbitHero";
 
 test("motion registry primitives render their server-safe initial state", () => {
   const beam = renderToStaticMarkup(createElement(AnimatedBeam, {
@@ -85,4 +88,31 @@ test("FAQ and syllabus previews expose their expanded content and real links", (
   assert.match(faq, /不是。GESP 考级宝是 Reacher 独立作品/);
   assert.match(syllabus, /role="tablist"/);
   assert.match(syllabus, /href="\/syllabus\?language=cpp&amp;level=1"/);
+});
+
+test("Orbit hero exposes both tasks and a readable evidence equivalent", () => {
+  const markup = renderToStaticMarkup(createElement(OrbitHero));
+
+  assert.match(markup, /GESP/);
+  assert.match(markup, /href="\/plan"/);
+  assert.match(markup, /href="\/analyze"/);
+  assert.match(markup, /产品演示/);
+  assert.match(markup, /试卷原文/);
+  assert.match(markup, /CCF 条款/);
+  assert.match(markup, /判断结论/);
+});
+
+test("learning scene uses sourced course totals and the existing example estimate", () => {
+  const markup = renderToStaticMarkup(createElement(LearningExamScene));
+
+  assert.match(markup, /96/);
+  assert.match(markup, /93%/);
+  assert.match(markup, /不代表考试成绩/);
+});
+
+test("landing removes the repeated long-form sections", () => {
+  const markup = renderToStaticMarkup(createElement(LandingPage));
+
+  assert.doesNotMatch(markup, /常见问题/);
+  assert.doesNotMatch(markup, /你想先做什么？/);
 });

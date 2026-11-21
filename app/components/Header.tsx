@@ -15,6 +15,7 @@ const navigation = [
 
 export default function Header() {
   const path = usePathname();
+  const home = path === "/";
   const [open, setOpen] = useState(false);
   const reduceMotion = useReducedMotion();
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -34,19 +35,19 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="relative z-40 border-b border-line bg-surface print:hidden">
+    <header className={`relative z-40 border-b print:hidden ${home ? "border-white/10 bg-[#0b120f]" : "border-line bg-surface"}`}>
       <div className="mx-auto flex min-h-20 max-w-[1440px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-12">
         <Link
           href="/"
           aria-label="GESP 考级宝首页，Reacher 作品"
-          className="flex min-h-12 items-center gap-3 whitespace-nowrap text-ink"
+          className={`flex min-h-12 items-center gap-3 whitespace-nowrap ${home ? "text-[#edf3ef]" : "text-ink"}`}
         >
-          <span className="grid size-9 place-items-center rounded-lg bg-wash text-brand">
+          <span className={`grid size-9 place-items-center rounded-lg ${home ? "bg-white/[0.06] text-[#d4ad66]" : "bg-wash text-brand"}`}>
             <Waypoints size={19} strokeWidth={1.5} aria-hidden />
           </span>
           <span>
             <span className="block text-base font-medium tracking-[-0.02em]">GESP 考级宝</span>
-            <span className="block text-[11px] text-muted">C++ 考级分析工具</span>
+            <span className={`block text-[11px] ${home ? "text-[#82968b]" : "text-muted"}`}>C++ 考级分析工具</span>
           </span>
         </Link>
 
@@ -57,7 +58,11 @@ export default function Header() {
               href={href}
               aria-current={path === href ? "page" : undefined}
               className={`relative flex min-h-11 items-center rounded-lg px-4 text-sm transition-colors ${
-                path === href ? "bg-wash font-medium text-brand" : "text-muted hover:bg-quiet hover:text-ink"
+                path === href
+                  ? "bg-wash font-medium text-brand"
+                  : home
+                    ? "text-[#a8b5ad] hover:bg-white/[0.05] hover:text-[#edf3ef]"
+                    : "text-muted hover:bg-quiet hover:text-ink"
               }`}
             >
               {name}
@@ -73,14 +78,14 @@ export default function Header() {
             href={syllabusSources.directory}
             target="_blank"
             rel="noreferrer"
-            className="hidden min-h-11 items-center gap-1 px-2 text-sm text-muted transition-colors hover:text-brand sm:inline-flex"
+            className={`hidden min-h-11 items-center gap-1 px-2 text-sm transition-colors sm:inline-flex ${home ? "text-[#a8b5ad] hover:text-[#d4ad66]" : "text-muted hover:text-brand"}`}
           >
             CCF 官网 <ArrowUpRight size={14} aria-hidden />
           </a>
           <button
             ref={menuButton}
             type="button"
-            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-line px-3 text-sm text-ink md:hidden"
+            className={`inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 text-sm md:hidden ${home ? "border-white/15 text-[#edf3ef]" : "border-line text-ink"}`}
             aria-expanded={open}
             aria-controls="mobile-navigation"
             onClick={() => setOpen((value) => !value)}
@@ -96,7 +101,7 @@ export default function Header() {
           <motion.nav
             id="mobile-navigation"
             aria-label="移动端导航"
-            className="absolute inset-x-4 top-[76px] rounded-xl border border-line bg-surface p-2 shadow-[0_16px_40px_rgb(20_35_28/14%)] md:hidden"
+            className={`absolute inset-x-4 top-[76px] rounded-xl border p-2 shadow-[0_16px_40px_rgb(20_35_28/14%)] md:hidden ${home ? "border-white/12 bg-[#17231d]" : "border-line bg-surface"}`}
             initial={{ opacity: 0, transform: "translateY(-8px)" }}
             animate={{ opacity: 1, transform: "translateY(0px)" }}
             exit={{ opacity: 0, transform: "translateY(-8px)" }}
@@ -110,7 +115,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 aria-current={path === href ? "page" : undefined}
                 className={`flex min-h-12 items-center rounded-lg px-4 text-sm ${
-                  path === href ? "bg-wash font-medium text-brand" : "text-ink"
+                  path === href ? "bg-wash font-medium text-brand" : home ? "text-[#edf3ef]" : "text-ink"
                 }`}
               >
                 {name}
@@ -120,7 +125,7 @@ export default function Header() {
               href={syllabusSources.directory}
               target="_blank"
               rel="noreferrer"
-              className="flex min-h-12 items-center justify-between rounded-lg px-4 text-sm text-muted"
+              className={`flex min-h-12 items-center justify-between rounded-lg px-4 text-sm ${home ? "text-[#a8b5ad]" : "text-muted"}`}
             >
               CCF 官网 <ArrowUpRight size={15} aria-hidden />
             </a>

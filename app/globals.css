@@ -76,6 +76,7 @@
   --color-on-current: var(--workspace-on-current);
   --font-sans: var(--font-geist-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
+  --font-display: "Songti SC", "STSong", "Noto Serif CJK SC", Georgia, serif;
   --color-invert-foreground: var(--invert-foreground);
   --color-invert: var(--invert);
   --color-warning-foreground: var(--warning-foreground);
