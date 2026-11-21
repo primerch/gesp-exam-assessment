@@ -18,7 +18,7 @@ import { reviewFile, type PaperReport } from "../lib/review/pdf-client";
 import { syllabusHref } from "../lib/syllabus-links";
 import PdfUploader from "./PdfUploader";
 import ExamAnalysisResult, { type ReportContext } from "./ExamAnalysisResult";
-import { field, heading, lead, primary, shell, sourceStyle } from "./review-styles";
+import { field, primary, shell } from "./review-styles";
 
 export default function PaperWorkspace({ initial }: { initial: Selection }) {
   const [selection, setSelection] = useState(initial),
@@ -112,10 +112,11 @@ export default function PaperWorkspace({ initial }: { initial: Selection }) {
       <div className="print:hidden">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <h1 className={heading}>试卷分析</h1>
-            <p className={lead}>上传 PDF 试卷，逐题查看考点、得分要点和超纲依据，并将结论追溯到 CCF 原文。</p>
+            <p className="font-mono text-[10px] tracking-[0.16em] text-brand">PAPER → EVIDENCE</p>
+            <h1 className="mt-3 font-display text-4xl tracking-[-0.035em] text-ink sm:text-5xl">把试卷放进来，逐题看依据</h1>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">识别题目、对照 CCF 考纲，再查看纲内、超纲与依据不足的结论。</p>
           </div>
-          <p className="text-sm text-muted">支持文字版、扫描件与图示 · 最多 64 页</p>
+          <p className="font-mono text-xs text-muted">PDF / MAX 64 PAGES</p>
         </div>
 
         <ol aria-label="试卷分析步骤" className="mt-8 grid grid-cols-3 border-y border-line py-4">
@@ -216,28 +217,30 @@ export default function PaperWorkspace({ initial }: { initial: Selection }) {
           </div>
         </form>
 
-        <aside className="overflow-hidden rounded-2xl border border-line bg-surface lg:sticky lg:top-6">
-          <div className="border-b border-line bg-wash px-5 py-6 sm:px-6">
-            <h2 className="text-sm font-medium text-muted">本次对照标准</h2>
-            <p className="mt-2 text-2xl font-medium tracking-[-0.02em] text-brand">
+        <aside className="overflow-hidden rounded-2xl bg-[#17231d] text-[#edf3ef] lg:sticky lg:top-6">
+          <div className="border-b border-white/10 px-5 py-6 sm:px-6">
+            <h2 className="font-mono text-[10px] tracking-[0.16em] text-[#d4ad66]">本次对照标准</h2>
+            <p className="mt-3 font-display text-3xl">
               {languageNames[selection.language]} · {levelNames[selection.level]}
             </p>
-            <p className="mt-2 text-xs text-muted tabular-nums">{entries.length} 项考点 · {revisionDate} 修订</p>
+            <p className="mt-2 font-mono text-xs text-[#a8b5ad] tabular-nums">{entries.length} 项考点 · {revisionDate} 修订</p>
           </div>
-          <div className="flex flex-col gap-6 p-5 sm:p-6">
-            <div>
-              <h3 className="mb-2 text-sm font-medium">本级考点</h3>
-              <p className="text-sm leading-7 text-muted">{entries.map((entry) => entry.title).join("、")}。</p>
-            </div>
-            <div className="border-t border-line pt-5">
+          <div className="p-5 sm:p-6">
+            <details className="group border-b border-white/10 pb-5">
+              <summary className="flex min-h-10 cursor-pointer list-none items-center justify-between text-sm font-medium">
+                查看本级考点 <ChevronDown size={15} className="transition-transform group-open:rotate-180" aria-hidden />
+              </summary>
+              <p className="pt-2 text-sm leading-7 text-[#a8b5ad]">{entries.map((entry) => entry.title).join("、")}。</p>
+            </details>
+            <div className="border-b border-white/10 py-5">
               <h3 className="mb-2 text-sm font-medium">判定口径</h3>
-              <p className="text-sm leading-7 text-muted">按完成题目所需的最低知识要求判断。可选解法和干扰项单独注明。</p>
+              <p className="text-sm leading-6 text-[#a8b5ad]">按完成题目所需的最低知识要求判断，可选解法和干扰项单独注明。</p>
             </div>
-            <div className="flex flex-col items-start gap-3 border-t border-line pt-5">
-              <a href={sourceLink(entries[0])} target="_blank" rel="noreferrer" className={sourceStyle}>
+            <div className="flex flex-col items-start gap-3 pt-5">
+              <a href={sourceLink(entries[0])} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-sm text-[#d4ad66] underline-offset-4 hover:underline">
                 CCF 标准 · 第 {entries[0].page} 页 <ArrowUpRight size={14} aria-hidden />
               </a>
-              <Link className={sourceStyle} href={syllabusHref(selection.level, selection.language)}>
+              <Link className="inline-flex items-center gap-1 text-sm text-[#c4d2c8] underline-offset-4 hover:underline" href={syllabusHref(selection.level, selection.language)}>
                 展开本级条款 <ArrowRight size={14} aria-hidden />
               </Link>
             </div>

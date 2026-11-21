@@ -66,7 +66,7 @@ function MorphingDialogProvider({
 
   return (
     <MorphingDialogContext.Provider value={contextValue}>
-      <MotionConfig transition={transition}>{children}</MotionConfig>
+      <MotionConfig transition={transition} reducedMotion='user'>{children}</MotionConfig>
     </MorphingDialogContext.Provider>
   );
 }
@@ -79,7 +79,7 @@ export type MorphingDialogProps = {
 function MorphingDialog({ children, transition }: MorphingDialogProps) {
   return (
     <MorphingDialogProvider>
-      <MotionConfig transition={transition}>{children}</MotionConfig>
+      <MotionConfig transition={transition} reducedMotion='user'>{children}</MotionConfig>
     </MorphingDialogProvider>
   );
 }
@@ -89,6 +89,7 @@ export type MorphingDialogTriggerProps = {
   className?: string;
   style?: React.CSSProperties;
   triggerRef?: React.RefObject<HTMLButtonElement>;
+  'aria-label'?: string;
 };
 
 function MorphingDialogTrigger({
@@ -96,8 +97,10 @@ function MorphingDialogTrigger({
   className,
   style,
   triggerRef,
+  'aria-label': ariaLabel,
 }: MorphingDialogTriggerProps) {
-  const { setIsOpen, isOpen, uniqueId } = useMorphingDialog();
+  const { setIsOpen, isOpen, uniqueId, triggerRef: contextTriggerRef } = useMorphingDialog();
+  const resolvedTriggerRef = triggerRef ?? contextTriggerRef;
 
   const handleClick = useCallback(() => {
     setIsOpen(!isOpen);
@@ -115,7 +118,7 @@ function MorphingDialogTrigger({
 
   return (
     <motion.button
-      ref={triggerRef}
+      ref={resolvedTriggerRef}
       layoutId={`dialog-${uniqueId}`}
       className={cn('relative cursor-pointer', className)}
       onClick={handleClick}
@@ -124,7 +127,7 @@ function MorphingDialogTrigger({
       aria-haspopup='dialog'
       aria-expanded={isOpen}
       aria-controls={`motion-ui-morphing-dialog-content-${uniqueId}`}
-      aria-label={`Open dialog ${uniqueId}`}
+      aria-label={ariaLabel ?? `Open dialog ${uniqueId}`}
     >
       {children}
     </motion.button>
@@ -195,6 +198,7 @@ function MorphingDialogContent({
       document.body.classList.remove('overflow-hidden');
       triggerRef.current?.focus();
     }
+    return () => document.body.classList.remove('overflow-hidden');
   }, [isOpen, triggerRef]);
 
   useClickOutside(containerRef, () => {
@@ -272,6 +276,7 @@ function MorphingDialogTitle({
 
   return (
     <motion.div
+      id={`motion-ui-morphing-dialog-title-${uniqueId}`}
       layoutId={`dialog-title-container-${uniqueId}`}
       className={className}
       style={style}
@@ -338,7 +343,7 @@ function MorphingDialogDescription({
       initial='initial'
       animate='animate'
       exit='exit'
-      id={`dialog-description-${uniqueId}`}
+      id={`motion-ui-morphing-dialog-description-${uniqueId}`}
     >
       {children}
     </motion.div>
@@ -374,6 +379,7 @@ function MorphingDialogImage({
 export type MorphingDialogCloseProps = {
   children?: React.ReactNode;
   className?: string;
+  'aria-label'?: string;
   variants?: {
     initial: Variant;
     animate: Variant;
@@ -385,6 +391,7 @@ function MorphingDialogClose({
   children,
   className,
   variants,
+  'aria-label': ariaLabel,
 }: MorphingDialogCloseProps) {
   const { setIsOpen, uniqueId } = useMorphingDialog();
 
@@ -396,7 +403,7 @@ function MorphingDialogClose({
     <motion.button
       onClick={handleClose}
       type='button'
-      aria-label='Close dialog'
+      aria-label={ariaLabel ?? 'Close dialog'}
       key={`dialog-close-${uniqueId}`}
       className={cn('absolute top-6 right-6', className)}
       initial='initial'

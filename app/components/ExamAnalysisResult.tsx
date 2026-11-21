@@ -1,11 +1,14 @@
 "use client";
 import { useState } from "react";
-import { ArrowUpRight, ChevronDown, Copy, FileText, Printer } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Copy, Printer } from "lucide-react";
+import { NumberTicker } from "@/app/components/ui/number-ticker";
+import { TransitionPanel } from "@/app/components/motion";
+import PaperIdentity from "./analyze/PaperIdentity";
+import QuestionEvidence from "./analyze/QuestionEvidence";
 import {
   clauseLabel,
   languageNames,
   levelNames,
-  revisionDate,
   sourceLink,
 } from "../data/official-syllabus";
 import { hasDefect, reportStates, type QuestionJudgment, type Verdict } from "../lib/review/judgment";
@@ -226,6 +229,11 @@ export default function ExamAnalysisResult({
   const visible = report.rows.filter(
     (r) => filter === "all" || (filter === "invalid" ? hasDefect(r) : r.verdict === filter),
   );
+  const filterIndex = filter === "all" ? 0 : states.indexOf(filter) + 1;
+  const filterSummaries = [
+    `全部 ${report.rows.length} 题 · 点击判定计数可筛选`,
+    ...states.map((state) => `${reportStates[state]} · ${counts[state]} 题`),
+  ];
   return (
     <section
       id="paper-report"
@@ -233,33 +241,35 @@ export default function ExamAnalysisResult({
       tabIndex={-1}
       className="scroll-mt-5 rounded-2xl border border-line bg-surface px-5 py-7 sm:px-8"
     >
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h2 id="report-title" className="text-2xl font-semibold">
-            试卷分析报告
-          </h2>
-          <p className="mt-2 flex items-center gap-2 break-all text-sm text-muted">
-            <FileText size={15} className="shrink-0" />
-            {report.fileName}
-          </p>
-        </div>
+      <div className="flex flex-wrap items-start gap-3">
+        <div className="min-w-0 flex-1"><PaperIdentity report={report} /></div>
         <button className={secondary + " print:hidden"} onClick={() => window.print()}>
-          <Printer size={16} />
+          <Printer size={16} aria-hidden />
           打印报告
         </button>
       </div>
-      <p className="mt-5 text-sm text-muted">
-        {languageNames[language]} {levelNames[level]} · {report.pages} 页 · 已识别 {report.rows.length} 题 ·
-        大纲修订 {revisionDate}
-      </p>
-      <div className="mt-3 grid grid-cols-2 divide-x divide-line border-y border-line sm:grid-cols-4">
+      <div className="mt-5 grid grid-cols-2 overflow-hidden rounded-xl border border-line sm:grid-cols-4">
         {states.map((v) => (
-          <div className="px-3 py-4 first:pl-0" key={v}>
-            <div className={`font-mono text-3xl font-medium tabular-nums ${colors[v]}`}>{counts[v]}</div>
-            <div className="mt-1 text-sm text-muted">{reportStates[v]}</div>
-          </div>
+          <button
+            type="button"
+            key={v}
+            aria-pressed={filter === v}
+            onClick={() => setFilter(v)}
+            className={`border-r border-line px-3 py-4 text-left transition-colors last:border-r-0 ${filter === v ? "bg-wash" : "hover:bg-quiet"}`}
+          >
+            <NumberTicker value={counts[v]} startValue={counts[v]} aria-label={`${counts[v]} 题${reportStates[v]}`} className={`font-mono text-3xl font-medium tabular-nums ${colors[v]}`} />
+            <span className="mt-1 block text-sm text-muted">{reportStates[v]}</span>
+          </button>
         ))}
       </div>
+      <TransitionPanel
+        activeIndex={filterIndex}
+        variants={{ enter: { opacity: 0, y: 5 }, center: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -5 } }}
+        transition={{ duration: 0.16 }}
+        className="mt-3"
+      >
+        {filterSummaries.map((summaryText, index) => <p key={index} className="text-xs text-muted">{summaryText}</p>)}
+      </TransitionPanel>
       {report.notes.length > 0 && (
         <div className="mt-4 rounded-md bg-quiet p-4">
           <h3 className="text-sm font-semibold">卷面说明</h3>
@@ -337,7 +347,7 @@ export default function ExamAnalysisResult({
       <div className="print:hidden">
         {visible.length ? (
           visible.map((r) => (
-            <Row key={r.id} row={r} fileUrl={fileUrl} initiallyOpen={r.id === firstFlag} />
+            <QuestionEvidence key={r.id} row={r} fileUrl={fileUrl} initiallyOpen={r.id === firstFlag} />
           ))
         ) : (
           <p className="py-6 text-sm text-muted">本卷没有这一类判定。</p>
