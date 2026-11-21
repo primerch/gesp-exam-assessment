@@ -47,3 +47,6 @@ next-env.d.ts
 /public/pdf-assets/
 .dev.vars*
 /.pdf-assets-*/
+
+# Isolated task worktrees
+/.worktrees/
