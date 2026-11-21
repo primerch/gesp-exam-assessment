@@ -9,9 +9,9 @@ import { Particles } from "@/app/components/ui/particles";
 import { Spotlight, Tilt } from "@/app/components/motion";
 
 const stages = [
-  { name: "读取题目", index: "01", label: "试卷原文", detail: "识别题干、代码与问题" },
-  { name: "对照考点", index: "02", label: "CCF 条款", detail: "单层循环 · GESP 一级" },
-  { name: "形成结论", index: "03", label: "判断结论", detail: "纲内 · 依据随结论保留" },
+  { name: "读取题目", index: "01", label: "试卷原文", detail: "识别题干、代码与问题", accessible: "程序阅读示例：for (int i = 1; i <= 5; i++) { cout << i; }，输出 12345。" },
+  { name: "对照考点", index: "02", label: "CCF 条款", detail: "单层循环 · GESP 一级", accessible: "CCF 条款：GESP 一级 · 第 5 页，循环结构程序中的单层循环。完成本题必须理解 for 循环。" },
+  { name: "形成结论", index: "03", label: "判断结论", detail: "纲内 · 依据随结论保留", accessible: "判断结论：纲内。必要考点为 GESP 一级单层循环，CCF 原文第 5 页随结论保留。" },
 ];
 
 export default function OrbitPaperScene({
@@ -178,8 +178,8 @@ export default function OrbitPaperScene({
             key={stage.name}
             type="button"
             aria-pressed={active === index}
+            aria-controls="orbit-evidence-text"
             onClick={() => onActiveChange(index)}
-            onFocus={() => onActiveChange(index)}
             className={`group min-h-20 border-r border-white/10 px-3 py-3 text-left transition-colors last:border-r-0 sm:px-5 ${active === index ? "bg-white/[0.06] text-[#edf3ef]" : "text-[#82968b] hover:bg-white/[0.03] hover:text-[#c4d2c8]"}`}
           >
             <span className="flex items-center gap-2 font-mono text-[11px] tracking-[0.14em]">
@@ -202,6 +202,7 @@ export default function OrbitPaperScene({
           </button>
         ))}
       </div>
+      <p id="orbit-evidence-text" aria-live="polite" className="sr-only">{stages[active].accessible}</p>
     </div>
   );
 }

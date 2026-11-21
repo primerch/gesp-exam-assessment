@@ -42,7 +42,7 @@ export default function PdfUploader({
             <FileCheck2 size={23} strokeWidth={1.5} aria-hidden />
           </span>
           <div className="min-w-0 flex-1 py-5">
-            <p className="break-all font-medium leading-6">{file.name}</p>
+            <p className="break-words font-medium leading-6">{file.name}</p>
             <p className="mt-2 font-mono text-xs text-[#a8b5ad]">{Math.max(1, Math.round(file.size / 1024)).toLocaleString()} KB · PDF</p>
           </div>
           <button

@@ -61,9 +61,13 @@ export default function PaperWorkspace({ initial }: { initial: Selection }) {
     }
   }
 
-  function change(selection: Selection) {
+  function change(nextSelection: Selection) {
+    if (report && nextSelection.level !== selection.level) {
+      const confirmed = window.confirm("更换对照等级会清除当前报告，确定继续吗？");
+      if (!confirmed) return;
+    }
     clearReport();
-    setSelection(selection);
+    setSelection(nextSelection);
   }
 
   async function run(event: React.FormEvent) {
@@ -139,7 +143,7 @@ export default function PaperWorkspace({ initial }: { initial: Selection }) {
         <form onSubmit={run} className="min-w-0 rounded-2xl border border-line bg-surface p-5 sm:p-8">
           <fieldset disabled={busy} className="min-w-0">
             <legend className="text-xl font-medium tracking-[-0.02em]">试卷文件</legend>
-            <p className="mb-5 mt-2 text-sm leading-6 text-muted">文件只在当前分析流程中使用；选择后可随时移除。</p>
+            <p className="mb-5 mt-2 text-sm leading-6 text-muted">PDF 会经当前分析服务与模型处理；页数越多耗时越长，扫描质量会影响识别。结论请结合原文复核。</p>
             <PdfUploader
               file={file}
               disabled={busy}

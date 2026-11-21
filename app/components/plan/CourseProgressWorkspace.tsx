@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { ArrowLeft, ArrowRight, ChevronDown, Search } from "lucide-react";
 import { NumberTicker } from "@/app/components/ui/number-ticker";
 import { TransitionPanel } from "@/app/components/motion";
@@ -20,9 +20,15 @@ function lessonLabel(number: number, title: string) {
   return `第 ${number} 课 · ${title}`;
 }
 
-export default function CourseProgressWorkspace() {
-  const [level, setLevel] = useState<CppCourseLevel>(1);
-  const [lessonNumber, setLessonNumber] = useState(1);
+export default function CourseProgressWorkspace({
+  initialLevel = 1,
+  initialLesson = 1,
+}: {
+  initialLevel?: CppCourseLevel;
+  initialLesson?: number;
+}) {
+  const [level, setLevel] = useState<CppCourseLevel>(initialLevel);
+  const [lessonNumber, setLessonNumber] = useState(initialLesson);
   const [query, setQuery] = useState("");
   const listId = useId();
   const lessons = courseLessons(level);
@@ -31,6 +37,13 @@ export default function CourseProgressWorkspace() {
   const recommendation = getRecommendedExam(level, lessonNumber);
   const probabilities = calculatePassProbability(level, lessonNumber);
   const probability = recommendation ? probabilities[recommendation.level] : null;
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    url.searchParams.set("level", String(level));
+    url.searchParams.set("lesson", String(lessonNumber));
+    window.history.replaceState(window.history.state, "", url);
+  }, [level, lessonNumber]);
 
   function changeLevel(next: CppCourseLevel) {
     setLevel(next);

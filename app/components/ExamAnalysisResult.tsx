@@ -248,7 +248,16 @@ export default function ExamAnalysisResult({
           打印报告
         </button>
       </div>
-      <div className="mt-5 grid grid-cols-2 overflow-hidden rounded-xl border border-line sm:grid-cols-4">
+      <div className="mt-5 grid grid-cols-2 overflow-hidden rounded-xl border border-line sm:grid-cols-5">
+        <button
+          type="button"
+          aria-pressed={filter === "all"}
+          onClick={() => setFilter("all")}
+          className={`border-r border-line px-3 py-4 text-left transition-colors ${filter === "all" ? "bg-wash" : "hover:bg-quiet"}`}
+        >
+          <NumberTicker value={report.rows.length} startValue={report.rows.length} aria-label={`全部 ${report.rows.length} 题`} className="font-mono text-3xl font-medium text-ink tabular-nums" />
+          <span className="mt-1 block text-sm text-muted">全部</span>
+        </button>
         {states.map((v) => (
           <button
             type="button"
@@ -270,6 +279,7 @@ export default function ExamAnalysisResult({
       >
         {filterSummaries.map((summaryText, index) => <p key={index} className="text-xs text-muted">{summaryText}</p>)}
       </TransitionPanel>
+      <p className="mt-2 text-xs leading-5 text-muted">模型判断仅供复核，请结合试卷与 CCF 原文确认。</p>
       {report.notes.length > 0 && (
         <div className="mt-4 rounded-md bg-quiet p-4">
           <h3 className="text-sm font-semibold">卷面说明</h3>
@@ -332,18 +342,6 @@ export default function ExamAnalysisResult({
         )}
       </section>
       <h3 className="mt-7 mb-3 text-lg font-semibold">逐题依据</h3>
-      <div className="mb-2 flex flex-wrap gap-1 print:hidden">
-        {(["all", ...states] as const).map((s) => (
-          <button
-            key={s}
-            aria-pressed={filter === s}
-            className={`min-h-10 rounded px-3 text-sm ${filter === s ? "bg-wash font-semibold text-brand" : "text-muted hover:bg-quiet"}`}
-            onClick={() => setFilter(s)}
-          >
-            {s === "all" ? "全部" : reportStates[s]}
-          </button>
-        ))}
-      </div>
       <div className="print:hidden">
         {visible.length ? (
           visible.map((r) => (

@@ -69,7 +69,7 @@ export default function OrbitHero() {
         <motion.div {...enter(0.3)} className="relative z-10 -mx-2 self-end lg:mx-0 lg:self-center">
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[62%] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#294638]/20 blur-[100px]" aria-hidden />
           <OrbitPaperScene active={displayedActive} onActiveChange={setActive} />
-          <div className="pointer-events-none absolute right-2 top-2 hidden items-center gap-3 font-mono text-[11px] tracking-[0.16em] text-[#82968b] sm:flex">
+          <div className="pointer-events-none absolute -top-6 left-2 hidden items-center gap-3 font-mono text-[11px] tracking-[0.16em] text-[#82968b] sm:flex">
             <span className="size-1 rounded-full bg-[#d4ad66]" />
             <TextMorph className="text-[#c4d2c8]">{stageNames[displayedActive]}</TextMorph>
             <span>0{displayedActive + 1} / 03</span>

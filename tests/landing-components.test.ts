@@ -97,7 +97,7 @@ test("PDF uploader exposes file input and removable long-name file card", () => 
 
   assert.match(empty, /accept="application\/pdf,.pdf"/);
   assert.match(selected, /aria-label="移除试卷"/);
-  assert.match(selected, /break-all/);
+  assert.match(selected, /break-words/);
   assert.match(selected, /GESP-一级-练习卷/);
 });
 
@@ -139,4 +139,36 @@ test("brand mark uses the product-specific evidence glyph", () => {
   assert.match(markup, /data-brand-mark="gesp-evidence"/);
   assert.match(markup, /aria-hidden="true"/);
   assert.match(markup, /<circle/);
+});
+
+test("number ticker does not override the consumer's foreground color", () => {
+  const markup = renderToStaticMarkup(createElement(NumberTicker, { value: 93, startValue: 93, className: "text-[#d4ad66]" }));
+
+  assert.doesNotMatch(markup, /text-black|dark:text-white/);
+});
+
+test("Orbit scene exposes the full current evidence as live text", () => {
+  const markup = renderToStaticMarkup(createElement(OrbitHero));
+
+  assert.match(markup, /id="orbit-evidence-text"/);
+  assert.match(markup, /aria-live="polite"/);
+  assert.match(markup, /for \(int i = 1; i &lt;= 5; i\+\+\)/);
+  assert.match(markup, /GESP 一级 · 第 5 页/);
+});
+
+test("course workspace accepts a shared lesson selection", () => {
+  const markup = renderToStaticMarkup(createElement(CourseProgressWorkspace, { initialLevel: 1, initialLesson: 12 }));
+
+  assert.match(markup, /GESP 一级/);
+  assert.match(markup, /aria-label="93%"/);
+});
+
+test("report exposes one five-choice verdict filter", () => {
+  const markup = renderToStaticMarkup(createElement(ExamAnalysisResult, {
+    report,
+    fileUrl: "blob:paper",
+    context: { teacher: "", student: "", course: "" },
+  }));
+
+  assert.equal((markup.match(/aria-pressed=/g) || []).length, 5);
 });

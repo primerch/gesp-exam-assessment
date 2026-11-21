@@ -13,7 +13,7 @@ export default function PaperIdentity({ report }: { report: PaperReport }) {
         </span>
         <div className="min-w-0">
           <p className="font-mono text-[11px] tracking-[0.16em] text-[#d4ad66]">这份试卷</p>
-          <h2 id="report-title" className="mt-2 break-all font-display text-2xl leading-7 sm:text-3xl">{report.fileName}</h2>
+          <h2 id="report-title" className="mt-2 break-words font-display text-2xl leading-7 sm:text-3xl">{report.fileName}</h2>
         </div>
       </div>
       <dl className="mt-6 grid grid-cols-2 gap-x-4 gap-y-5 border-t border-white/10 pt-5 sm:grid-cols-5">
