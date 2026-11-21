@@ -13,7 +13,7 @@ const stageNames = ["读取题目", "对照考点", "形成结论"];
 export default function OrbitHero() {
   const [active, setActive] = useState(0);
   const reduceMotion = useHydratedReducedMotion();
-  const displayedActive = reduceMotion ? 2 : active;
+  const displayedActive = active;
   const enter = (delay: number) => ({
     initial: reduceMotion ? false : { opacity: 0, y: 28 },
     animate: { opacity: 1, y: 0 },

@@ -111,6 +111,8 @@ test("paper identity and question evidence keep real report metadata and sources
   assert.match(identity, /一级/);
   assert.match(identity, /1 题/);
   assert.match(identity, new RegExp(revisionDate));
+  assert.match(identity, /print:bg-white/);
+  assert.match(identity, /print:text-ink/);
   assert.match(evidence, /解题需要跟踪 for 循环/);
   assert.match(evidence, /本题 2 分/);
   assert.match(evidence, /试卷原文/);
